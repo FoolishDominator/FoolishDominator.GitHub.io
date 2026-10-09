@@ -1,0 +1,1464 @@
+[00:00] The following content is provided under a Creative
+[00:02] Commons license.
+[00:03] Your support will help MIT OpenCourseWare
+[00:06] continue to offer high quality educational resources for free.
+[00:10] To make a donation or to view additional materials
+[00:12] from hundreds of MIT courses, visit MIT OpenCourseWare
+[00:16] at ocw.mit.edu.
+[00:26] ANDREW W. LO: So on behalf of the Sloan School
+[00:29] I want to welcome all of you to 15.401 Finance Theory.
+[00:34] This course is meant for first year MBA students.
+[00:40] And so that's the focus, and I'm going
+[00:42] to assume that that's the background that all of you
+[00:46] will have.
+[00:46] We may have a few other students in the class,
+[00:49] but primarily it will be first year MBAs who
+[00:53] are thinking about a career in finance,
+[00:57] as well as those of you who aren't
+[00:58] sure about a career in finance but are curious about it.
+[01:02] Hopefully over the next 13 weeks we'll
+[01:05] be able to satisfy that curiosity.
+[01:08] I want to start by talking a little bit
+[01:12] about what finance is, and how I got interested in it,
+[01:17] because I think it's often helpful in order
+[01:20] to motivate a subject to get a sense of how
+[01:23] somebody else decided to choose this as a profession.
+[01:28] To do that I have to go back a little bit,
+[01:31] and give you some background about
+[01:33] my own educational experiences.
+[01:37] So let me start by mentioning that I've
+[01:42] been at MIT for the past 20 years,
+[01:45] and been in the finance group all that time.
+[01:48] Before that I taught at the Wharton School for four years.
+[01:51] And before that, I got my PhD in economics
+[01:53] from Harvard University, and then graduated in 1980
+[01:58] from Yale also majoring in economics.
+[02:02] And during that time I've learned an enormous amount
+[02:06] both about finance and the real world,
+[02:09] but one of the things that I keep coming back to
+[02:11] is the fact that the finance field
+[02:15] is almost unique in how it applies to practical management
+[02:20] problems.
+[02:21] And what I want to try to do over the next 13 weeks
+[02:25] is to convince you of the fact that finance
+[02:29] is in fact, the most important subject
+[02:31] that you'll ever encounter.
+[02:33] That in fact, finance is at the core of everything
+[02:37] that you will ever do in business and in management.
+[02:41] Now that's a tall order I recognize,
+[02:44] and I suspect that some of you are
+[02:45] quite skeptical about the role that finance might play
+[02:49] in your own career objectives.
+[02:50] And I know many of you have very different career objectives.
+[02:53] And I'm not even trying to convince all of you
+[02:55] to go into a career in finance, but I
+[02:58] am trying to convince all of you that finance is really
+[03:01] the lifeblood and the basic lingua
+[03:05] franca of all of business.
+[03:07] And that's one of the reasons why finance
+[03:09] is such an important subject.
+[03:11] Now before I begin, let me ask you a question.
+[03:14] How many people have had no finance background whatsoever?
+[03:20] Oh, that's great.
+[03:22] I look forward to a challenge.
+[03:25] But the other reason it's great is
+[03:26] I have to tell you that it's a real privilege for me to be
+[03:30] here in front of you to tell you about finance
+[03:34] for the very first time.
+[03:35] And it reminds me a little bit of my younger
+[03:38] son who is an extraordinarily fussy eater,
+[03:41] he's eight years old now.
+[03:42] But ever since he was born he had some allergies,
+[03:45] and he just refused to eat most of everything.
+[03:47] In fact, my wife often says that my younger son is a vegetarian
+[03:51] except he doesn't eat vegetables.
+[03:53] So he's an incredibly fussy eater,
+[03:55] and somehow when he was one year old
+[03:57] he saw my older son eating an ice cream cone,
+[04:00] and figured that that's something he ought to try.
+[04:03] How he figured that out, I don't know.
+[04:04] But he tasted it for the very first time,
+[04:08] and you could see his face change in about four seconds
+[04:12] from disgust to curiosity to absolute, you know,
+[04:17] enthrallment with the taste and feel of ice cream.
+[04:20] He just loved it thereafter.
+[04:22] That's one of his major food groups now.
+[04:24] It's ice cream.
+[04:25] And so I feel privileged to be able to share that experience
+[04:29] here in the sense that once you get a taste of finance,
+[04:31] I think you're going to be incredibly
+[04:33] excited and enthralled by the subject.
+[04:35] Because it's one of the few subjects,
+[04:37] in fact, that's the only subject that I've encountered
+[04:39] that is both rigorous, it's extraordinarily
+[04:43] challenging from a research and intellectual perspective,
+[04:47] and at the end of the day it's extremely practical.
+[04:51] In fact, I would say it's indispensable
+[04:53] for financial management.
+[04:55] So I'm going to try to convince you of that over the next 13
+[04:57] weeks, and I'm going to do that by going over material
+[05:01] that you will find indispensable.
+[05:04] As many of you know, at the end of the course
+[05:06] we have a ritual where we hand out teaching ratings.
+[05:09] And among the finance faculty, among all the faculty,
+[05:12] we're very concerned about good teaching.
+[05:15] So these teaching ratings actually matter.
+[05:17] And I've always thought that having a teaching rating
+[05:21] survey at the end of the semester,
+[05:23] is somewhat misguided.
+[05:25] What I'd like to do, and what I've proposed
+[05:28] hasn't been adopted yet, I propose
+[05:30] to have teaching ratings submitted five
+[05:32] years after a course is done.
+[05:35] Now this may be a problem for some people who aren't
+[05:39] up to speed in the classroom.
+[05:40] But the reason I say this is, because it will only
+[05:43] be after you get into your jobs, into your careers,
+[05:47] before you realize how useful finance is.
+[05:51] And five years from now, I suspect all of you
+[05:54] will come back and say, gee, this
+[05:55] is one of the most important courses you have ever taken.
+[05:58] Not because of me, but because of the substance of what
+[06:01] we're going to cover over the next 13 weeks.
+[06:03] It's because of you and all of the work
+[06:05] that you will put into this course.
+[06:08] This will be the most challenging course
+[06:10] you will ever love.
+[06:11] So-- stealing from the military--
+[06:14] I think that you'll really appreciate
+[06:16] how the discipline of financial logic
+[06:20] will help you to think smarter about all of your management
+[06:22] decisions no matter what you decide to do with your careers.
+[06:26] Now that's a very tall order.
+[06:27] I've built up expectations.
+[06:29] So I'm going to have to deliver over the next 13 weeks,
+[06:31] and we'll see whether or not we can do that.
+[06:34] But let me start now by talking about what
+[06:37] we're going to cover today.
+[06:39] I want to start with a little bit of motivation,
+[06:41] and then talk about the dramatis personae.
+[06:44] These are the cast of characters that we're
+[06:46] going to be focusing on over the next 13 weeks.
+[06:50] And then I'm going to lay out the fundamental challenges
+[06:53] of financial analysis.
+[06:54] It turns out there are only two.
+[06:58] There are only two challenges in financial analysis,
+[07:01] and once you figure both of those out, you're done.
+[07:03] So if by chance you can figure that out
+[07:05] before the end of the class, you don't
+[07:07] need to come back for the rest of the lectures.
+[07:10] Then I'm going to turn to providing you
+[07:13] with a framework for thinking about these financial
+[07:15] challenges.
+[07:16] To me it's very important to have a framework to start with,
+[07:19] because I like to organize my thoughts
+[07:21] into things that I know and things that I don't know.
+[07:23] And of the things that I know, how did it relate to the stuff
+[07:26] that I already knew, or thought I knew.
+[07:28] So I want to give you a sense of that kind of framework
+[07:31] to think about financial analysis upfront.
+[07:34] You probably won't fully appreciate it at this point,
+[07:38] but sometime over the next 13 weeks you will get it.
+[07:42] And so I want to give that to you
+[07:43] so that you can start thinking about it subconsciously,
+[07:46] unconsciously, and then eventually you
+[07:48] will understand how all the pieces fit together.
+[07:52] I then want to talk about the importance
+[07:55] of two aspects of financial analysis
+[07:58] that make finance different from every other discipline you
+[08:01] will ever encounter here at MIT and elsewhere.
+[08:04] And that is time and risk.
+[08:08] Without those two factors it turns out
+[08:10] that finance is actually done.
+[08:13] In other words, there's no real research challenges,
+[08:16] no open questions left once you eliminate time and risk.
+[08:21] Put in another way, the only reason
+[08:24] that there exists a finance department, and finance
+[08:27] faculty, and finance journals, and a finance industry,
+[08:30] the only reason is because of time and risk.
+[08:34] So I'm going to come back to that.
+[08:36] Then I'm going to conclude by giving you the six
+[08:40] basic principles of finance.
+[08:42] These are principles that you will encounter
+[08:44] in all of your finance courses for the rest of your stay
+[08:47] at MIT and elsewhere.
+[08:49] These are the ideas, the fundamental ideas,
+[08:51] that have shaped financial markets
+[08:53] and that are at the root cause of all of the financial market
+[08:56] innovations, as well as all of the financial market crises
+[08:59] that we've seen including what's been going on
+[09:01] over the last several months in the subprime mortgage market.
+[09:04] In fact, we're going to talk about the subprime mortgage
+[09:06] problems after we cover fixed income securities.
+[09:09] Right now I suspect most of you know
+[09:11] that there's something going on, know that it's bad stuff,
+[09:14] but you don't know why, how, where, when,
+[09:16] and what to do about it.
+[09:18] Well, in about five lectures, you will.
+[09:21] It's not complicated, but it's different from anything
+[09:25] that you've ever encountered.
+[09:26] And in fact, financial analysis, I suspect,
+[09:28] is different from anything most of you have ever encountered.
+[09:32] I'm hoping that by the end of the course,
+[09:34] it will change the way you think about everything.
+[09:38] And again, I recognize that that's a tall order,
+[09:41] but you tell me 13 weeks from now
+[09:42] whether or not I've delivered.
+[09:45] And then I'll conclude by talking about the course
+[09:47] overview, and then finally I want
+[09:49] to say a few words about how as a student
+[09:51] you can get the most out of this course.
+[09:52] This is a part of the lecture that I've always
+[09:56] felt is critical at the very start of a course
+[09:59] like this, because there are a number of challenges
+[10:02] that you will face over the next 13
+[10:04] weeks regarding this material.
+[10:07] And I've always thought that it would
+[10:08] be helpful for the instructor to let me know where
+[10:12] those challenges might come from,
+[10:14] and what I should do in advance to prepare
+[10:16] for those challenges.
+[10:17] So I'm going to do that at the end of this hour and a half.
+[10:20] For next time I'd like you to read Brealey and Myers,
+[10:23] chapters one and two.
+[10:25] We are going to be covering that today as well as next Monday.
+[10:30] So please keep up with your readings.
+[10:32] And at the end of this lecture, I
+[10:34] will talk a bit about the course requirements
+[10:37] and other aspects of the course mechanics.
+[10:41] Any questions?
+[10:44] All right, let me start with some motivation
+[10:47] about why you might want to study finance
+[10:50] and why finance is so important.
+[10:52] And I've always found that with motivation it's really best
+[10:56] to do it in a personal way.
+[10:59] That is, to try to find an individual or a group
+[11:01] of individuals that personify a particular discipline
+[11:05] or endeavor.
+[11:06] And so there are three people that I'd
+[11:08] like to introduce you to.
+[11:09] I suspect you'll know at least two out of the three,
+[11:13] but my guess is you won't know all of them.
+[11:17] The first person-- oh, before I do
+[11:18] that, I want to introduce a very simple definition of what
+[11:21] finance is.
+[11:22] So this is the very first equation
+[11:23] that you'll ever see in this course,
+[11:25] and there'll be many others of course.
+[11:27] But the first expression of exactly what is finance
+[11:31] is this, finance is simply equal to mathematics plus money.
+[11:37] Now that suggests that mathematics as a discipline
+[11:40] is equal to finance without the money,
+[11:42] but really that's not my point.
+[11:46] Although it's true by the way, that's not my point.
+[11:49] My point is that finance is the study,
+[11:52] the systematic and disciplined study of financial transactions
+[11:56] of money.
+[11:58] Now when you see this you might think, well, gee,
+[12:01] I don't really have a strong math background.
+[12:03] Maybe I'm in the wrong place or the wrong class.
+[12:05] And I want to explain to you that that's completely
+[12:10] inaccurate, and inappropriate.
+[12:14] When I say mathematics, I'm actually
+[12:16] talking about a very wide range of mathematics.
+[12:20] Everything from the extraordinarily
+[12:23] complex and profound to the extremely pedestrian
+[12:28] and obvious.
+[12:29] So literally the range from differential geometry
+[12:34] and partial differential equations
+[12:35] on one end of the spectrum to arithmetic and high school
+[12:40] algebra at the other end of the spectrum.
+[12:43] Now since this is an introductory finance class,
+[12:46] I assume that you know nothing.
+[12:48] What I mean by that is, I assume that there
+[12:51] are no prerequisites that you have other than what it took
+[12:54] for you to get into here, which is
+[12:56] pretty substantial by the way.
+[12:58] Congratulations to all of you for getting in.
+[13:01] But we're not requiring that you have
+[13:04] any background in quantitative analysis, computers,
+[13:09] upper level mathematics.
+[13:11] So when I say finance is equal to mathematics plus money,
+[13:15] there's a variety of kinds of mathematics
+[13:17] that can be appropriate for creating
+[13:18] an extraordinarily profitable career in this industry.
+[13:23] And now here are the three examples.
+[13:27] Anybody know who James Simons is?
+[13:30] Who is he?
+[13:32] AUDIENCE: Well, I know about Renaissance.
+[13:34] ANDREW W. LO: You know about Renaissance Technologies.
+[13:36] Do you know what James Simons did before he started
+[13:39] Renaissance Technologies?
+[13:41] Yeah.
+[13:41] AUDIENCE: He's a math professor.
+[13:43] ANDREW W. LO: He's a math professor, that's right.
+[13:46] James Simons is a math professor.
+[13:49] Well, was a math professor.
+[13:51] In fact, he was quite a well-known math professor.
+[13:54] When I first heard of him, it wasn't
+[13:56] because of Renaissance Technologies,
+[13:58] which is a hedge fund that he started
+[14:00] about 15 or 20 years ago.
+[14:03] James Simons was a differential geometer who for many years
+[14:08] was the chairman of the math department
+[14:10] at Stony Brook in New York.
+[14:14] And he authored with S.S. Chern a particular field of study
+[14:20] in differential geometry called Chern-Simons theory, which
+[14:24] has subsequently proved to be extraordinarily
+[14:26] useful in an area of physics known as string theory.
+[14:30] Extraordinarily abstract.
+[14:32] And Simons started a hedge fund about 20 years ago.
+[14:38] And this is probably the single most successful hedge fund
+[14:43] in the history of the industry in terms of its performance
+[14:47] record.
+[14:48] Over the course of 15 or 20 years,
+[14:52] he's put together a track record that has literally
+[14:55] beaten every other hedge fund manager's track
+[14:58] record by a lot.
+[14:59] So it's not just a little bit.
+[15:01] He's just sort of way out there.
+[15:02] He's the Michael Phelps of quantitative investment
+[15:06] strategies.
+[15:08] By the way, just to give you a sense of how successful
+[15:10] he has been.
+[15:13] In 2006, two years ago, it was reported
+[15:16] by Institutional Investor's Alpha Magazine--
+[15:19] this is a trade publication for the hedge fund industry-- it
+[15:21] was reported that James Simons was the single most highly
+[15:26] paid hedge fund manager that year
+[15:29] with a take-home pay of $1.7 billion.
+[15:35] Now, that's not wealth, that's income.
+[15:38] That was on his W-2.
+[15:42] That was one year's compensation.
+[15:47] he did this by building a quantitative investment
+[15:50] management company with 75 PhDs in mathematics, physics,
+[15:54] computer science, and so on.
+[15:57] And nobody, nobody knows what he does or how he does it.
+[16:00] It's extraordinarily secret.
+[16:03] But there's no doubt that he's incredibly successful.
+[16:07] So that's one end of the spectrum.
+[16:09] That kind of mathematics can make money,
+[16:12] and can be extraordinarily relevant to financial analysis.
+[16:16] Now at the other end of the spectrum, we have this guy.
+[16:22] You may have heard of him, Warren Buffett.
+[16:25] He is currently the richest man on earth.
+[16:28] In 2008 Forbes ranked him number one in terms of wealth.
+[16:33] At the time, February of 2008, he was worth $62 billion.
+[16:38] In fact, in a private conversation
+[16:40] I was told that when Simons found out he said, really?
+[16:43] $62 billion?
+[16:44] How did he get that?
+[16:45] It's amazing.
+[16:47] That's an extraordinary amount of wealth for an individual
+[16:50] to put together.
+[16:51] And what's extraordinary about it, is how he did it.
+[16:54] As many of you know Warren Buffett is an investor based
+[16:57] in Omaha, Nebraska.
+[17:00] His office is probably smaller than many of the conference
+[17:06] rooms here at Sloan.
+[17:07] The number of people he has working for him, I suspect,
+[17:10] is fewer than many of you who have
+[17:12] done your startups or plan to.
+[17:14] He's got an extraordinarily small staff.
+[17:17] Mainly it's Charlie Munger and him,
+[17:19] and a couple of secretaries, and maybe
+[17:22] a few accountants here and there, and lawyers of course.
+[17:27] But what he does is to read company prospectuses, income
+[17:33] statements, balance sheets.
+[17:35] And with literally high school arithmetic
+[17:39] he's built this incredible investment empire
+[17:43] by looking at valuation.
+[17:46] Simple accounting.
+[17:47] Now I say simple accounting, but there's nothing simple
+[17:50] about what he does.
+[17:52] And so clearly he has certain skills
+[17:55] that also involve mathematics, but not
+[17:58] the kind of mathematics that James Simons uses.
+[18:02] And finally, the third individual
+[18:04] that I'd like to introduce you to is this fellow, Jack Welch.
+[18:08] Now again, many of you know him or know of him.
+[18:11] You know that he actually teaches a course here at Sloan.
+[18:14] But you may not know that his PhD was actually
+[18:19] in engineering.
+[18:21] And he started out at General Electric in 1960.
+[18:25] Became CEO in 1981, and at that time the revenues
+[18:32] of General Electric was about $26 billion a year.
+[18:35] So it was already a big and successful company.
+[18:39] And Jack Welch took it over in 1981.
+[18:43] At the time there were 400,000 employees for General Electric.
+[18:47] Five years later, there were 300,000 employees
+[18:50] at General Electric.
+[18:52] He eliminated 100,000 jobs.
+[18:53] That's one of the reasons why he developed the nickname Neutron
+[18:56] Jack, because like a neutron bomb,
+[18:59] he eliminated a huge segment of the population.
+[19:03] But five years later with 300,000 employees,
+[19:08] he increased the market value of General Electric
+[19:10] by several fold.
+[19:12] And at the end of his tenure in 2001, 20 years later,
+[19:17] General Electric's revenues was not $26 billion,
+[19:21] it was $130 billion.
+[19:23] He increased it by a factor of 4 and 1/2
+[19:26] over the course of 20 years.
+[19:28] It's an extraordinary accomplishment
+[19:30] for an individual.
+[19:32] Now why do I put him up here?
+[19:35] It's because one of the things that Welch
+[19:37] did at General Electric, one of the things
+[19:39] that he was extraordinarily good at, was making
+[19:42] good decisions about investments, making
+[19:44] good decisions about costs, being able to understand
+[19:49] the language of finance despite the fact
+[19:52] that he used none of his PhD skills in his job.
+[19:56] He was an engineer by training, not a manager.
+[20:00] He didn't go to management school,
+[20:02] although he did a lot of executive education
+[20:05] after his PhD.
+[20:09] The reason that I give you these three cast of characters
+[20:11] is because they are so different in what they do.
+[20:16] They have such different backgrounds.
+[20:18] They're all extraordinarily successful,
+[20:21] but there's one thing in common.
+[20:23] The thing in common is that they all understand innately,
+[20:28] deeply, fundamentally, the language of finance.
+[20:32] And what we're going to cover over the next 13 weeks,
+[20:34] are the very basics.
+[20:36] Things that they take for granted.
+[20:37] Things that they use on a daily basis to do their jobs.
+[20:43] So it's not to say that if you do well in this course
+[20:45] you'll end up being one of these guys,
+[20:48] but it's certainly a prerequisite I would say.
+[20:51] There's nobody that's been successful in business,
+[20:54] truly successful, without having an understanding, at least
+[20:58] an innate or instinctive understanding,
+[21:00] of the concepts that we're going to cover over the next 13
+[21:03] weeks.
+[21:04] So to me, that's exciting.
+[21:06] Now again, I'm not trying to motivate you by greed.
+[21:10] I'd rather motivate you by the intellectual challenge
+[21:12] of finance, and there will be some extraordinarily
+[21:15] challenging ideas.
+[21:16] Ideas that are not natural for any of you at this point,
+[21:21] but which I hope will be very natural
+[21:24] at the end of this 13 weeks.
+[21:27] So let me start with the cast of characters
+[21:30] that we're going to be studying over the next 13 weeks.
+[21:35] There are going to be four components of the economy
+[21:38] that we're going to focus on.
+[21:40] Now this is a flow diagram of the economy.
+[21:41] Since we're at MIT we have to have flow diagrams
+[21:44] at some point, right?
+[21:46] So here's my version of a flow diagram.
+[21:49] This is a flow model of the economy,
+[21:51] and there are four components that
+[21:54] comprise the financial system.
+[21:55] Households, financial intermediaries,
+[21:59] non-financial corporations, and then capital markets.
+[22:04] Now obviously the economy is comprised
+[22:06] of additional components like labor markets and product
+[22:09] markets.
+[22:10] We're not going to focus on that.
+[22:11] Although there are certain financial aspects of those
+[22:14] markets.
+[22:15] Given that we only have 13 weeks,
+[22:17] our attention will be spent on those four components,
+[22:21] and I'm going to cover each of those four components,
+[22:24] both in parallel and to a certain degree sequentially,
+[22:27] all right?
+[22:28] So I want you to be familiar with these four,
+[22:30] because we're going to be talking
+[22:31] about them interchangeably at various points in time.
+[22:35] Financial analysis applies to all of these components
+[22:39] in exactly the same way.
+[22:40] But once you apply them to the specific context,
+[22:43] the terminology may change, the particular applications
+[22:46] may look different.
+[22:47] What I'm going to try to teach you in this 13 weeks
+[22:49] is the underpinning theories that
+[22:52] unify all of the various different kinds of ideas.
+[22:55] So these are the four components that we're
+[22:57] going to be looking at from now and then.
+[23:01] Now let me talk about the fundamental challenges
+[23:03] of finance.
+[23:04] I told you that there are only two, right?
+[23:06] And here they are.
+[23:08] There are two aspects of financial analysis
+[23:11] that we're going to be focused on.
+[23:12] The first is the valuation of assets.
+[23:20] And the second is very simply the management of assets.
+[23:26] That's it.
+[23:27] That's all there is to it.
+[23:29] Valuing and managing.
+[23:33] And I can tell you exactly what the managing
+[23:34] part is going to look like.
+[23:37] Managing is going to involve figuring out which of two
+[23:40] possibilities is more valuable.
+[23:44] And then you know what?
+[23:45] You take the more valuable option.
+[23:47] That's it.
+[23:48] That's all there is to it.
+[23:50] Figuring out the value, that's going to be challenging.
+[23:55] So we're going to take that first challenge
+[23:59] to start with, and try to understand valuation.
+[24:03] I'm going to argue that all business
+[24:04] decisions, any kind of business decision,
+[24:07] involves those two challenges.
+[24:10] Valuing something, and then once you value it,
+[24:14] make a decision on what you want to do with that value.
+[24:20] This is why I've argued that finance
+[24:21] is the most important subject, because literally any business
+[24:24] decision that you will ever engage in,
+[24:26] constitutes those two components.
+[24:27] Valuation and management.
+[24:31] Now valuation is going to be a challenge by itself,
+[24:36] because it's not at all clear what value we're talking about.
+[24:40] In other words, what is value?
+[24:43] Is water valuable?
+[24:46] Well, life can't be sustained without it.
+[24:47] At least carbon based forms of life.
+[24:50] So water is pretty valuable.
+[24:52] But water is not that expensive.
+[24:54] At least before Poland Springs came along.
+[24:58] Now what about diamonds?
+[24:59] As far as I know, humans do not need diamonds to survive,
+[25:03] and yet diamonds are extraordinarily expensive.
+[25:06] There are certain gems that are invaluable.
+[25:10] Now how can that be?
+[25:11] Clearly we have to think more carefully
+[25:14] about what we mean by value.
+[25:17] And of course, once value is established then
+[25:20] management is relatively easy to do.
+[25:24] Objectives plus valuations obviously leads to decisions.
+[25:28] So once you tell me what you're trying to achieve,
+[25:31] and then you value all the various different
+[25:33] possibilities, then I can tell you what the right decision is.
+[25:36] Pick the decision that is the most valuable for achieving
+[25:40] the objectives that you want.
+[25:43] Now that doesn't really help a lot
+[25:45] if we can't apply this to specific contexts,
+[25:49] and come up with specific value.
+[25:52] So I want to hammer this home, and to do
+[25:54] that I want to talk about how it is that financial markets helps
+[25:58] us establish value through the price discovery mechanism.
+[26:03] And to do that, I am going to do a simple demonstration.
+[26:06] Now when I was growing up I went to one
+[26:09] of these specialized high schools
+[26:11] that focused on science.
+[26:12] So we were always getting these various different kinds
+[26:14] of neat demonstrations of the Tesla kind of coil.
+[26:19] I've always been very jealous of these science teachers,
+[26:21] because they have these cool demonstrations that we
+[26:23] in finance don't.
+[26:25] So I've developed a little demonstration of my own.
+[26:28] It's a simple one that has to do with the price discovery
+[26:30] mechanism, and because I teach two sections,
+[26:32] I'm going to have to make it a little bit more
+[26:34] involved than normally.
+[26:35] So I need two volunteers.
+[26:37] The first volunteer-- thank you.
+[26:38] I'd like you to take these two pieces of paper,
+[26:40] these are blank pieces of paper.
+[26:42] On one of them write heads, and the other write tails.
+[26:45] And then place them face down, and shuffle them
+[26:47] so you don't know which is which.
+[26:50] And I need another volunteer who has a coin that they can flip,
+[26:54] because-- thank you.
+[26:55] So as soon as he's done, I'm going
+[26:57] to ask you to flip a coin.
+[26:58] Do you have a coin by the way?
+[26:59] AUDIENCE: Yeah.
+[27:00] ANDREW W. LO: OK.
+[27:01] I have two items here.
+[27:04] One of which is going to be auctioned off in this section,
+[27:07] and the other is going to be auctioned off
+[27:08] in the later section.
+[27:09] And since I don't know what your preferences are
+[27:11] for one or the other, I want to randomize this
+[27:14] so that there's no chance that I favor one section or the other.
+[27:18] So are you done with that?
+[27:19] You shuffled them.
+[27:20] You don't know which is which.
+[27:21] OK, I'd like you to take these two face down, and put
+[27:23] one in front of one of these packages,
+[27:25] and the other in front of the other face down as well.
+[27:29] While you do that, can you go ahead and flip your coin?
+[27:33] And as soon as he puts that on there,
+[27:34] I want you to tell me whether you flipped heads or tails.
+[27:37] And based upon that, the particular object
+[27:40] that is chosen will be auctioned off in this particular section.
+[27:44] OK, go ahead.
+[27:45] What have you got?
+[27:46] AUDIENCE: Tails.
+[27:47] ANDREW W. LO: Tails, OK.
+[27:48] So tails.
+[27:50] This is heads, and this is tails.
+[27:53] So here is the item that I'm going to auction off.
+[27:56] Before I do that, I'm going to ask somebody.
+[27:58] Anybody know what's in here?
+[28:01] Nobody knows what's in that box?
+[28:05] Well, what do you think its value is?
+[28:09] Zero?
+[28:12] Negative?
+[28:15] Can't be negative, right?
+[28:16] There's limited liabilities.
+[28:17] You can't owe me for something that's in there.
+[28:20] So good.
+[28:21] We've established some information.
+[28:22] There's a zero lower bound.
+[28:25] Well, I don't know what the value is.
+[28:28] So what we're going to do is we're going to figure it out.
+[28:31] Rather, you're going to figure it out.
+[28:35] I'm going to auction this off, and now this is for real.
+[28:38] So don't bid if you can't pay me, and by the way,
+[28:44] I expect to be paid in cash.
+[28:47] All right?
+[28:49] So I'm serious.
+[28:50] This is a serious game.
+[28:51] So if you don't want to participate,
+[28:53] you're not prepared to pay me in cash at the end
+[28:55] of this lecture, do not bid.
+[28:57] All right?
+[28:58] OK, I'm going to open it up.
+[29:01] Anybody want to start bidding for this item?
+[29:04] AUDIENCE: $1.
+[29:04] ANDREW W. LO: $1.
+[29:06] AUDIENCE: Three.
+[29:07] ANDREW W. LO: $3.
+[29:08] AUDIENCE: $4.
+[29:09] AUDIENCE: Four.
+[29:10] AUDIENCE: Six.
+[29:11] ANDREW W. LO: Six.
+[29:12] AUDIENCE: Five.
+[29:12] ANDREW W. LO: All right, $6 is the high bid.
+[29:15] Can't do that.
+[29:17] All right, $6 is the high bid.
+[29:20] AUDIENCE: Ten.
+[29:21] AUDIENCE: Ten.
+[29:22] ANDREW W. LO: Ten.
+[29:22] OK, we got two tens here.
+[29:23] You were the first.
+[29:24] So that's your bid.
+[29:25] Your bid is the high bid. $10.
+[29:27] AUDIENCE: 20.
+[29:28] ANDREW W. LO: 20.
+[29:29] We have 20.
+[29:30] Wow!
+[29:31] AUDIENCE: High roller.
+[29:31] ANDREW W. LO: $20.
+[29:33] You do see that this package is smaller than this one, right?
+[29:36] It's a tiny little thing. $20.
+[29:38] AUDIENCE: 30.
+[29:39] ANDREW W. LO: $30.
+[29:41] $30.
+[29:43] High bid.
+[29:45] Any more than $30?
+[29:46] AUDIENCE: Can I ask a question, please?
+[29:48] ANDREW W. LO: Yes.
+[29:49] AUDIENCE: Where does the money-- who gets it?
+[29:51] ANDREW W. LO: I get the money.
+[29:52] That's a great question.
+[29:53] That's a great question.
+[29:55] This is going to go to the foundation
+[29:56] to support Andrew Lo.
+[29:59] I'm the charity.
+[30:00] So this is not a charity auction.
+[30:02] This is going to go to me.
+[30:04] By the way, I paid for these items.
+[30:06] So that's why it's going to go to reimburse my teaching costs.
+[30:10] AUDIENCE: It's going to ice cream, [INAUDIBLE]
+[30:11] ANDREW W. LO: Right.
+[30:12] OK, $30 high bid.
+[30:15] Any higher bid than that?
+[30:18] $30?
+[30:20] Nothing higher?
+[30:20] AUDIENCE: 31.
+[30:21] ANDREW W. LO: 31.
+[30:25] AUDIENCE: 35.
+[30:26] ANDREW W. LO: 35.
+[30:29] OK, do I hear 40?
+[30:32] Anybody want to do 40?
+[30:35] $40?
+[30:37] AUDIENCE: I'll give you 40.
+[30:38] ANDREW W. LO: $40.
+[30:38] All right, we've got $40.
+[30:43] Anybody willing to go 45?
+[30:47] $45?
+[30:51] All right.
+[30:51] AUDIENCE: 45.
+[30:52] ANDREW W. LO: $45.
+[30:54] Wow!
+[30:55] OK.
+[30:56] Do we hear 50?
+[30:59] $50?
+[31:02] 45 is the high bid.
+[31:03] Anybody for 50?
+[31:05] AUDIENCE: Can I short too?
+[31:06] ANDREW W. LO: No shorting, sorry.
+[31:08] I'm the only auctioneer here.
+[31:10] $45 is the high bid.
+[31:13] Anybody here 50?
+[31:14] Going once.
+[31:15] Going twice.
+[31:18] All right, sold. $45.
+[31:20] Now you're going to pay me, right?
+[31:21] AUDIENCE: Yep.
+[31:22] ANDREW W. LO: All right.
+[31:24] We established the value.
+[31:28] It's $45.
+[31:31] That's the market at work.
+[31:33] None of you knew what was in here.
+[31:35] It could be nothing actually.
+[31:40] But I suspect that you didn't think it was nothing,
+[31:45] because you bid for it, right?
+[31:47] Moreover, I didn't let you touch it.
+[31:50] I didn't let you feel it.
+[31:51] I didn't let you shake it.
+[31:52] There was no information whatsoever other than
+[31:53] this very pretty packaging.
+[31:56] And yet somehow magically you were
+[31:59] able to come up with a value.
+[32:01] Now we could argue whether that value is good or bad.
+[32:04] But it's a number, and it's a number that
+[32:06] can now be used for analysis.
+[32:10] Now again, I'm not commenting on how good or bad the number is.
+[32:13] In a minute we're going to find out,
+[32:14] because I'm going to open this.
+[32:15] Or let this gentleman here open it, and see what he bought.
+[32:19] But before he does that, I want to comment that knowing nothing
+[32:24] without any information whatsoever,
+[32:29] we've established value.
+[32:31] That's remarkable.
+[32:32] Now it's not true, though, that there is no information.
+[32:36] In fact, there's a tremendous amount
+[32:39] of information in this room.
+[32:41] Tremendous amount.
+[32:42] Because you know a number of things.
+[32:45] You know about the size of packages.
+[32:47] You know about the fact that I'm a professor,
+[32:49] and if I really cheat you then I might get in trouble
+[32:52] with the dean.
+[32:54] There are a number of constraints that are in place,
+[32:58] and with this audience those constraints affected the value.
+[33:03] For the next five weeks that's what we're going to be doing,
+[33:07] is talking about valuation and trying
+[33:09] to understand how what just happened happened.
+[33:15] OK, would you like to open it up, and let us know
+[33:17] what you've got for your $45?
+[33:20] And you'll let me know whether this
+[33:21] has been a good deal or a bad deal for you and for me.
+[33:30] Oh, just rip it.
+[33:34] My wife does this all the time.
+[33:35] It drives me crazy.
+[33:37] My sons are just--
+[33:39] AUDIENCE: I'm enjoying my [INAUDIBLE] $45.
+[33:42] ANDREW W. LO: Fair point.
+[33:43] Fair point.
+[33:51] AUDIENCE: Oohhh!
+[33:52] [APPLAUSE]
+[33:58] ANDREW W. LO: Anybody know what the retail value of that is?
+[34:01] It's an iPod Nano 4 gig version.
+[34:05] AUDIENCE: 125.
+[34:06] ANDREW W. LO: 149 to be precise.
+[34:10] So you had a good deal.
+[34:11] AUDIENCE: Yeah, yeah.
+[34:12] Thank you.
+[34:13] ANDREW W. LO: You're welcome.
+[34:14] Thank you, because what we did was
+[34:18] to engage in a price discovery process
+[34:20] with limited information.
+[34:21] With limited information.
+[34:23] I couldn't get the value out of that that I wanted to.
+[34:27] I would have loved to have gotten a bid of $149,
+[34:31] but would any of you be willing to pay that for a box
+[34:34] with no information at all?
+[34:37] Probably not.
+[34:38] So the lack of transparency, the lack of information,
+[34:41] actually reduced the value of that object.
+[34:44] But nevertheless, it did have a value.
+[34:46] Because some of you were willing to take a chance
+[34:48] that there might be something interesting in that package.
+[34:52] That is what we're going to try to understand over the next 13
+[34:56] weeks, and for the first five of those weeks
+[34:59] we're going to try to take it apart.
+[35:01] We're going to try to understand how it is that the market comes
+[35:04] up with the value.
+[35:08] And it's going to be a challenge.
+[35:09] This is hard to do, because just like
+[35:12] if we decided to spend the rest of the lecture figuring out
+[35:14] how you came up with a $45 bid, or why you
+[35:17] weren't willing to go to 50.
+[35:20] It's going to be really hard for us to tease out
+[35:23] all of the thinking that went into this kind of discussion.
+[35:25] So that's why we have work to do.
+[35:28] It will be exciting work, because at the end
+[35:30] we are going to come up with specific quantitative analysis
+[35:35] that will tell us how valuation is done.
+[35:39] So that's where we're going to focus on
+[35:41] for the next few weeks.
+[35:45] Clearly once we figure out valuation,
+[35:48] we can then focus on management.
+[35:50] And the first two-thirds of this class
+[35:53] will be focused on valuation.
+[35:55] The last one third will be focused on taking those ideas,
+[36:00] and applying them to management contexts like capital budgeting
+[36:04] and risk management.
+[36:07] For valuation, the kind of questions
+[36:10] that we're going to tackle are ones that implicitly we
+[36:12] did in just a few minutes here.
+[36:14] It's going to be how are financial assets valued
+[36:19] versus how should they be valued,
+[36:22] and is that always the same?
+[36:25] Is it the case that financial assets
+[36:27] are valued the way they should be valued,
+[36:29] and what do we even mean by whether or not it should
+[36:32] be valued in a way or not.
+[36:35] And finally, we're going to ask the question for valuation,
+[36:38] how well do financial markets really work?
+[36:41] Can we always rely on them to work well?
+[36:44] In this case, I don't know if you
+[36:45] would call this particular auction
+[36:48] one that worked out well.
+[36:50] Certainly worked out well for you,
+[36:52] but it didn't work out well for me.
+[36:54] So in what sense did it work out well?
+[36:58] Well, it worked out well in the sense
+[37:00] that if I really wanted to get rid of that box,
+[37:02] if I really wanted to unload it, I actually was able to do that.
+[37:06] And I got something for it.
+[37:07] Sight unseen, with no information whatsoever,
+[37:10] I actually got $45.
+[37:12] Roughly a third of the value of the asset.
+[37:14] That's actually not too bad.
+[37:16] If you're trying to sell an asset sight unseen,
+[37:20] and you need to do it immediately,
+[37:23] a 66% discount is actually pretty fair.
+[37:27] Now we're going to see more examples of that
+[37:29] over the next few weeks.
+[37:31] Once we determine value, then the question is management.
+[37:35] How much should I save or spend?
+[37:36] That's a management question that all of you
+[37:39] have to deal with at some point or another in your lives.
+[37:42] What should I buy?
+[37:42] What should I sell?
+[37:44] When should I buy and sell it, and how should I
+[37:46] finance the transaction?
+[37:47] Those are the problems of financial analysis
+[37:50] plain and simple.
+[37:51] These are problems that apply to Jack Welch, to James Simons,
+[37:55] to Warren Buffett, and to you.
+[37:56] And it applies to you not just from the corporate perspective,
+[38:01] but from a personal perspective as well.
+[38:02] Every one of you have to think about these issues
+[38:05] on a daily basis.
+[38:07] And so finance really is completely
+[38:11] inclusive in the sense that it applies to virtually everything
+[38:14] that you will ever encounter in life.
+[38:18] To do that I have to go over the framework
+[38:20] of financial analysis, and the starting point is accounting.
+[38:25] Accounting is the language, the lexicon of finance
+[38:31] in that it's the beginning of how
+[38:33] to measure economic concepts.
+[38:35] Like profit and loss, revenues and costs, and so on.
+[38:41] So while many of you may not have accounting backgrounds,
+[38:44] you will learn a fair bit of accounting in this course,
+[38:48] just because you're going to have to in order to understand
+[38:50] the material in the lectures.
+[38:53] So you'll need to get familiar with the basic terms
+[38:56] of accounting, and in particular you're
+[38:57] going to have to focus on two concepts that are probably
+[39:01] alien to you.
+[39:02] The notion of a stock and a flow.
+[39:05] Now when I say stock, I don't mean common stock or equities,
+[39:09] I have a different term in mind.
+[39:11] By stock in this context, I mean the stock of assets.
+[39:16] The level of assets.
+[39:19] And by flow I mean the rate of change of assets.
+[39:24] You know when I was in grad school,
+[39:26] we started discussing this concept on the first day
+[39:28] of macroeconomics, and then one of the students
+[39:30] in the back of the room said, excuse me, Professor,
+[39:32] but isn't that just the distinction between a variable
+[39:36] and its first derivative?
+[39:38] And the professor was a little bit taken aback and said,
+[39:42] well, yes, that's right.
+[39:43] But let me give you another way of thinking about it that
+[39:45] is somewhat more intuitive.
+[39:46] And that is, think about a bathtub,
+[39:48] and think about the faucet turned on
+[39:50] and the water flowing into it.
+[39:53] The stock is the level of the water.
+[39:56] The flow is how fast the water is coming into the tub.
+[40:01] And so after that explanation the student
+[40:04] still seemed confused, and so the professor said,
+[40:07] you know what, some people find bathtubs intuitive,
+[40:09] other people find derivatives intuitive.
+[40:11] So to each his own.
+[40:14] These two concepts are extraordinarily
+[40:16] critical to financial analysis.
+[40:18] And accounting counterparts are nothing more than the balance
+[40:22] sheet and the income statement.
+[40:25] The balance sheet measures the stock of wealth of a company.
+[40:29] What your assets are, and what your claims on those assets
+[40:34] or liabilities are.
+[40:37] On the other hand, the flow of wealth into a company
+[40:42] or out of a company is measured by the income statement.
+[40:45] This tells you how much the company
+[40:47] is making per unit time versus its losses.
+[40:55] So the framework for financial analysis
+[40:58] that we're going to be coming back to time and again
+[41:00] is this framework of a corporation.
+[41:02] A corporation has a certain set of assets.
+[41:05] It's got claims on those assets, which are called liabilities.
+[41:09] So this picture, this snapshot, measures
+[41:12] the level of the bathtub.
+[41:13] But that's not enough to understand
+[41:15] how a company is doing.
+[41:18] You also have to look at the income statement, which
+[41:21] tells you the sources of funds, and the uses of funds
+[41:25] over any time period.
+[41:26] Typically on a quarterly basis.
+[41:30] So we're going to come back to this concept as the framework
+[41:33] for financial analysis.
+[41:35] And by the way, this is the sum total of the tools
+[41:39] that Warren Buffett uses for analyzing his investments.
+[41:44] That's it.
+[41:46] Believe it or not.
+[41:47] Nothing fancier.
+[41:49] So it's an incredibly powerful set of ideas
+[41:51] if you know how to read it.
+[41:57] That framework when you think about it
+[41:59] from a corporate financial decision perspective,
+[42:02] involves making decisions at five points in time.
+[42:08] Corporate financial decisions involve
+[42:11] thinking about how to deal with cash raised from investors.
+[42:16] How to think about cash invested in real assets,
+[42:20] and how to deal with cash generated by operations.
+[42:24] How much cash to reinvest, and how much cash you
+[42:28] give back to your investors.
+[42:31] So from this you should get the idea
+[42:33] that as a corporate financial officer
+[42:36] you are focused on cash, the flow of cash.
+[42:39] In fact, cash you can think of as the lifeblood of a company.
+[42:45] If you follow the cash, you will eventually
+[42:47] hit upon every important aspect of the modern corporation's
+[42:51] operations.
+[42:52] And as a financial officer, you will
+[42:54] be responsible for analyzing that flow.
+[42:57] And as a decision maker, as a leader of a corporation,
+[43:00] you're going to have to make decisions about that cash flow.
+[43:03] Jack Welch uses the information to be
+[43:06] able to make those decisions.
+[43:07] But he doesn't just get those decisions prepackaged for him,
+[43:10] he has to understand what those numbers mean.
+[43:13] Just like Warren Buffett.
+[43:15] Now the corporate financial decisions involved,
+[43:20] obviously, have a variety of different components
+[43:24] from a perspective of career paths.
+[43:29] From the management perspective real investment decisions
+[43:33] involve two and three.
+[43:35] So if you're thinking about investing
+[43:37] in a new division or a new plant or getting
+[43:39] involved in a new product area, you've
+[43:41] got to focus on two and three.
+[43:43] On the other hand, if you're the chief financial officer,
+[43:45] and you're thinking about how should the company finance
+[43:47] its operations, you're going to be focused on one and four.
+[43:51] If you're the board of directors,
+[43:53] and you're deciding how much to pay out to the shareholders,
+[43:56] you're going to be thinking about five.
+[43:58] And if you're engaged in managing
+[43:59] the risks of the corporation, you're
+[44:01] going to be worried about one and five.
+[44:03] And ultimately your objective as a shareholder
+[44:07] and as a manager of this corporation
+[44:10] is to do well by the owners.
+[44:13] So your objective is to maximize shareholder wealth,
+[44:16] and the framework that I've introduced
+[44:18] is going to allow you to do that.
+[44:20] Now again, this may seem kind of theoretical to you,
+[44:23] and I realize that.
+[44:24] So I'm going to ask you to make this more personal.
+[44:27] And to do that, I'm going to ask you to turn this
+[44:30] into your own personal household financial decision
+[44:32] making framework.
+[44:34] So I'd like you to take all of these ideas
+[44:36] and literally apply them to yourself.
+[44:38] Think about the cash flows that are
+[44:42] flowing through your own life.
+[44:45] There may not be that much right now since you're at school,
+[44:48] but believe me, it will grow.
+[44:51] So the household, this is you, sits in
+[44:55] between real economic activities.
+[44:57] In other words, your job, and financial assets
+[45:00] and liabilities, which are all of the financial transactions
+[45:04] that you deal with.
+[45:06] So this cash flow process that I outlined for corporations, it
+[45:11] works for you too.
+[45:13] So there's cash raised from financial institutions, right?
+[45:17] Like student loans or borrowing or home equity loans.
+[45:22] There's cash invested in real assets.
+[45:25] What's the biggest real asset that you are all
+[45:27] investing in right now?
+[45:29] AUDIENCE: Education [INAUDIBLE].
+[45:30] ANDREW W. LO: Exactly.
+[45:31] Human capital, yourselves.
+[45:32] Your own education.
+[45:35] Cash generated by labor supply.
+[45:37] Well, obviously, when you get a job
+[45:38] you're going to be generating cash.
+[45:40] Cash consumed and reinvested in real assets.
+[45:43] So consumed means beer or pretzels or whatever,
+[45:47] and investing in real assets means
+[45:49] you invested either in yourself or you invest it
+[45:53] in a home or your children.
+[45:56] Those are real assets.
+[45:57] Sometimes they're also real liabilities,
+[45:59] but that's a separate issue.
+[46:00] And finally cash invested in financial assets.
+[46:05] Most of you may not have a lot of financial assets
+[46:07] at this point, but you actually have some.
+[46:09] I suspect 401(k) plans, retirement, Social Security.
+[46:13] Those are financial assets that whether you know it or not,
+[46:16] you're invested in.
+[46:17] And so when you think about management,
+[46:20] think about personal management.
+[46:22] How are you managing yourself?
+[46:25] You've got to think about real investment.
+[46:26] Consumption and financing, savings and investment,
+[46:29] risk management, and, obviously, what is
+[46:32] your overall objective in life?
+[46:36] And what you ought to be doing is with that objective in mind,
+[46:40] managing your real and financial assets
+[46:43] to maximize the likelihood of achieving those objectives.
+[46:49] So what I'm asking you to do is, I want you
+[46:52] to take this course personally.
+[46:54] I want you to take the ideas.
+[46:56] Every single idea that I mention,
+[46:58] and whether I tell you to or not for the next 13 weeks,
+[47:01] I want you to take that idea and ask the question,
+[47:04] how does that make my life better off?
+[47:05] How can I use that in my own personal management activities
+[47:11] to improve the kind of decisions that I'm making?
+[47:13] Because if you could do that, if you
+[47:15] learn how to do that instinctively,
+[47:17] you will then take those ideas and apply them
+[47:19] to management contexts in your career.
+[47:21] And it will make it much more likely
+[47:23] that you'll get more out of this course
+[47:25] than you otherwise might.
+[47:27] Now there are two other factors that I describe
+[47:29] that make financial analysis challenging,
+[47:33] and those two factors are time and risk.
+[47:40] I've argued before that without these two elements
+[47:43] finance is complete.
+[47:45] There is no more research to be done.
+[47:47] There's no more analysis to be done, and all of you
+[47:50] probably will already be able to intuit a lot of the decisions
+[47:55] that you're going to be forced to make.
+[47:58] Because without time-- and by time I mean decisions
+[48:02] at different points in time--
+[48:04] without time and without risk financial decisions
+[48:10] actually reduce to basic microeconomic analysis.
+[48:14] If you've taken an undergraduate course in microeconomics
+[48:17] supply equal demand, well, you've
+[48:19] learned all there is to learn about finance without time
+[48:22] and risk.
+[48:24] The only reason that finance is interesting,
+[48:27] the only challenging aspects of what we do
+[48:31] are because of time and risk.
+[48:35] The fact that cash flows now are not the same as cash
+[48:39] flows later, and that time flows in only one direction.
+[48:44] In about four lectures, I'm going
+[48:47] to give you an alternative proof of the theory
+[48:49] of special relativity.
+[48:51] And this proof will have to do with the fact
+[48:54] that interest rates are not negative.
+[48:57] It turns out that there's a very deep philosophical connection
+[48:59] between finance and physics that we're going to get to.
+[49:03] But this is something that you don't need to be a physicist
+[49:05] to understand.
+[49:06] In fact, I'd argue that Warren Buffett,
+[49:08] although he may not be able to articulate these principles,
+[49:13] these are principles that are somehow
+[49:15] inbred in his worldview.
+[49:18] He knows that $1 today is not the same as $1 next year.
+[49:22] And he also knows that $1 today without risk
+[49:24] is not the same as $1 today with a little bit of risk.
+[49:27] Even a tiny little bit of risk, he knows that.
+[49:31] And at the end of this course, you will too.
+[49:35] So risk we have to talk about in a much more serious way.
+[49:38] We're not going to get to that for probably six weeks,
+[49:41] because that's going to take a whole different set of tools
+[49:46] to understand.
+[49:47] So what I'd like to do for the first three or four weeks
+[49:50] is to focus on time and just time,
+[49:55] and then I'm going to bring in risk once we develop
+[49:57] a little bit more machinery to understand how to capture risk.
+[50:02] And when we put these two together,
+[50:04] we're going to get modern finance.
+[50:07] So that will happen some time in week six, seven, and eight.
+[50:13] Now finally, I want to talk about
+[50:15] the fundamental principles of finance,
+[50:17] and then I'm going to talk specifically about this course.
+[50:21] There are six fundamental ideas that finance has come up
+[50:27] with that really will change the way you think about the world,
+[50:32] and you won't appreciate it today.
+[50:35] I know that.
+[50:36] But I want to put it into your subconscious today,
+[50:40] because sometime over the next 13 weeks,
+[50:44] at least I hope over the next 13 weeks, your face will light up
+[50:49] and you're going to get it one day.
+[50:50] You're going to get it in the sense
+[50:52] that you will understand at that point in time
+[50:54] how these six principles can be used
+[50:58] to make any financial decision that you need to make
+[51:02] for the rest of your careers.
+[51:04] The first principle is pretty obvious.
+[51:06] There is no such thing as a free lunch.
+[51:09] Actually all of these principles are
+[51:11] approximations to a much more complex truth.
+[51:14] So if you really want to be strict about it,
+[51:17] it should read, there may be free lunches on occasion,
+[51:20] but there's no such thing as a free lunch program.
+[51:24] There isn't systematic free lunches.
+[51:28] You might be able to find one or two every now and then
+[51:30] if you're lucky and if you work hard,
+[51:33] but systematic transfers of wealth for no reason at all
+[51:38] are unlikely.
+[51:41] Second principle.
+[51:42] Other things equal-- and this is a phrase
+[51:44] that you'll hear economists utter all the time.
+[51:47] And of course, other things are never equal,
+[51:49] but let's pretend that they are.
+[51:52] Other things equal, individuals satisfy three characteristics.
+[51:58] They prefer more money to less.
+[52:01] That's often called non-satiation.
+[52:05] They prefer money now to money later,
+[52:08] and they prefer less risk to more risk
+[52:12] when risk is defined properly.
+[52:16] Now I'd argue that these principles
+[52:18] are in fact fairly universal.
+[52:21] Not that you can't find exceptions every now and then
+[52:24] for every individual, but by and large over periods of time
+[52:29] and over a large population this is generally true.
+[52:33] And if you don't believe me or if you
+[52:35] know people that don't satisfy these principles,
+[52:39] please introduce them to me after class.
+[52:41] I'd like to get to know them, and do some business with them.
+[52:48] Principle three.
+[52:49] All agents act to further their own self-interest.
+[52:54] Now again, this is not to say that there aren't
+[52:57] Mother Teresas out there.
+[52:59] That there aren't people that care about the general welfare
+[53:02] of the public.
+[53:04] But economists in their own unique and annoying way
+[53:07] have been able to redefine preferences to even argue
+[53:12] that Mother Teresa is incredibly selfish, because her utility
+[53:16] function is the utility
+[53:19] function of other people.
+[53:21] And so by doing all this good, Mother Teresa
+[53:23] was only furthering her own self-interests.
+[53:26] Isn't she so selfish.
+[53:28] Now, so in a way when the economist defines preferences,
+[53:33] they almost define it as a tautology.
+[53:36] But finance makes economics practical in the sense
+[53:40] that I'll describe in a few weeks exactly
+[53:44] what kinds of preferences are actually embodied in decision
+[53:48] making, and why this principle is more often than not,
+[53:52] a pretty good approximation to a much more complex reality.
+[53:56] Now the last three principles I'm not
+[54:00] going to talk about in great detail, because those really
+[54:03] embody a much larger set of issues
+[54:06] about economics and finance.
+[54:07] We're going to talk about those three principles,
+[54:10] but only in the last lecture oddly enough.
+[54:14] We're going to use them.
+[54:15] We're going to use these principles,
+[54:17] but in the last lecture I'm going
+[54:20] to question all of the framework that I've developed for you,
+[54:24] and show you where the holes are.
+[54:26] For the first 13 weeks, I'm going
+[54:28] to need you to willingly suspend your disbelief as we describe
+[54:32] the relatively straightforward and standardized framework
+[54:39] for thinking about financial problems.
+[54:41] And in the last lecture I'm going
+[54:43] to describe to you where the approximations were made,
+[54:46] and why you need to take advanced courses in finance
+[54:49] to fill those gaps.
+[54:53] So with that said, let me now turn to course overview,
+[54:57] and then I'll take questions about course mechanics.
+[55:00] There are going to be four sections of the course
+[55:02] as outlined in the syllabus.
+[55:04] The four sections are the introductory material,
+[55:07] which we've gone over today.
+[55:09] Section B, which we will cover for the next three or four
+[55:14] lectures is valuation.
+[55:16] Discounting and the mathematics of net present value.
+[55:19] Pricing stocks, bonds, futures, forwards, and options,
+[55:22] and the relative kinds of issues that
+[55:25] come up across those different asset classes.
+[55:30] Section C will focus on risk, and introduce risk
+[55:34] into the framework of section B. So once we complete Section C,
+[55:40] we will then have focused on time and risk.
+[55:44] And finally section D will be how
+[55:47] to apply those principles to problems in corporate finance.
+[55:51] What Jack Welch did from 1981 to 2001.
+[55:57] How do you take these ideas, and apply them
+[55:59] to practical circumstances.
+[56:02] And then the last lecture will be
+[56:04] a lecture-- this is not the same last lecture
+[56:07] as other last lectures.
+[56:08] I'm not going to die, but so I don't mean
+[56:10] to call it the final lecture.
+[56:11] That sounds a little ominous.
+[56:14] The idea behind this last lecture
+[56:16] is to put it all together, and explain
+[56:18] how these financial theories interact
+[56:21] with imperfections in the marketplace, and what is--
+[56:24] or is not good approximations.
+[56:29] Let me talk about course requirements now.
+[56:32] Obviously the lectures and the readings,
+[56:35] and attendance and participation will be an important part
+[56:39] of the course.
+[56:40] We are not going to cover the entire tome of Brealey, Myers
+[56:44] and Allen.
+[56:45] This is a book, which if dropped off of a six-story building
+[56:48] could actually kill somebody if it hit them.
+[56:51] So we can't possibly cover the entire textbook.
+[56:53] We'll cover selected chapters, but this is Finance 401,
+[56:58] so it's an introductory course.
+[56:59] And so the readings that you are going to be responsible for
+[57:02] are the ones that are outlined on the reading list,
+[57:04] and that I've listed in every lecture.
+[57:07] So for example, chapters one and two,
+[57:09] you are now responsible for.
+[57:11] And we will be grading class participation.
+[57:14] So I expect you to come to class prepared, and ready
+[57:17] to discuss material, and possibly
+[57:19] questions that we may have raised in the previous lecture.
+[57:22] And there will be one case study that you
+[57:24] will be responsible for writing up and handing in,
+[57:27] and that will be worth 10% of the grade.
+[57:29] And attendance and participation will be worth another 10%.
+[57:32] So that's 20% of your grade.
+[57:35] And then finally the midterm and final exam
+[57:39] will be worth 25% and 55%.
+[57:43] Let me explain a little bit about how
+[57:44] the midterm and final exam works, because it's
+[57:46] a little different in this class than in some
+[57:48] of the other classes.
+[57:48] And by the way, this grading scheme
+[57:51] and the particular mechanisms are
+[57:53] identical in these two sections that I teach,
+[57:55] and in the sections that Professor Wang teaches.
+[57:58] So he and I have coordinated to have the same approach, so
+[58:01] as not to advantage or disadvantage any one section.
+[58:06] In your readings packet will be a collection of problems
+[58:12] that we've put together.
+[58:13] And actually I don't know if it's in there right now
+[58:15] or if it's being photocopied, but we
+[58:17] will prepare a list of problems that you can work on.
+[58:22] These are completely optional.
+[58:24] And there are far too many problems for you
+[58:27] to be able to do even in one full semester.
+[58:32] The reason we give them to you is,
+[58:34] because the only way to learn finance is to do finance.
+[58:39] If you come into the class and listen
+[58:41] to my lectures you may be entertained
+[58:44] for an hour and a half, you won't learn the material.
+[58:48] In fact, I've now changed the way I talk about the course,
+[58:51] and I don't describe what I do as teaching anymore.
+[58:56] Because teaching implies that I can force feed knowledge
+[59:00] into your brains.
+[59:02] It turns out it can't be done.
+[59:04] And my two sons have proven that to me time and again.
+[59:08] You have to want to learn the material,
+[59:10] so you have to pull the knowledge from me into you.
+[59:14] In other words, you have to be an active participant.
+[59:17] My 12th grade math teacher used to say that mathematics
+[59:20] is not a spectator sport.
+[59:22] That's the same for finance.
+[59:23] Finance is not a spectator sport.
+[59:25] You actually have to do it.
+[59:27] You have to confront yourself with problems time and again,
+[59:31] and think about how to apply the principles in our lecture
+[59:33] to those problems.
+[59:36] The purpose of a lecture is to give you the motivation,
+[59:39] and take you through the most difficult aspects
+[59:43] of the principles and the theories of financial analysis.
+[59:47] But it's your job to do the analysis.
+[59:50] And to that end we're going to give you some motivation.
+[59:53] And the motivation is that the midterm and the final exams
+[59:56] are structured so that most of the weight
+[59:58] is placed on the final.
+[59:59] The reason is the final is cumulative.
+[60:01] So it's going to cover twice the material as the midterm.
+[60:04] Therefore it should be worth roughly double.
+[60:08] But the other reason is that financial analysis
+[60:12] is alien to the typical human cognitive process.
+[60:17] None of you are hard wired to engage in net present value
+[60:21] calculations.
+[60:22] And so it's going to take some time before you get it,
+[60:25] before it sinks in.
+[60:27] And I've taught this class many times
+[60:29] before, and usually somewhere between week eight and week 13
+[60:34] a light goes off in your head, and you get it.
+[60:37] And I see this by the bright smiles
+[60:39] on your face around that time.
+[60:41] It could be because you're getting
+[60:41] to the end of the semester, and you're
+[60:42] glad to be done with the class.
+[60:44] But I like to think that it's because at some point
+[60:46] you actually get it.
+[60:48] In a few rare cases it happens at week 14,
+[60:50] which is not so good, but hopefully
+[60:53] before the final exam.
+[60:55] Now in order to provide you with extra incentive to do problems,
+[60:59] and given this is an MBA class, I realize that all of you
+[61:03] have very busy schedules, and you
+[61:04] can schedule your own activities better than we can.
+[61:07] So rather than have weekly problem sets that are due,
+[61:10] and you have to hand them in, we have to hand them back.
+[61:12] It's a hassle for everybody.
+[61:14] There are no problem sets in this class.
+[61:16] None.
+[61:17] However, we're going to give you a package of problems
+[61:20] and solutions upfront.
+[61:22] You'll get that within the next few days.
+[61:25] And I will promise you that the majority of exam questions
+[61:31] will come verbatim from this package of problems.
+[61:36] Majority.
+[61:37] Meaning more than 50% of the points
+[61:39] will come from the package.
+[61:42] So if all you did was to memorize this entire stack,
+[61:47] you could ace the course.
+[61:49] But of course, that would mean you
+[61:51] would spend enormous amounts of time
+[61:53] in finance, which is not such a bad outcome either.
+[61:57] So we want to do this to eliminate
+[61:59] a lot of the fear and anxiety with financial analysis.
+[62:03] It is challenging, but it's a lot of fun too.
+[62:05] We want you to have fun, because that's
+[62:06] the only way you're going to learn this material well.
+[62:09] So it's up to you as to how much you want to do.
+[62:13] The recitations will cover selected problems.
+[62:16] So you're not going to be left on your own.
+[62:18] The recitations will go over problems and how to solve them.
+[62:21] I'll do a few in class, the ones that
+[62:23] are particularly challenging, but then you'll
+[62:25] need to do more on your own.
+[62:26] And if you do that, you will be prepared for the final exam
+[62:30] better than most.
+[62:31] The other material will be readings and lecture material,
+[62:35] and therefore there will be some customization,
+[62:38] because my lecture style is different from Professor
+[62:40] Wang's.
+[62:41] But the majority of the exam will be identical,
+[62:43] and it will be drawn from these problem banks
+[62:48] that you're going to get a copy of in advance.
+[62:51] Now frankly, I have to tell you that I don't really
+[62:53] like to give grades at all, but I'm forced to do so.
+[62:56] And so that's why we set up this process for assigning grades.
+[63:01] In fact, a few years ago, I came up
+[63:02] with what I thought was a brilliant way to assign grades,
+[63:06] but I haven't been able to convince the dean's office
+[63:08] to let me do that.
+[63:09] And you know what it is?
+[63:11] It goes like this.
+[63:11] Let me show you.
+[63:13] I propose to give everybody in this class a B. That's it.
+[63:21] Everybody gets a B. Now before I do this,
+[63:25] how many people would object to that?
+[63:27] Raise your hand.
+[63:29] All right, those of you with your hands up, you get As.
+[63:32] Done.
+[63:36] You see how brilliant that is?
+[63:39] I get a grade distribution.
+[63:40] No work.
+[63:43] The only problem is it only works once.
+[63:46] And when you're teaching two sections, so
+[63:47] somehow the second section, it doesn't work as well.
+[63:50] So I'm sorry I have to give grades.
+[63:53] You're all adults.
+[63:54] I realize that.
+[63:55] But nevertheless, this is a necessary part
+[63:57] of the curriculum.
+[63:58] So that's how we're going to be assigning grades.
+[64:02] In the last four minutes, and I think
+[64:05] I'm going to try to keep on time for the entire semester
+[64:07] so we end at five before the half hour,
+[64:11] and we start five after the hour.
+[64:13] In the last four minutes, I want to tell you
+[64:16] a little bit about how to get the most out of this course.
+[64:19] And we can take this up next time if you've got questions,
+[64:22] but I want you to spend time thinking about this.
+[64:25] Most of this course will be devoted to theory.
+[64:28] But finance is not a theoretical subject
+[64:31] unlike algebraic topology.
+[64:34] That's a theoretical subject.
+[64:35] I've never heard anybody become a practical or applied
+[64:39] algebraic topologist.
+[64:41] Finance on the other hand, there's
+[64:43] no finance without practice.
+[64:46] So while the course will be focused on the theory,
+[64:49] I need you to think about the practical elements of it,
+[64:52] and I'm going to help you in a couple of different ways.
+[64:55] One is by problems, but the other
+[64:57] is to encourage you to sit in on a pro-seminar called
+[65:00] the Practice of Finance.
+[65:02] This is a new pro-seminar that we're launching.
+[65:04] September 17 is the first meeting.
+[65:07] It doesn't carry any units, so you can come and go
+[65:09] as you please.
+[65:10] But it'll give you a sense of the practical aspects
+[65:12] of the industry, and in particular information
+[65:15] about the career aspects of the industry
+[65:17] like what are starting salaries for financial analysts.
+[65:20] Or how do I get a job in finance if I don't
+[65:22] have any background in it.
+[65:23] It'll go through those kinds of issues.
+[65:25] So I'd encourage you to keep that in mind.
+[65:28] The second thing is with respect to the course,
+[65:31] I will give you lecture notes ahead of time
+[65:34] for all of the lectures.
+[65:36] I expect you to take a look at them in advance.
+[65:38] Just skim them.
+[65:39] You don't have to read them, and try
+[65:41] to sort out what I'm saying.
+[65:42] But I want you to skim it at least.
+[65:44] And then in class I urge you to take lots of notes,
+[65:47] because the lecture notes are not meant to be complete.
+[65:50] In fact, they are purposefully incomplete
+[65:54] so that you have to use your hand
+[65:55] and write down your impressions of the material
+[65:58] as I'm speaking.
+[65:59] Because in that method, you will actually
+[66:02] absorb more of the material, and it'll stay with you longer.
+[66:07] I would urge you to review the lectures afterwards.
+[66:09] Review what I said.
+[66:10] Because you may have heard what I said,
+[66:12] but you may not have understood what I said,
+[66:14] and you may not be able to apply what I said.
+[66:17] So you need to spend time afterwards soaking it in.
+[66:21] I urge you to work on the assignments
+[66:22] in groups, but also alone.
+[66:24] Because when you do the midterm and final exams,
+[66:26] you'll be doing them alone.
+[66:28] So do both.
+[66:29] Don't just assume that you can do the same in groups
+[66:33] what you will do alone.
+[66:35] And finally, I would ask you to ask plenty of questions.
+[66:38] I'm going to manage the class discussion.
+[66:40] So that if we have time, I'd be happy to talk about issues that
+[66:43] are current and on your mind.
+[66:46] Even whether or not you should refinance your auto loan.
+[66:50] We're happy to take those kind of questions assuming
+[66:52] that it's apropos, and that we have the time
+[66:55] to be able to cover that.
+[66:56] I want you to get engaged.
+[66:57] I want you to take this course personally,
+[66:59] because that's the only way you're going
+[67:01] to really learn the material.
+[67:03] All right, thank you very much.
+[67:04] We're out of time.
+[67:05] We'll see you next Monday.

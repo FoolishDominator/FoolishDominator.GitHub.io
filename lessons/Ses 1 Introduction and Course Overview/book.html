@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金融理论入门：估值、现金流、时间与风险</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ── 基础重置 ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            color-scheme: light;
+            --bg-primary: #f7f7f8;
+            --bg-secondary: #ffffff;
+            --bg-card: #eef0f3;
+            --bg-code: #f2f3f5;
+            --text-primary: #1f2328;
+            --text-secondary: #57606a;
+            --text-muted: #6e7781;
+            --accent: #2563eb;
+            --accent-glow: rgba(37, 99, 235, 0.08);
+            --border: #d9dce1;
+            --border-subtle: #e7e9ec;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 文章容器 ── */
+        .book-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 32px 120px;
+        }
+
+        /* ── 标题 ── */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0 0 12px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 56px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 36px 0 12px;
+        }
+
+        /* ── 段落与文字 ── */
+        p {
+            margin: 0 0 16px;
+            color: var(--text-primary);
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── 引用 ── */
+        blockquote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--text-secondary);
+        }
+        blockquote p { margin: 0; }
+
+        /* ── 列表 ── */
+        ul, ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-primary);
+        }
+        li {
+            margin: 6px 0;
+        }
+
+        /* ── 分割线 ── */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 48px 0;
+        }
+
+        /* ── 表格 ── */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        thead {
+            background: var(--bg-card);
+        }
+        th {
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            color: var(--accent);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        tbody tr {
+            background: var(--bg-secondary);
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: var(--bg-card);
+        }
+
+        /* ── 代码 ── */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-code);
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.88em;
+            color: #6d28d9;
+        }
+
+        pre {
+            margin: 20px 0;
+            padding: 20px 24px;
+            background: var(--bg-code);
+            border-radius: var(--radius);
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--text-primary);
+        }
+
+        /* ── 视频嵌入卡片 ── */
+        .video-card {
+            margin: 32px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 12px 16px;
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .video-caption a {
+            color: var(--accent);
+        }
+
+        .video-card.fallback {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ── Lightbox：截图点击放大 ── */
+        .screenshot-card img { cursor: zoom-in; transition: opacity 0.15s; }
+        .screenshot-card img:hover { opacity: 0.9; }
+        .lightbox {
+            position: fixed; inset: 0; z-index: 999;
+            display: none; align-items: center; justify-content: center;
+            background: rgba(5, 5, 8, 0.92); backdrop-filter: blur(4px);
+            cursor: zoom-out; padding: 24px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 96vw; max-height: 90vh;
+            border-radius: 8px; box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+        }
+        .lightbox-caption {
+            position: absolute; bottom: 14px; left: 0; right: 0;
+            text-align: center; color: var(--text-secondary); font-size: 0.85em;
+        }
+
+        /* ── 顶部信息栏 ── */
+        .book-content > blockquote:first-of-type {
+            background: var(--accent-glow);
+            border-left-color: var(--accent);
+            border-radius: var(--radius);
+            margin-bottom: 32px;
+        }
+
+        /* ── 图表居中 ── */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        /* ── 滚动条 ── */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* ── 响应式 ── */
+        @media (max-width: 640px) {
+            .book-content { padding: 32px 16px 80px; }
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.3em; }
+        }
+    
+        .chapter-nav { margin: 28px 0; padding: 16px 20px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
+        .chapter-nav summary { cursor: pointer; color: #1f2328; font-weight: 600; }
+        .chapter-nav ol { margin-bottom: 0; }
+        .lightbox-caption { color: #f7f7f8; }
+        .screenshot-card img { height: auto; }
+        .mermaid svg { max-width: 100%; height: auto; }
+        @media (max-width: 640px) { table { display: block; overflow-x: auto; } }
+
+    </style>
+</head>
+<body>
+    <article class="book-content">
+        <h1 id="_1">金融理论入门：估值、现金流、时间与风险</h1>
+<blockquote>
+<p>MIT 15.401《Finance Theory I》第一讲 · Andrew W. Lo（罗闻全） · 2008 年秋季<br />
+原视频：<a href="https://www.youtube.com/watch?v=HdHlfiOAJyE"><em>Ses 1: Introduction and Course Overview</em></a> · 67 分 12 秒<br />
+本书依据整讲英文字幕、课堂画面及<a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/6445d784e4bacb5a5b0fee96716bc084_MIT15_401F08_lec01.pdf">官方第一讲幻灯片</a>译编。人物、市场事件、金额及课程安排均置于授课当年的语境中。</p>
+</blockquote>
+<p>金融分析的任务，可以归结为两个问题：<strong>一项资产值多少，以及在既定目标下应该如何管理它。</strong> 时间和风险让这两个看似简单的问题变得困难。理解现金流如何流动、何时发生、承担什么风险，就有了理解个人理财、投资管理和企业决策的共同起点。</p>
+<p>本讲先解释学习金融的理由，再通过一次真实的课堂拍卖展示价格如何形成，随后建立企业和家庭都能使用的分析框架，最后介绍基本原理与课程学习方法。</p>
+<nav class="chapter-nav" aria-label="章节目录"><details><summary>章节目录</summary><ol><li><a href="#_2">一、为什么金融是一门管理的基础语言</a></li><li><a href="#_5">二、金融等于“数学加金钱”吗？三种不同的实践</a></li><li><a href="#_8">三、金融体系中的四类参与者</a></li><li><a href="#_9">四、金融分析的两个任务：估值与管理</a></li><li><a href="#45">五、一个密封礼盒如何得到 45 美元的价格</a></li><li><a href="#_18">六、分析框架的起点：存量、流量与财务报表</a></li><li><a href="#_21">七、沿着现金走：从企业决策到个人生活</a></li><li><a href="#_25">八、为什么时间和风险决定了金融的难度</a></li><li><a href="#_28">九、金融基本原理：先建立近似，再理解边界</a></li><li><a href="#_30">十、课程地图与学习方法</a></li><li><a href="#_35">回看索引与术语</a></li></ol></details></nav>
+<h2 id="_2">一、为什么金融是一门管理的基础语言</h2>
+<p><strong>对应视频：00:00:26—00:10:41。</strong></p>
+<p>这门课面向 MBA 一年级学生，包括准备进入金融行业的人，也包括尚未决定职业方向、只是希望了解金融的人。Lo 的目标并不是让所有学生都成为金融从业者，而是让大家理解：金融知识会影响几乎所有需要权衡资源和结果的管理决策。</p>
+<p>在介绍自己时，他回顾了在耶鲁学习经济学、在哈佛获得经济学博士学位、在沃顿任教以及此后在 MIT 金融学组工作的经历。他反复强调，金融既可以在研究上非常严谨、充满智力挑战，也可以直接用于现实管理。这种理论与实践之间的联系，正是他选择这一领域的原因。</p>
+<h3 id="_3">第一次尝到金融的“滋味”</h3>
+<p>Lo 用小儿子第一次吃冰淇淋的故事形容接触新学科的体验：一个原本极度挑食的孩子，在几秒钟内从嫌弃转为好奇，再到着迷。他希望初学者也能经历类似的变化——从觉得金融陌生，到看见它如何解释真实问题。</p>
+<p>他还提出一个带有玩笑意味的教学评价办法：与其在学期末评价课程，不如五年后再评价。等学生真正进入职业生涯，才更容易判断某套知识能否持续改善决策。课程的价值，最终要由学生日后的使用来检验。</p>
+<h3 id="_4">数学基础与课程起点</h3>
+<p>这是一门入门课，不要求学生事先掌握高等数学、计算机或定量分析。课程会从共同的基本概念出发。不过，“入门”并不意味着不需要投入：许多金融思想与日常直觉不同，需要反复练习才能内化。</p>
+<p>本讲给出的路线是：先认识经济中的参与者，再理解估值和管理两个任务，建立分析框架，最后把时间与风险放入其中。接下来 13 周的内容，都可以放回这条主线上理解。</p>
+<h2 id="_5">二、金融等于“数学加金钱”吗？三种不同的实践</h2>
+<p><strong>对应视频：00:10:44—00:21:24。</strong></p>
+<p>Lo 用一个有意简化的表达开启讨论：</p>
+<p><strong>金融 = 数学 + 金钱。</strong></p>
+<p>这里的“数学”范围很宽：一端可以是微分几何、偏微分方程，另一端可以只是算术和中学代数。重点不在于一律使用复杂工具，而在于对涉及金钱的交易进行系统、严谨的分析。</p>
+<h3 id="james-simons">James Simons：高度定量化的投资</h3>
+<p>James Simons 原本是一位微分几何学家，曾担任石溪大学数学系主任，并与陈省身共同发展了 Chern-Simons 理论。Lo 介绍他时，先谈的是数学背景，再谈其创办的 Renaissance Technologies。</p>
+<p>在课堂叙述中，这家投资管理公司聚集了数学、物理、计算机等领域的博士，方法高度保密，却创造了非常突出的投资业绩。Lo 引用当时的行业报道，称 Simons 在 2006 年的个人收入达到 <strong>17 亿美元</strong>，并特意提醒学生区分“某一年的收入”与“一个人的财富”。</p>
+<p>这个例子说明，复杂数学可以服务于金融分析，但它只是金融实践的一种形态。</p>
+<h3 id="_6">沃伦·巴菲特：财务报表与估值判断</h3>
+<p>另一端是巴菲特。Lo 引述 2008 年福布斯的排名，提到当年 2 月约 <strong>620 亿美元</strong>的财富估计。他着重描述的不是复杂模型，而是一个规模很小的团队，持续阅读企业资料、利润表和资产负债表，进行估值判断。</p>
+<p>“使用基础算术”不等于“工作简单”。真正困难的部分，是看懂数字、理解业务，并判断这些数字意味着什么。两个人都在做金融分析，但使用的数学和组织方式很不一样。</p>
+<h3 id="_7">杰克·韦尔奇：企业经营中的财务决策</h3>
+<p>第三位人物是杰克·韦尔奇。他接受工程学训练，在 1960 年加入通用电气，1981 年成为 CEO。Lo 给出的课堂数据是：公司年营业收入从接任时约 <strong>260 亿美元</strong>，增长到 2001 年任期结束时约 <strong>1,300 亿美元</strong>。他也提到，任职初期员工人数从约 40 万降至 30 万，以及由此产生的“中子弹杰克”绰号。</p>
+<p>Lo 用这个案例强调的能力，是判断投资、控制成本、理解财务数字，并据此作出经营决策。韦尔奇的作用不在于亲自使用博士阶段的技术工具，而在于理解财务语言。</p>
+<blockquote>
+<p>数字校读：讲者随后口头说“达到原来的四倍半”，但按同一段给出的 260 亿与 1,300 亿计算，后者是前者的 5 倍。英文订正稿和逐段译稿保留原话；此处明确区分口头说法与算术关系。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>人物</th>
+<th>课堂强调的工作方式</th>
+<th>共同基础</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>James Simons</td>
+<td>定量研究、数学与计算工具、研究团队</td>
+<td>理解金融逻辑与价值</td>
+</tr>
+<tr>
+<td>沃伦·巴菲特</td>
+<td>阅读公司资料和财务报表，判断估值</td>
+<td>理解金融逻辑与价值</td>
+</tr>
+<tr>
+<td>杰克·韦尔奇</td>
+<td>判断投资、成本及企业资源配置</td>
+<td>理解金融逻辑与价值</td>
+</tr>
+</tbody>
+</table>
+<p>这三个例子不是“修完一门课就能复制成功”的承诺。Lo 的意思是：背景、职业和方法可以不同，对金融基本概念的理解却是重要的共同条件。</p>
+<h2 id="_8">三、金融体系中的四类参与者</h2>
+<p><strong>对应视频：00:21:27—00:22:57。</strong></p>
+<p>本课程重点研究四个组成部分：</p>
+<ol>
+<li><strong>家庭</strong>：从个人与家庭的角度处理收入、消费、储蓄及资产负债。</li>
+<li><strong>金融中介机构</strong>：处于金融交易和资金配置过程之中的机构。</li>
+<li><strong>非金融企业</strong>：从事实体经营，也必须作出投资和融资决策。</li>
+<li><strong>资本市场</strong>：各类金融资产交易与定价的重要场所。</li>
+</ol>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_22_10.png" alt="课堂中的经济流量图，用来定位家庭、金融中介、非金融企业和资本市场" loading="lazy">
+  <p class="video-caption">📷 课堂中的经济流量图，用来定位家庭、金融中介、非金融企业和资本市场<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=1330" target="_blank" rel="noopener">在 YouTube 中打开 (00:22:10)</a></p>
+</div>
+
+<p>经济还包括劳动市场、产品市场等。Lo 并未否认这些市场的重要性，而是根据课程时长，把注意力集中在上述四个部分。</p>
+<p>学习时应当留意：同一套分析原则换到不同参与者身上，术语和应用可能发生变化，底层逻辑却相通。企业的融资决策和家庭的借款安排，看起来属于不同问题，实际上都涉及现金流、时间、风险与目标。</p>
+<h2 id="_9">四、金融分析的两个任务：估值与管理</h2>
+<p><strong>对应视频：00:23:01—00:26:03，以及 00:35:45—00:38:14。</strong></p>
+<h3 id="_10">先确定价值，再作出选择</h3>
+<p>第一个任务是<strong>资产估值</strong>，第二个任务是<strong>资产管理</strong>。在一个已经明确目标、并且能够比较各方案价值的框架中，管理就是选择更有助于实现目标的方案。</p>
+<p>课堂用一句话概括这个关系：</p>
+<p><strong>目标 + 估值 → 决策。</strong></p>
+<p>这并没有消除管理的难度，而是指出难度主要落在哪里：首先要弄清目标，然后要知道比较的究竟是什么价值，以及这个价值是如何得到的。</p>
+<h3 id="_11">水与钻石：有用不等于昂贵</h3>
+<p>水是生命所必需的，却通常不昂贵；钻石并非生存必需，却可能极其昂贵。这个对照迫使我们区分日常语言中的“很重要”“很有用”和交易情境中的“值多少钱”。</p>
+<p>本讲没有在这里完整推导水与钻石的价格，而是借此提醒：<strong>讨论估值，必须先明确价值的含义和分析情境。</strong></p>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_25_30.png" alt="资产估值与资产管理的课堂框架：在目标明确后，通过估值支持决策" loading="lazy">
+  <p class="video-caption">📷 资产估值与资产管理的课堂框架：在目标明确后，通过估值支持决策<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=1530" target="_blank" rel="noopener">在 YouTube 中打开 (00:25:30)</a></p>
+</div>
+
+<h3 id="_12">估值问题与管理问题各在问什么</h3>
+<table>
+<thead>
+<tr>
+<th>估值问题</th>
+<th>管理问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金融资产实际上如何定价？</td>
+<td>应该储蓄多少、消费多少？</td>
+</tr>
+<tr>
+<td>它们应该如何定价？</td>
+<td>应该买什么、卖什么？</td>
+</tr>
+<tr>
+<td>实际定价与应有定价是否一致？</td>
+<td>何时买入或卖出？</td>
+</tr>
+<tr>
+<td>金融市场在哪些意义上运作良好？</td>
+<td>如何为交易筹资？</td>
+</tr>
+</tbody>
+</table>
+<p>Lo 预计课程前三分之二主要研究估值，后三分之一把这些思想用于资本预算、风险管理等管理问题。同样的提问既可以指向企业，也可以指向个人生活。</p>
+<h2 id="45">五、一个密封礼盒如何得到 45 美元的价格</h2>
+<p><strong>对应视频：00:26:03—00:35:41。</strong></p>
+<p>这场课堂拍卖是本讲最具体的实验。它把“价格发现”从抽象名词变成了学生亲自参与的过程。</p>
+<h3 id="_13">第一步：随机选择拍卖物品</h3>
+<p>Lo 为两个班各准备了一件物品。为了避免偏袒某个班，他请一位学生在两张纸上分别写“正面”和“反面”，反扣、打乱，再分别放在两个包裹前。另一位学生抛硬币，决定当前班拍卖哪一件。</p>
+<p>随机化解决的是两个班之间的分配问题。选定之后，盒子仍然是密封的，学生不知道其中内容。</p>
+<h3 id="_14">第二步：明确规则与已有信息</h3>
+<p>有人猜价值为零，也有人说可能是负数。Lo 以本次交易的有限责任为由，说明购买者不会因为盒子里的东西而反过来承担额外欠款，因此先确立一个零下限。</p>
+<p>随后，他强调这是真实拍卖：出价意味着愿意支付，课后必须用现金结算。有人问钱归谁，他回答归自己，用来补偿购买教具的支出，并非慈善拍卖。</p>
+<p>这些细节都属于交易环境。它们决定参与者怎样理解自己报出的价格。</p>
+<h3 id="_15">第三步：通过竞价形成成交价</h3>
+<p>出价从 1 美元开始，逐渐升至 10、20、30 美元，随后又出现 31、35、40、45 美元的报价。有人询问能否做空，Lo 明确拒绝。在没有人愿意出到 50 美元时，礼盒以 <strong>45 美元成交</strong>。</p>
+<p>这时，一个可以用于分析的数字已经形成，但谁也还没有看过盒子里的东西。Lo 因而追问：这个数字是怎样产生的？为什么停在 45，而不是 50？</p>
+<h3 id="_16">第四步：拆开礼盒，区分成交与信息</h3>
+<p>礼盒打开后，里面是一台 <strong>4 GB 版 iPod nano</strong>。Lo 说它当时的零售价是 <strong>149 美元</strong>。</p>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_33_51.png" alt="课堂拍卖揭晓：未知内容的礼盒成交后，学生展示盒中的 iPod nano" loading="lazy">
+  <p class="video-caption">📷 课堂拍卖揭晓：未知内容的礼盒成交后，学生展示盒中的 iPod nano<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2031" target="_blank" rel="noopener">在 YouTube 中打开 (00:33:51)</a></p>
+</div>
+
+<p>对买家来说，45 美元买到这件物品很划算；对卖家来说，没有收回希望得到的 149 美元。但如果卖家的目标是立刻把一个内容不透明的盒子卖出去，市场确实完成了这个任务，而且产生了正的成交收入。</p>
+<blockquote>
+<p>数字校读：讲者把 45 美元称作大约三分之一的价值，并口头提到约 66% 的折价。以 149 美元作比较基准，45 ÷ 149 约为 30.2%，对应折价约 69.8%。这只是对课堂给定数字的核算，不改变实验要说明的信息问题。</p>
+</blockquote>
+<h3 id="_17">“不知道盒内物品”并不等于“没有信息”</h3>
+<p>学生不能触摸、摇晃或检查盒内物品，但仍然掌握一些线索：包装大小、讲者是一位教授、欺骗学生可能带来的声誉与院内约束，以及课堂拍卖的具体规则。</p>
+<p>因此，出价是在有限信息下形成的，并非在真正的真空中形成。Lo 将成交价低于他希望得到的金额，解释为缺乏透明度和物品信息的结果。</p>
+<p>本讲据此留下三个需要继续分析的问题：</p>
+<ul>
+<li>市场如何把参与者的信息和判断转化为价格？</li>
+<li>一个价格已经形成，是否意味着它就是“正确”的价值？</li>
+<li>评价市场运作好坏时，应当看卖方收入、买方收益，还是交易能否完成？</li>
+</ul>
+<p>这次演示能展示价格发现的过程，却没有在这一讲中分解出各个因素对 45 美元的精确贡献。Lo 正是借此说明，进一步的定量分析为什么必要。</p>
+<h2 id="_18">六、分析框架的起点：存量、流量与财务报表</h2>
+<p><strong>对应视频：00:38:18—00:41:51。</strong></p>
+<p>会计提供了描述利润、亏损、收入、成本等经济概念的词汇和计量起点。Lo 要求学生首先掌握两个概念：<strong>存量（stock）</strong>和<strong>流量（flow）</strong>。</p>
+<p>这里的 stock 不是“股票”，而是某个时点的资产水平。flow 则是资产随时间变化的速率。</p>
+<h3 id="_19">浴缸的比喻</h3>
+<p>想象一个正在进水的浴缸：浴缸里已经有多少水，是存量；水以多快的速度流入，是流量。熟悉微积分的人，也可以把它理解为一个变量及其对时间的一阶导数。</p>
+<p>Lo 回忆，研究生课堂上有人觉得“变量与导数”比浴缸更直观。老师的回应是，各人可以选适合自己的理解方式。真正重要的是，不要把某个时点的数量与一段时间内的变化混为一谈。</p>
+<table>
+<thead>
+<tr>
+<th>观察角度</th>
+<th>浴缸比喻</th>
+<th>课堂中的会计对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>存量</td>
+<td>某一时刻浴缸里的水量</td>
+<td>资产负债表展示某个时点的财务状况</td>
+</tr>
+<tr>
+<td>流量</td>
+<td>水流入或流出的速度</td>
+<td>利润表展示一段期间的收入、费用与经营成果</td>
+</tr>
+</tbody>
+</table>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_40_30.png" alt="存量与流量的课堂说明：用资产负债表和利润表分别观察时点与期间" loading="lazy">
+  <p class="video-caption">📷 存量与流量的课堂说明：用资产负债表和利润表分别观察时点与期间<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2430" target="_blank" rel="noopener">在 YouTube 中打开 (00:40:30)</a></p>
+</div>
+
+<h3 id="_20">一张快照不能说明全部经营状况</h3>
+<p>只知道公司当前有什么资产，以及这些资产对应什么权利或义务，还不够。还要观察一段时间内公司的经营如何产生收入与损失。课堂以季度作为常见的观察期间。</p>
+<p>Lo 在这里用简化的语言把会计报表与财富流动联系起来，随后才转入现金流框架。阅读时应保留这一层区别：<strong>利润表中的利润，不应直接当作同额的现金流。</strong> 本讲的重点是“时点与期间”这两种观察方式，以及报表能够支持经营判断。</p>
+<p>他把巴菲特再次作为例子：基础报表本身可以很朴素，但从中读出有用信息的能力非常有力量。</p>
+<h2 id="_21">七、沿着现金走：从企业决策到个人生活</h2>
+<p><strong>对应视频：00:41:57—00:47:25。</strong></p>
+<h3 id="_22">企业的五个现金流环节</h3>
+<p>从企业财务决策的角度，Lo 把分析组织为五个环节：</p>
+<ol>
+<li>从投资者处筹集现金。</li>
+<li>将现金投入实物资产。</li>
+<li>经营活动产生现金。</li>
+<li>将部分现金用于再投资。</li>
+<li>将部分现金返还投资者。</li>
+</ol>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_42_25.png" alt="企业现金流的五个环节：筹资、投资、经营回款、再投资和返还投资者" loading="lazy">
+  <p class="video-caption">📷 企业现金流的五个环节：筹资、投资、经营回款、再投资和返还投资者<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2545" target="_blank" rel="noopener">在 YouTube 中打开 (00:42:25)</a></p>
+</div>
+
+<p>下面的图按课堂这五个环节整理，编号保留了讲者的对应关系：</p>
+<pre class="highlight"><code class="language-mermaid">graph LR
+    I[投资者] --&gt;|1 筹集现金| C[企业]
+    C --&gt;|2 投入现金| A[实物资产与经营活动]
+    A --&gt;|3 经营产生现金| C
+    C --&gt;|4 留存再投资| C
+    C --&gt;|5 返还现金| I
+</code></pre>
+
+<p>现金是公司运转的命脉。追踪它，会触及经营中的许多重要环节。不过，拥有数据并不等于已经拥有决策；管理者必须理解数字的含义。</p>
+<p>不同岗位从同一张图中提出不同问题。按本讲的编号，管理者的实物投资决策重点落在 <strong>2 和 3</strong>，融资安排关注 <strong>1 和 4</strong>，董事会的分配决策关注 <strong>5</strong>，讲者讨论的风险管理关注 <strong>1 和 5</strong>。这些对应关系用来帮助初学者定位问题，而不是在本讲中穷尽各岗位的职责。</p>
+<p>在课程采用的企业分析框架中，股东和管理者的目标是为所有者谋求好的结果，具体表述为最大化股东财富。</p>
+<h3 id="_23">家庭可以使用同样的框架</h3>
+<p>Lo 随即要求学生把这张图换成自己的生活。家庭处在劳动等真实经济活动，与金融资产、金融负债之间，同样面对资金如何获得、如何使用的问题。</p>
+<table>
+<thead>
+<tr>
+<th>企业框架中的环节</th>
+<th>课堂给出的家庭对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>筹集资金</td>
+<td>助学贷款、其他借款、房屋净值贷款</td>
+</tr>
+<tr>
+<td>投入实物资产</td>
+<td>当前对教育与自身人力资本的投入</td>
+</tr>
+<tr>
+<td>经营产生现金</td>
+<td>提供劳动、工作取得现金收入</td>
+</tr>
+<tr>
+<td>消费或再投资</td>
+<td>日常消费，以及对自己、住房、孩子的投入</td>
+</tr>
+<tr>
+<td>配置金融资产</td>
+<td>储蓄、退休计划等金融安排</td>
+</tr>
+</tbody>
+</table>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_46_04.png" alt="家庭现金流框架：将借款、教育、劳动收入、消费和金融资产放在同一张图中" loading="lazy">
+  <p class="video-caption">📷 家庭现金流框架：将借款、教育、劳动收入、消费和金融资产放在同一张图中<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2764" target="_blank" rel="noopener">在 YouTube 中打开 (00:46:04)</a></p>
+</div>
+
+<p>课堂以美国的 401(k) 计划、退休安排和社会保障权益为例，提醒学生：即使当前可支配资产不多，也已经处在一套金融安排之中。</p>
+<p>企业框架使用股东财富目标；个人框架则必须先回答“我希望怎样生活”。接下来才是围绕目标管理实物与金融资产，提高实现目标的可能性。</p>
+<h3 id="_24">把课程当作与自己有关的事</h3>
+<p>对每个概念，Lo 都要求学生追问：它怎样改善我的生活？怎样帮助我作出更好的个人决策？当这种思考成为习惯，迁移到职业管理情境就会更自然。</p>
+<p>他的要求不是把课堂知识停留在定义上，而是把它用到储蓄、消费、融资、教育投入和风险承担等真实选择中。</p>
+<h2 id="_25">八、为什么时间和风险决定了金融的难度</h2>
+<p><strong>对应视频：00:47:27—00:50:07。</strong></p>
+<p>如果所有现金流都在同一时刻发生，而且结果完全确定，许多问题可以简化为基础的微观经济分析。Lo 因此把时间和风险看成金融学特别需要研究的两个维度。</p>
+<h3 id="_26">时间：今天的一美元不等于明年的一美元</h3>
+<p>现金流的日期是其经济含义的一部分。即使名义金额相同，现在收到和以后收到也不能直接视为同一件事。本课程会先用数周建立处理时间的工具，再讨论贴现和净现值。</p>
+<p>讲者用“时间只朝一个方向流动”引出一个与物理学有关的课堂预告，并提到会借利率的设定作类比。这一讲并未给出那项论证，因而这里仅保留它作为后续课程的引子。</p>
+<h3 id="_27">风险：确定的一美元不等于不确定的一美元</h3>
+<p>即使日期相同，无风险的现金流与带风险的现金流也不同。金额之外，还需要理解获得该金额的不确定性。</p>
+<p>Lo 预计，在建立更多工具后再正式引入风险。<strong>把时间与风险结合起来，才进入这门课的现代金融分析框架。</strong></p>
+<pre class="highlight"><code class="language-mermaid">graph TD
+    C[需要比较的现金流] --&gt; T[时间：何时发生]
+    C --&gt; R[风险：结果是否确定]
+    T --&gt; V[估值]
+    R --&gt; V
+    V --&gt; D[结合目标作出管理决策]
+</code></pre>
+
+<p>这张图是对本讲论述的整理。它没有给出任何尚未讲授的定价公式，而是说明后续各种工具要回答什么问题。</p>
+<h2 id="_28">九、金融基本原理：先建立近似，再理解边界</h2>
+<p><strong>对应视频：00:50:13—00:54:49。</strong></p>
+<p>Lo 提出六条基本思想，并在本讲口头解释前三条。他特别强调：这些原理是对复杂现实的近似。先理解标准框架，后续才能判断近似在哪些地方有效、又在哪些地方不足。</p>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_50_25.png" alt="完整六条金融原理的课堂幻灯片；讲者先解释前三条，并把其余原理的深入讨论留到课程后段" loading="lazy">
+  <p class="video-caption">📷 完整六条金融原理的课堂幻灯片；讲者先解释前三条，并把其余原理的深入讨论留到课程后段<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=3025" target="_blank" rel="noopener">在 YouTube 中打开 (00:50:25)</a></p>
+</div>
+
+<h3 id="1">1. 不存在持续、系统性的免费午餐</h3>
+<p>“天下没有免费的午餐”是方便记忆的说法。更严谨的意思是：运气好、付出努力时，偶尔可能发现有利机会，但不能期待毫无缘由的财富转移持续、系统地发生。</p>
+<p>因此，这条原理并不是宣称所有偶然的好机会都不存在，而是在建立一种不依赖持续无偿获利的分析出发点。</p>
+<h3 id="2">2. 其他条件相同时，人们通常有三种偏好</h3>
+<ul>
+<li>钱多于钱少，通常更好；课堂称为<strong>非饱和性</strong>。</li>
+<li>现在拿到钱，通常优于以后才拿到。</li>
+<li>在风险定义恰当的前提下，风险较少通常优于风险较多。</li>
+</ul>
+<p>这里的关键限定是“其他条件相同”。Lo 承认现实中很难完全满足这个条件，也承认个人可能在特定时刻出现例外。他要表达的是，作为较长时期、较大人群的近似，这些假设通常有用。</p>
+<h3 id="3">3. 经济主体会采取行动增进自身利益</h3>
+<p>这条假设中的“自身利益”，不能简单等同于不顾他人的金钱私利。如果一个人关心他人的福利，帮助他人也可能满足自己的偏好。</p>
+<p>Lo 以特蕾莎修女作带有反讽意味的例子，说明经济学家可以把他人的福祉放入一个人的效用之中。他同时指出，这种定义有时接近同义反复；金融分析需要进一步把偏好变成可以具体讨论的决策结构。</p>
+<h3 id="46">4—6. 价格调整、市场适应与金融创新</h3>
+<p>官方第一讲幻灯片第 14 页列出了完整的六条原理。其余三条是：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>幻灯片中的原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>金融市场价格会调整，使供给与需求相等。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>金融市场具有高度适应性和竞争性。</td>
+</tr>
+<tr>
+<td>6</td>
+<td>风险分担与摩擦是金融创新的核心。</td>
+</tr>
+</tbody>
+</table>
+<p>这里补录的是配套课件列示的命题。讲者没有在本讲口头逐条展开，因此本书也不把它们扩写成已经完成论证的结论。特别是第五条的表述是“适应性和竞争性”，不应擅自替换成“市场价格永远正确”。</p>
+<h3 id="_29">原理的作用与局限</h3>
+<p>讲者计划先使用标准框架，最后一讲再回过头来讨论市场的不完美、理论中的近似及其漏洞。</p>
+<p>学习这些原理的方式，应当同时包括两步：先掌握它们如何帮助分析，再问清它们依赖哪些条件。把近似当作无条件成立的断言，会错过本讲反复强调的限定。</p>
+<h2 id="_30">十、课程地图与学习方法</h2>
+<p><strong>对应视频：00:54:53—01:07:08。</strong></p>
+<h3 id="_31">四个部分把“时间”和“风险”逐渐合起来</h3>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>本讲给出的内容</th>
+<th>与整体框架的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A：导论</td>
+<td>本讲的参与者、任务与分析框架</td>
+<td>建立共同语言</td>
+</tr>
+<tr>
+<td>B：估值</td>
+<td>贴现、净现值，股票、债券、期货、远期与期权的定价</td>
+<td>建立估值工具，先处理时间</td>
+</tr>
+<tr>
+<td>C：风险</td>
+<td>把风险引入前面的框架</td>
+<td>将时间与风险结合</td>
+</tr>
+<tr>
+<td>D：公司金融应用</td>
+<td>把原理用于实际企业决策</td>
+<td>从估值走向管理</td>
+</tr>
+</tbody>
+</table>
+<p>最后一讲会整合全课程，并讨论理论与市场不完美之间的关系。</p>
+<div class="video-card screenshot-card">
+  <img width="640" height="480" src="images/shot_00_55_20.png" alt="课程总体安排的前半页：导论、估值与风险；公司金融应用列在后续幻灯片中" loading="lazy">
+  <p class="video-caption">📷 课程总体安排的前半页：导论、估值与风险；公司金融应用列在后续幻灯片中<br><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=3320" target="_blank" rel="noopener">在 YouTube 中打开 (00:55:20)</a></p>
+</div>
+
+<h3 id="_32">当年的考核安排</h3>
+<p>本讲要求学生按指定清单阅读 Brealey、Myers 和 Allen 的教材，而不是读完整本书。眼前的阅读任务是第一、二章。出勤、准备和讨论也是课程的一部分。</p>
+<table>
+<thead>
+<tr>
+<th>考核项目</th>
+<th style="text-align: right;">占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>案例分析书面报告</td>
+<td style="text-align: right;">10%</td>
+</tr>
+<tr>
+<td>出勤与课堂参与</td>
+<td style="text-align: right;">10%</td>
+</tr>
+<tr>
+<td>期中考试</td>
+<td style="text-align: right;">25%</td>
+</tr>
+<tr>
+<td>期末考试</td>
+<td style="text-align: right;">55%</td>
+</tr>
+</tbody>
+</table>
+<p>期末考试权重较大，一方面因为它是综合性考试，覆盖更多内容；另一方面因为学生需要时间适应金融分析。Lo 说，很多人要到学期后段，才会真正把前面的知识联系起来。</p>
+<p>这些安排属于视频所记录的 2008 年课程。教师之间协调了不同班级的主要评分机制，但部分课堂材料仍会随授课风格而有所不同。</p>
+<h3 id="_33">自愿做题不等于可以不练习</h3>
+<p>课堂不要求每周上交习题，而是提前提供大量题目和答案。Lo 承诺，当年考试超过一半的分值会直接来自这套题库。习题课会讲解选定题目，他也会在课堂演示较难的问题，但学生仍需自行完成更多练习。</p>
+<p>这套安排的目的，是减少重复收交作业的负担和对考试的焦虑，把练习节奏交给学生。它没有改变学习本身的要求：<strong>学习金融分析，必须亲自做分析。</strong></p>
+<p>Lo 把这说成“金融不是一项观赏性运动”。听懂一次讲解，并不保证独立面对新问题时就会应用。</p>
+<h3 id="_34">课前、课中、课后各做什么</h3>
+<ol>
+<li><strong>课前浏览讲义。</strong> 不必提前吃透全部内容，但至少知道将要讨论什么。</li>
+<li><strong>课中主动记笔记。</strong> 讲义是刻意不完整的；要记下自己对推理和概念的理解。</li>
+<li><strong>课后回顾并消化。</strong> 区分“听见了”“理解了”和“能够使用”。</li>
+<li><strong>既合作，也独立做题。</strong> 小组讨论有帮助，但不能据此假定自己能独立完成；考试要求个人作答。</li>
+<li><strong>持续提问并联系实际。</strong> 只要与课程相关且时间允许，个人贷款等现实问题也可以成为讨论对象。</li>
+</ol>
+<p>Lo 还介绍了当年新开设、从 9 月 17 日开始的非学分研讨课 <em>The Practice of Finance</em>，用于讨论金融行业的实务与职业问题。这里的意义，是提醒学生把理论与实践联系起来。</p>
+<p>在结束前，他再次要求学生把课程看作与自己有关的事情。每学到一个概念，就尝试说明它怎样改变一个真实决策：先确定目标，识别现金流，分清存量与流量，再处理时间和风险。</p>
+<h2 id="_35">回看索引与术语</h2>
+<h3 id="_36">关键片段</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=26s">00:00:26</a></td>
+<td>课程定位、金融与管理</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=677s">00:11:17</a></td>
+<td>“数学加金钱”与三位人物</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=1287s">00:21:27</a></td>
+<td>金融体系四类参与者</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=1381s">00:23:01</a></td>
+<td>估值与管理</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=1563s">00:26:03</a></td>
+<td>密封礼盒拍卖</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2298s">00:38:18</a></td>
+<td>存量、流量与会计框架</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2517s">00:41:57</a></td>
+<td>企业与家庭现金流</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=2847s">00:47:27</a></td>
+<td>时间与风险</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=3013s">00:50:13</a></td>
+<td>金融基本原理</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=HdHlfiOAJyE&amp;t=3293s">00:54:53</a></td>
+<td>课程结构、考核与学习方法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_37">核心术语对照</h3>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>本书译法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>valuation</td>
+<td>估值</td>
+</tr>
+<tr>
+<td>price discovery</td>
+<td>价格发现</td>
+</tr>
+<tr>
+<td>financial intermediaries</td>
+<td>金融中介机构</td>
+</tr>
+<tr>
+<td>non-financial corporations</td>
+<td>非金融企业</td>
+</tr>
+<tr>
+<td>stock / flow</td>
+<td>存量／流量；证券语境中的 stock 另译“股票”</td>
+</tr>
+<tr>
+<td>balance sheet / income statement</td>
+<td>资产负债表／利润表</td>
+</tr>
+<tr>
+<td>cash flow</td>
+<td>现金流</td>
+</tr>
+<tr>
+<td>real assets / financial assets</td>
+<td>实物资产／金融资产</td>
+</tr>
+<tr>
+<td>capital budgeting</td>
+<td>资本预算</td>
+</tr>
+<tr>
+<td>discounting / net present value</td>
+<td>贴现／净现值</td>
+</tr>
+<tr>
+<td>non-satiation</td>
+<td>非饱和性</td>
+</tr>
+<tr>
+<td>utility function</td>
+<td>效用函数</td>
+</tr>
+</tbody>
+</table>
+<p>原始字幕中有三处简短的学生发言标为听不清，分别在 00:30:10、00:33:39 和 00:45:29。译稿保留了标记；它们不影响拍卖结果和主干论证。授课中的幽默、历史性陈述与当年课程安排，均按其课堂语境理解。</p>
+    </article>
+
+    <!-- Mermaid 图表引擎初始化 -->
+    <script src="assets/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: false, theme: 'default' });
+            
+            // 兼容普通代码块以及丢失 language-mermaid 类名的情况 (CodeHilite 干扰)
+            const codeNodes = document.querySelectorAll('pre code, .highlight code');
+            codeNodes.forEach(function(node) {
+                const text = node.textContent.trim();
+                // 匹配常见的 mermaid 图表前缀
+                if (text.startsWith('graph ') || text.startsWith('sequenceDiagram') || text.startsWith('gantt') || text.startsWith('pie') || text.startsWith('classDiagram') || text.startsWith('stateDiagram') || text.startsWith('mindmap')) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.className = 'mermaid';
+                    tempDiv.textContent = text;
+                    
+                    // 获取需要替换的最外层父节点 (比如 div.highlight 或者 pre)
+                    const wrapper = node.closest('.highlight') || node.parentNode;
+                    wrapper.replaceWith(tempDiv); 
+                }
+            });
+            
+            // 所有节点转换完成，统一进行图表动态绘制
+            mermaid.run();
+        });
+    </script>
+    <!-- Lightbox：截图点击放大 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = '<img alt=""><div class="lightbox-caption"></div>';
+            document.body.appendChild(lightbox);
+            const lbImg = lightbox.querySelector('img');
+            const lbCap = lightbox.querySelector('.lightbox-caption');
+            function openLightbox(src, alt) {
+                lbImg.src = src; lbImg.alt = alt || '';
+                lbCap.textContent = alt || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lbImg.src = '';
+                document.body.style.overflow = '';
+            }
+            document.querySelectorAll('.screenshot-card img').forEach(function(img) {
+                img.addEventListener('click', function() { openLightbox(img.src, img.alt); });
+            });
+            lightbox.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+        });
+    </script>
+</body>
+</html>
