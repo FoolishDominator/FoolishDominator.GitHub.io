@@ -64,6 +64,7 @@ li::marker { color: #a2a7ae; }
 .note-meta a { color: #667d97; }
 .breadcrumb { font-size: 14px; color: var(--muted); margin: 0 0 28px; }
 .site-footer {
+  width: calc(100% - 72px);
   max-width: 828px;
   margin: 0 auto;
   padding: 18px 0 32px;
@@ -89,7 +90,7 @@ th, td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: le
   h1 { font-size: 28px; }
   h2 { font-size: 20px; margin-top: 36px; }
   .entry-description { display: block; margin: 3px 0 0; }
-  .site-footer { margin: 0 22px; }
+  .site-footer { width: auto; margin: 0 22px; }
 }
 @media print {
   .site-header, .site-footer, .skip-link { display: none; }
