@@ -1,0 +1,114 @@
+.project-feature .post-header {
+  text-align: left;
+}
+
+.project-label {
+  margin: 0 0 18px;
+  color: #777;
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+
+.project-feature .post-title {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.project-tagline {
+  margin: 14px 0 0;
+  font-size: 23px;
+  color: #333;
+}
+
+.project-feature .post-body {
+  margin-top: 28px;
+}
+
+.project-description {
+  color: #666;
+}
+
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+}
+
+.project-features strong,
+.project-features span {
+  display: block;
+}
+
+.project-features strong {
+  color: #333;
+  font-size: 16px;
+}
+
+.project-features span {
+  margin-top: 6px;
+  color: #777;
+  font-size: 13px;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+}
+
+.project-actions .btn {
+  margin: 0;
+  padding: 8px 20px;
+  border-color: #222;
+  background: #222;
+  color: #fff;
+}
+
+.project-actions .btn:hover {
+  border-color: #555;
+  background: #555;
+  color: #fff;
+}
+
+.project-source {
+  font-size: 14px;
+}
+
+.project-actions .fa-arrow-right,
+.project-actions .fa-github {
+  margin-left: 6px;
+}
+
+.project-feature a:focus-visible,
+.archive-empty a:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 5px;
+}
+
+.archive-empty {
+  padding: 24px 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .project-feature .post-title {
+    font-size: 34px;
+  }
+
+  .project-tagline {
+    font-size: 20px;
+  }
+
+  .project-features {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
