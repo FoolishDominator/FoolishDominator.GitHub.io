@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT 金融理论 I · 第 3 讲：现值关系 II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ── 基础重置 ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            color-scheme: light;
+            --bg-primary: #f7f7f8;
+            --bg-secondary: #ffffff;
+            --bg-card: #eef0f3;
+            --bg-code: #f2f3f5;
+            --text-primary: #1f2328;
+            --text-secondary: #57606a;
+            --text-muted: #6e7781;
+            --accent: #2563eb;
+            --accent-glow: rgba(37, 99, 235, 0.08);
+            --border: #d9dce1;
+            --border-subtle: #e7e9ec;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 文章容器 ── */
+        .book-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 32px 120px;
+        }
+
+        /* ── 标题 ── */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0 0 12px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 56px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 36px 0 12px;
+        }
+
+        /* ── 段落与文字 ── */
+        p {
+            margin: 0 0 16px;
+            color: var(--text-primary);
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── 引用 ── */
+        blockquote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--text-secondary);
+        }
+        blockquote p { margin: 0; }
+
+        /* ── 列表 ── */
+        ul, ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-primary);
+        }
+        li {
+            margin: 6px 0;
+        }
+
+        /* ── 分割线 ── */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 48px 0;
+        }
+
+        /* ── 表格 ── */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        thead {
+            background: var(--bg-card);
+        }
+        th {
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            color: var(--accent);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        tbody tr {
+            background: var(--bg-secondary);
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: var(--bg-card);
+        }
+
+        /* ── 代码 ── */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-code);
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.88em;
+            color: #6d28d9;
+        }
+
+        pre {
+            margin: 20px 0;
+            padding: 20px 24px;
+            background: var(--bg-code);
+            border-radius: var(--radius);
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--text-primary);
+        }
+
+        /* ── 视频嵌入卡片 ── */
+        .video-card {
+            margin: 32px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 12px 16px;
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .video-caption a {
+            color: var(--accent);
+        }
+
+        .video-card.fallback {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ── Lightbox：截图点击放大 ── */
+        .screenshot-card img { cursor: zoom-in; transition: opacity 0.15s; }
+        .screenshot-card img:hover { opacity: 0.9; }
+        .lightbox {
+            position: fixed; inset: 0; z-index: 999;
+            display: none; align-items: center; justify-content: center;
+            background: rgba(5, 5, 8, 0.92); backdrop-filter: blur(4px);
+            cursor: zoom-out; padding: 24px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 96vw; max-height: 90vh;
+            border-radius: 8px; box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+        }
+        .lightbox-caption {
+            position: absolute; bottom: 14px; left: 0; right: 0;
+            text-align: center; color: var(--text-secondary); font-size: 0.85em;
+        }
+
+        /* ── 顶部信息栏 ── */
+        .book-content > blockquote:first-of-type {
+            background: var(--accent-glow);
+            border-left-color: var(--accent);
+            border-radius: var(--radius);
+            margin-bottom: 32px;
+        }
+
+        /* ── 图表居中 ── */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        /* ── 滚动条 ── */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* ── 响应式 ── */
+        @media (max-width: 640px) {
+            .book-content { padding: 32px 16px 80px; }
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.3em; }
+        }
+    </style>
+
+    <style>
+        .book-content { max-width: 860px; }
+        h1 { color: #172554; background: none; -webkit-text-fill-color: currentColor; }
+        :root { --text-muted: #57606a; }
+        .formula { margin: 20px 0; padding: 18px 20px; background: #eef2ff;
+            border: 1px solid #c7d2fe; border-radius: 10px; color: #172554;
+            font-family: Cambria, 'Times New Roman', 'Noto Serif SC', serif;
+            font-size: 1.15em; line-height: 1.9; overflow-x: auto; }
+        .formula sub, .formula sup { font-size: 0.75em; }
+        .toc { padding: 20px 24px; background: #fff; border: 1px solid #d9dce1; border-radius: 12px; }
+        .toc ul { margin-bottom: 0; }
+        .toc summary { cursor: pointer; font-weight: 600; color: #172554; }
+        .table-scroll { overflow-x: auto; margin: 24px 0; }
+        .table-scroll table { margin: 0; min-width: 510px; }
+        .lightbox-caption { color: #fff; }
+        @media (max-width: 640px) {
+            .formula { font-size: 1em; padding: 14px; }
+            .toc { padding: 12px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <article class="book-content">
+        <h1 id="mit-i-3-ii">MIT 金融理论 I · 第 3 讲：现值关系 II</h1>
+<blockquote>
+<p><strong>Andrew W. Lo · MIT 15.401 Finance Theory I · 2008 年秋季</strong><br />
+本讲从净现值决策出发，推导永续年金、增长型永续年金和有限期年金，最后讨论复利及利率报价。正文依据完整课堂字幕整理，插图直接由 MIT 官方原始 PDF 渲染。时间链接用于定位对应讲解；图片保留课件原貌。</p>
+</blockquote>
+<p><a href="https://foolishdominator.github.io/">返回主页</a> · <a href="https://foolishdominator.github.io/lessons/">课程笔记</a> · <a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI">完整视频</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf">原始课件 PDF</a></p>
+<details class="toc" open><summary>目录</summary><ul><li><a href="#1">1. 课前问答：汇率、证券与金融危机</a></li><li><a href="#2">2. 从现金流序列到净现值决策</a></li><li><a href="#3">3. 投资例题：照明系统与利息补贴</a></li><li><a href="#4">4. 永续年金：无限期付款为什么有有限价值</a></li><li><a href="#5-rg">5. 增长型永续年金：为什么必须 r&gt;g</a></li><li><a href="#6">6. 有限期年金：两项永续年金的差</a></li><li><a href="#7">7. 年金贴现因子与房贷付款额</a></li><li><a href="#8-apr-ear">8. 复利：APR 与 EAR 为什么不同</a></li><li><a href="#9">9. 课堂收尾：连续复利与复习线索</a></li><li><a href="#_1">来源与整理说明</a></li></ul></details>
+<h2 id="1">1. 课前问答：汇率、证券与金融危机</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=21s">00:21–21:12</a></strong></p>
+<h3 id="11">1.1 “确定”与“恒定”是两个不同的假设</h3>
+<p>学生首先问：某个项目的净现值（net present value，NPV），能否以一种货币计算时为正，换成另一种货币时为负？</p>
+<p>如果汇率（exchange rate）在所有日期都等于同一个正数 S，那么每笔现金流（cash flow）都乘以相同系数。在贴现关系也保持一致的情况下，可以把 S 提出求和符号：</p>
+<div class="formula">另一币种的 NPV = S × 原币种的 NPV，S &gt; 0。</div>
+
+<p>此时，正负号不会因为统一换算而改变。但课堂随即指出：<strong>没有不确定性（uncertainty），不等于某个量随时间保持不变。</strong> 一条未来完全已知的汇率路径，也可能逐年上升或下降。</p>
+<p>若不同日期使用不同的汇率，就不能从所有现金流中提出同一个常数。必须先确定自己关心的收付款币种，再处理各期的货币换算与相应的贴现。等引入不确定性以后，汇率还会成为额外的风险来源。</p>
+<p><strong>编者说明：</strong>讲师这一段的部分口述同时使用了“fixed”和“随时间上升”，措辞并不严密，而且尚未建立不同币种贴现率之间的关系。因此，不能仅凭这段讨论断言“改变计价单位就能改变项目经济价值”。这里应掌握的是：区分已知与恒定，明确计价币种，并一致地处理汇率和贴现。</p>
+<h3 id="12-paper">1.2 金融语境中的 paper 是什么</h3>
+<p>在金融讨论中，paper 常用来指证券（security）。商业票据（commercial paper）是一种债务工具（debt instrument），本质上代表发行人的付款承诺，类似一张欠条（IOU）。这与拥有公司部分所有权的股票是不同的权利。</p>
+<p>讲师同时提醒，课堂只有有限的时间，不能逐一解释所有金融术语。指定教材 Brealey、Myers 与 Allen 的相关章节，需要与课堂同步阅读；课堂没有定义过的术语，仍可能是必须掌握的知识。</p>
+<h3 id="13">1.3 公司股价下跌，为什么整个市场反而上涨</h3>
+<p>课堂以当时的房利美（Fannie Mae）与房地美（Freddie Mac）救助为例，区分两组利益：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>权利或影响</th>
+<th>救助讨论中的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所有者权益（owner's equity）</td>
+<td>公司亏损会损害原有股东的投资；救助并不意味着股东的损失得到补偿</td>
+</tr>
+<tr>
+<td>已发行的债务证券</td>
+<td>政府承担或支持付款义务，能降低这些证券无法偿付的担忧</td>
+</tr>
+<tr>
+<td>对其他企业的影响</td>
+<td>持有相关债权、与相关机构交易的企业，以及更广泛的经营环境，都可能受影响</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，“被救助公司的原股东受损”与“整个股市受到提振”可以同时发生。其他企业即使没有直接持有相关债务，也可能因为经营环境更稳定而受益。</p>
+<p>讲师用雷曼兄弟（Lehman Brothers）说明连锁传导：一个大型金融机构承压，可能冲击交易对手（counter-parties），再传导到其他机构及整个市场。这是 <strong>2008 年课堂当时的讨论</strong>，其中关于未来几天走势或机构是否倒闭的发言，应按当时的信息环境理解。</p>
+<h3 id="14">1.4 救助的两难与工具的适用范围</h3>
+<p>救助面临两方面的权衡：一方面，频繁救助可能产生道德风险（moral hazard），使投资者形成“损失由别人承担”的预期；另一方面，任由机构倒闭，也可能引发大规模恐慌和严重经济衰退。</p>
+<p>讲师用森林火灾作比喻：受控燃烧可以形成防火带，阻止火势蔓延。但金融系统没有一架能看清所有火源的“直升机”；隐藏的债务、交易关系和潜在损失，使隔离风险更加困难。他的个人看法是，市场可能还需要经历损失，才能重新认识风险，同时也必须防止失控的恐慌。</p>
+<p>对于高管被解雇后仍获得丰厚补偿的问题，讲师没有立即给出政策结论，而是指出金色降落伞（golden parachutes）、薪酬和绩效之间存在激励关系，将在公司金融（corporate finance）部分讨论。</p>
+<p>学生还提出国际救助政策的差异。讲师给出的思考方法是：先分别辨认经济问题、政治问题和社会问题，再讨论如何权衡。经济学能分析激励与成本，但并不能独自决定全部政治和社会取舍。</p>
+<h2 id="2">2. 从现金流序列到净现值决策</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1276s">21:16–25:13</a></strong></p>
+<h3 id="21">2.1 资产与资产价值</h3>
+<p>资产（asset）是一系列现金流（cash flows），而资产的价值是把这组现金流输入价值函数后，得到的一个数。把两者区分开，是本讲所有公式的起点。</p>
+<p>以每期贴现率（discount rate）恒定为 r 的简化情况为例，今天的价值为：</p>
+<div class="formula">V<sub>0</sub> = CF<sub>0</sub> + CF<sub>1</sub> / (1+r) + CF<sub>2</sub> / (1+r)<sup>2</sup> + …</div>
+
+<p>CF₀ 可以是负数，例如初始投资；未来各期的现金流也可以是负数，例如后续成本。把这些成本一并纳入，就得到净现值（net present value，NPV）。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_21_29.png" alt="原 PDF 第 16 页：把各期现金流折算至今天，并以净现值作决策" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 16 页：把各期现金流折算至今天，并以净现值作决策<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1289s" target="_blank" rel="noopener">定位课堂讲解 (00:21:29)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=16" target="_blank" rel="noopener">查看原课件第 16 页</a></p>
+</div>
+
+<p>在本讲的简化框架中，决策规则是：<strong>接受净现值为正的项目，拒绝净现值为负的项目。</strong> 后续课程的任务，是逐步放宽假设，让现金流预测、贴现率和市场条件更加贴近现实。</p>
+<h3 id="22">2.2 今天与未来之间的“兑换率”</h3>
+<p>货币时间价值（time value of money）允许把不同日期的金额转换到同一日期。若 r=5%，今天的一美元对应：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>日期</th>
+<th style="text-align: right;">今天 1 美元的未来金额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一年后</td>
+<td style="text-align: right;">1.05 美元</td>
+</tr>
+<tr>
+<td>两年后</td>
+<td style="text-align: right;">1.1025 美元，课件约写为 1.103</td>
+</tr>
+<tr>
+<td>三年后</td>
+<td style="text-align: right;">1.157625 美元，课件约写为 1.158</td>
+</tr>
+</tbody>
+</table></div>
+<p>反过来，t 年后的一美元，其现值（present value，PV）为：</p>
+<div class="formula">PV = 1 / (1+r)<sup>t</sup>。</div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_24_30.png" alt="原 PDF 第 17 页：5% 利率下，一美元在不同日期之间的换算" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 17 页：5% 利率下，一美元在不同日期之间的换算<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1470s" target="_blank" rel="noopener">定位课堂讲解 (00:24:30)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=17" target="_blank" rel="noopener">查看原课件第 17 页</a></p>
+</div>
+
+<p>在正利率假设下，收到现金的时间越远，现值越低；对于同一个未来日期，贴现率越高，现值也越低。下图用 4%、8% 与 12% 三条曲线展示这种关系。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_24_54.png" alt="原 PDF 第 18 页：不同利率下，未来一美元现值随等待时间下降" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 18 页：不同利率下，未来一美元现值随等待时间下降<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1494s" target="_blank" rel="noopener">定位课堂讲解 (00:24:54)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=18" target="_blank" rel="noopener">查看原课件第 18 页</a></p>
+</div>
+
+<h2 id="3">3. 投资例题：照明系统与利息补贴</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1518s">25:18–29:41</a></strong></p>
+<h3 id="31">3.1 节省成本也构成现金流</h3>
+<p>一家公司的总部每年支付 80 万美元电费。安装计算机控制的照明系统，需要立即投入 23 万美元，并在之后三年每年节约 9 万美元。</p>
+<p>估值（valuation）时，应该关注因采用该方案而发生变化的现金流（cash flows）。原有 80 万美元电费是背景；本题的投资序列是：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>期数</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增量现金流，美元</td>
+<td style="text-align: right;">−230,000</td>
+<td style="text-align: right;">90,000</td>
+<td style="text-align: right;">90,000</td>
+<td style="text-align: right;">90,000</td>
+</tr>
+</tbody>
+</table></div>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_25_34.png" alt="原 PDF 第 19 页：照明系统的初始支出与未来三年的成本节约" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 19 页：照明系统的初始支出与未来三年的成本节约<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1534s" target="_blank" rel="noopener">定位课堂讲解 (00:25:34)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=19" target="_blank" rel="noopener">查看原课件第 19 页</a></p>
+</div>
+
+<p>假设节约额确定，贴现率（discount rate）为 4%，净现值（net present value，NPV）就是：</p>
+<div class="formula">NPV = −230,000 + 90,000/1.04 + 90,000/1.04<sup>2</sup> + 90,000/1.04<sup>3</sup><br>= 19,758.19 美元。</div>
+
+<p>课件将结果约写为 19,758 美元；讲师口述为约 2 万美元。在这些假设下，项目值得接受。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_26_33.png" alt="原 PDF 第 20 页：逐期贴现后的照明项目净现值为正" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 20 页：逐期贴现后的照明项目净现值为正<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1593s" target="_blank" rel="noopener">定位课堂讲解 (00:26:33)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=20" target="_blank" rel="noopener">查看原课件第 20 页</a></p>
+</div>
+
+<h3 id="32">3.2 利率改变，决策也可能改变</h3>
+<p>如果市场利率更高，现在的资金就有更高的机会成本（opportunity cost）。把钱用于照明系统，意味着放弃了其他可获得的收益，因而未来节约额的现值会下降。</p>
+<p>例如，沿用本题的现金流，仅把 r 改为课堂讨论的 10%，复算得到 NPV 约为 <strong>−6,183.32 美元</strong>，项目便不再有正净现值。</p>
+<p>利率来自市场中实际可获得的投资机会，不能由管理者凭感觉挑选。管理者需要先识别可行替代方案，再进行估值与权衡。正确估值能帮助决策，但获得可靠的现金流与利率输入本身仍是一项重要工作。</p>
+<h3 id="33">3.3 课件自练：优惠贷款值多少钱</h3>
+<p>讲师简要介绍中海油（CNOOC）收购优尼科（Unocal）的课件例子，让学生自行做粗略计算。课件中的报价为每股 67 美元，并假设母公司提供合计 70 亿美元的优惠贷款。普通借款利率为 8%，优惠融资条件如下：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>贷款</th>
+<th style="text-align: right;">本金</th>
+<th style="text-align: right;">优惠利率</th>
+<th style="text-align: right;">期限</th>
+<th style="text-align: right;">每年节省的利息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>贷款 1</td>
+<td style="text-align: right;">25 亿美元</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">2 年</td>
+<td style="text-align: right;">25 亿 × 8% = 2 亿美元</td>
+</tr>
+<tr>
+<td>贷款 2</td>
+<td style="text-align: right;">45 亿美元</td>
+<td style="text-align: right;">3.5%</td>
+<td style="text-align: right;">30 年</td>
+<td style="text-align: right;">45 亿 × (8%−3.5%) = 2.025 亿美元</td>
+</tr>
+</tbody>
+</table></div>
+<p>要估算利息补贴（interest subsidy）的现值（present value），先写出每年的利息节约，再按普通融资利率贴现。按课件的年末付款序列，前两年同时获得两笔贷款的节约，之后只剩第二笔。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_29_27.png" alt="原 PDF 第 21 页：以优惠贷款利息节约的贴现值估算融资补贴" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 21 页：以优惠贷款利息节约的贴现值估算融资补贴<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1767s" target="_blank" rel="noopener">定位课堂讲解 (00:29:27)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=21" target="_blank" rel="noopener">查看原课件第 21 页</a></p>
+</div>
+
+<p><strong>课件数字核对：</strong>原图把两笔年度节约都近似写为 2 亿美元，并给出约 26.2 亿美元的答案。按图中明确列出的“前两年 4 亿、随后 28 年每年 2 亿”序列，以 8% 复算为 <strong>26.0821 亿美元</strong>；若保留第二笔贷款每年 2.025 亿的精确值，则为 <strong>26.3635 亿美元</strong>。原图的近似答案与展示的数值存在小幅差异，这里保留原图并明确说明。该例的重点是，把融资优惠转换为现金流，再计算现值。</p>
+<h2 id="4">4. 永续年金：无限期付款为什么有有限价值</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1785s">29:45–45:38</a></strong></p>
+<h3 id="41">4.1 定义与付款时点</h3>
+<p>永续年金（perpetuity）是一项从下一期开始、每期永远支付相同金额 C 的权利。今天是第 0 期，付款发生在第 1、2、3……期。</p>
+<p>假设每期利率（interest rate）恒定为 r，且 r&gt;0，则其现值（present value，PV）为：</p>
+<div class="formula">PV = C/(1+r) + C/(1+r)<sup>2</sup> + C/(1+r)<sup>3</sup> + …</div>
+
+<p>付款的名义金额加总是无穷大，但越远期的现金流（cash flow），贴现到今天的价值越小。只要这个贴现后的级数收敛，现值就可以有限。</p>
+<h3 id="42">4.2 乘、减、除的推导</h3>
+<p>把等式两边乘以 1+r，会得到原级数再加一个 C：</p>
+<div class="formula">(1+r)PV = C + PV<br>rPV = C<br><strong>PV = C/r</strong></div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_32_45.png" alt="原 PDF 第 22 页：从无穷贴现现金流推导永续年金公式 C/r" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 22 页：从无穷贴现现金流推导永续年金公式 C/r<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=1965s" target="_blank" rel="noopener">定位课堂讲解 (00:32:45)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=22" target="_blank" rel="noopener">查看原课件第 22 页</a></p>
+</div>
+
+<p>假设永远每年支付 100 美元：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>每年利率 r</th>
+<th style="text-align: right;">现值 C/r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10%</td>
+<td style="text-align: right;">100/0.10 = 1000 美元</td>
+</tr>
+<tr>
+<td>5%</td>
+<td style="text-align: right;">100/0.05 = 2000 美元</td>
+</tr>
+</tbody>
+</table></div>
+<p>这个公式依赖固定现金流、恒定贴现率，以及第一笔付款在下一期等条件。若利率随时间变化，就要回到逐期贴现的方法，不能继续直接使用一个固定的 C/r。</p>
+<h3 id="43">4.3 真实交易与市场利率</h3>
+<p>讲师以英国永续公债（consol）作为课堂中的历史例子，也提到迪士尼（Walt Disney）曾发行百年期债券。百年与永远并不相同，但在适当的正贴现率下，遥远未来的付款对现值的贡献已经很小，因此很长的付款序列可以接近永续情形。</p>
+<p>对一项符合永续年金假设的权利，市场价格 P 与利率之间可以相互换算：</p>
+<div class="formula">P = C/r，因而 r = C/P。</div>
+
+<p>例如 C=100 美元、市场价格 P=500 美元，隐含利率就是 20%。价格不是凭空给定的，它反映了市场参与者对未来、风险与替代机会的判断。</p>
+<h3 id="44">4.4 拍卖怎样形成价格</h3>
+<p>市场定价（market pricing）并非没有分析。研究者提供估值方法，交易者再结合经营因素作出报价。这个过程可能犯错，但讲师认为市场机制总体仍有重要的信息功能。</p>
+<p>拍卖（auction）的设计会影响报价是否能够反映真实经济估值。课堂举出一种机制：最高报价者获胜，但支付第二高报价，而非自己的最高报价。讲师用它说明，规则可以改变参与者的激励，使报价更接近真实偏好。</p>
+<p>课程此时先假设市场能够提供合适价格；后面再研究市场机制、激励，以及心理偏差（psychological biases）为什么会使这个假设受到挑战。不同年份的价格也不能脱离当时的信息比较，因为市场条件会变化。</p>
+<h3 id="45">4.5 价格没涨，并不意味着没有收益</h3>
+<p>如果 C 和 r 都不变，永续年金的价格 C/r 就不变。以 C=100、r=10% 为例，今天价值 1000 美元，未来同一付款时点下仍然价值 1000 美元。</p>
+<p>但持有人每年收到 100 美元票息（coupon）。因此，价格收益率（price return）为零，并不代表总收益率（rate of return）为零。按同一期初与期末的价格口径：</p>
+<div class="formula">一年的总收益率 = (期末价格 − 期初价格 + 当年付款) / 期初价格<br>= (1000 − 1000 + 100) / 1000 = 10%。</div>
+
+<h2 id="5-rg">5. 增长型永续年金：为什么必须 r&gt;g</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=2742s">45:42–52:26</a></strong></p>
+<h3 id="51-c">5.1 C 表示下一期的第一笔付款</h3>
+<p>在增长型永续年金（growing perpetuity）中，现金流（cash flow）永远持续，但每期按恒定增长率（rate of growth）g 增长。这里的 C 是下一期的付款，不是今天的付款：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>期数</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>付款</td>
+<td>C</td>
+<td>C(1+g)</td>
+<td>C(1+g)²</td>
+<td>…</td>
+</tr>
+</tbody>
+</table></div>
+<p>若 C=100 美元、g=5%，前三笔依次为 100、105、110.25 美元。</p>
+<p>按恒定贴现率（discount rate）r 贴现，得到：</p>
+<div class="formula">PV = C/(1+r) + C(1+g)/(1+r)<sup>2</sup> + C(1+g)<sup>2</sup>/(1+r)<sup>3</sup> + …<br><strong>PV = C/(r−g)，条件是 r &gt; g。</strong></div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_46_02.png" alt="原 PDF 第 23 页：增长型永续年金的推导及收敛条件 r 大于 g" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 23 页：增长型永续年金的推导及收敛条件 r 大于 g<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=2762s" target="_blank" rel="noopener">定位课堂讲解 (00:46:02)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=23" target="_blank" rel="noopener">查看原课件第 23 页</a></p>
+</div>
+
+<p>相对于同样第一笔付款的固定永续年金（perpetuity），在其他条件相同、正增长且满足 r&gt;g 时，分母变小，现值（present value）变大。这是未来付款增长的结果。</p>
+<h3 id="52-rg">5.2 r=g 时，每项贴现值不再变小</h3>
+<p>若 r=g，增长恰好抵消贴现。每一项都变成相同的正数：</p>
+<div class="formula">C(1+g)<sup>t−1</sup> / (1+r)<sup>t</sup> = C/(1+r)。</div>
+
+<p>把无穷多个相同的正数相加，结果会发散。因此，不能把 r=g 直接代入一个分母为零的简式，假装得到普通的有限价格。</p>
+<p>若 g&gt;r，付款增长得比贴现衰减更快，原级数同样不收敛。<strong>C/(r−g) 的适用条件已经不成立，不能因为分母为负，就把一串正付款解释成负价值。</strong></p>
+<h3 id="53">5.3 短期高增长与永远高增长</h3>
+<p>讲师强调，有限时期内增长率超过利率，并没有被这个结论排除。限制来自“永远保持同样增长率”的假设。</p>
+<p>课堂以当时中国的高速经济增长作说明，并用夸张的星球比喻强调：把某一时期的高增长无限外推，会得到不合理的长期结果。应区分短期增长观察与无限期模型假设。这个公式以后会用于债券与股票定价。</p>
+<h2 id="6">6. 有限期年金：两项永续年金的差</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3150s">52:30–64:47</a></strong></p>
+<h3 id="61">6.1 从逐期贴现得到年金公式</h3>
+<p>年金（annuity）在有限的 T 期内，每期支付固定金额 C，然后停止。这里讨论第一笔付款在下一期、共 T 笔的普通付款序列。</p>
+<p>其现值（present value，PV）为：</p>
+<div class="formula">PV = C/(1+r) + C/(1+r)<sup>2</sup> + … + C/(1+r)<sup>T</sup><br><strong>PV = (C/r) × [1 − 1/(1+r)<sup>T</sup>]</strong></div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_54_24.png" alt="原 PDF 第 24 页：把有限期贴现现金流求和，得到年金公式" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 24 页：把有限期贴现现金流求和，得到年金公式<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3264s" target="_blank" rel="noopener">定位课堂讲解 (00:54:24)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=24" target="_blank" rel="noopener">查看原课件第 24 页</a></p>
+</div>
+
+<p>课堂提到汽车贷款、房贷和债券等应用。学生问本金（principal）是在每次付款中归还，还是到期才归还；讲师把这个问题留到债券部分。因此，此处应先掌握付款序列的估值，具体工具还需要核对本金与利息如何安排。</p>
+<h3 id="62">6.2 用现金流相减理解，而非只记公式</h3>
+<p>从第 1 期开始付款的永续年金（perpetuity），减去从第 T+1 期开始付款的永续年金，剩下的就是第 1 至 T 期付款的年金。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>现金流序列</th>
+<th style="text-align: right;">第 1 期</th>
+<th>…</th>
+<th style="text-align: right;">第 T 期</th>
+<th style="text-align: right;">第 T+1 期</th>
+<th>第 T+2 期及以后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完整永续年金</td>
+<td style="text-align: right;">C</td>
+<td>…</td>
+<td style="text-align: right;">C</td>
+<td style="text-align: right;">C</td>
+<td>C，C，…</td>
+</tr>
+<tr>
+<td>减去的远期永续年金</td>
+<td style="text-align: right;">0</td>
+<td>…</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">C</td>
+<td>C，C，…</td>
+</tr>
+<tr>
+<td>剩余有限期年金</td>
+<td style="text-align: right;">C</td>
+<td>…</td>
+<td style="text-align: right;">C</td>
+<td style="text-align: right;">0</td>
+<td>0，0，…</td>
+</tr>
+</tbody>
+</table></div>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_59_07.png" alt="原 PDF 第 26 页：永续年金减去从 T+1 开始支付的部分，留下前 T 笔付款" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 26 页：永续年金减去从 T+1 开始支付的部分，留下前 T 笔付款<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3547s" target="_blank" rel="noopener">定位课堂讲解 (00:59:07)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=26" target="_blank" rel="noopener">查看原课件第 26 页</a></p>
+</div>
+
+<p>完整永续年金在第 0 期的价值为 C/r。需要减去的那项永续年金，其第一笔付款在 T+1，因此它在 <strong>T 时点</strong> 的价值为 C/r。将这个价值折算回第 0 期，要贴现 <strong>T 期</strong>：</p>
+<div class="formula">被减去部分在第 0 期的价值 = (C/r) / (1+r)<sup>T</sup><br>前 T 笔付款的价值 = C/r − (C/r)/(1+r)<sup>T</sup>。</div>
+
+<h3 id="63-t-t1">6.3 T 与 T+1 的课堂澄清</h3>
+<p>这段讲解一度容易混淆。讲师最初把出售时间、现金流开始时间和估值时间混在一起，口称贴现 T+1 期；在 <a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3637s">60:37</a> 开始纠正，并在 <a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3788s">63:08</a> 的黑板说明中明确：</p>
+<p><strong>第一笔剩余付款在 T+1，而这串剩余付款的 C/r 价值是在 T。因此，贴现指数是 T。</strong></p>
+<p>也可以理解为：在第 0 期买入永续年金，领取第 1 至 T 期付款，在第 T 期刚收到第 T 笔付款后，出售剩余付款权利。原语言订正稿与逐段译稿保留课堂的纠正过程；这里按照最终澄清组织推导。</p>
+<p>画时间轴时，始终分别标清“哪期付钱”和“在哪个时点估值”，就能避免把 T 与 T+1 混为一谈。</p>
+<h2 id="7">7. 年金贴现因子与房贷付款额</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=3891s">64:51–68:46</a></strong></p>
+<h3 id="71">7.1 把现金流金额与利率部分分开</h3>
+<p>年金贴现因子（annuity discount factor，ADF）将每期付款额 C 与时间、利率条件分开：</p>
+<div class="formula">ADF(r,T) = [1 − (1+r)<sup>−T</sup>] / r<br>PV = C × ADF(r,T)。</div>
+
+<p>已知贷款本金对应的现值（present value）PV、每期利率（interest rate）r 以及付款期数 T，就可以求每期固定付款：</p>
+<div class="formula"><strong>C = PV / ADF(r,T)</strong>。</div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_01_06_56.png" alt="原 PDF 第 25 页：年金贴现因子公式及不同利率、期数的查表值" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 25 页：年金贴现因子公式及不同利率、期数的查表值<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4016s" target="_blank" rel="noopener">定位课堂讲解 (01:06:56)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=25" target="_blank" rel="noopener">查看原课件第 25 页</a></p>
+</div>
+
+<p>讲师以借款 20 万美元买房为说明：贷款金额在等式左边，每月付款在右边，合适的每期利率进入 ADF。月度现金流必须使用月度利率和总月数，计算时要明确利率报价采用什么口径；下一节解释为何不能混用年百分比利率与有效年利率。</p>
+<p>反过来，已知每期付款、期数与利率，也能算出贷款的市场价值。</p>
+<h3 id="72">7.2 查表与计算的底层方法相同</h3>
+<p>讲师回忆自己首次办理房贷：银行的表册没有当日那个利率，他用公式自己算出月供。工作人员逐级询问、最终从总行查到的数字，与他的结果一致到小数点后第四位。</p>
+<p>这个故事说明，表册、计算器或 Excel 只是计算手段，背后的依据仍然是年金公式。同一张年金贴现因子表可以适用于房贷、汽车贷款与其他具有相同付款结构的消费信贷。</p>
+<h3 id="73">7.3 课件自练：中了彩票，是不是百万富翁</h3>
+<p>课件给出每年领取 10 万美元的彩票，分别比较 20 年、50 年与永久支付，假设 r=10%。这些数值题由讲师留给学生自行阅读。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>支付期限</th>
+<th>现值计算</th>
+<th style="text-align: right;">现值，美元</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20 年</td>
+<td>100,000/0.10 × (1−1.10⁻²⁰)</td>
+<td style="text-align: right;">851,356.37</td>
+</tr>
+<tr>
+<td>50 年</td>
+<td>100,000/0.10 × (1−1.10⁻⁵⁰)</td>
+<td style="text-align: right;">991,481.45</td>
+</tr>
+<tr>
+<td>永久</td>
+<td>100,000/0.10</td>
+<td style="text-align: right;">1,000,000.00</td>
+</tr>
+</tbody>
+</table></div>
+<div class="video-card screenshot-card">
+  <img src="images/shot_01_08_35.png" alt="原 PDF 第 27 页：彩票的有限期年金与永续付款现值比较" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 27 页：彩票的有限期年金与永续付款现值比较<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4115s" target="_blank" rel="noopener">定位课堂讲解 (01:08:35)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=27" target="_blank" rel="noopener">查看原课件第 27 页</a></p>
+</div>
+
+<p>20 年名义付款总额为 200 万美元，但这不是今天的价值。期限越长，现值越接近永续年金的 100 万美元；远期新增付款的现值贡献则越来越小。</p>
+<h2 id="8-apr-ear">8. 复利：APR 与 EAR 为什么不同</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4132s">68:52–78:57</a></strong></p>
+<h3 id="81">8.1 六个月取款，引出了什么问题</h3>
+<p>利率通常以年化口径报价，但资金可能只持有半年或一个月。复利（compounding）讨论的是：中途产生的利息是否加入本金，再继续产生利息。</p>
+<p>若年百分比利率（annual percentage rate，APR）为 10%，约定半年支付 5%，则：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>时点</th>
+<th style="text-align: right;">本金与已累积利息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年初</td>
+<td style="text-align: right;">1000 美元</td>
+</tr>
+<tr>
+<td>半年后</td>
+<td style="text-align: right;">1000 × 1.05 = 1050 美元</td>
+</tr>
+<tr>
+<td>年末，再存半年</td>
+<td style="text-align: right;">1050 × 1.05 = 1102.50 美元</td>
+</tr>
+</tbody>
+</table></div>
+<p>第二个半年不只在原始本金上取得收益，还在前半年的利息上取得收益。所以全年实际收益为 10.25%，超过报价中的 10%。</p>
+<h3 id="82-10">8.2 如果全年收益必须恰好为 10%</h3>
+<p>另一种约定是，规定全年有效收益恰好为 10%，再求对应的半年利率 i：</p>
+<div class="formula">(1+i)<sup>2</sup> = 1.10<br>i = √1.10 − 1 ≈ 4.8809%。</div>
+
+<p>这个半年利率略低于 5%。讲师借此说明，直接除以计息次数与根据全年有效收益反推每期收益，是两种不同的报价处理方式。</p>
+<h3 id="83">8.3 一般公式</h3>
+<p>若报价 APR 为 r，每年复利 n 次，每期利率为 r/n，则一年的本金增长倍数为 (1+r/n)ⁿ。因此，有效年利率（effective annual rate，EAR）为：</p>
+<div class="formula"><strong>EAR = (1+r/n)<sup>n</sup> − 1</strong>。</div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_01_15_28.png" alt="原 PDF 第 28 页：复利频率、每期利率以及 APR 到 EAR 的换算" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 28 页：复利频率、每期利率以及 APR 到 EAR 的换算<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4528s" target="_blank" rel="noopener">定位课堂讲解 (01:15:28)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=28" target="_blank" rel="noopener">查看原课件第 28 页</a></p>
+</div>
+
+<p>讲师口述中也使用 equivalent annual rate，译稿保留了这个措辞；课件采用 effective annual rate，正文统一译为有效年利率。学生另外提到年百分比收益率（annual percentage yield，APY），课堂没有展开其细节。</p>
+<p>对 APR=10%、本金为 1000 美元的情况，按公式复算：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>每年复利次数</th>
+<th>每期利率</th>
+<th style="text-align: right;">EAR</th>
+<th style="text-align: right;">年末金额，美元</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 次</td>
+<td>10%</td>
+<td style="text-align: right;">10.0000%</td>
+<td style="text-align: right;">1100.00</td>
+</tr>
+<tr>
+<td>2 次，半年</td>
+<td>5%</td>
+<td style="text-align: right;">10.2500%</td>
+<td style="text-align: right;">1102.50</td>
+</tr>
+<tr>
+<td>4 次，季度</td>
+<td>2.5%</td>
+<td style="text-align: right;">10.3813%</td>
+<td style="text-align: right;">1103.81</td>
+</tr>
+<tr>
+<td>12 次，月份</td>
+<td>10%/12</td>
+<td style="text-align: right;">10.4713%</td>
+<td style="text-align: right;">1104.71</td>
+</tr>
+<tr>
+<td>365 次，每日</td>
+<td>10%/365</td>
+<td style="text-align: right;">10.5156%</td>
+<td style="text-align: right;">1105.16</td>
+</tr>
+</tbody>
+</table></div>
+<p>课堂把前三种额外收益粗略说成约 3、4、5 美元，正文表格保留到美分。在同样 APR 下，提高复利频率会提高有效年利率。作为借款人，真正承担的金额也会受到这种复利效应影响。</p>
+<h3 id="84-675">8.4 课件自练：6.75% 的汽车贷款</h3>
+<p>原课件另有一个按日复利的例子：借入 10,000 美元，APR 为 6.75%，对未偿还余额按日计息。假设期间不还款、每年取 365 天，则：</p>
+<div class="formula">一年后的余额 = 10,000 × (1+0.0675/365)<sup>365</sup><br>≈ 10,698.24 美元<br>EAR ≈ 6.9824%。</div>
+
+<div class="video-card screenshot-card">
+  <img src="images/shot_01_18_30.png" alt="原 PDF 第 29 页：按日复利时，6.75% APR 对应约 6.982% 的有效年利率；此图为课件补充例题" loading="lazy">
+  <p class="video-caption">📷 原 PDF 第 29 页：按日复利时，6.75% APR 对应约 6.982% 的有效年利率；此图为课件补充例题<br><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4710s" target="_blank" rel="noopener">定位课堂讲解 (01:18:30)</a> · <a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf#page=29" target="_blank" rel="noopener">查看原课件第 29 页</a></p>
+</div>
+
+<p>课件把日利率显示为约 0.0185%，但其最终金额对应的是使用未提前取整的 0.0675/365 计算。中间展示值可以取近似，计算过程中应保留足够精度。</p>
+<h3 id="85">8.5 读报价时，要同时确认复利约定</h3>
+<p>只知道 APR，还不足以确定全年金额；必须知道复利频率。银行账户可能按日计息，抵押贷款与租约可能按月，债券可能按半年；这些都是课件中用于说明不同惯例的例子。</p>
+<p>讲师以随时取款的账户说明，按日计算能够避免为每一个存取日期重新制定特殊算法。对于很短期的市场融资，也可以按小时、分钟，甚至连续时间处理利息。</p>
+<p>关于银行披露义务及某些账户默认按日计息的发言，属于当时的课堂语境。理解实际合约时，应从其明确的报价与计息规则出发。</p>
+<h2 id="9">9. 课堂收尾：连续复利与复习线索</h2>
+<p><strong>讲解区间：<a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI&amp;t=4739s">78:59–80:12</a></strong></p>
+<p>讲师留下连续复利（continuous compounding）的思考题：若 APR 固定为 r，复利次数 n 越来越大，直到连续计息，有效年利率（effective annual rate）会趋向什么数？</p>
+<div class="formula">思考：当 n → ∞ 时，(1+r/n)<sup>n</sup> − 1 的极限是什么？</div>
+
+<p>本讲没有公布这个谜题的答案，安排下一讲继续讨论。通货膨胀（inflation）同样留待下一讲，因此本笔记没有把课件第 30 页之后的内容提前作为本讲讲解。</p>
+<p>复习时，可以依次检查以下关系是否已经理解：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>要解决的问题</th>
+<th>本讲的方法</th>
+<th>首先核对的条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一组收支今天值多少</td>
+<td>各期现金流逐一贴现后加总</td>
+<td>金额、正负号、日期、贴现率</td>
+</tr>
+<tr>
+<td>每期支付 C，永远持续</td>
+<td>C/r</td>
+<td>下一期首次支付，C 与 r 恒定，r&gt;0</td>
+</tr>
+<tr>
+<td>下一期支付 C，此后按 g 永远增长</td>
+<td>C/(r−g)</td>
+<td>C 是第一笔付款，r&gt;g，长期增长假设</td>
+</tr>
+<tr>
+<td>每期支付 C，共 T 期</td>
+<td>(C/r)[1−(1+r)⁻ᵀ]</td>
+<td>第一笔在第 1 期，最后一笔在第 T 期</td>
+</tr>
+<tr>
+<td>给定贷款金额，求固定每期付款</td>
+<td>C=PV/ADF(r,T)</td>
+<td>付款频率、利率期间、期数一致</td>
+</tr>
+<tr>
+<td>APR 与全年实际收益如何对应</td>
+<td>EAR=(1+r/n)ⁿ−1</td>
+<td>年内复利次数 n 与每期利率 r/n</td>
+</tr>
+</tbody>
+</table></div>
+<p>计算之前先画时间轴；把资产的现金流与价值区分开；把各个金额转换到同一日期、同一币种；最后再作决策。这些步骤把看似不同的照明投资、贷款、彩票和债券问题连接起来。</p>
+<h2 id="_1">来源与整理说明</h2>
+<p>本笔记依据 MIT 开放课程（MIT OpenCourseWare）《15.401 Finance Theory I, Fall 2008》中的 <strong>Ses 3: Present Value Relations II</strong> 整理。原课由 Andrew W. Lo 讲授，插图保留课件版权标识。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=4F1J5Q3DiaI">课堂视频</a>：约 80 分 15 秒。</li>
+<li><a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/pages/video-lectures-and-slides/present-value-relations/">MIT 官方课程与视频说明</a>：本讲对应 Present Value Relations II，主要覆盖第 17–29 张幻灯片。</li>
+<li><a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/mit15_401f08_lec02/">MIT 官方课件资源页</a>与<a href="https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/73c95059e657c8a7acb042ea33a21940_MIT15_401F08_lec02.pdf">原始 PDF</a>：正文使用第 16 页回顾，以及第 17–29 页的相关图表。第 21、27、29 页的例题数据来自课件，其中讲师未逐步解答的部分已注明。</li>
+<li>许可：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>。中文翻译、书面重组、计算复核与编者说明为本笔记的整理改动；原课件图像保持原貌。</li>
+</ul>
+<p>原字幕中听不清的学生发言、不能确定的姓名，以及讲师在年金时间点上的自我纠正，均在逐段字幕与修改记录中保留。书面正文采用可确认的解释；补贴数字差异在相应例题中单独注明。</p>
+    </article>
+    <!-- Lightbox：截图点击放大 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = '<img alt=""><div class="lightbox-caption"></div>';
+            document.body.appendChild(lightbox);
+            const lbImg = lightbox.querySelector('img');
+            const lbCap = lightbox.querySelector('.lightbox-caption');
+            function openLightbox(src, alt) {
+                lbImg.src = src; lbImg.alt = alt || '';
+                lbCap.textContent = alt || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lbImg.src = '';
+                document.body.style.overflow = '';
+            }
+            document.querySelectorAll('.screenshot-card img').forEach(function(img) {
+                img.addEventListener('click', function() { openLightbox(img.src, img.alt); });
+            });
+            lightbox.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+        });
+    </script>
+<script>if (window.matchMedia("(max-width: 640px)").matches) document.querySelector(".toc").open=false;</script>
+</body>
+</html>

@@ -1,0 +1,1713 @@
+[00:00] The following content is provided under a Creative
+[00:02] Commons license.
+[00:03] Your support will help MIT OpenCourseWare
+[00:06] continue to offer high quality educational resources for free.
+[00:10] To make a donation or to view additional materials
+[00:12] from hundreds of MIT courses, visit MIT OpenCourseWare
+[00:16] at ocw.mit.edu.
+[00:21] ANDREW LO: First of all, any questions from last lecture?
+[00:27] Yes?
+[00:28] AUDIENCE: [INAUDIBLE] he said he was [INAUDIBLE] possible
+[00:38] [INAUDIBLE]?
+[00:44] ANDREW LO: OK.
+[00:45] So let me repeat the question to make sure everybody heard.
+[00:48] The question about net present value is that, is it possible,
+[00:52] is it possible, that in one currency,
+[00:56] the net present value of a project is positive,
+[01:00] but in a different currency, it is negative?
+[01:04] That's a very interesting question.
+[01:06] And it turns out that the answer is staring us in the face right
+[01:10] here.
+[01:11] Now remember, we're in a world of no uncertainty.
+[01:15] So we know what future cash flows are going to be.
+[01:18] And we know what future discount rates or discount
+[01:22] factors are going to be.
+[01:24] That's my assumption.
+[01:26] And in that world, when I give you
+[01:29] the value of a sequence of cash flows,
+[01:33] this v sub 0, if I wanted to denominate it in dollars,
+[01:38] then presumably all the cash flows have to be in dollars.
+[01:43] If I want to denominate it in yen,
+[01:45] then the cash flows have to be in yen.
+[01:48] So strictly speaking, assuming that the exchange
+[01:53] rates don't change over time--
+[01:57] and that's, again, a big assumption--
+[02:01] the question is, can I have a different result
+[02:05] in terms of the sign of a net present value by changing
+[02:09] the exchange rate?
+[02:11] Any thoughts on that?
+[02:13] What do you think?
+[02:14] Yeah.
+[02:15] AUDIENCE: No.
+[02:16] ANDREW LO: No, why?
+[02:19] AUDIENCE: Because currency [INAUDIBLE].
+[02:33] ANDREW LO: OK.
+[02:34] So the answer is no, because currency,
+[02:37] the exchange rates always have to be positive.
+[02:39] And presumably, you're multiplying the cash flows
+[02:42] by the same number, either positive of one number
+[02:48] or positive of another number.
+[02:49] So when you multiply a sequence by a positive number, when
+[02:54] you add that up, it is either still positive
+[02:57] or still negative.
+[02:58] In other words, you can factor it out.
+[02:59] Right?
+[03:01] You sure?
+[03:03] Yeah.
+[03:04] AUDIENCE: I have a question.
+[03:05] When we are doing this in the [INAUDIBLE],
+[03:11] is it possible to have different [INAUDIBLE]?
+[03:17] ANDREW LO: Well.
+[03:19] Right now, we're not talking about risk.
+[03:21] So let's hold that off for seven or eight lectures.
+[03:24] I want to ask this question.
+[03:25] Have I got it right?
+[03:27] We agreed that no matter what you multiply it by,
+[03:30] as long as it's a positive number,
+[03:31] it can't change the sign, so the currency doesn't matter.
+[03:34] Yeah.
+[03:34] Ernest?
+[03:35] AUDIENCE: But the exchange rate, so the actuals
+[03:38] are at different times.
+[03:39] ANDREW LO: Yes.
+[03:40] AUDIENCE: So if your exchange rate
+[03:42] is different at different times, then it's
+[03:43] going to stay factored throughout the--
+[03:47] ANDREW LO: The assumption is that it's fixed.
+[03:50] There's no uncertainty.
+[03:51] But--
+[03:51] AUDIENCE: [INAUDIBLE].
+[03:53] ANDREW LO: I didn't say it was the same.
+[03:55] So you said that it was the same.
+[03:57] I didn't.
+[03:58] You're right.
+[03:59] So [? Shlomi, ?] you're right.
+[04:01] If the exchange rate is the same over time,
+[04:04] then when you multiply by one number,
+[04:06] it's the same number for every cash flow.
+[04:08] Then, it factors out.
+[04:11] And then you're multiplying v sub-zero by a positive number.
+[04:16] So if v sub-zero is positive, it stays positive.
+[04:19] If it's negative, it stays negative.
+[04:21] But no uncertainty doesn't mean that it's fixed.
+[04:28] So here's the subtlety.
+[04:29] The subtlety is that if I assume that the exchange rate is fixed
+[04:33] and known, but going up over time, whereas in US dollars,
+[04:40] it stays fixed, that makes a difference.
+[04:44] Right?
+[04:45] So it's possible.
+[04:46] It's possible that if I change currencies and the currency
+[04:49] is rapidly appreciating or rapidly depreciating,
+[04:53] then you can actually change the net present value
+[04:56] of the project.
+[04:58] But it has to be the case that the particular path
+[05:02] of the currency appreciation or depreciation
+[05:05] is exactly opposite what's going on with the NPV.
+[05:10] So the bottom line is, you've got to do the calculation.
+[05:13] And you have to use the currency that you care about.
+[05:17] So if you're in US, you presumably
+[05:19] care about getting paid in US dollars.
+[05:21] You would use US dollars.
+[05:22] If you're in Japan, you get paid in yen.
+[05:25] You'll want to do it in yen.
+[05:26] And you have to do the currency conversion.
+[05:28] Now when we talk about uncertainty,
+[05:30] that's going to make it much more complicated.
+[05:32] It's going to introduce another component of risk
+[05:36] in our calculations that has to be dealt with.
+[05:39] So we're going to come back to that.
+[05:40] But that's a good question.
+[05:43] Anybody else?
+[05:44] Yes?
+[05:45] AUDIENCE: I noticed that you used the term
+[05:46] paper a couple of times.
+[05:48] I just wanted [INAUDIBLE] definition of--
+[05:50] ANDREW LO: Of what?
+[05:50] AUDIENCE: Paper.
+[05:51] ANDREW LO: Paper.
+[05:52] You mean, this is a piece of paper?
+[05:54] AUDIENCE: Well, I don't think [INAUDIBLE].
+[05:58] ANDREW LO: Right.
+[05:59] Yeah, so typically by paper, people mean a security.
+[06:03] And commercial paper is a security
+[06:05] that is a debt instrument that is basically an IOU.
+[06:09] It's like a bond.
+[06:10] So we'll come back to that when we talk about fixed income
+[06:12] securities.
+[06:12] But that's what I mean.
+[06:13] By the way, you raise a good point.
+[06:15] When I mention terminology, feel free to ask me.
+[06:19] But in turn, I'm going to feel free to tell you,
+[06:21] you may want to look that up in Brealey, Myers
+[06:23] and Allen, because I want you to read the book alongside of what
+[06:27] we're doing in class, because you'll need to pick up this
+[06:30] terminology, and we don't have enough time in this 20 lectures
+[06:34] to cover all the terminology that you need to know.
+[06:37] So don't assume that just because I haven't covered it
+[06:42] in class, or that I haven't defined it
+[06:45] that you don't need to know it.
+[06:47] The textbook is there to help you
+[06:50] with the supplementary material that I would like you to cover.
+[06:53] So that's why we assign those chapters.
+[06:55] OK?
+[06:56] Yeah, Justin.
+[06:58] AUDIENCE: [INAUDIBLE].
+[07:01] ANDREW LO: Yes.
+[07:02] AUDIENCE: Then I read a news article,
+[07:05] and they said the stock market jumps because they're
+[07:08] getting bailed out.
+[07:09] ANDREW LO: Right.
+[07:09] AUDIENCE: So is there a simple reason as to why this is such
+[07:13] a massive increase in stock--
+[07:17] ANDREW LO: In the stock market, while their stock has
+[07:19] gone down.
+[07:20] AUDIENCE: Right.
+[07:20] So that seems a little counter-intuitive.
+[07:22] I'm going to give you a two minute answer now,
+[07:24] but then I'm going to give you a much deeper answer
+[07:27] in about three or four lectures, when we actually
+[07:29] apply all of the framework we're developing
+[07:31] to pricing common stock.
+[07:33] So as I said with Freddie and Fannie,
+[07:35] there are two components.
+[07:36] There are two sets of issues surrounding those companies.
+[07:39] One is the value of the owner's equity, the folks who owned
+[07:44] a piece of those companies.
+[07:46] What are their investments worth?
+[07:48] And the answer is very little.
+[07:50] The second piece is that Freddie and Fannie
+[07:53] have issued all sorts of IOUs, all sorts of obligations
+[07:57] to counter-parties.
+[07:58] And the question is, what are those securities worth.
+[08:02] The government bailing out Freddie and Fannie
+[08:04] are basically saying, we will stand behind those IOUs.
+[08:09] The shareholders of the company--
+[08:11] sorry, you guys lost.
+[08:14] The company has not done well.
+[08:15] It suffered a lot of losses.
+[08:17] So the fact that you own a piece of the company
+[08:19] means that what you own is now worthless.
+[08:21] But the pieces of paper that the company has issued,
+[08:25] we will assume that obligation as the US government
+[08:29] and make good on those obligations.
+[08:32] So the fact that those pieces of paper
+[08:35] have much broader impact on the market as a whole, the fact
+[08:39] that the US government is standing
+[08:40] behind those pieces of paper will protect the stock market
+[08:45] as a whole because there's confidence
+[08:47] that business conditions will not be as bad as we thought.
+[08:52] So that's what explains the fact that the stock
+[08:54] market as a whole went up.
+[08:57] It's because the market environment
+[08:58] has been stabilized.
+[09:00] You can imagine what might have happened if Fannie
+[09:02] and Freddie were to go under.
+[09:04] Their pieces of paper, their IOUs, would be worthless.
+[09:07] Which means the folks that own those pieces of paper,
+[09:10] now they have a bunch of worthless paper.
+[09:13] And when that happens, there are repercussion effects
+[09:17] for those businesses, and those businesses
+[09:19] will end up losing money, which will
+[09:21] have repercussions for the entire market as a whole.
+[09:25] AUDIENCE: [INAUDIBLE] the amount that it went up
+[09:28] shows how their paper was distributed
+[09:31] to all these other companies.
+[09:32] ANDREW LO: It's a combination of how
+[09:34] their paper was distributed.
+[09:35] But more than that--
+[09:36] I mean, there are many companies in the S&P 500,
+[09:39] for example, that don't own any of this paper.
+[09:42] So why would their stock be buoyed?
+[09:45] It's because the business conditions
+[09:47] have been stabilized, and there won't be any knock on effects.
+[09:51] A good example of this is Lehman Brothers.
+[09:53] As many of you know, Lehman Brothers
+[09:54] is a big player in these kinds of securities,
+[09:57] and they are currently under a lot of pressure.
+[10:00] Their stock prices dropped dramatically,
+[10:02] even in the last few days, because they are a big mortgage
+[10:06] lender, and CDO investor, so they're actually
+[10:09] hit pretty hard by all of this.
+[10:10] And while the rescue of Freddie and Fannie
+[10:13] has had some positive effects on Lehman's stock price,
+[10:17] it still is under fire and a lot of people
+[10:19] want to get rid of it.
+[10:22] Imagine if Freddie and Fannie weren't rescued.
+[10:25] It's almost a sure thing that Lehman
+[10:29] would have gone under immediately
+[10:31] as a knock-on effect.
+[10:33] And if Lehman went under, well, I mean,
+[10:34] there are other investment banks out there
+[10:36] that might have gone under.
+[10:37] And now all of a sudden, you have a series
+[10:39] of very large companies that do business
+[10:41] with all of Wall Street that it has gone under.
+[10:44] That's going to have bad repercussions for the stock
+[10:47] market as a whole.
+[10:48] Yeah?
+[10:50] AUDIENCE: [INAUDIBLE] companies, like big companies?
+[10:57] ANDREW LO: Well, the short answer is I don't know.
+[11:00] Nobody knows.
+[11:01] I think that there is a concern that the Fed cannot be viewed
+[11:06] as rescuing every possible financial institution
+[11:09] that's out there.
+[11:10] It's got to stop at some point.
+[11:12] Many people said it should have stopped even
+[11:14] before the Bear Stearns rescue.
+[11:17] So the answer is we don't know.
+[11:19] Wait and see, and we'll find out over the next few days.
+[11:22] As I said last time, these are very
+[11:24] interesting times for financial markets.
+[11:27] Very, very serious issues that are coming to the forefront
+[11:29] literally every day.
+[11:30] So we're going to be watching that,
+[11:32] and we'll be talking about that.
+[11:33] Yeah?
+[11:34] AUDIENCE: [INAUDIBLE].
+[11:40] ANDREW LO: Where do I think that should stop?
+[11:42] Well, there are a couple of issues
+[11:47] that are at the heart of these discussions.
+[11:50] The two issues are, how do you balance
+[11:52] the cost of bailing out these large organizations
+[11:57] and the implicit moral hazard that it creates,
+[12:00] the kind of potential promises that you're implicitly
+[12:03] making to future equity holders of these organizations
+[12:07] versus letting the market work against the potential disaster
+[12:12] scenario of allowing these kinds of events
+[12:16] to spread like wildfire.
+[12:17] I don't know how many of you actually
+[12:19] know what happens during wildfires, during forest fires.
+[12:22] But when forest fires get started,
+[12:25] they're actually very difficult to stop.
+[12:27] And every once in a while, they try
+[12:31] to stop a forest fire by creating additional fires.
+[12:36] Right?
+[12:36] This may sound counter-intuitive.
+[12:38] But what they will do is around a raging forest fire,
+[12:42] they will burn what's called a firewall.
+[12:47] That term did not come out of IT.
+[12:49] It actually came out of fighting forest fires.
+[12:51] They will burn a ring around that forest fire,
+[12:55] a controlled burn where they target very specific set
+[12:59] of trees, and they would do it in a controlled fashion,
+[13:02] so that when the forest fire gets to that ring,
+[13:06] it burns itself out.
+[13:09] And one could argue that we need a firewall
+[13:13] around these kinds of events.
+[13:14] We need to have certain financial institutions fail
+[13:19] and stop the spread of this kind of problem.
+[13:24] The difficulty with that analogy is that with a forest fire,
+[13:28] all you need is a helicopter to get up there and see
+[13:31] what's going on.
+[13:33] We don't have a helicopter.
+[13:34] There's no helicopter that tells us where the fires are,
+[13:37] and where the fires may be, and where the underground gasoline
+[13:41] tanks are hidden for future explosions.
+[13:44] We don't know because a lot of this stuff is hidden.
+[13:47] So my own opinion is that we are going
+[13:51] to need to have at least one or two additional large failures,
+[13:57] and people will have to lose money before they understand
+[14:02] that this stuff really is risky, and that the price you pay
+[14:06] for the benefits that you've gotten from these very
+[14:08] handsome returns in the years before this kind of an event
+[14:12] is the fact that every once in a while,
+[14:14] in the parlance of Wall Street, you get your face ripped off.
+[14:18] That's the nature of financial markets.
+[14:21] So I think that it's very dangerous
+[14:24] to rescue these companies.
+[14:26] But at the same time, you have to balance
+[14:28] that against the risk of creating a mass panic.
+[14:30] And if we do create that mass panic,
+[14:33] there's virtually no way to stop it,
+[14:36] and then we will run into a very deep recession and depression
+[14:40] of the likes that we haven't seen since 1929.
+[14:42] That's the balance and the danger.
+[14:45] Yeah?
+[14:46] AUDIENCE: [INAUDIBLE].
+[14:58] ANDREW LO: Well, you know, that might be.
+[15:00] But let me suggest this.
+[15:03] Let me put that off for a discussion point
+[15:05] until we finish fixed income securities.
+[15:08] Because at that point, I'm going to talk
+[15:09] about the subprime problem specifically.
+[15:12] And I'm going to use the tools that we develop-- actually,
+[15:14] you guys are going to use the tools that we develop to figure
+[15:17] out exactly what's happened in these markets,
+[15:20] why they're happening, and how maybe we can get around that.
+[15:23] So let me not give you my view now.
+[15:26] I'd rather have you develop your own views
+[15:28] based upon the tools we develop in this course.
+[15:30] OK?
+[15:31] Yeah?
+[15:33] AUDIENCE: Because of all this [INAUDIBLE]
+[15:37] CEOs or executives were fired to get a big handsome buyout
+[15:41] for all their hard work and efforts.
+[15:43] ANDREW LO: Yeah.
+[15:44] AUDIENCE: But now, should the market
+[15:46] be able to self-regulate itself?
+[15:48] Or does there need to be regulation in place?
+[15:51] Or what will become of it?
+[15:52] ANDREW LO: Well, you know, that's again
+[15:54] a very difficult question to answer because we're not
+[15:56] done yet, so we don't know where this is going to end up.
+[15:59] I think that there are some very important issues that we're
+[16:01] going to have to come back to.
+[16:03] Let me put that off for even a bit longer
+[16:05] because when we talk about corporate finance,
+[16:07] we're going to talk about CEO compensation
+[16:10] and ask the question, how do we relate compensation
+[16:12] to performance, and does it make sense?
+[16:14] It turns out that there's some incentive issues, such that
+[16:16] if we don't do that, if we don't allow
+[16:19] them to have these golden parachutes,
+[16:21] then it may end up creating weird incentives
+[16:24] when things are going well.
+[16:26] So every action has some kind of equal and opposite reaction
+[16:30] in some other part of the system.
+[16:32] And unless you know what that system is,
+[16:34] it's hard to figure out the answer to the question.
+[16:36] So by the end of the semester, I'm
+[16:37] hoping that you'll be able to come up with answers
+[16:39] to these questions.
+[16:40] So let me put that off for a little while.
+[16:42] OK.
+[16:42] One more clarifying question maybe, and then we can move on.
+[16:47] AUDIENCE: During the Southeast Asian Crisis in '97,
+[16:51] there was this discussion about the international financial
+[16:53] institutions should risk [INAUDIBLE] countries
+[16:57] and because of the bar [INAUDIBLE].
+[17:01] ANDREW LO: Right.
+[17:02] AUDIENCE: And they decided they should,
+[17:03] so they rescued them and they survived.
+[17:06] 10 years later, Latin America went into a crisis,
+[17:09] and the same discussion started, and
+[17:11] the international financial institutions,
+[17:14] led by the United States decided not to rescue them.
+[17:19] So we went into a crisis.
+[17:21] And so I see now [INAUDIBLE]
+[17:31] ANDREW LO: That's right.
+[17:32] Yeah, that's a very serious issue.
+[17:35] But I would argue that issue actually goes even--
+[17:38] it goes to an even broader set of issues that have little
+[17:42] to do with economics and finance,
+[17:44] but political and social issues, which I won't comment on
+[17:48] in this class, but which are important for determining
+[17:51] those kinds of policy questions.
+[17:53] That's one of the things that I'd like to get across to you
+[17:56] in terms of thinking about these issues, which
+[17:58] is that there are multiple aspects to every issue.
+[18:01] And rather than trying to come up with a single answer, what
+[18:05] I would propose that you might do
+[18:07] is when you think about a challenge like this, first
+[18:10] of all, you try to identify the different issues
+[18:14] and then come up with an answer for every single perspective
+[18:18] of that issue.
+[18:19] So for example in the case of Latin America,
+[18:21] there is certainly the economic issue and moral hazard.
+[18:23] That's an important one.
+[18:26] But there's also a political and social issue,
+[18:28] which is that if you don't bail out countries that are in need,
+[18:33] that's a recipe for creating social unrest.
+[18:36] And if you don't do it, there is some dictator
+[18:38] waiting with guns and other interesting possibilities
+[18:43] for the people to try to take over.
+[18:46] That's right.
+[18:47] And I mean, it's not rocket science.
+[18:49] I mean, people are looking for solutions.
+[18:51] And if you can't offer one, they'll
+[18:53] go to the next person that has one.
+[18:55] Whether or not it's true or false,
+[18:57] they will try to come up with some kind of leadership.
+[19:02] So how do you balance off the economic considerations
+[19:05] against the political and social?
+[19:06] That's not something that an economist can answer,
+[19:09] so I won't even try to begin.
+[19:10] And by the way, my opinion is no better or worse than anybody
+[19:14] else's.
+[19:14] So I won't waste your time with that.
+[19:16] But what I would suggest is from looking at these issues,
+[19:20] first of all, try to think clearly
+[19:22] about what the economic issues are, and then
+[19:25] what the social and political issues are, and separate them
+[19:28] out.
+[19:29] And then you can answer each of those questions in isolation
+[19:33] and, at the end, decide on how you want to balance
+[19:36] these kind of considerations.
+[19:37] But don't use economics to try to answer a political question,
+[19:41] and don't use politics to try to answer an economic question.
+[19:44] You should use the tools that you
+[19:45] have to answer the questions that those tools are designed
+[19:49] for.
+[19:49] And in the case of Latin America,
+[19:51] I would argue that's a very complex set of issues that
+[19:53] economics alone cannot answer.
+[19:56] The economic answer, never bail out
+[19:59] countries that are failing, because you'll
+[20:01] create moral hazard and increase the cost of borrowing
+[20:04] for future generations in other countries.
+[20:07] That sounds good until you see what
+[20:10] happens when you don't, and you get
+[20:12] these socialist dictatorships that
+[20:14] end up creating all sorts of dislocation
+[20:18] for the people in the country.
+[20:21] I mean, that there's a very big cost to that as well.
+[20:24] And I'm going to have to beg the question about how
+[20:26] you balance those costs against the benefits.
+[20:29] Again, that's something for politicians and for voters
+[20:33] to hopefully to decide.
+[20:38] Yeah?
+[20:38] Which?
+[20:39] AUDIENCE: [INAUDIBLE].
+[20:43] ANDREW LO: No.
+[20:44] Sorry.
+[20:46] AUDIENCE: [INAUDIBLE] has renounced the United States
+[20:52] treasury--
+[20:53] ANDREW LO: Yeah.
+[20:53] AUDIENCE: [INAUDIBLE].
+[20:57] ANDREW LO: That sounds good, but that wasn't my handout.
+[20:59] So that might be my handout in about three weeks.
+[21:03] But we have work to do now.
+[21:05] So let me stick to that.
+[21:07] And we'll come back to these interesting issues.
+[21:09] But I want to give you the framework and the tools
+[21:11] to be able to think about them.
+[21:12] OK.
+[21:16] So let me continue on.
+[21:19] This is Lecture Three.
+[21:21] And we're going to continue looking
+[21:22] at present value relationships and the time value of money.
+[21:27] Last time, we were left with the expression
+[21:29] for the value of an asset as simply being equal to the cash
+[21:34] flows discounted with the appropriate discount factors,
+[21:38] where I've assumed for simplicity that the discount
+[21:42] rate between one year and the next is constant
+[21:47] and given by the interest rate, or discount factor, or cost
+[21:52] of capital, or user cost, or opportunity cost, r.
+[21:57] Fancy terms for the simple concept
+[21:59] of the number that you use to construct these exchange
+[22:04] rates between cash at different points in time.
+[22:09] Now the solution of how you make management decisions given
+[22:16] this simple framework becomes trivial.
+[22:19] Take projects that have positive NPV.
+[22:22] That's it.
+[22:23] When you figure out what the value of a project
+[22:26] is as a function of all of these exchange rates,
+[22:30] you calculate what the present value is.
+[22:33] And if the cost of the investment
+[22:35] is included as a cash flow, possibly a negative cash flow,
+[22:38] you've got the net present value.
+[22:40] And for things that are positive NPV, you want them,
+[22:44] you want to take them.
+[22:45] For things that are negative NPV, you don't want them,
+[22:47] you don't take them, or if you can, you sell them.
+[22:51] All right?
+[22:52] Now, there are many different assumptions
+[22:54] that got us to this point.
+[22:56] We understand that.
+[22:57] We're going to make those assumptions more
+[23:00] and more realistic over time.
+[23:01] That's, in fact, what the rest of the course
+[23:03] is going to be doing.
+[23:05] We're going to be focusing on picking this expression
+[23:08] and making it more realistic.
+[23:10] And it's going to take us 12 more weeks to do that.
+[23:13] So it's non-trivial, but that's exactly the objective.
+[23:16] Yes?
+[23:17] AUDIENCE: Last week, you said [INAUDIBLE] summation
+[23:22] of cash flow.
+[23:23] ANDREW LO: No.
+[23:24] I said the asset was a sequence.
+[23:28] What is an asset?
+[23:30] An asset is a sequence of cash flows.
+[23:33] That's the definition of an asset, not the value.
+[23:36] The value of the asset, remember,
+[23:38] is that function that you stick in a cash flow sequence,
+[23:42] and out pops a number.
+[23:45] So the value of an asset is not the same thing as the asset
+[23:48] itself, right?
+[23:51] You can have a rocket ship that can go to the moon.
+[23:54] That is an asset.
+[23:56] The value of a rocket ship that goes to the moon, that's
+[23:59] a different thing, right?
+[24:01] You need to have this v function in order to figure out
+[24:03] the value of an asset.
+[24:05] But I can't really talk about the value of an asset
+[24:07] unless I've defined the asset to begin with.
+[24:11] So v sub-zero is the value of the asset.
+[24:15] It's not the asset itself.
+[24:16] It's the value of the asset.
+[24:17] The asset itself is the sequence of cash flows.
+[24:23] Now, here's a simple example about how
+[24:27] these discount factors work.
+[24:28] This is just an interest rate example.
+[24:30] If you let little r equal 5%, then you
+[24:33] can figure out what the value of a dollar is in the future,
+[24:37] or you can figure out what the value today of a future dollar
+[24:41] is.
+[24:41] It's just using simple arithmetic
+[24:44] to be able to do that.
+[24:45] So this is just a simple concrete illustration.
+[24:49] And if you graph the present value of a dollar, over time,
+[24:54] you'll notice that as time goes out farther,
+[24:57] the present value of a dollar declines.
+[24:59] Not surprisingly, $1 today is worth more
+[25:02] than the dollar tomorrow.
+[25:03] But $1 tomorrow is worth more than $1 two years from now.
+[25:07] And $1 two years from now is worth
+[25:09] much more than $1 an infinite number of years from now.
+[25:12] Right?
+[25:18] Now here's an example of how you use this valuation approach.
+[25:23] And the problems that we handed out last time
+[25:26] will give you practice in how to think about present value.
+[25:29] So I urge you to do those problems
+[25:31] to make sure you really understand these concepts.
+[25:34] Here's an example where a firm spends
+[25:36] $800,000 every single year for electricity
+[25:39] at its headquarters.
+[25:41] And by installing some kind of specialized computer lighting
+[25:44] system, it turns out that you can reduce your electricity
+[25:48] bills by $90,000 in each of the next three years.
+[25:53] Now, of course, it costs money to install that system.
+[25:55] It costs $230,000 to install that system.
+[25:59] So the question is, is this a good deal?
+[26:02] Should you do it?
+[26:03] That's a management decision.
+[26:07] And the management decision relies on valuation first.
+[26:10] Once you value it, then you can make a decision.
+[26:14] So you've got 90,000, 90,000, 90,000 in the three years
+[26:19] as your cost savings, but it's going
+[26:22] to cost you $230,000 upfront.
+[26:25] Now if it turns out that the interest rate is 4%,
+[26:30] you can figure out what the answer is.
+[26:33] At 4%, it turns out that the NPV of this project
+[26:40] is about $20,000.
+[26:44] So it's a good deal.
+[26:47] On the other hand, if you change the assumptions,
+[26:52] and you make the interest rate something else,
+[26:54] well, it might not be a good deal.
+[26:59] How would you have to change the interest rate
+[27:01] to make this a terrible deal?
+[27:06] Increase or decrease it?
+[27:08] Increase it.
+[27:09] Why?
+[27:09] Why does that make sense?
+[27:13] Yeah?
+[27:13] AUDIENCE: [INAUDIBLE].
+[27:15] ANDREW LO: Exactly.
+[27:15] With a higher interest rate, money now
+[27:18] is more valuable than the cost savings to your electricity.
+[27:22] How do you know it's more valuable?
+[27:24] AUDIENCE: [INAUDIBLE]
+[27:26] ANDREW LO: Exactly.
+[27:27] The opportunity cost is 10% as opposed to 4%.
+[27:30] It's a lot more valuable.
+[27:32] If you stick it in the bank, you get 10%.
+[27:34] So the cost savings depends on the interest rate at hand.
+[27:42] Once you have the interest rate, you can make a decision.
+[27:47] Where does interest rate come from?
+[27:48] AUDIENCE: [INAUDIBLE]
+[27:49] ANDREW LO: Exactly.
+[27:50] The market.
+[27:52] You don't pick the interest rate out of the air.
+[27:54] You don't say, I sort of feel like it's a 2% kind of day.
+[27:58] The interest rate is what you can get on the open market.
+[28:00] See, that's why the market matters.
+[28:03] It's because if that's a market interest
+[28:05] rate, by saying it's a market interest rate,
+[28:07] it means you can actually get that rate from the market.
+[28:13] And therefore, it's a real number that can be actionable.
+[28:16] It's not a fictitious theoretical construct
+[28:19] that may or may not have any practical bearing.
+[28:21] It's a number that actually you can achieve.
+[28:25] And as a manager, if you're trying
+[28:27] to increase the value of shareholder wealth,
+[28:30] if that's the objective, is to make
+[28:31] more money for the shareholders, this is the way to do it.
+[28:35] So this is what I meant when I told you
+[28:37] at the very beginning of this course
+[28:38] that finance is the most important subject you'll ever
+[28:40] study.
+[28:41] It's because with proper valuation,
+[28:43] management decisions are easy.
+[28:45] Now, it's not always easy to get to the point
+[28:47] where the numbers tell you so much.
+[28:50] And so, management is trying to understand
+[28:53] all of the various different factors and balancing them out.
+[28:56] Like, the kind of questions you were asking me
+[28:58] at the very beginning of class, I can't answer many of them
+[29:00] in the abstract.
+[29:01] It depends on the situation.
+[29:03] And I'm hoping that by the end of this course,
+[29:05] you will know enough about the basic framework
+[29:07] to make those trade-offs yourself.
+[29:10] And then, the art of management works together
+[29:13] with the science of management to come up with good decisions.
+[29:17] OK.
+[29:17] So this is simple.
+[29:19] And in the next few slides, I'm going
+[29:21] to ask you to take a look at examples on your own.
+[29:24] Here's an example, a real live example,
+[29:27] where CNOOC, the Chinese oil company,
+[29:29] made an offer to acquire Unocal about a year, year
+[29:33] and a half ago.
+[29:34] And I would suggest you take a look at this example
+[29:36] and just do the back of the envelope calculation
+[29:38] to see whether or not they provided
+[29:41] a good deal or a bad deal.
+[29:45] But I want to turn now to the main subject of today's
+[29:48] lecture, which is one of the most beautiful formulas
+[29:53] in this entire course.
+[29:54] Now it might seem strange for me to talk about a formula
+[29:57] as being beautiful.
+[30:00] You know, a while ago, Paul Samuelson, the great economist
+[30:04] here at MIT, once said that, you know,
+[30:08] either you think that probability theory is beautiful
+[30:12] or not.
+[30:13] And if you don't think it's beautiful,
+[30:14] then I feel sorry for you.
+[30:15] And I suppose the same can be said for this formula.
+[30:19] It's hard to believe that a formula can be beautiful,
+[30:22] but trust me, it is.
+[30:24] And if you don't think so, I feel sorry for you.
+[30:27] By the end of the semester, hopefully you
+[30:28] will think it's beautiful.
+[30:31] Let me explain what we're about to do.
+[30:34] I want to come up with the value of a very specific asset,
+[30:40] an asset with a very, very simple and interesting cash
+[30:44] flow.
+[30:44] So this is one of the two special cash flows
+[30:47] that we're going to analyze in this class.
+[30:49] And this cash flow is known as a perpetuity.
+[30:53] A perpetuity is exactly what it sounds like.
+[30:56] It pays cash forever.
+[31:01] Now we can debate whether or not forever really exists.
+[31:04] I won't try to argue with you that we will live forever.
+[31:09] But it's a hypothetical construct.
+[31:12] OK?
+[31:12] So this is a figment of our imaginations.
+[31:16] There exists in my imagination a piece of paper
+[31:20] that has a claim, such that whoever
+[31:22] holds the piece of paper will be entitled
+[31:26] to a cash payment of C dollars every year
+[31:30] forever, out to infinity.
+[31:35] OK?
+[31:35] And the question is, how much is this worth?
+[31:37] How much is this piece of paper worth?
+[31:39] It's an asset, because it's a sequence of cash flows.
+[31:42] It just turns out that this cash flow is an infinite sequence.
+[31:45] It never ends.
+[31:47] It's the gift that keeps on giving.
+[31:51] So you would think that it should be worth
+[31:55] an infinite amount, because it pays an infinite amount
+[31:58] of cash, right?
+[32:00] No, that's not right.
+[32:02] And the reason it's not right is because $1 today
+[32:06] is worth more than $1 tomorrow, which is worth more than $1
+[32:11] a year from now, which is worth more than $1
+[32:13] two years from now.
+[32:14] And so the value of a dollar paid out
+[32:17] into the far future declines.
+[32:20] And it turns out that it declines
+[32:23] at a rate for which you can actually figure out
+[32:26] what the value is today.
+[32:29] So here's what we're going to do.
+[32:30] Using the same principle of discounting
+[32:35] that we did for the previous set of cash flows,
+[32:40] we're going to take a sequence and discount it.
+[32:45] I'm assuming with the perpetuity,
+[32:47] that it starts paying next year.
+[32:49] So that's the very first cash flow.
+[32:50] We're sitting here at date zero, and it
+[32:52] pays C dollars next year, and then another C dollars the year
+[32:56] after, and then another C dollars the year after that,
+[32:58] and so on.
+[32:59] So we're going to discount them by 1 plus r, 1 plus r squared,
+[33:03] dot, dot, dot, forever.
+[33:06] And so this is an infinite sequence.
+[33:09] And those of you who were on your high school math team,
+[33:13] you'll know that a quick and dirty way of summing
+[33:16] that infinite sequence is basically
+[33:19] to multiply both sides by 1 plus r.
+[33:22] And you'll notice that when you do that,
+[33:24] you get the series back again, but with an extra C.
+[33:28] And when you do the subtraction and division,
+[33:31] you end up with this incredibly simple formula
+[33:35] that says that the present value of this claim that
+[33:38] pays C dollars forever is not infinite.
+[33:42] In fact, it's quite finite.
+[33:44] It's C divided by r.
+[33:46] What a simple formula.
+[33:49] If I have a piece of paper that pays $100 a year forever,
+[33:53] and the interest rate is 10%, what
+[33:56] is this piece of paper worth?
+[33:59] Yes?
+[34:00] AUDIENCE: $1,000.
+[34:00] ANDREW LO: Exactly.
+[34:01] $1,000.
+[34:02] Isn't that amazing, that we could actually value something
+[34:05] like that?
+[34:07] If the interest rate is 5%, what is it worth then?
+[34:11] Yeah.
+[34:12] $2,000.
+[34:12] Right.
+[34:13] Simple.
+[34:14] We have complete analytical solution for a cash flow
+[34:19] that, on the surface of it, seems like it should be
+[34:21] worth a huge amount of money.
+[34:23] It's not that huge.
+[34:26] Yeah?
+[34:26] AUDIENCE: [INAUDIBLE]
+[34:29] ANDREW LO: Well, yes.
+[34:29] We're assuming that interest rates are constant.
+[34:33] Absolutely.
+[34:34] So if interest rates vary.
+[34:35] This formula is not right.
+[34:37] We're going to come to the case where
+[34:38] interest rates vary over time.
+[34:40] So, absolutely.
+[34:41] This is still under the simplistic assumption
+[34:43] that interest rates are the same.
+[34:45] But under that case, I think it's still pretty cool
+[34:47] that we're able to come up with the formula for value, right?
+[34:50] Yeah.
+[34:51] AUDIENCE: [INAUDIBLE]
+[34:56] ANDREW LO: Well, that's a good question.
+[34:58] I was afraid you were going to ask that.
+[35:00] But I am prepared.
+[35:01] I am prepared to answer that.
+[35:03] In the United Kingdom, there is a bond
+[35:06] issued by the government called a consol.
+[35:10] And this bond is a perpetuity.
+[35:13] That is, it pays to the holder a fixed amount every year
+[35:18] forever.
+[35:19] Now in that case, forever means as long
+[35:21] as the British government is still in existence.
+[35:24] You know, it's still around.
+[35:27] But that's an example.
+[35:29] AUDIENCE: [INAUDIBLE].
+[35:29] ANDREW LO: Yes, absolutely.
+[35:31] It trades.
+[35:31] You can buy it, sell it, observe the price.
+[35:34] Absolutely.
+[35:34] Yeah.
+[35:37] Yes?
+[35:37] AUDIENCE: [INAUDIBLE]
+[35:49] ANDREW LO: Right.
+[35:50] Good question.
+[35:52] Where do we get the interest rate?
+[35:54] The market.
+[35:55] Exactly.
+[35:56] So you can either get it from the marketplace--
+[36:00] so I have a piece of paper.
+[36:01] It pays $1 a year forever.
+[36:04] Who will pay me $5 for this piece of paper.
+[36:07] $6?
+[36:08] $7?
+[36:08] I'll auction it off to the highest bidder,
+[36:11] and that price will translate into an interest rate
+[36:16] determined by the marketplace.
+[36:18] So the short answer is the market.
+[36:19] Now you're asking me probably a deeper question, which
+[36:23] is where does that come from?
+[36:24] Because there are all sorts of factors,
+[36:26] like future, famine, and plagues, and wars,
+[36:29] and all these other issues.
+[36:32] And the answer is, it's an approximation
+[36:35] that market participants make, and they're
+[36:39] willing to live with.
+[36:40] Right?
+[36:41] I'll give you an example.
+[36:42] A few years ago, Walt Disney, the entertainment company,
+[36:47] issued bonds, corporate bonds.
+[36:49] They were 100 year bonds.
+[36:52] They were going to mature in 100 years.
+[36:56] Now, I don't know how many of you
+[36:58] are high school math team jocks, but if you
+[37:00] are, one test is to ask the question,
+[37:05] with this infinite series, if you take it out to 100 terms,
+[37:09] instead of all the way out to infinity,
+[37:11] what percentage of the total market value will you capture?
+[37:15] It turns out that 100 terms is pretty darn close
+[37:19] to infinite in this grand scheme of things with interest rates
+[37:22] that we use.
+[37:23] So that's an example, where when they issued that bond,
+[37:26] and they auctioned it off to the market participants, whoever
+[37:29] bought those bonds, whoever the highest bidders were,
+[37:33] they set the price.
+[37:34] Once you have the price, you can back out and calculate the r.
+[37:38] In fact, let me ask you this.
+[37:39] If I tell you what C is, C is $100,
+[37:43] and I tell you the market price, say it's $500,
+[37:48] what's the interest rate?
+[37:49] Can you figure that out?
+[37:51] Yeah?
+[37:51] AUDIENCE: [INAUDIBLE].
+[37:53] ANDREW LO: Right.
+[37:53] Exactly it's basically determined.
+[37:57] So the market price for an instrument like this
+[38:00] will give you the market's assessment
+[38:03] of what that interest rate is.
+[38:06] AUDIENCE: [INAUDIBLE]
+[38:21] ANDREW LO: Let me repeat the question in case people
+[38:24] didn't hear.
+[38:25] The question is, am I telling you that with all the PhDs
+[38:29] out there, there is nothing more sophisticated in terms
+[38:32] of pricing these instruments than simply auctioning them
+[38:35] off, as we did to a bunch of MBAs?
+[38:38] Well, first of all, I wouldn't denigrate MBAs that way.
+[38:44] I would argue that the PhDs who are doing research
+[38:49] are ultimately advising the MBAs as to what to bid,
+[38:53] and then the MBAs take into account the business
+[38:55] considerations, as well as the analytics.
+[38:58] And so it's actually a highly complex and sophisticated
+[39:02] process by which the bidding occurs.
+[39:04] In other words, you're not getting amateurs doing it.
+[39:06] You're getting professionals who know how to price these things.
+[39:10] That said, are they going to make mistakes?
+[39:12] Absolutely.
+[39:13] So market pricing is an imperfect mechanism.
+[39:17] But the imperfect mechanism actually works pretty well.
+[39:21] And so far, nobody else has figured out anything
+[39:23] that works any better.
+[39:25] So, yeah?
+[39:27] AUDIENCE: [INAUDIBLE] price [INAUDIBLE] $1 [INAUDIBLE].
+[39:38] Obviously, they're not just issuing one
+[39:40] to the highest bidder.
+[39:42] ANDREW LO: So the question is, isn't there
+[39:44] a problem in terms of the auction if what we're doing
+[39:47] is determining the price based upon the highest bidder.
+[39:50] Because the highest bidder is typically the individual
+[39:52] that's the most confident.
+[39:54] Or it's possible that that particular bidder knows
+[39:59] something that the rest of the market doesn't.
+[40:01] So I don't know which of those two possibilities
+[40:04] might be the case.
+[40:06] It depends on the market circumstances.
+[40:08] One of the things about auctions,
+[40:09] though, is that the design of the auction
+[40:13] can actually have a big impact on how informative
+[40:15] the price is.
+[40:16] So the standard auction is actually very, very complicated
+[40:21] in terms of the various incentive effects.
+[40:23] But there are more intelligent auctions
+[40:26] that are designed to elicit true responses based upon not just
+[40:31] kind of anxiousness to win, but on what the economic valuation
+[40:35] is.
+[40:36] In fact, there's an example of an auction
+[40:39] that works something like this.
+[40:42] You have bidders bidding for a particular commodity.
+[40:46] And it turns out that the highest bidder wins.
+[40:54] But the highest bidder will pay a price
+[40:59] that is the second highest bidder's price.
+[41:04] So that actually has a very interesting incentive
+[41:09] in the sense that it ends up forcing you to actually reveal
+[41:14] your true preferences.
+[41:16] And we'll come back to that as we talk later on about market
+[41:19] mechanisms and pricing.
+[41:21] Yeah?
+[41:21] AUDIENCE: [INAUDIBLE] mechanisms in auction, for example,
+[41:24] for public contracts--
+[41:25] ANDREW LO: Yeah.
+[41:25] AUDIENCE: In which they do the average
+[41:28] and they rule out people who have more than 15%
+[41:30] deviation from that.
+[41:31] So it could really go for a very low price.
+[41:34] ANDREW LO: Yeah.
+[41:35] AUDIENCE: It's interpretative that you're like, [INAUDIBLE].
+[41:37] So you're kicked off the deal.
+[41:38] ANDREW LO: That's right.
+[41:39] So there are mechanisms to try to make the auctions smarter.
+[41:42] And that's one example.
+[41:43] Another example of that.
+[41:45] But we're going to assume for now that the auction mechanism
+[41:48] produces a good price.
+[41:50] Later on, after we figure out how markets work,
+[41:52] we're going to come back and question that.
+[41:54] And the very end of this course, I'm
+[41:57] going to question all of this and confront you
+[42:00] with empirical evidence that describes psychological biases
+[42:05] that all of us have that are hardwired
+[42:06] into us that would make you think that markets
+[42:09] don't work well at all.
+[42:11] And we'll give you a framework for thinking about those two
+[42:13] kinds of phenomenon.
+[42:15] Yeah?
+[42:16] AUDIENCE: I'm just curious to see--
+[42:20] [INAUDIBLE] would you have bought this [INAUDIBLE]
+[42:24] at market price.
+[42:26] [INAUDIBLE]
+[42:31] ANDREW LO: OK.
+[42:32] The question is, do people's bids actually
+[42:34] reflect interest rates over time?
+[42:36] Well, remember that market conditions are changing.
+[42:39] So the question is, do they reflect people's information
+[42:43] as of when.
+[42:45] I mean, you never step into the same river twice.
+[42:48] So what you bought last year at last year's price
+[42:51] may have no bearing on what you're willing to buy
+[42:54] at this year's price, right?
+[42:56] Things change.
+[42:57] So I'm not sure that that question is well-posed.
+[43:00] At every point in time, if an individual
+[43:03] will pay this C divided by r for a security that pays C forever,
+[43:08] that's the fair market price.
+[43:09] Now in the future, if interest rates change,
+[43:13] the price will change.
+[43:15] But what this does say is a very interesting point
+[43:17] that I think you're getting to, which
+[43:19] is that suppose that C never changes by contract.
+[43:25] If interest rates never change, then this security
+[43:31] will never change in price.
+[43:34] It will have absolutely no price growth.
+[43:40] So here's an example where you buy a piece of paper--
+[43:43] let's say the interest rate is 10% and C is $100.
+[43:47] You pay $1,000 today.
+[43:50] If next year the interest rate is 10%, this piece of paper's
+[43:55] still worth $1,000.
+[43:57] And then five years from now, if the interest rate is 10%,
+[44:00] the piece of paper's still worth $1,000.
+[44:04] Does that make sense?
+[44:05] Does that seem to suggest that you got stiffed
+[44:08] because you bought a security and it didn't grow in price?
+[44:13] In fact, the rate of return on that security is 0.
+[44:17] Right?
+[44:21] AUDIENCE: [INAUDIBLE].
+[44:23] ANDREW LO: Or I mean, a $100 payment.
+[44:25] AUDIENCE: You have one coupon payment plus--
+[44:27] ANDREW LO: Every year.
+[44:28] Right, exactly.
+[44:30] So it's wrong that the return is zero.
+[44:33] The price return is zero.
+[44:35] There's no price growth.
+[44:37] But meanwhile every year, you've been getting checks for $100.
+[44:41] And if the piece of paper was $1,000
+[44:45] and you've been getting checks for $100 every year,
+[44:49] what's your annual return?
+[44:53] 10%.
+[44:54] What's the interest rate?
+[44:56] Oh, funny how that works, huh?
+[44:58] That's great.
+[44:59] You get a 10% return.
+[45:01] Why?
+[45:02] Because you're holding this piece of paper
+[45:04] that generates coupons, and the coupons
+[45:09] end up giving you a 10% rate of return,
+[45:12] because the price of the security
+[45:14] is those coupons discounted at 10%.
+[45:19] Nothing magic about it.
+[45:20] It all adds up.
+[45:21] It all works together.
+[45:22] OK?
+[45:25] Yes?
+[45:25] AUDIENCE: [INAUDIBLE] for example--
+[45:31] ANDREW LO: We're going to get to that.
+[45:32] Yes, we're going to get to that.
+[45:33] That's my next example.
+[45:35] Let me hold off on that.
+[45:36] I want to make sure everybody understands
+[45:37] the perpetuity though.
+[45:38] And then we're going to get to the example where C changes.
+[45:42] Now to your example, what happens if C changes.
+[45:46] In fact, let's be optimistic and let's say that C grows.
+[45:52] So not only am I going to pay you something
+[45:55] forever, but that something, I'm going
+[45:58] to let that grow by a rate of growth of g.
+[46:02] So next year, I pay you C. But the year after, I'm
+[46:07] going to pay you C, multiplied by 1 plus g.
+[46:10] So let's say g is 5%.
+[46:14] Then next year, I pay you $100.
+[46:17] The year after, I pay you $105.
+[46:20] And the year after that, I'll pay you
+[46:22] whatever 1.05 squared is times 100, and so on.
+[46:29] Now, what is this piece of paper worth?
+[46:33] And if you do the same kind of high school math team
+[46:36] trick and solve for the present value, you get an answer,
+[46:43] PV is equal to C divided by r minus g.
+[46:49] r minus g.
+[46:51] So you subtract this growth rate.
+[46:53] Now when you subtract the growth rate,
+[46:57] that makes the denominator smaller,
+[46:59] which makes the whole thing bigger,
+[47:02] which is the right direction because you're
+[47:05] getting a cash flow that is not steady over time,
+[47:09] but it's growing over time.
+[47:10] So it should be worth more.
+[47:12] And it's worth r minus g more.
+[47:16] All right?
+[47:19] Now you notice, I have a little condition at the end of that.
+[47:22] r has to be greater than g.
+[47:25] Why do I have that condition?
+[47:27] Yeah?
+[47:29] AUDIENCE: [INAUDIBLE] infinite [INAUDIBLE]
+[47:33] the infinite [INAUDIBLE].
+[47:36] ANDREW LO: That's right.
+[47:37] So let's suppose that r equals g.
+[47:39] Let's see what happens.
+[47:40] If r equals g, then the infinite series on top, c divided by 1
+[47:47] plus r plus C times 1 plus g over 1 plus r squared,
+[47:53] that's just C over 1 plus r, because I'm assuming g and r
+[47:56] are the same.
+[47:58] Plus C over 1 plus r, plus C over 1 plus r, plus C over 1
+[48:03] plus r.
+[48:04] I have an infinite number of C over 1 plus r.
+[48:07] And C over 1 plus r is a finite constant.
+[48:13] The sum is infinite.
+[48:17] So at some point, that's going to exceed
+[48:19] total world GDP, and then beyond it, and then
+[48:23] the other planets of the solar system, and so on.
+[48:28] What's going on here?
+[48:29] Why is it happening?
+[48:33] Anybody give me the intuition for what's happening?
+[48:35] AUDIENCE: Because the numbers are going smaller and smaller
+[48:41] [INAUDIBLE]
+[48:45] ANDREW LO: Right.
+[48:46] AUDIENCE: But compared just to zero, the amount of
+[48:49] [INAUDIBLE].
+[48:51] ANDREW LO: Right.
+[48:52] Yes.
+[48:52] AUDIENCE: [INAUDIBLE].
+[48:54] ANDREW LO: Yeah.
+[48:55] That's right.
+[48:55] It's growing.
+[48:56] But what's the intuition for why that can't persist?
+[49:00] AUDIENCE: Sounds like you're [INAUDIBLE]
+[49:02] the 10,000 [? quantity. ?]
+[49:03] ANDREW LO: Right.
+[49:05] That's right.
+[49:06] It's basically working against the time value of money
+[49:09] because the numerator is growing as fast as the denominator is
+[49:12] growing.
+[49:13] So what it says is that the cash that you're presumably
+[49:16] going to be paying to somebody is actually
+[49:19] increasing at the exact same rate
+[49:21] that the discount rate is growing.
+[49:25] So there's no way to sustain that forever.
+[49:28] You can't do that forever.
+[49:31] So it has to be the case that the amount that the cash is
+[49:35] growing can never exceed the discount rate.
+[49:41] Now remember, these are all theoretical concepts
+[49:43] where I'm assuming that growth rate stays the same forever,
+[49:46] and the interest rate stays the same forever.
+[49:49] This doesn't rule out for short periods of time growth rates
+[49:54] exceeding interest rates.
+[49:55] You just can't do it forever.
+[49:58] For the last 15 years, China has been growing
+[50:02] at a rate of approximately 10%.
+[50:04] Their entire economy has been growing at 10% a year
+[50:08] for every single year over the past 15 years.
+[50:13] That can't persist.
+[50:15] If it did, not only would we all be speaking Chinese,
+[50:19] but all of the planets in this entire galaxy
+[50:23] would end up speaking Chinese.
+[50:25] I mean, growth rates cannot persist forever.
+[50:28] But here, we're assuming that this growth rate
+[50:31] is an infinite growth rate.
+[50:34] It applies forever.
+[50:35] So in that sense, it has to be smaller than the discount rate.
+[50:40] Question?
+[50:41] OK.
+[50:44] AUDIENCE: [INAUDIBLE] rest of the world.
+[50:58] ANDREW LO: Well, there are a couple of problems with that.
+[51:01] So the question is, what happens when r is actually less than g?
+[51:05] Right?
+[51:06] You would think that that gives you a negative number.
+[51:08] In fact, it doesn't, because there's
+[51:11] a discontinuity at zero.
+[51:13] And so this formula is-- that doesn't even apply.
+[51:18] What happens, if you do the infinite sum, when
+[51:23] g approaches r, this infinite sum already goes to infinity.
+[51:28] When g gets above r, it gets to be even more infinite,
+[51:33] whatever that means.
+[51:36] Right?
+[51:37] Because the numerator is then not growing at the same rate,
+[51:40] but it's growing at a faster rate than the denominator.
+[51:42] So the formula, you wouldn't even
+[51:44] get the formula, because now you're dealing with infinities.
+[51:47] OK?
+[51:48] AUDIENCE: [INAUDIBLE].
+[51:50] ANDREW LO: Right.
+[51:52] Right.
+[51:53] AUDIENCE: [INAUDIBLE].
+[51:55] ANDREW LO: It would just be an infinite value,
+[51:57] but an even bigger infinity, whatever that means.
+[52:00] And so, this formula really only holds under this condition.
+[52:04] If it were equal to or negative, this formula
+[52:08] just would not be appropriate.
+[52:09] You'd have to go back to that formula.
+[52:11] And what that formula would show you
+[52:12] is that you're getting an infinity.
+[52:17] OK?
+[52:17] So that's a perpetuity.
+[52:18] And we're going to use this, by the way.
+[52:20] This may seem kind of theoretical.
+[52:21] But trust me, it's going to come in
+[52:23] very handy when we start pricing bonds and stocks.
+[52:26] So we're going to use this quite a bit.
+[52:30] Now I want to tell you about a formula that
+[52:34] is my second favorite formula in this entire course.
+[52:37] And in a way, this is much more practical,
+[52:39] and it's very closely related to the perpetuity.
+[52:41] This formula is a formula for an annuity.
+[52:46] An annuity is a security that pays a fixed amount every year
+[52:51] for a finite number of years, and then it stops paying.
+[52:54] So an example of an annuity is a bond.
+[52:56] Another example is an auto loan.
+[52:58] Another example is a mortgage.
+[53:00] And I think I told you that this mortgage valuation formula is
+[53:04] one that you're going to use when
+[53:06] you start thinking about making a home purchase decision.
+[53:08] And it will actually be this formula
+[53:10] exactly that you're going to need to use.
+[53:12] Question?
+[53:13] AUDIENCE: [INAUDIBLE].
+[53:15] ANDREW LO: Yes.
+[53:16] AUDIENCE: Just one question.
+[53:17] The principal is returned within these payments, or at the end?
+[53:20] ANDREW LO: Let me talk about that later.
+[53:22] Right now, we don't know what principal is.
+[53:24] So when I talk about bonds, I'm going to come back to that.
+[53:26] OK?
+[53:27] So let's not get ahead of ourselves.
+[53:28] I want to make sure we understand the formula
+[53:30] and then I'll come to that.
+[53:30] That's an important point that we're
+[53:32] going to get to in about a lecture and a half.
+[53:35] OK?
+[53:36] OK.
+[53:37] So let me explain what a perpetuity and an annuity
+[53:41] are in relationship to each other.
+[53:43] A perpetuity pays a fixed amount forever.
+[53:47] An annuity pays a fixed amount for a finite period of time.
+[53:53] So there's a relationship between the two.
+[53:58] And in particular, you can think about the value
+[54:03] of an annuity as the value of a perpetuity
+[54:10] where you only get to have it for a finite period of time.
+[54:15] Right?
+[54:16] Let me explain.
+[54:18] An annuity, the value of that, is
+[54:21] given by the expression on the top line.
+[54:23] Right?
+[54:24] C, C, C, C for T periods, discounted
+[54:28] at the appropriate discount rate.
+[54:33] Now, it turns out that you can come up
+[54:36] with an expression for what that present value is, again,
+[54:39] using the high school math team kind of an approach.
+[54:43] You simply multiply both sides by 1 plus r,
+[54:46] and then you solve for the present value,
+[54:50] and you get an expression that looks like this.
+[54:55] Well, this looks an awful lot like it's related
+[54:58] to the perpetuity formula.
+[55:01] You've got a C over r here, but then there's
+[55:03] some annoying other terms over here.
+[55:09] So let me give you a thought experiment that will show you
+[55:12] how to derive this formula in less than one minute
+[55:16] without any kind of high school math team tricks.
+[55:19] And the experiment goes like this.
+[55:25] Suppose that you want to create an annuity,
+[55:29] but you don't have an annuity at hand.
+[55:33] Well, one way you can do it is to buy a perpetuity,
+[55:42] hold it for T periods, and then get rid of it and sell it.
+[55:51] Now look at the cash flows that you get.
+[55:54] If you were to take a perpetuity,
+[55:58] which is the top cash flow, and you
+[56:02] would subtract from it a perpetuity as of date
+[56:07] T plus 1-- so you've gotten rid of the perpetuity
+[56:10] at this point.
+[56:12] When you take the top cash flow sequence
+[56:15] and you subtract from it the next cash flow sequence,
+[56:18] you get the bottom cash flow sequence,
+[56:21] which is just an annuity.
+[56:25] Right?
+[56:26] So an annuity is a perpetuity on borrowed time.
+[56:32] So what is it worth?
+[56:33] Well, it's worth whatever it is to buy a perpetuity,
+[56:41] hold it for T periods, and as soon as it pays off
+[56:45] in that Tth date, you sell it.
+[56:50] OK?
+[56:51] So what's it going to cost?
+[56:54] What's the value of that?
+[56:57] The value of that is this is what it costs
+[57:03] to purchase the annuity today--
+[57:07] the perpetuity, sorry.
+[57:09] Right?
+[57:09] C over r.
+[57:10] That's what it costs to purchase the perpetuity today.
+[57:14] And you're going to hold on to that perpetuity for T days or T
+[57:18] periods.
+[57:20] And at date T plus 1, you're going to sell the perpetuity.
+[57:26] What are you going to get when you sell it?
+[57:29] What would you get as the payment?
+[57:33] C over r.
+[57:34] That's right, because that's the price of a perpetuity.
+[57:36] The price never changes.
+[57:38] It's always C over r.
+[57:40] When do you get paid that price?
+[57:43] At T or T plus 1?
+[57:45] AUDIENCE: T plus 1.
+[57:46] ANDREW LO: Because I want to have T periods of cash flow.
+[57:49] So I've got to hold onto that perpetuity at least
+[57:52] until T periods.
+[57:53] After the Tth date, I sell it, which
+[57:55] means I sell at the next date, which is T plus 1.
+[57:59] And so I get paid a cash flow of c over r at day T plus 1.
+[58:06] What is that cash flow worth today?
+[58:12] Remember, it's at two different points in time.
+[58:14] I need to use the exchange rate to convert it
+[58:16] to the same currency.
+[58:17] What's the exchange rate between date 0 and date t plus 1?
+[58:23] Yeah? [? Scholmi? ?]
+[58:24] AUDIENCE: [INAUDIBLE]
+[58:29] ANDREW LO: By t, or by t plus 1?
+[58:31] AUDIENCE: By t.
+[58:33] ANDREW LO: No.
+[58:34] Close, but no cigar.
+[58:37] AUDIENCE: t plus 1.
+[58:37] ANDREW LO: Why t plus 1?
+[58:38] AUDIENCE: That's the period where you're getting paid.
+[58:39] ANDREW LO: That's the period where you're getting paid.
+[58:41] So let's go back.
+[58:42] And remember, the first thing you do?
+[58:43] Draw a time line.
+[58:44] Right?
+[58:45] So here's the timeline.
+[58:46] And you see why it's confusing.
+[58:48] You know, I don't blame you for thinking it's t,
+[58:51] because I said two periods and you're
+[58:52] going to sell it after two periods
+[58:54] but when I say sell it after two periods
+[58:56] if it's after two periods it's plus 1.
+[59:00] So take a look at this diagram, and you've
+[59:02] got to draw the diagram.
+[59:03] You've got to draw the diagram to really get this.
+[59:05] OK?
+[59:07] The top part is a perpetuity.
+[59:10] The middle part is that same perpetuity at day T plus 1.
+[59:15] So if you own the top piece, and at the same time
+[59:21] you sell the middle piece, that means at time T plus 1,
+[59:26] you're going to give up all of your future cash flows
+[59:29] because you're going to sell the perpetuity.
+[59:31] Then you're left with the actual annuity cash flow that we want.
+[59:39] So the question is, what does this transaction cost?
+[59:42] I buy that it's going to cost me c over r.
+[59:45] I sell this.
+[59:47] This is a sequence of cash flows.
+[59:50] So if I'm selling a sequence of cash flows,
+[59:52] I'm selling that value.
+[59:54] I'm going to receive that value as payment.
+[59:56] So it's going to reduce my cost, and so like any other sequence
+[60:01] of cash flows, when I sell this, I have to value it,
+[60:04] and it turns out that this is equal to the value
+[60:07] at this date, the value of the perpetuity at this date.
+[60:11] And what is that value?
+[60:14] C over r.
+[60:16] And if it's C over r at this date, what
+[60:20] is the value at this date?
+[60:22] I've got to discount it by 1 plus r to the T plus 1,
+[60:27] because it's T plus 1 periods going back.
+[60:34] OK?
+[60:37] Well, actually, sorry.
+[60:39] T periods, the convention is a little confusing.
+[60:44] It's T periods because you're at t plus 1,
+[60:48] and you want to figure out what the value is.
+[60:51] And the value of the perpetuity at T
+[60:55] is a perpetuity that starts paying off at T plus 1.
+[60:59] So you're right.
+[61:01] It's T, but you're discounting it
+[61:03] as of the payment as of T plus 1.
+[61:07] OK?
+[61:10] How many people are confused?
+[61:12] OK.
+[61:14] Yes.
+[61:15] AUDIENCE: [INAUDIBLE].
+[61:17] let me do this on the board.
+[61:19] Right.
+[61:19] Exactly.
+[61:20] Let me do this on the board, because the notation is
+[61:23] confusing.
+[61:23] Let me just switch on the light.
+[61:25] Whoops.
+[61:29] OK.
+[61:35] So we're going to start by assuming that we've
+[61:38] got a perpetuity at date 0.
+[61:40] So this is date 0.
+[61:42] And remember, the definition of perpetuity
+[61:43] is that it starts paying the next period.
+[61:48] And so it pays C, C until this date.
+[61:55] And sorry.
+[61:57] T Plus 1 pays T plus 2, and so on.
+[62:06] The annuity that we want to value
+[62:08] is an annuity that is just consisting of the first T cash
+[62:14] flows.
+[62:16] Right?
+[62:18] So what I claim is that if you engage
+[62:22] in the following transaction, at date 0, you buy a perpetuity,
+[62:33] and you also agree to sell that perpetuity at date
+[62:40] after date T. So you sell after T. What that means
+[62:48] is that you will hold onto the perpetuity
+[62:50] until it pays you C dollars.
+[62:55] And as soon as it does that, after it does that,
+[62:58] you sell it.
+[63:00] Now when you sell it, what do you get for it?
+[63:03] You get C over r.
+[63:04] But the question is, when do you get that C over r?
+[63:08] If you have a sequence of cash flows
+[63:11] that starts in year T plus 1, then the value of it at day T
+[63:19] is C over r right?
+[63:21] Because a perpetuity by assumption is a piece of paper
+[63:25] that starts paying off not today, but next year.
+[63:30] So if it starts paying off next year,
+[63:34] for every single year thereafter,
+[63:36] the value at that point is going to be equal to C over r.
+[63:42] Any questions about that?
+[63:45] OK.
+[63:45] So we've now established that when
+[63:48] you sell these cash flows going out into the infinite future,
+[63:53] the value at date T is C over r.
+[64:05] And therefore, if the value at date
+[64:07] T is C over r, what is the value at date 0?
+[64:12] You have to bring it back to date 0.
+[64:15] You're discounting it by T periods.
+[64:19] So it's C over r times 1 over 1 plus r to the t.
+[64:25] That's what you get when you sell this perpetuity.
+[64:29] And what you paid for it is C over r.
+[64:32] So the value of this particular set of actions
+[64:36] that you've engaged in is C over r minus C over r times 1 over 1
+[64:42] plus r to the T.
+[64:47] That's the annuity discount formula in a nutshell.
+[64:51] And this formula is the basis of how you figure out
+[64:55] your mortgage payments.
+[64:57] Because a mortgage is where you have an obligation every month
+[65:03] to pay something to the bank in exchange for a pile of money,
+[65:06] the money that you used to buy your house.
+[65:09] And the first time I was buying my house I
+[65:11] actually went through this transaction.
+[65:13] I decided that I was going to just calculate this myself,
+[65:16] because the interest rate was not
+[65:17] exactly given by what was in the particular banker's table.
+[65:23] So I went to the mortgage company.
+[65:24] It was a bank.
+[65:26] And I think the interest rate that day
+[65:29] was something like, I don't know, 8%, 8 and 1/2%,
+[65:32] or 8 and 3/4%.
+[65:34] And it turns out that the table, this book,
+[65:37] that had all of these calculations, all
+[65:39] of these numbers, didn't have that interest rate.
+[65:43] It didn't have 8 and 3/4.
+[65:44] It had 8 and 1/2 or 9, but it didn't have 8 and 3/4.
+[65:48] And so I just used this formula, punched in a few numbers,
+[65:51] and I got my monthly payment.
+[65:53] And you know, I told the banker, well, you know,
+[65:55] this is what I'll pay every month.
+[65:57] And he said, well, you can't just do that.
+[66:01] I said, well, what do you mean?
+[66:02] And he says, well, you know, I don't know
+[66:04] that that's the right number.
+[66:05] We have to wait for the senior vice president
+[66:08] to tell me what the right number is.
+[66:10] Because we don't have the book.
+[66:11] And he contacted the senior vice president.
+[66:12] It turned out he didn't have the book either.
+[66:14] So they had to call the main branch,
+[66:16] and somebody had to look it up in this book.
+[66:19] And sure enough, when they came back with the number,
+[66:23] it was my number down to the fourth decimal place.
+[66:26] And so he was amazed like, wow, how did you do that?
+[66:29] You know, this is amazing.
+[66:31] You're incredible.
+[66:33] It's incredible if you don't know this very basic secret.
+[66:37] So you're going to do this.
+[66:39] You're going to do this in the problems.
+[66:40] You're going to calculate mortgage payments, auto loan
+[66:42] payments, consumer finance payments.
+[66:44] All of it is based upon this simple formula.
+[66:46] And you can construct tables, as people have done,
+[66:52] of what are called annuity discount factors.
+[66:56] So the annuity discount factor is simply
+[66:58] separating the interest rate from the cash flow.
+[67:02] And so when you're going out for a mortgage, the amount
+[67:05] that you're borrowing, you borrow
+[67:07] $200,000 for your house, that's the left-hand side.
+[67:12] Your monthly payment, C, that's the right-hand side.
+[67:15] And the prevailing interest rate, that's the r.
+[67:18] So if you know the annuity discount factor, which
+[67:22] is based just on the interest rate,
+[67:24] and you know the amount of the loan that you want,
+[67:27] PV, you can divide and figure out
+[67:29] what your monthly payments are, or vice versa.
+[67:32] If you have a particular set of cash flows every month,
+[67:35] and you have an interest rate, you
+[67:36] can figure out what your total value of that loan
+[67:39] is going to be in terms of market terms.
+[67:42] And so once you have this expression,
+[67:45] you can use a simple table of numbers
+[67:49] to calculate these annuity discount factors.
+[67:51] And then you can compute mortgage payment yourself.
+[67:53] So this is the kind of number I was talking about.
+[67:56] Given various different interest rates,
+[67:58] you can come up with these particular annuity discount
+[68:01] factors.
+[68:03] And once you do, you can calculate monthly payments
+[68:06] very easily.
+[68:07] So you only need one set of tables.
+[68:10] And for any kind of mortgage, for any kind of consumer loan,
+[68:13] you can compute the monthly payments.
+[68:15] Right?
+[68:16] Whether it's an auto loan, or a mortgage, it doesn't matter.
+[68:18] What you need is this table right here.
+[68:20] Nowadays, we can do it in Excel.
+[68:21] It's not a big deal.
+[68:23] But still, you should know what the underlying basis
+[68:26] is for those calculations.
+[68:30] OK.
+[68:31] Now before you finish this, I would
+[68:35] like you to take a look at a few examples.
+[68:36] I've given you some here, numerical examples.
+[68:39] And I want to close this class with a discussion
+[68:43] about compounding, and then next time,
+[68:46] finish up with a discussion of inflation.
+[68:49] Because I don't think we'll have time to do both.
+[68:52] Compounding is a matter of convention.
+[68:57] And I want to explain what that convention is and try
+[68:59] to give you a little bit of motivation for the logic of it,
+[69:02] so that at least it doesn't look like I'm just
+[69:04] making it up out of the blue.
+[69:07] The idea behind convention is to take into account calendar
+[69:10] effects, and in particular, the possibility
+[69:14] of early withdrawal.
+[69:15] Let me explain.
+[69:16] When I tell you that an interest rate is 10%,
+[69:20] typically, that quote is in terms of an annual interest
+[69:25] rate.
+[69:25] Almost all interest rates in the world
+[69:28] are quoted on an annualized basis, meaning
+[69:31] if you were to keep an investment
+[69:33] for a 12-month period, that's what the rate of return
+[69:37] for that investment would be.
+[69:40] The problem with that quote, 10%,
+[69:44] is that what do you do if you want to withdraw
+[69:47] your money after six months?
+[69:50] What should you get paid then?
+[69:53] Well, it would seem fair, if you agree to a 10% interest
+[69:58] rate per year, to say, all right, if I take it
+[70:01] out in six months instead of a year, maybe
+[70:04] you should only pay me half the interest rate.
+[70:07] Right?
+[70:08] That seems like a fair deal.
+[70:09] Right?
+[70:09] Instead of 10%, pay me 5%.
+[70:14] And maybe if I keep it in for only a month,
+[70:19] it would be fair not to pay me 10% for that month,
+[70:21] but to pay me 10% divided by 12 for the month.
+[70:28] The reason that that discussion matters
+[70:31] is that if you agree that that's the fair thing to do,
+[70:35] well then 10% is not what you're going to get.
+[70:40] Because if you get paid 5% interest over the first six
+[70:45] months, you take your money out of the bank,
+[70:50] and they give you that 5%, and then
+[70:53] you put the money back in the bank literally the next minute
+[70:57] and keep it in for the next six months,
+[70:59] you're going to earn another 5% on your original amount,
+[71:05] plus you're going to earn 5% on the first six month's 5%.
+[71:10] You're going to earn interest on the interest.
+[71:13] And the banks know that.
+[71:15] And after a while, they were OK with that.
+[71:19] That's a convention there's no reason it has to be that way.
+[71:23] The bank could say, I'm going to give you 10% interest.
+[71:27] But if you want to withdraw your money in six months,
+[71:29] I'm going to give you the amount of interest such
+[71:32] that if you were to take the money out and put it
+[71:34] right back in and hold it, you would get 10%.
+[71:38] Does anybody know what that interest rate would be?
+[71:41] How you figure that out?
+[71:42] Yeah, [INAUDIBLE]?
+[71:43] AUDIENCE: [INAUDIBLE].
+[71:47] ANDREW LO: Roots.
+[71:48] That sounds painful.
+[71:49] Is that like a root canal?
+[71:51] What root do you mean?
+[71:53] You're right.
+[71:53] You're right.
+[71:54] What is it?
+[71:55] AUDIENCE: [INAUDIBLE].
+[71:58] ANDREW LO: Yes.
+[71:59] AUDIENCE: [INAUDIBLE].
+[72:03] ANDREW LO: Yes. The square root.
+[72:07] Right.
+[72:08] AUDIENCE: [INAUDIBLE] you get [INAUDIBLE].
+[72:11] ANDREW LO: That's right.
+[72:12] AUDIENCE: [INAUDIBLE].
+[72:13] Exactly.
+[72:14] So what you would do in order to figure out what the six month
+[72:17] interest rate would be so that when you held
+[72:20] the interest on the interest over through the whole year,
+[72:25] it would add up to exactly 10%.
+[72:28] The way you would do it is 1.10, take the square root of that.
+[72:34] Minus 1, that's the interest rate
+[72:38] that you would have for the first six months
+[72:40] and the second six months.
+[72:41] A little less than 5%, such that that number,
+[72:45] when you add 1 and multiply it by itself, you'll get 1.10.
+[72:51] They don't do that, mainly because nobody likes dealing
+[72:54] with roots, except dentists.
+[72:56] OK?
+[72:58] So what they do is they say, OK, as a matter of convention,
+[73:01] here's what we're going to do for you.
+[73:03] This is the deal we're going to give you.
+[73:04] When we say 10% on an annualized basis, what we mean
+[73:08] is that it's going to be compounded,
+[73:11] typically on a monthly basis, and nowadays on a daily basis.
+[73:16] What that means is that the interest
+[73:18] rate that you're actually going to get
+[73:20] is the stated equivalent.
+[73:25] It's the stated annual rate divided by the compounding
+[73:30] interval.
+[73:33] Now that's a good deal when you're a depositor.
+[73:37] That's not a good deal if you're a borrower.
+[73:41] Because when they tell you, you want to borrow money from me,
+[73:44] I'll give it to you at a great rate, it's going to be at 10%.
+[73:48] But when you actually look at how much interest you're
+[73:50] paying, you're going to find out that, actually, it's
+[73:53] more than 10%.
+[73:55] So that's where the term APR and EAR came from.
+[74:01] What does APR stand for?
+[74:02] Anybody know?
+[74:04] When you see this ad on TV for auto loans, you know,
+[74:07] [? buyer ?] loans, buy a car, no money down,
+[74:09] we'll give you a loan, the APR is x%.
+[74:15] Annual percentage rate.
+[74:16] That is the stated rate.
+[74:17] That's not the rate including the effects of compounding.
+[74:22] So as a depositor, when you're lending money to the bank--
+[74:27] that's what it means to deposit money in the bank--
+[74:29] that's a good thing.
+[74:30] Because the annual percentage rate of 10%
+[74:33] is actually not what you're getting.
+[74:35] You're getting more than that, because it's
+[74:36] going to be compounded on a monthly, or in some cases,
+[74:38] on a daily basis.
+[74:40] OK?
+[74:41] In other words, the compounding means you get interest
+[74:45] on your interest on your interest's interest going
+[74:48] forward.
+[74:49] Right?
+[74:51] So you've got to keep in mind that when you see these
+[74:55] discount rates being quoted, ask whether or not they are APR,
+[74:59] annual percentage rate-- that's like the 10% stated rate--
+[75:03] or EAR.
+[75:04] EAR is the equivalent annual rate.
+[75:08] That's what you're really going to get.
+[75:10] That's what you would actually get in terms of literal dollars
+[75:14] at the end of the year if you did nothing but left the money
+[75:17] in there for that entire year.
+[75:18] It would include the interest on the interest on interest
+[75:21] on the interest and so on.
+[75:22] Yeah?
+[75:23] AUDIENCE: [INAUDIBLE].
+[75:25] ANDREW LO: Annual percentage yield.
+[75:27] Yeah, that's right.
+[75:28] Now, this is a very clear example of it.
+[75:31] OK?
+[75:32] If you've got $1,000, and there's no compounding effects
+[75:37] and the interest rate is 10%, you're going to get $1,100.
+[75:41] If you compound twice a year, which is what the old banks
+[75:45] used to do because they didn't have calculators in those
+[75:47] days-- it was kind of hard to compute these numbers--
+[75:51] they would compound it twice a year.
+[75:53] And so you would get credit for the interest,
+[75:56] and then you would get interest on that interest
+[75:58] as well as on the original deposit or principal.
+[76:02] Then that turns into $1,103.
+[76:05] So being able to compound more frequently
+[76:09] gives you an additional bonus, right?
+[76:11] Not much. $3.
+[76:13] But if you think about this as billions of dollars,
+[76:16] this starts adding up to be real money.
+[76:19] Now, if you compound on a quarterly basis, it's $4.
+[76:23] If you compound on a monthly basis, it's $5.
+[76:25] That's actually starting to add up to something important.
+[76:28] Right?
+[76:29] Yeah?
+[76:30] AUDIENCE: [INAUDIBLE].
+[76:43] ANDREW LO: Well, I mean, I think it's six of one,
+[76:45] or half a dozen of the other, as they say.
+[76:47] Banks will compete with each other
+[76:49] to offer ultimately what the market rate is.
+[76:52] So they won't play any tricks with this kind of stuff.
+[76:55] Some banks did play tricks with this early
+[76:57] on in the early days of banking.
+[76:59] That's why banking is such a highly regulated industry,
+[77:02] to make sure that no funny business goes on.
+[77:04] And frankly, that's why banks are forced now
+[77:07] to tell you whether it's an APR or an EAR.
+[77:11] It's a truth in lending kind of a commitment
+[77:14] that they are now being forced to make.
+[77:17] So nowadays, when you get an auto loan or a mortgage,
+[77:21] they have to tell you, yeah, this is APR.
+[77:23] This is the annual percentage rate.
+[77:25] But your actual rate earned may vary,
+[77:29] and it may vary because of compounding effects.
+[77:32] And if you ask them what the effective annual rate is,
+[77:35] they are obligated to tell you.
+[77:37] AUDIENCE: [INAUDIBLE] all the information.
+[77:39] Because with APR, you also need to know the compound--
+[77:43] ANDREW LO: Compounding rate.
+[77:44] But it's now taken for granted that compounding
+[77:48] happens on a daily basis.
+[77:50] So that's a given.
+[77:51] OK?
+[77:52] Any questions about that?
+[77:54] AUDIENCE: [INAUDIBLE].
+[77:55] ANDREW LO: Compounding does, yes.
+[77:57] AUDIENCE: For checking accounts?
+[77:58] ANDREW LO: For checking accounts, for savings accounts.
+[78:01] Yes, it's daily.
+[78:02] And you know why?
+[78:03] It's because they allow you to take out
+[78:04] money on a daily basis.
+[78:06] So if they didn't do it on a daily basis,
+[78:08] they'd have to figure out on a one-off,
+[78:10] if you were to take your money out in the middle of the month,
+[78:13] and I was to take my money out after the first three days,
+[78:15] and you were to take your money out after five days,
+[78:18] they'd have to do all these custom calculations for each
+[78:20] of those circumstances.
+[78:21] So now they do it simply.
+[78:22] They say, fine, we're going to give you your interest
+[78:23] rate every day.
+[78:24] Every day, we're going to compute your interest.
+[78:26] So whether you come or go, you will figure out
+[78:29] when you get the interest.
+[78:30] For certain market applications, people
+[78:34] compute interest intraday.
+[78:36] Like the number of hours you borrow money,
+[78:38] they will calculate interest.
+[78:39] There are cases where you need to borrow money, only
+[78:42] for four hours or three hours.
+[78:45] I know this sounds like drug money.
+[78:46] But that's not what I'm talking about.
+[78:49] There are cases where you need very, very
+[78:50] short-term financing, and you need to borrow the money.
+[78:54] And in those cases, they compute it on a minute to minute.
+[78:57] And in some cases, on a continuous basis.
+[78:59] So I'm going to leave you with a little puzzler, which
+[79:03] is if this tells you what the effective annual rate is, where
+[79:08] you're compounding at intervals of n--
+[79:12] so if r is an APR, an annual percentage rate,
+[79:16] and n is denominated in months--
+[79:18] so monthly would be 12--
+[79:23] what would happen, what would your effective annual rate be,
+[79:28] if you compounded not every day, not every hour, not
+[79:34] every minute, not every femtosecond,
+[79:37] but literally every possible time slice,
+[79:40] the narrowest time slice you can think of.
+[79:42] If you did it continuously, if n were to go to infinity,
+[79:49] what would you get?
+[79:51] Think about that.
+[79:52] That's a little puzzle.
+[79:53] It turns out that's called continuous compounding.
+[79:57] So you're compounding continuously.
+[80:00] It turns out that you actually get a number.
+[80:03] And what that number is is really bizarre.
+[80:08] So I want you to think about that,
+[80:10] and we'll take that up next time.
+[80:12] Thank you.
