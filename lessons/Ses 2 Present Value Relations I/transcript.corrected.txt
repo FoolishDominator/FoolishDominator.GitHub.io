@@ -1,0 +1,1711 @@
+[00:00] The following content is provided under a Creative
+[00:02] Commons license.
+[00:03] Your support will help MIT OpenCourseWare
+[00:06] continue to offer high quality educational resources for free.
+[00:10] To make a donation or to view additional materials
+[00:12] from hundreds of MIT courses, visit MIT OpenCourseWare
+[00:16] at ocw.mit.edu.
+[00:20] ANDREW LO: The other item that I auctioned off--
+[00:22] that's a good question.
+[00:24] Well, first of all, before I tell you that,
+[00:27] you'll note that I put those two packages up here
+[00:30] in the front of the room for this first section.
+[00:33] One was bigger than the other.
+[00:34] And you guys got the smaller one, right?
+[00:37] And you obviously know what that was.
+[00:39] The bigger one turns out to have been a book.
+[00:42] In fact, it's a book that I recently
+[00:44] published on hedge funds.
+[00:48] Now it turns out that the bidding of that second item
+[00:52] went for $60.
+[00:56] The bidding of the item that I sold to this auction
+[00:59] went for $45.
+[01:00] And the fact that it's a smaller package I think
+[01:03] makes some sense of why it went for a smaller amount.
+[01:08] That shows you the power of information,
+[01:10] or lack of information, in terms of determining values.
+[01:13] Yeah, question?
+[01:14] AUDIENCE: Yeah, I was just going to ask
+[01:16] if there was some insider information that
+[01:18] would up the value of that second box?
+[01:23] ANDREW LO: Well, I don't think so.
+[01:24] And one of the reasons that I had two different packages
+[01:28] and I showed this entire section the two different packages
+[01:33] is to try to eliminate a bit of that private information.
+[01:36] I don't believe there was any.
+[01:38] If I used the same two items, then I
+[01:40] think there would have been a concern
+[01:43] that there might have been some information spill over.
+[01:46] So I don't think that was it.
+[01:48] In fact, I think what it was the size of the packages,
+[01:50] believe it or not.
+[01:52] So anybody that tells you that size doesn't matter I think
+[01:56] is not being realistic.
+[01:58] Was there another question back here?
+[01:59] AUDIENCE: I had the same question.
+[02:00] ANDREW LO: OK, yeah?
+[02:01] AUDIENCE: How much did the book retail at?
+[02:05] ANDREW LO: The book retails for $45.
+[02:10] Now of course, I autographed the book, so--
+[02:13] [LAUGHTER]
+[02:15] --so that probably reduced the resale value.
+[02:20] I took the $60.
+[02:23] No tears.
+[02:24] Fair is fair.
+[02:25] So this class, the individual who bid $45 for that iPod
+[02:29] did very, very well indeed.
+[02:31] And the student who bid $60 for the book
+[02:35] didn't do quite as well.
+[02:36] But that's the point of this example.
+[02:38] It's that when you don't know what you're bidding for,
+[02:42] when there's literally no information,
+[02:44] you're obviously not going to get it exactly right.
+[02:47] But you have to admit that in the grand scheme of things,
+[02:50] it's actually not that far off, and not that far
+[02:53] off in a very particular way.
+[02:54] I want to, in particular, talk about the iPod.
+[02:57] Because we are looking at something
+[02:59] like a 70% discount off of the retail value
+[03:02] of that for this class.
+[03:05] Now I want to comment on that in the context of what's
+[03:07] going on today.
+[03:08] I want to spend a few minutes, before we start the lecture,
+[03:11] talking about current events.
+[03:12] Because finance of course involves current events.
+[03:15] And right now we are going through an extraordinarily
+[03:19] interesting set of times.
+[03:20] I think that's a Chinese curse--
+[03:22] may you live in interesting times.
+[03:24] Well, we're going through some really extraordinary times.
+[03:28] Because what happened over the weekend
+[03:29] is something that has probably not happened
+[03:32] since the Great Depression.
+[03:34] What happened over the weekend is that the federal government
+[03:37] took over two of the largest government-sponsored financial
+[03:41] entities in the world, Fannie Mae and Freddie Mac.
+[03:44] These are two government-sponsored entities.
+[03:47] They're private organizations but they
+[03:48] have the backing of the government
+[03:51] in some ambiguous sense.
+[03:54] And it was ambiguous, up until this weekend, what that meant.
+[03:58] What happened was that these large financial institutions
+[04:01] were responsible for purchasing the mortgages
+[04:07] from various different regional banks and lending institutions.
+[04:12] And why would they do that?
+[04:14] What was their function?
+[04:15] Anybody know?
+[04:17] Yeah?
+[04:17] AUDIENCE: To provide a secondary market for mortgages
+[04:21] so that the banks that are the initial lenders
+[04:24] can generate more mortgages and make credit more available.
+[04:28] ANDREW LO: Exactly.
+[04:29] Their goal was to really make credit more available
+[04:32] in the housing market, and the student loan market,
+[04:34] and the auto loan market-- these consumer finance markets.
+[04:38] The purpose of these two organizations
+[04:40] was to buy up the various different obligations
+[04:43] from banks and other financial institutions
+[04:47] so that the banks and financial institutions
+[04:49] could then go out and lend more money to more individuals that
+[04:53] wanted these kinds of loans.
+[04:55] So the purpose of these two organizations
+[04:57] was really to support and grow these various markets.
+[05:02] And it turns out that over the last 20 years,
+[05:05] these markets have grown to epic proportions,
+[05:09] tremendous proportions.
+[05:11] And now, as the housing market has turned down,
+[05:14] the original lenders that made these obligations
+[05:20] are facing some severe pressures.
+[05:22] And that's carried the ripple effects
+[05:25] all the way through the financial system,
+[05:26] to the point where these two organizations literally
+[05:30] could not stand on their own.
+[05:32] And if there had been a default of these two organizations,
+[05:35] there would be some major repercussions.
+[05:37] We're going to talk about that in about four lectures.
+[05:40] The material that we're going to develop over the next three
+[05:42] lectures are going to allow us to analyze the situation
+[05:46] and really try to understand what's
+[05:48] going on in these markets.
+[05:49] But I just wanted to alert you to the fact
+[05:51] that something really big has happened.
+[05:52] You won't understand fully what it is.
+[05:54] You might read the newspapers, and I
+[05:55] would encourage you to do so, but you won't fully
+[05:58] appreciate the importance of it for another three or four
+[06:01] lectures.
+[06:01] But you're going to see this event
+[06:03] unfold before your very eyes this semester.
+[06:06] And that will provide the motivation
+[06:07] for developing the tools to understand what's going on.
+[06:11] Yeah?
+[06:12] AUDIENCE: Can I ask you now, or can we ask you now,
+[06:15] do you think that was the only option,
+[06:19] or do you think that was the right--
+[06:21] ANDREW LO: Well, that's a very tough question.
+[06:23] In terms of the possibilities for the Secretary
+[06:27] of the Treasury Paulson and the government,
+[06:30] there aren't too many left in the sense
+[06:33] that these two organizations are in a real bind in that they
+[06:39] have issued lots of securities based upon their activities.
+[06:43] And in order to maintain the quality of those securities,
+[06:47] in order to make good on those promises that it has made
+[06:50] to other counter-parties--
+[06:52] very important counter-parties I might add,
+[06:55] including the governments of India, China,
+[06:58] and a number of sovereign wealth funds that we depend on to loan
+[07:02] us the money that has kept us in the style to which we have
+[07:06] become accustomed in this country--
+[07:08] in order for us to maintain those kinds of relationships,
+[07:11] we have to make good on our promises.
+[07:14] And it's getting harder and harder for these two
+[07:16] organizations to do so.
+[07:17] Because while they've got all of these promises
+[07:20] that they've made, the money that's
+[07:21] supposed to be coming in order to allow them to make good
+[07:24] on these promises is dwindling.
+[07:28] And as they've tried to raise more money in the open market,
+[07:31] it's become harder and harder, because people realize
+[07:33] that they're in trouble, and it's very difficult for them
+[07:36] to raise that money.
+[07:38] In fact, this is related exactly to the point about the iPod
+[07:43] auction that we engaged in last time.
+[07:46] Think about how little I received for that $150 item.
+[07:52] I received basically $0.30 on the dollar.
+[07:55] And why?
+[07:56] It's because none of you knew what was in that package.
+[07:59] So now instead of an iPod that's in a wrapped package,
+[08:02] imagine if that wrapped package contained paper issued
+[08:05] by Fannie Mae or Freddie Mac.
+[08:07] And now I'm going to ask you, can you bid on this paper?
+[08:10] Now I don't know whether Freddie Mac or Fannie Mae will still
+[08:13] be around in two years, but I'd like you to bid on this paper
+[08:15] anyway.
+[08:16] And by the way, what you get for this piece of paper,
+[08:18] I don't really know, so it's wrapped up.
+[08:20] And you don't know either.
+[08:21] You don't know.
+[08:22] I don't know.
+[08:23] You know I don't know.
+[08:24] And I know you know I know I don't know.
+[08:27] So what's that piece of paper going to go for?
+[08:29] Well probably less than $0.30 on the dollar, right?
+[08:33] So what we saw happen in this classroom last time
+[08:36] is exactly what's happened in spades to these two
+[08:39] large organizations.
+[08:40] At some point, there has to be a day of reckoning.
+[08:43] And the Treasury decided rather than
+[08:45] waiting for that day of reckoning--
+[08:46] because if that day of reckoning came before they were
+[08:49] able to do something, it's very hard to put the pieces back
+[08:52] together.
+[08:53] So in my opinion, I think they had very little choice
+[08:57] but to do something right now, before it got out of hand.
+[09:01] And we're going to talk about this again.
+[09:03] In fact, we're going to run a trading game where all of you
+[09:06] are going to get a chance to engage in this kind of trading.
+[09:09] It's not exactly the kind that involves credit.
+[09:13] But it'll be a trading game, where
+[09:15] you'll get to see what it's like to be under pressure
+[09:18] and to have to make decisions and value
+[09:20] securities in real time.
+[09:22] And you'll have a much deeper appreciation
+[09:24] for the kind of issues that we're up against.
+[09:27] Yeah?
+[09:28] AUDIENCE: Sorry, what did the government exactly do
+[09:30] to agree to pay for all their--
+[09:34] ANDREW LO: Yes, so the government
+[09:35] said, OK, you guys, Fannie Mae and Freddie Mac,
+[09:38] you can't make good on your obligations
+[09:41] because you've got some problems.
+[09:42] So we, the Treasury, will stand by all of your claims.
+[09:48] AUDIENCE: And the government paid that?
+[09:50] ANDREW LO: Absolutely.
+[09:51] You know how?
+[09:52] How can the government pay that?
+[09:55] What?
+[09:56] AUDIENCE: How, issuing money?
+[09:58] AUDIENCE: [INAUDIBLE]
+[09:59] ANDREW LO: Exactly.
+[10:00] The government-- they own the printing presses.
+[10:03] So they just-- you want to get paid dollars?
+[10:05] I'll pay you dollars.
+[10:06] Here, how many dollars would you like?
+[10:07] I'm going to run it.
+[10:08] Here you go!
+[10:09] AUDIENCE: So we're probably getting hit with inflation?
+[10:11] ANDREW LO: That's the concern.
+[10:13] So the concern is that if you do this too much
+[10:16] and you do it without anything backing up the pieces of paper
+[10:21] you now print and give to your debtors,
+[10:26] then there'll be a problem.
+[10:27] Because pretty soon they're going
+[10:28] to realize that the piece of paper
+[10:30] isn't really worth as much as they thought it was.
+[10:32] So inflation could be a problem.
+[10:34] It could be a problem.
+[10:35] We'll have to see.
+[10:36] But right now the paper, the dollars that are being printed,
+[10:41] are backed by the full faith and credit of the US Government.
+[10:44] And for the time being, that still means something.
+[10:47] Yeah?
+[10:49] AUDIENCE: Are all the levels of debt
+[10:52] being guaranteed with interest?
+[10:56] How much of the Fannie and Freddie is debt?
+[11:00] ANDREW LO: So the question is, is
+[11:02] all of the debt being guaranteed or is it just how
+[11:04] much Freddie and Fannie issued?
+[11:06] Well certainly it's what they've issued.
+[11:07] So all of the paper that they've issued
+[11:09] will be backed by the government.
+[11:11] In addition, there is some new paper
+[11:14] that they have to issue in order to finance
+[11:16] additional mortgages.
+[11:17] And the government will back that too.
+[11:20] Now this is not for free.
+[11:22] It's not just printing presses.
+[11:23] That sounds a little too easy.
+[11:25] Somebody has to pay for it.
+[11:26] The money's got to come from somewhere.
+[11:28] Or I'll put it another way.
+[11:29] That money that is spent now backing these instruments
+[11:33] cannot be used for other things.
+[11:35] So if you believe in balancing your budget as
+[11:38] opposed to spending on credit, which frankly is what got us
+[11:41] into the problems to begin with, then there
+[11:44] will be additional reckoning.
+[11:45] People have said that the American taxpayer
+[11:49] will pay for this.
+[11:50] Well, that's true.
+[11:51] But the question is which set of taxpayers?
+[11:54] Is it us?
+[11:55] Is that your children?
+[11:57] Is it your children's children?
+[11:58] There are a lot of intergenerational questions
+[12:01] about where the burden lies.
+[12:02] But the fact of the matter is yes, we are on the hook,
+[12:05] that the American taxpayers are on the hook for tens
+[12:08] of billions of dollars.
+[12:09] Now in the grand scheme of things, tens of billions
+[12:12] of dollars is nothing.
+[12:15] The federal budget is much, much larger than that,
+[12:17] so this is not a big deal.
+[12:19] The concern is if this spreads and ends up
+[12:22] costing us more because of ripple effects
+[12:24] and knock on effects that we don't yet know about,
+[12:27] that could be a problem.
+[12:28] And that, frankly, is one of the reasons why
+[12:30] the Fed and the Treasury have decided to step in now to try
+[12:33] to contain this problem.
+[12:34] How good they will be at doing that we don't know.
+[12:37] Read the newspapers over the next few weeks and let's see.
+[12:40] Yep?
+[12:41] AUDIENCE: Do you think the common stock basically
+[12:43] has to be worth zero at this point now?
+[12:45] ANDREW LO: Well, it's not worth exactly zero,
+[12:46] but it's pretty darn close.
+[12:48] And in fact, it's come down quite a lot,
+[12:49] I think, over the last couple of years.
+[12:51] I don't know what the peak of the price was.
+[12:53] I haven't looked at it.
+[12:53] But I think that the decline has been
+[12:56] on the order of 90% to 95% decline of what
+[13:00] the peak was over the last couple of years, which is--
+[13:02] AUDIENCE: This morning it's down 83%.
+[13:04] ANDREW LO: Yeah, 83% since when?
+[13:05] AUDIENCE: Since yesterday.
+[13:06] ANDREW LO: Yeah, that was just a day ago.
+[13:07] But I'm talking about since the peak.
+[13:09] I think it's come down dramatically.
+[13:11] So effectively, the value of the shareholders' equity
+[13:15] is pretty close to zero.
+[13:16] But that's what happens in a bankruptcy.
+[13:18] And by the way, we're going to talk about bankruptcy too.
+[13:20] That's going to be a very important part of what
+[13:23] we do when we analyze fixed income instruments.
+[13:25] So we're going to get to that shortly.
+[13:27] Yeah?
+[13:27] AUDIENCE: Has there been anything
+[13:29] about potentially going private again down the road?
+[13:33] Is that--
+[13:34] ANDREW LO: There have been discussions
+[13:35] about them going private, but private in a much smaller way.
+[13:39] So the discussions that have occurred
+[13:41] at the Treasury-- and we don't know
+[13:43] which way things are going to end up
+[13:44] because it's a political process as well as an economic one.
+[13:47] But there's a feeling that these two institutions got too big,
+[13:51] too quickly and that there wasn't
+[13:53] enough oversight to allow them to be able to fail.
+[13:57] In other words, they grew so big,
+[13:58] so quickly that after a point they
+[14:01] were in fact too big to fail.
+[14:03] And when you're too big to fail, all sorts
+[14:05] of abuses and improper risk management practices
+[14:09] can go on, which we will talk about in probably eight
+[14:11] or nine lectures.
+[14:14] So there's a variety of proposals
+[14:16] that have been put forward.
+[14:17] And we'll talk about those also over the next six or seven
+[14:20] weeks.
+[14:21] AUDIENCE: Who did the government actually
+[14:23] bought the shares from?
+[14:25] Are they federal agencies?
+[14:26] Are these private companies?
+[14:28] Who--
+[14:30] ANDREW LO: So Fannie Mae and Freddie Mac
+[14:31] are called GSEs, Government-Sponsored Entities,
+[14:35] which means that they're not a federal agency.
+[14:38] But they are backed by the federal government
+[14:42] in some manner that has been, up until now, relatively vague.
+[14:46] So they're meant to be private companies.
+[14:48] They had a CEO.
+[14:50] Both of them had CEOs, who were fired over the weekend.
+[14:53] They had separate boards of directors.
+[14:55] And they pay pretty attractive salaries, private sector
+[15:00] salaries.
+[15:01] But they were related to the government in the sense that
+[15:04] their objectives were to try to support and expand the housing
+[15:08] market financing, which was a government-dictated mandate
+[15:12] to this--
+[15:13] AUDIENCE: Their main goal is not to earn money?
+[15:17] It's to bring a secondary market for mortgages?
+[15:20] ANDREW LO: Their main goal was to create additional financing
+[15:25] to allow the mortgage market to grow and to allow people to buy
+[15:28] homes at reasonable rates.
+[15:30] Their secondary goal was to make a profit on top of that.
+[15:35] So that's why they're not just a government entity,
+[15:38] but they have a kind of a quasi private sector type of mandate.
+[15:44] And by the way, they did a great job.
+[15:46] They did a great job in the sense
+[15:47] that the housing market has grown tremendously.
+[15:49] Now you could argue that that was irresponsible
+[15:51] and that created all these problems
+[15:53] that we're facing today.
+[15:55] But you talk to somebody who has a subprime mortgage that
+[15:59] otherwise couldn't have afforded a house that now has made
+[16:02] every single payment, and really enjoys living in their home,
+[16:04] and has a lifestyle that they couldn't have otherwise had.
+[16:07] You talk to them and you tell them that it was a mistake.
+[16:10] So it's not at all clear that this is a total disaster.
+[16:15] It's unfortunate.
+[16:16] And it's a catastrophe from the point
+[16:18] of view of the current holders of various pieces of paper
+[16:21] that are related to these subprime mortgages.
+[16:24] But there's a whole group of people out there
+[16:26] that have benefited from these subprime mortgages.
+[16:28] And so you've got to balance the costs and the benefits.
+[16:32] And we're not doing that right now.
+[16:33] Right now we're just panicking because we're
+[16:35] all scared like hell that something really
+[16:37] is going to break.
+[16:39] But there's a positive side as well as a negative side
+[16:41] to every story.
+[16:42] And so we're going to have to talk about that in a little bit
+[16:44] more detail.
+[16:45] But we can't do that unless we have the framework
+[16:47] to think about it.
+[16:48] So that is going to lead me to today's lecture.
+[16:50] Yeah?
+[16:51] AUDIENCE: Just to follow up on another question,
+[16:54] who were the shareholders in Freddie and Fannie Mae system,
+[16:58] and did the investment go to zero overnight?
+[17:01] ANDREW LO: So there are two groups of individuals
+[17:03] that are involved.
+[17:04] One are the shareholders of the companies themselves.
+[17:07] And these are investors.
+[17:08] A number of them are pension funds, institutional investors.
+[17:11] So therefore, you and I, in our 401(k) plans--
+[17:14] we might actually have an investment
+[17:16] in one of these organizations through the plan sponsor
+[17:18] that invests in various different entities.
+[17:21] So they're a stock that was traded on the exchanges,
+[17:24] just like any other stock.
+[17:26] That's one group.
+[17:27] And those are going to lose most of their capital.
+[17:31] They're going to lose their investment,
+[17:32] just like when a stock goes belly up,
+[17:34] the investors of Enron, too bad.
+[17:36] They lose everything.
+[17:37] They're gone.
+[17:37] They knew it.
+[17:38] They took the risks and the risks don't always work out,
+[17:41] so that's that.
+[17:43] The other parties that are involved
+[17:45] are the folks that do business with these agencies,
+[17:50] the counter-parties that bought the paper that they issued,
+[17:53] these IOUs and other complex instruments that Fannie Mae
+[17:57] and Freddie Mac issued.
+[17:59] Those individuals, we're hoping, will
+[18:03] be relatively happy about the outcome of the government
+[18:08] backing the paper.
+[18:09] Because now the paper that they once held and thought
+[18:12] was in trouble will have the full faith and credit of the US
+[18:16] government behind them.
+[18:17] And that is a major concern.
+[18:20] Because these counter-parties are very, very substantial
+[18:23] investors.
+[18:24] If they decide that this paper is no good
+[18:27] and they start getting rid of it wholesale,
+[18:30] that will create some really significant market dislocation
+[18:33] and mass panic.
+[18:34] And that's what the Treasury stepped in
+[18:36] to stave off this weekend.
+[18:39] And hopefully they will have succeeded.
+[18:42] In fact, if you look at the data,
+[18:44] it looks like they did succeed.
+[18:46] But I'm not going to talk about that for another three or four
+[18:49] lectures, because I want to show you exactly how to think
+[18:51] about these instruments.
+[18:52] And then we're going to look at the data
+[18:54] and see whether or not they've actually
+[18:56] done something significant.
+[18:57] And you'll be able to tell.
+[18:58] By looking at market prices, by looking
+[19:00] at the outcome of auctions like we did last time,
+[19:04] we're going to be able to tell exactly what happened.
+[19:10] All right, well, that took a little longer than I thought,
+[19:13] but I think it is useful for motivation for what
+[19:15] we're going to do in the class.
+[19:19] What I want to do today is to start
+[19:20] on lectures two and three, present value relations.
+[19:24] And I have to tell you, this is one
+[19:26] of the most interesting lectures of the entire course,
+[19:29] not because of the underlying material,
+[19:33] but rather because of the novelty of the perspective
+[19:36] that I want to give you about these kinds of issues.
+[19:42] This is the very first step in changing the way you
+[19:45] look at financial transactions.
+[19:47] We're going to start by discussing
+[19:49] cashflows and assets.
+[19:51] I'm going to define some terms.
+[19:53] And I want to change the way you think of an asset.
+[19:56] And then we're going to talk about the present value
+[19:58] operator.
+[20:01] And then we're going to apply that
+[20:03] to the time value of money.
+[20:06] I want to make that concrete so that all of you
+[20:08] will start thinking differently now about money
+[20:11] today versus money next year.
+[20:13] And then-- probably not today, but next time-- we're
+[20:17] going to cover two very special kinds of cashflows,
+[20:22] the annuity and the perpetuity.
+[20:24] These are two mathematical abstractions
+[20:26] that provide some really interesting insights
+[20:28] into this whole notion of present value.
+[20:31] And then I'm going to talk about a couple
+[20:32] of technical issues, compounding and inflation.
+[20:35] And that will lead us right to thinking about fixed income
+[20:39] securities, and how to value them,
+[20:41] and how the market values them, and whether or not
+[20:43] the two are the same or different.
+[20:46] For the readings, I'd like you to start on Brealey and Myers,
+[20:49] Allen, chapters two and three.
+[20:51] You should have already read chapter two from last time.
+[20:53] I'd like you to reread that and also focus on chapter 3
+[20:56] for the next couple of lectures.
+[21:01] So first order of business, let's define some terms.
+[21:07] I think you all know what a cashflow is, right?
+[21:09] It's just money that's coming to you
+[21:11] or going away from you, a flow of cash.
+[21:16] And you all know what cash is, I presume.
+[21:20] The next question I want to take on is, what is an asset?
+[21:23] We talk about valuing assets.
+[21:25] But we have to start first by agreeing
+[21:28] on a definition for what an asset is.
+[21:30] And I've just put some examples up here of what assets are.
+[21:34] Business entity is an asset.
+[21:35] If you guys decide to do a startup,
+[21:37] that startup has value.
+[21:40] It's an asset.
+[21:42] Property, plant and equipment, patents, R&D, stocks, bonds,
+[21:49] options, and even something as difficult to value as knowledge
+[21:54] and reputation are assets.
+[21:59] Does anybody know of an example of a really valuable asset that
+[22:06] is not physical at all?
+[22:09] You can't touch it or feel it.
+[22:10] Yeah?
+[22:11] AUDIENCE: The algorithms that Google is using?
+[22:13] ANDREW LO: The algorithms that Google is using.
+[22:15] That's right.
+[22:15] Now how do you know that those are assets?
+[22:17] AUDIENCE: Because they generate revenue.
+[22:20] ANDREW LO: They generate revenue, right.
+[22:21] And has anybody turned them into anything concrete,
+[22:26] like any type of legal structure to make them assets?
+[22:31] AUDIENCE: Patents.
+[22:32] ANDREW LO: A patent, exactly.
+[22:33] A patent-- and Google has many patents--
+[22:36] those have value.
+[22:37] Not only are they considered assets,
+[22:39] but you can actually trade them.
+[22:41] You can buy a patent, sell a patent, license a patent.
+[22:45] Yeah?
+[22:46] AUDIENCE: Are they patents or are they trade secrets?
+[22:48] ANDREW LO: Well, they're both.
+[22:49] So Google has patents.
+[22:50] But there are also a number of trade secrets
+[22:52] that it uses to protect its intellectual property.
+[22:55] What's the distinction?
+[22:57] AUDIENCE: I think a trade secret is
+[22:59] if you have a patent, but not an implicit patent.
+[23:01] AUDIENCE: No, it doesn't have any patents.
+[23:03] ANDREW LO: No, no.
+[23:04] AUDIENCE: What does that mean?
+[23:06] What is a trade secret?
+[23:08] AUDIENCE: It's a secret.
+[23:09] ANDREW LO: It's a secret.
+[23:11] Thank you.
+[23:11] AUDIENCE: A patent without legal backing.
+[23:13] ANDREW LO: Well, I'm not sure it's
+[23:15] a patent without any kind of legal standing.
+[23:17] In fact, it's sort of an anti-patent, isn't it?
+[23:19] AUDIENCE: It's not a patent.
+[23:21] It's a secret, specifically.
+[23:22] Like Coke, for example-- the formula for Coke
+[23:24] is a trade secret that is not patented.
+[23:26] When you apply for a patent you have to disclose fully
+[23:30] what your patent covers.
+[23:31] And that means that at the end of the life coverage,
+[23:37] you're out.
+[23:37] And so I could go and--
+[23:40] if Coke would have applied for a patent however many years ago,
+[23:44] it would have expired.
+[23:45] I could be making Coke right now.
+[23:47] But a trade secret is secret forever, as long
+[23:49] as you take steps to keep it secret.
+[23:53] ANDREW LO: Right.
+[23:53] AUDIENCE: So they are taking the risk of the secret.
+[23:55] ANDREW LO: Exactly.
+[23:56] Coke is taking a big risk in that it has not
+[23:59] filed for a patent.
+[24:00] And frankly, if it did, it would have expired long ago.
+[24:03] Now what exactly is a patent?
+[24:05] What's the motivation for a patent?
+[24:07] A patent is a legal agreement that
+[24:10] says that if you tell me everything
+[24:13] there is to know about how to construct the item
+[24:16] or algorithm that you want to patent, if you're
+[24:18] willing to disclose that to me and the whole world,
+[24:22] and I acknowledge that it is new and useful,
+[24:27] then I will grant you the ability
+[24:29] to be the sole user of that algorithm, product,
+[24:35] or business process for a finite period of time--
+[24:39] say, 17 years.
+[24:41] So for 17 years, if anybody wants to use that algorithm,
+[24:45] they have to pay you for that privilege.
+[24:48] So it's a monopoly.
+[24:50] It's a monopoly that the government grants you
+[24:53] for a fixed period of time in exchange for what?
+[24:56] In exchange for you to be willing to disclose everything
+[24:59] there is to know about it.
+[25:01] And why is it?
+[25:02] So that everybody else can learn from it.
+[25:04] And after 17 years, and after you've
+[25:05] made a god awful amount of money,
+[25:08] somebody else can take that idea and incorporate it
+[25:10] into what they're doing and make money off of that.
+[25:14] The patent process creates assets out of ideas.
+[25:19] And it allows you to derive economic value
+[25:21] from that in exchange for freely sharing those ideas.
+[25:26] That's one path to go.
+[25:27] And the other path is I don't want
+[25:28] to share because I think that I can do better
+[25:32] by keeping it a secret.
+[25:33] And that's what Coca-Cola has done.
+[25:34] That's the example that I was thinking of,
+[25:37] of an idea that has no legal standing
+[25:41] but that's one of the most incredibly valuable ideas
+[25:44] in the world today.
+[25:45] The amount of money that Coca-Cola produces
+[25:47] is unbelievable given this simple recipe
+[25:51] that apparently people haven't been able to figure out
+[25:54] how to reproduce.
+[25:55] How hard could it be?
+[25:56] You just mix a few things and add some coloring
+[25:59] and then you get Pepsi.
+[26:00] I don't know.
+[26:02] Yeah?
+[26:02] AUDIENCE: But a lot of their value is also in the brand.
+[26:05] ANDREW LO: That's right.
+[26:05] AUDIENCE: There's the trillions of people who associate
+[26:07] a red dot with feeling happy.
+[26:09] ANDREW LO: That's true.
+[26:10] Now that's the case.
+[26:12] They've spent years building the Coca-Cola brand.
+[26:15] That's one of the most recognizable brands
+[26:17] in the world.
+[26:18] And that has value, too.
+[26:20] And by the way, that value is different from the trade
+[26:23] secret.
+[26:24] So now we see that there's lots of different assets.
+[26:28] And that's an asset, right?
+[26:29] Yeah?
+[26:29] AUDIENCE: I'm just curious.
+[26:31] Is there a financial reason-- or maybe not--
+[26:34] for why you would patent something versus have a trade
+[26:39] secret?
+[26:39] And what I was thinking of is pharmaceutical companies.
+[26:43] Why would you go and patent Lipitor?
+[26:46] Wouldn't it be better to keep that a trade secret
+[26:49] and be the only company in the world ever to make it?
+[26:51] ANDREW LO: Well that depends.
+[26:52] It depends on whether or not you think you can keep it a secret.
+[26:56] Coca-Cola apparently has been kept secret pretty well.
+[26:59] But there are a lot of other people working
+[27:02] on the various different kinds of cholesterol reducing drugs,
+[27:05] not just the folks that develop Lipitor.
+[27:08] So if you can keep it a secret, great, keep it for yourself.
+[27:12] But very often you won't be, because other people are
+[27:14] working on the same research.
+[27:16] Also there's a certain cachet to having a patent.
+[27:19] And it provides you with a certain kind
+[27:20] of business viability.
+[27:23] You can go to an investor and say, here, I've got this idea.
+[27:26] The idea has been certified by the US Patent Office.
+[27:29] It is patent number XYZ, and that's
+[27:31] why you should give me money, versus you go to an investor
+[27:34] and say, hey, I got a secret.
+[27:35] I can't tell you what it is.
+[27:37] You know what?
+[27:38] You're back to the iPod.
+[27:40] Andy, question?
+[27:41] AUDIENCE: Oh, no.
+[27:42] I was going to say the same thing.
+[27:43] ANDREW LO: Yep, OK.
+[27:45] So now we know that there are all sorts of assets.
+[27:48] Even intangibles, even things that you can't hold
+[27:51] in your hand can be an asset.
+[27:55] I want you to forget about all of that.
+[27:57] I want you to think about an asset
+[27:59] in a completely different way.
+[28:02] I want to reduce an asset to its fundamental core properties.
+[28:08] And to do that, here's my definition of an asset.
+[28:13] An asset, at a given point in time t,
+[28:17] is simply equal to a sequence of future cashflows--
+[28:27] CFt, CFt plus 1, CFt plus 2, dot, dot, dot.
+[28:33] That is the definition of an asset
+[28:37] that I would like to adopt for the next 12 weeks.
+[28:42] Now this might seem trivial to you, but trust me, it's not.
+[28:47] It's a very subtle idea.
+[28:49] And it's going to have all sorts of interesting implications
+[28:52] that we're going to discuss over the next few lectures.
+[28:55] But I want to make sure that everybody fully
+[28:56] appreciates what I mean when I say
+[28:59] an asset is a sequence of current and future cashflows.
+[29:04] Let me just describe a couple of interesting things
+[29:06] about this definition.
+[29:07] First of all, it doesn't involve past cashflows.
+[29:11] So when I define an asset I have to define
+[29:14] it relative to a point in time.
+[29:16] That, in and of itself, I think is something new.
+[29:19] So it's not enough to say an asset is Coca-Cola.
+[29:24] You have to say that the asset is
+[29:26] Coca-Cola today, versus Coca-Cola 10 years ago, versus
+[29:32] Coca-Cola 100 years from now.
+[29:35] Those are different assets.
+[29:38] The point in time actually matters, in other words.
+[29:41] This is like the zen paradox.
+[29:43] You can never step into the same river
+[29:44] twice because water is moving.
+[29:47] It's always a different river.
+[29:49] In that sense, an asset, as at every point in time,
+[29:53] is a different asset.
+[29:55] And that's not that surprising.
+[29:57] Because if you believe, from my definition,
+[30:00] that an asset is equivalent to its current and future
+[30:04] cashflows, then those cashflows are very different
+[30:08] depending on where you stand.
+[30:10] So for example, the stock of Fannie Mae and Freddie Mac
+[30:14] as an asset was very different five years ago
+[30:18] than it is today.
+[30:20] They're both assets.
+[30:21] They're both cashflows.
+[30:24] But the cashflows are very different
+[30:26] depending on what point in time you're talking about.
+[30:30] So when I think about a cashflow,
+[30:33] I'm thinking about a particular sequence that
+[30:36] occurs given market conditions.
+[30:40] An asset is comprised of those cashflows.
+[30:43] They are one and the same.
+[30:45] When you tell me that you have an asset,
+[30:48] I immediately think of OK, what's
+[30:50] the sequence of cashflows?
+[30:51] That's all I care about.
+[30:53] From the purposes of financial analysis,
+[30:55] that's all that matters.
+[30:57] So over the next few weeks, we're
+[30:59] going to be building up a theory of financial analysis.
+[31:02] The basic building blocks of that theory are assets.
+[31:07] So you could think of assets as the molecules
+[31:11] or atoms of a unified field theory of finance.
+[31:15] And the protons and electrons--
+[31:17] those are the cashflows.
+[31:19] Yeah?
+[31:19] AUDIENCE: Do the cashflows have to be positive?
+[31:22] ANDREW LO: No.
+[31:22] They don't have to be positive or negative.
+[31:24] But they do have to be real numbers,
+[31:25] so no complex numbers here, OK?
+[31:29] Positive or negative-- that's what an asset is.
+[31:31] Now you might think, well, gee, if all the cashflows
+[31:34] are negative then I don't really want that asset.
+[31:37] Well that's the nature of an asset.
+[31:39] Maybe then instead of an asset you call it a--
+[31:41] AUDIENCE: Liability.
+[31:42] ANDREW LO: --liability, exactly.
+[31:44] But from my perspective, developing this atomic theory
+[31:47] of finance, I'm going to focus on this as the basic building
+[31:50] blocks.
+[31:51] And I don't care whether they're positive or negative
+[31:53] for the moment.
+[31:54] We're going to talk about their characteristics later.
+[31:56] But I just want to agree on a definition of what an asset is.
+[31:59] Question, yeah?
+[32:00] AUDIENCE: So it's a sequence of cashflows,
+[32:03] it's not a summation?
+[32:04] ANDREW LO: Right, it's not a summation.
+[32:06] It's a sequence, meaning it's basically
+[32:10] just a list of cash flows at different points in the future,
+[32:16] including the present, but not the past.
+[32:20] So according to my definition, the past doesn't matter.
+[32:24] When you talk to me about an asset, all I'm looking at
+[32:28] is current and future cash flows.
+[32:31] And it's a sequence of cash flows.
+[32:32] So that means they're ordered in time.
+[32:35] And I'm not even telling you whether or not
+[32:37] what the cash flows are.
+[32:39] So it could be that the future cash flows--
+[32:41] I'm writing them as letters, but who knows
+[32:45] what the letters stand for.
+[32:46] You might not know what the future cash flows are.
+[32:49] But you can still, nevertheless, acknowledge that they
+[32:52] exist as an abstraction.
+[32:59] That's what an asset is.
+[33:00] I don't care what you use to value
+[33:03] your various different cash flows.
+[33:06] But the definition of an asset is simply
+[33:09] a sequence of current and future cash flows.
+[33:11] All right, that's what we're going
+[33:12] to talk about as an asset.
+[33:13] So all the things that I listed up there--
+[33:15] knowledge, reputation.
+[33:18] Can reputation be considered a sequence of future cash flows?
+[33:22] Does that make sense?
+[33:23] How?
+[33:25] What?
+[33:26] AUDIENCE: Goodwill.
+[33:27] ANDREW LO: Goodwill.
+[33:28] How would you use that goodwill?
+[33:30] Yeah?
+[33:32] AUDIENCE: Your reputation is such
+[33:34] that people choose you instead of a competitor.
+[33:39] And so that cash flow, from that choice,
+[33:42] is coming from your reputation.
+[33:43] ANDREW LO: Exactly right.
+[33:44] The additional cashflow that you get based on that reputation--
+[33:49] that's the value of the asset, or that is the asset
+[33:52] right there.
+[33:53] Yeah?
+[33:54] AUDIENCE: Can assets have common elements?
+[33:56] ANDREW LO: Absolutely.
+[33:57] No reason why you can't have common cash
+[33:59] flows across different assets.
+[34:02] But nevertheless, a single asset is
+[34:05] a collection of present and future cash flows.
+[34:08] Yeah?
+[34:09] AUDIENCE: I'm not sure if I can explain correctly,
+[34:12] but as you said, if I have one asset, a building,
+[34:17] and if she has a building, and if I
+[34:19] am a lender, that means I have a different cash
+[34:21] flow on that asset.
+[34:22] ANDREW LO: Yes.
+[34:23] AUDIENCE: But however, there is a market of the building.
+[34:27] But if the sequence of the cash flow, how can you like--
+[34:32] ANDREW LO: We're going to get to that.
+[34:33] That's actually a very deep question
+[34:35] that will require three more lectures before we get to.
+[34:38] But I will answer that exact question in three lectures,
+[34:40] if not before.
+[34:43] Before we talk about how to value these assets
+[34:46] I want to make sure we agree on what a definition of an asset
+[34:49] is.
+[34:50] So I think we agree, right?
+[34:51] Any questions about that?
+[34:52] Yeah?
+[34:53] AUDIENCE: So if, say, you have a bunch of patents,
+[34:55] but they can't generate any incremental cashflows
+[34:57] they don't exist.
+[34:57] Like, you have them, but incremental cash
+[35:00] flow from [INAUDIBLE] matter?
+[35:02] ANDREW LO: Well, not to be anal about this,
+[35:06] but mathematically, a sequence of 0, 0, 0, 0
+[35:09] is a bona fide cash flow.
+[35:12] So the zero asset is possible too.
+[35:17] So this is absolutely general.
+[35:19] And you might argue, at this level of generality
+[35:22] it's useless.
+[35:22] Well not quite, not quite.
+[35:25] Because I think it helps us to formulate a perspective.
+[35:28] And the perspective is when you start thinking about various
+[35:31] different kinds of assets-- and I'm talking really complicated
+[35:34] assets, assets with all sorts of options and triggers
+[35:38] and various contingencies--
+[35:41] the more complicated it gets, the more important
+[35:44] this framework is.
+[35:45] Because no matter how intimidating the problem
+[35:48] you are faced with, the bottom line
+[35:50] is an asset is a sequence of cash flows.
+[35:54] It's simple, conceptually.
+[35:57] The hard part is figuring out what those cash flows are.
+[36:01] But the conceptual framework is what I want you to start with.
+[36:04] Because that will clear your mind of a lot of cobwebs
+[36:06] that really don't belong in any kind of financial analysis.
+[36:09] So we start with cash flows.
+[36:11] Sequence of cash flows is an asset.
+[36:15] Now that I've told you that, there's lots of examples
+[36:18] that you can come up with.
+[36:19] So I've given you some in the notes.
+[36:20] Please take a look at them.
+[36:21] Each one of these is an asset.
+[36:24] And each one of these represents a certain sequence
+[36:28] of cash flows.
+[36:29] Some may be more subtle than others.
+[36:31] But they are, nevertheless, cash flows.
+[36:33] So I want you to think about that,
+[36:35] read through these examples, and make sure you
+[36:37] understand why they are assets.
+[36:40] Now valuing an asset--
+[36:45] that's the question that [INAUDIBLE] was asking about.
+[36:48] How do you value a sequence of cash flows?
+[36:51] Because you and I-- we might have
+[36:53] a very different perspective on what that cash flow is worth.
+[36:57] So for the moment, I'm not going to answer that question,
+[37:01] or rather I'm going to answer it with a typical device
+[37:05] that economists use all the time, which
+[37:09] is I'm going to just create some notation
+[37:11] to answer the question.
+[37:13] And the notation I'm going to give you is V,
+[37:17] in particular V sub t.
+[37:19] That's a function that takes as its input
+[37:25] a sequence of cash flows and spits
+[37:28] out a number, which I'm going to call the value of the asset
+[37:32] at time t.
+[37:34] So how do you value a cash flow?
+[37:36] Well, you use the value operator V sub t.
+[37:40] You stick in a cash flow and out pops a number.
+[37:45] We're going to have to spend the next three lectures figuring
+[37:47] out what V is.
+[37:50] But I can tell you one answer right away.
+[37:52] In fact, all of you know what V is, or one definition of V.
+[37:56] What is it?
+[37:57] Can anybody tell me what V is?
+[38:00] Where do you get V from?
+[38:03] Yeah?
+[38:04] AUDIENCE: What you pay for it?
+[38:06] ANDREW LO: That's right, but you're close.
+[38:09] Where did that come from, what you pay for it?
+[38:11] What do you mean by that?
+[38:15] Market price.
+[38:17] What market?
+[38:20] What market?
+[38:25] Yeah?
+[38:26] AUDIENCE: Any market where someone's willing to sell it.
+[38:28] ANDREW LO: Exactly.
+[38:28] Any market.
+[38:29] This is what you were getting at.
+[38:29] What you pay for it-- any market.
+[38:31] If there's a market, you've got your V.
+[38:35] So V-- one example of a Vt is a market at time t.
+[38:42] That's what we did last time.
+[38:43] We had a value operator.
+[38:45] Stick in a gift wrapped box and you get out $45.
+[38:51] That's an example of a V. What we're going to try to do,
+[38:54] though, is to take apart that box
+[38:56] and see how it works and whether or not it does work.
+[39:01] AUDIENCE: Would it be any market or the markets that
+[39:04] generate the best cashflows?
+[39:06] ANDREW LO: Well we don't know what best means.
+[39:07] So for our discussion right now any market will do.
+[39:11] But then you can have a separate discussion as to
+[39:14] whether or not there are better markets or worse markets.
+[39:16] And we have to define what that means.
+[39:17] So we're going to get to that when we start talking
+[39:19] about how the V operators work.
+[39:20] Yeah?
+[39:21] AUDIENCE: Does this work for a perfect market?
+[39:24] Or perfect market just means that the value
+[39:26] would be the summation of the--
+[39:28] ANDREW LO: So we don't
+[39:29] know what a perfect or an imperfect market is yet.
+[39:31] And I'm going to hold off on that for quite a few more
+[39:33] weeks.
+[39:34] All we know is it's a market.
+[39:37] So let me put it to you this way--
+[39:38] in the last lecture, when I auctioned off
+[39:40] that iPod and I only got 1/3 of the price,
+[39:43] would you consider that a perfect market?
+[39:45] It didn't feel that way to me.
+[39:48] But on the other hand, it worked.
+[39:50] I had something that I wanted to unload
+[39:53] and I unloaded it at a price that two mutually consenting
+[39:57] adults agreed to.
+[39:58] So that worked.
+[40:00] It was pretty good.
+[40:03] But in order for us to understand whether or not
+[40:05] it really works, we've actually got to take apart the box.
+[40:09] We've got to open up Vt.
+[40:10] I'm not going to do that just yet.
+[40:12] I want to first acknowledge that there exist Vts out there.
+[40:15] And more often than not, when you
+[40:17] let the market dictate what that Vt is,
+[40:20] you actually get some pretty interesting results,
+[40:23] results that will require a little bit more structure
+[40:26] to interpret.
+[40:27] One way to interpret the structure
+[40:29] is to acknowledge that there is a time element to the cash
+[40:33] flows.
+[40:34] So when I ask you to analyze a Vt or an asset,
+[40:39] the first thing you're going to want to do
+[40:42] is to draw this picture right here.
+[40:44] And I'm serious about this.
+[40:46] In order for you to understand the value of an asset,
+[40:48] you have to know the timing of the cash flows.
+[40:52] Time means everything in finance.
+[40:56] A cash flow today is not the same as a cash flow next year.
+[41:00] Yeah?
+[41:00] AUDIENCE: So are we going to divorce the accounting
+[41:05] definition of an asset from the finance?
+[41:10] For instance, land has to be recorded
+[41:13] at book value [INAUDIBLE] in accounting.
+[41:15] ANDREW LO: Yes, right.
+[41:17] So what I'm asking you to do is to think abstractly
+[41:21] in terms of the cashflows themselves.
+[41:23] I haven't talked about accounting practices at all.
+[41:26] I'm going to come back to how we actually implement this.
+[41:28] And at that point, it'll be important to bring
+[41:30] in the accounting elements.
+[41:32] But for now, let's set them aside.
+[41:35] So these are actual cashflows that you will receive
+[41:38] at different points in time.
+[41:40] And by the way, I want you to use this exact same framework
+[41:42] for analyzing accounting practices.
+[41:45] Because financial analysis can actually
+[41:48] be used to ask the question, are accounting conventions
+[41:51] good or bad?
+[41:53] Some accounting conventions are favorable.
+[41:55] Some are unfavorable.
+[41:56] But the only way to analyze them is
+[41:58] by using this kind of a framework first.
+[42:02] So I would argue that this will be certainly useful for looking
+[42:05] at accounting practices.
+[42:07] But it won't necessarily be the same.
+[42:09] So you'll need to have to make that distinction.
+[42:13] So, so far, nothing I've said is all that controversial,
+[42:16] I don't think.
+[42:17] I've simply defined that there is a value operator.
+[42:21] Operator means function.
+[42:22] You stick in a sequence of cashflows.
+[42:24] Out pops a number.
+[42:25] And when you analyze the value of an asset,
+[42:29] I want you to always draw a timeline
+[42:32] and make sure you understand the sequence of cashflows.
+[42:38] Without the timeline I don't know that you really
+[42:41] understand what's going on.
+[42:43] So first of all, as a tip for your midterm
+[42:45] and final exams, any time you have a calculation, which
+[42:49] you have to do a present value or a valuation exercise,
+[42:53] I want to see this.
+[42:54] I want to see that you know when things are going to happen.
+[42:57] Because nine out of 10 times, when
+[42:58] you make a mistake in valuation, it's
+[43:01] because you lined this up incorrectly.
+[43:05] Now what is V?
+[43:06] Well we said that one example of a V is the market.
+[43:09] But is that objective?
+[43:12] Is it subjective?
+[43:13] Does it work well?
+[43:15] How is value determined?
+[43:17] And what we're going to do in this lecture and the next one
+[43:21] is to take apart this function V in the case of no uncertainty.
+[43:29] So remember I told you the two important factors
+[43:32] in financial analysis that makes finance
+[43:34] interesting and exciting is time and uncertainty.
+[43:39] And we've seen both of those things happen this weekend.
+[43:43] A lot of time has passed in resolving the uncertainty
+[43:47] with regard to Fannie Mae and Freddie Mac.
+[43:51] What I'd like to do is to abstract from the uncertainty
+[43:54] part.
+[43:55] For the next couple of lectures there's no uncertainty.
+[44:00] I'm going to get rid of the randomness.
+[44:02] And I'm only going to focus on figuring out
+[44:05] the value operator, this V sub t function, for cases
+[44:09] where we have cashflows at different points in time
+[44:12] but where the cashflows are known for sure.
+[44:15] So there's no uncertainty about whether they're
+[44:17] going to happen or not happen.
+[44:20] After we do that, after we do the no uncertainty
+[44:23] case, for which we have a complete solution,
+[44:26] I will then come back and introduce uncertainty
+[44:29] in a somewhat more natural way.
+[44:32] And then we're going to focus on valuation with uncertainty
+[44:35] as well.
+[44:39] So let me start with the perfect certainty
+[44:42] case about how to figure out what this V sub t is.
+[44:46] And I'm going to start with a very simple example that
+[44:50] has to do with manipulating cashflows.
+[44:53] And I'm going to talk in particular
+[44:55] about foreign currencies.
+[44:57] So I wanted to ask you, what happens when
+[45:02] you add 150 yen to 300 pounds?
+[45:07] What do you get when you add those two?
+[45:11] 150 yen plus 300 pounds is equal to 450 what?
+[45:20] $450?
+[45:22] If you believe that, please see me after class and we'll
+[45:27] need to do some transactions.
+[45:33] Well look, obviously 450 makes no sense, right?
+[45:37] It's like adding your weight to your age.
+[45:40] That number might be interesting,
+[45:42] but there's no interpretation for it.
+[45:44] So 150 and 300--
+[45:47] you would never add those two and talk about 450 what.
+[45:52] You don't even have a unit to be able to ascribe to it.
+[45:56] Well that natural reaction that you have,
+[46:01] that natural aversion you have to adding up dollars or yen
+[46:07] in different currencies--
+[46:10] I want you to develop that exact same attitude towards cashflows
+[46:15] at different points in time.
+[46:18] So let me continue on with this.
+[46:19] Obviously if you want to add the two,
+[46:21] you know that you have to convert them
+[46:22] to the same currency.
+[46:24] So 300 pounds converts to a certain number of yen.
+[46:29] And so when you add that up, you get 46,050 yen.
+[46:33] Or if you want to convert it to pounds,
+[46:35] it converts to 300.98 pounds sterling.
+[46:41] Those numbers make sense.
+[46:44] The reason they make sense is because they're
+[46:46] in the same units.
+[46:47] So apples to apples is the familiar adage that we use.
+[46:52] You can't add apples to oranges.
+[46:55] Actually, in theory you could.
+[46:57] You could make fruit salad.
+[46:58] And you need apples, and oranges, and pears, and all
+[47:00] that.
+[47:01] But for argument's sake, when it comes to money
+[47:06] it really doesn't tell you much that you've got 450 blah.
+[47:11] You need to have a set of units.
+[47:13] Well it turns out that this actual analysis requires
+[47:20] that we pick a base currency.
+[47:23] We pick what's called a numeraire.
+[47:26] A numeraire is a unit of account,
+[47:29] or a standard, by which we measure everything.
+[47:34] So either yen or pounds will work just fine.
+[47:37] It doesn't matter which.
+[47:38] If you're a British investor, you might care about pounds.
+[47:41] If you're a Japanese investor, you might care more about yen.
+[47:44] It just depends upon your perspective,
+[47:46] but either one will do for the purposes
+[47:48] of analyzing how much money you have at a point in time.
+[47:54] Well that exact same exercise has
+[47:56] to be applied to money today versus money tomorrow.
+[48:02] Because those two things are not the same.
+[48:04] It's like yen and pounds.
+[48:06] They're not the same.
+[48:07] They can't buy the same things.
+[48:08] They aren't used in the same way.
+[48:10] They have different markets.
+[48:12] The markets are related, but they're different.
+[48:16] So once you know the exchange rate,
+[48:18] and once you pick a base currency,
+[48:21] you can combine the thing.
+[48:22] The same idea holds true for cashflows
+[48:25] at different points in time.
+[48:27] Cashflows at different points in time
+[48:29] are like different currencies.
+[48:31] In order to add them together, you've
+[48:33] got to use the appropriate exchange rates.
+[48:37] Once you do, then all of the valuation
+[48:39] that we're going to conduct over the next couple of lectures
+[48:42] becomes absolutely trivial.
+[48:44] So let me give you an example of that.
+[48:47] Here's my timeline.
+[48:49] And my timeline has payoffs at various different dates.
+[48:56] Now I'm arguing that the past and the future cannot be
+[48:58] combined without converting them.
+[49:01] So we have to have a set of exchange rates
+[49:05] that convert all the various different currencies
+[49:09] into a numeraire or single base currency.
+[49:14] And for the sake of argument, I'm
+[49:15] going to just pick, times 0, dollars today
+[49:20] as my base currency.
+[49:23] So in other words, I want to convert every cashflow
+[49:27] into the single currency that is today's dollars.
+[49:35] So in particular, over the course of t days,
+[49:39] days 1 through t, how many different currencies do I
+[49:43] have apart from my base currency of time 0 money.
+[49:49] Yeah, I've got t different currencies, t dates.
+[49:53] Every single date, it's a different currency.
+[49:58] And I need to convert them in order to add them up.
+[50:03] So I'm going to argue that sequence of cashflow, CF1, CF2,
+[50:12] dot, dot, dot-- if I want to figure out
+[50:14] what it's worth in a single currency, date 0 currency,
+[50:20] I got to multiply the cashflows by the appropriate exchange
+[50:23] rate.
+[50:24] What's the exchange rate?
+[50:25] The exchange rate is how many dollars at date
+[50:28] 1 per dollar at date 0?
+[50:30] How many dollars at date 2 per date 0 dollar?
+[50:34] How many dollars at date 3 per date $0 and so on.
+[50:38] I'll have t exchange rates for the t different kinds
+[50:43] of currencies that I have.
+[50:46] Each currency is dollars denominated
+[50:50] as of a particular date.
+[50:54] Any questions about that?
+[50:57] Pretty straightforward.
+[50:58] You think it's straightforward, but you're
+[51:00] going to have to think about it for a little while
+[51:02] and do some problems to really make sure you appreciate
+[51:05] this perspective.
+[51:08] Now we're ready to talk about what this value operator is.
+[51:14] I'm going to argue that once you've got the exchange
+[51:18] rates across the various different currencies,
+[51:23] then the value of the collection of cashflows
+[51:28] is just the sum of all of the values
+[51:31] of the cashflows denominated in the same currency.
+[51:35] But instead of currency, meaning pounds or dollars or yen,
+[51:40] the currency is going to be date 0 dollars.
+[51:48] Questions about this?
+[51:49] This is important now.
+[51:52] So I'm going to define something called the net present value
+[52:00] operator, NPV, as the date 0 value of the cashflows.
+[52:10] Now why is this called net present value?
+[52:13] Because typically, when you are valuing an investment,
+[52:17] you have to pay some money up front
+[52:20] and then you get cashflows later on.
+[52:22] And so your net investment is going
+[52:25] to be given by some summation of those pieces.
+[52:29] But it's not a simple sum.
+[52:30] You can't just add the numbers.
+[52:32] That would be like adding 300 yen to 150 pounds or whatever.
+[52:37] You have to figure out how to convert
+[52:40] all the currencies to the same unit of account, dollars today.
+[52:48] And so that's why it's called present value.
+[52:51] That's the value at the present, today.
+[52:54] And the reason it's net is you're
+[52:56] netting out any initial investment, which
+[53:00] is the cashflow at time 0.
+[53:05] So V sub 0 is equal to CF0.
+[53:09] Notice, there's no exchange rate,
+[53:11] because we're doing it in today's dollars,
+[53:13] so that's the base currency--
+[53:16] plus the cashflow tomorrow.
+[53:18] Multiply by the exchange rate between dollars tomorrow
+[53:20] and dollars today and so on.
+[53:23] If there's an initial investment,
+[53:25] then the initial cash flow is negative.
+[53:27] That just means you have to put money
+[53:28] in to the project or the investment.
+[53:32] And then, over the course of the next t periods,
+[53:35] you get cashflows, which could also be positive or negative.
+[53:40] And you have to convert them into today's dollars.
+[53:44] And once you do, you look at that number
+[53:47] and you see whether or not you like it.
+[53:50] That's the value, the net present value,
+[53:55] of the cashflows.
+[53:58] Now I have one unanswered question for you.
+[54:01] What's the unanswered question in all of this analysis?
+[54:03] Sounds good, right?
+[54:04] This is pretty simple stuff.
+[54:06] But I pulled something out of the air.
+[54:08] What did I pull out of the air?
+[54:10] AUDIENCE: The exchange rate.
+[54:10] ANDREW LO: Exactly, exactly.
+[54:11] Where do I get the exchange rates?
+[54:13] You should be asking me, where do you get the exchange rates?
+[54:16] And you know what I'm going to tell you?
+[54:18] What's the answer I'm going to give you?
+[54:19] Where do I get the exchange rates?
+[54:21] AUDIENCE: From the market.
+[54:22] ANDREW LO: From the market, exactly.
+[54:24] From the market.
+[54:25] I get it from the market.
+[54:26] How do I get it from the market?
+[54:27] Well, we did it last time.
+[54:29] You know how.
+[54:30] We're going to auction it off.
+[54:31] You want to see how?
+[54:33] I've got a security that pays $1 a year from today.
+[54:37] It pays $1 a year from today.
+[54:41] Who will offer me a penny for that piece of paper?
+[54:45] Who will offer me $0.50 for that piece of paper?
+[54:49] $0.75?
+[54:51] $0.80?
+[54:52] $0.90?
+[54:54] $0.95?
+[54:56] $0.97?
+[54:59] $0.98?
+[55:01] Well, all right.
+[55:03] $0.97 to the dollar.
+[55:04] There you go.
+[55:05] That's the exchange rate right there.
+[55:06] We're done.
+[55:08] And by the way, I appreciate that.
+[55:10] That's a lot of confidence in my credit worthiness.
+[55:12] It's only a 3% discount.
+[55:16] All right, well that's the exchange rate
+[55:18] between today and next year.
+[55:20] What about today and five years from now?
+[55:22] Where do we get that from?
+[55:25] AUDIENCE: The market.
+[55:26] ANDREW LO: Exactly, the market.
+[55:27] OK, I've got a piece of paper.
+[55:28] It pays $1 five years from now.
+[55:29] How many people will pay me a penny for that?
+[55:31] We'll go through the whole motion
+[55:33] and come up with the same kind of process.
+[55:37] And we'll get a number.
+[55:38] So the market-- now in a few weeks,
+[55:41] we're going to have to question whether or not
+[55:43] that is a good way of getting the exchange rates.
+[55:46] I'm not going to talk about that just yet.
+[55:48] But that's where we get it from.
+[55:51] So I've begged the question a little bit,
+[55:53] but I think I've actually made some progress
+[55:56] in providing a framework to think about valuation.
+[56:00] Once we establish the exchange rates,
+[56:01] you will agree with me that I can value any, any cashflow
+[56:07] whatsoever where the cashflow payments are known
+[56:10] with certainty in advance.
+[56:14] So that's a pretty impressive achievement
+[56:16] in the space of 45 minutes.
+[56:18] We've actually figured out how to value any cashflow
+[56:21] whatsoever under perfect certainty, given
+[56:25] the exchange rates.
+[56:26] And I've told you where to get the exchange rate from.
+[56:28] You get it from the marketplace.
+[56:30] That's why financial markets are so important.
+[56:32] It's because we require those inputs into our valuation
+[56:36] process for doing the analysis.
+[56:37] We rely on financial markets.
+[56:40] Financial markets didn't exist, we can't do this.
+[56:44] I'd have to wave my hands and say, well, you
+[56:45] can get it from some kind of theoretical source.
+[56:48] You just make it up.
+[56:49] Just come up with some numbers.
+[56:51] That doesn't sound very compelling.
+[56:53] And in fact, it's not.
+[56:54] The power of financial markets is the wisdom of the crowds.
+[56:57] And like it or not, you're the wisdom that we're tapping on.
+[57:00] We're tapping your wisdom to come up
+[57:03] with these exchange rates.
+[57:07] So we know now that the value of a sequence of cashflows
+[57:11] is simply equal to today's dollars
+[57:17] when you use these exchange rates to convert them
+[57:20] to present dollars, dollars today.
+[57:24] And that's often called present value.
+[57:27] Notice that these exchange rates are sometimes
+[57:31] called discount factors.
+[57:34] The reason they're called discount factors
+[57:36] is because typically they are numbers that are less than 1,
+[57:40] like what we saw today.
+[57:41] $1 next year I was able to auction off for $0.97 today.
+[57:46] That number is smaller than $1 because people are impatient.
+[57:50] $1 today is worth more than $1 next year.
+[57:53] So if I promise you $1 next year,
+[57:56] you're only willing to pay me a little bit less
+[57:59] than that for that privilege.
+[58:03] So it's a discount over what it would be on the day
+[58:09] that it gets paid.
+[58:12] AUDIENCE: One question.
+[58:13] ANDREW LO: Yes?
+[58:13] AUDIENCE: What exactly are you discounting
+[58:16] if there's perfect?
+[58:19] My impatience?
+[58:21] ANDREW LO: That's a great question.
+[58:23] Let me repeat it for everybody to hear.
+[58:25] The question is, what are you discounting
+[58:27] if there's no uncertainty?
+[58:28] Why should $1 next year be worth less than $1 today?
+[58:33] Because there's no uncertainty.
+[58:35] I've ruled out uncertainty, right?
+[58:37] So there's no default risk.
+[58:39] It's impatience.
+[58:40] People want to consume now versus later.
+[58:43] And therefore, if you're going to force somebody
+[58:46] to consume later, you've got to somehow offer them
+[58:49] some incentive to do that.
+[58:52] So in order for me to have you give me $1,
+[58:56] so that I can take the dollar now,
+[58:58] and I'll pay you back a year from now,
+[59:00] so that you can't consume that dollar today,
+[59:02] you have to wait a year to consume that dollar.
+[59:04] In order for me to do that, I actually
+[59:06] have to make it interesting for you,
+[59:07] which means you give me $0.97 now and I give you back $1
+[59:12] next year.
+[59:12] I pay you extra for that time that you have to wait.
+[59:16] Yeah?
+[59:16] AUDIENCE: Could you also make an argument
+[59:18] that I could take my dollar now and give it
+[59:21] to somebody who needs to use it now and charge them
+[59:23] for the privilege of using my dollar now?
+[59:26] ANDREW LO: Absolutely, absolutely.
+[59:28] We haven't talked about the mechanism
+[59:30] for determining what that exchange rate is.
+[59:33] And I'm going to come to that.
+[59:34] But before we even talk about that,
+[59:35] I want to acknowledge that it exists, and it's real,
+[59:40] and we can figure out what it is just
+[59:41] from a simple auction of market, and we can use it.
+[59:46] But I'm going to get to exactly what it means
+[59:49] and how we arrive at those exchange rates.
+[59:51] That's going to be a very important part of this.
+[59:54] AUDIENCE: For inflation, we know that because of inflation
+[59:57] $1 today is also much less than $1 next year.
+[60:00] ANDREW LO: That's right.
+[60:01] I'm going to get to that at the end of this lecture.
+[60:02] That's another reason why there might
+[60:04] be some kind of discounting.
+[60:06] It's not just the time preference.
+[60:07] AUDIENCE: That's part of the answer.
+[60:09] ANDREW LO: That's right, exactly.
+[60:10] So we're going to come back to that as well.
+[60:12] AUDIENCE: Is there such thing as a deflationary environment?
+[60:15] ANDREW LO: Deflation can occur.
+[60:17] Negative real interest rates can occur
+[60:20] during certain unusual periods of economic development.
+[60:23] So that's a possibility.
+[60:26] It's not a possibility that we've seen in the United States
+[60:28] in recent years.
+[60:29] But other countries have experienced that.
+[60:31] And when that happens, there are some really serious
+[60:33] repercussions.
+[60:34] So we're going to come to that.
+[60:35] In fact, in 2004 the US government,
+[60:40] early on in that year, was very concerned
+[60:42] about the possibility of deflation.
+[60:44] And it was only towards the end of 2005
+[60:47] that inflation became more of a concern.
+[60:50] So we're going to come to that as well.
+[60:51] AUDIENCE: Would you separate the concept of inflation
+[60:54] from the time value of money?
+[60:55] Would you call those two different fundamental concepts?
+[60:58] ANDREW LO: Yes, I would.
+[60:59] And let's hold off on inflation for now,
+[61:00] because I don't want people to get confused by it.
+[61:02] It's something I'm going to bring in at the very end.
+[61:04] So I will come to that.
+[61:05] That is a topic for lectures two and three.
+[61:10] So we now know how to value cashflows,
+[61:14] at least using this very simple framework with exchange rates.
+[61:18] And here's an example--
+[61:20] just a very, very simple one--
+[61:21] where I've got the two discount rates, or exchange rates,
+[61:26] for next year and the year after.
+[61:27] It's $0.90 to the dollar and $0.80 to the dollar.
+[61:31] Notice that the farther you go into the future,
+[61:34] the more of a discount these exchange rates require.
+[61:38] That's also human nature having to do
+[61:40] with impatience, and possible inflation,
+[61:43] and other kinds of phenomena.
+[61:45] But again, I'm not going to tell you how we got those numbers.
+[61:48] I got them from the marketplace.
+[61:51] Now what's the net present value of a project requiring
+[61:54] a current investment of $10 million
+[61:56] with cashflows of $5 million in year 1 and $7 million
+[61:59] in year 2?
+[62:01] That's trivial.
+[62:04] Here you go.
+[62:05] Minus $10 million today, $5 million next year,
+[62:09] but next year's dollars is not the same as today's dollars,
+[62:13] so you've got to convert it to the right currency.
+[62:16] So that's $0.90 to the dollar multiplied by 5.
+[62:20] And then $0.80 to the dollar multiplied by 7.
+[62:24] When you add it up you get a $100,000 of today's dollars.
+[62:29] That's what this investment is worth.
+[62:34] So the first question is, should you take this investment?
+[62:37] Is it a good project?
+[62:39] Well let me ask you, do you want a $100,000?
+[62:42] Yeah.
+[62:43] If you don't, again, see me afterwards.
+[62:45] I will help you with this problem.
+[62:49] Remember the first day, I told you
+[62:52] that once you figure out valuation,
+[62:55] management is trivial.
+[62:58] Well, I wasn't just kidding.
+[62:59] This is an example.
+[63:01] What we've been able to do is to take a problem.
+[63:03] What's the net present value of a project
+[63:05] requiring this sequence of cashflows?
+[63:07] We've been able to take that problem,
+[63:08] that management problem, should you do this or not--
+[63:11] we've been able to reduce that to a simple question,
+[63:13] do you want $100,000?
+[63:15] I think the answer is yes.
+[63:17] So that's the management part.
+[63:19] Let's do this.
+[63:20] Done.
+[63:22] The valuation part is the hard part.
+[63:24] The management part, the decision,
+[63:25] is easy once you have the right numbers in front of you.
+[63:29] Second question-- suppose a buyer
+[63:31] wishes to purchase this project but pay
+[63:34] for it two years from now.
+[63:38] How much should you ask for this project?
+[63:44] Now the first thing you need to do is what?
+[63:48] AUDIENCE: [INAUDIBLE].
+[63:49] ANDREW LO: Well, that's the second thing.
+[63:50] The first thing you need to do--
+[63:52] draw a timeline.
+[63:54] Draw a timeline so you know exactly what's going on.
+[63:56] Two years from now.
+[63:57] Is that next year or is that two years from today?
+[64:01] So draw a timeline.
+[64:03] And you can figure out, once you have
+[64:05] the timeline, what the present values and future values are.
+[64:12] So when you work out the numbers,
+[64:15] you can actually make a decision and figure out exactly what
+[64:19] you ought to charge for that.
+[64:23] That's it for the time value of money.
+[64:26] But I want to summarize by telling you
+[64:28] what we've learned so far.
+[64:31] We've learned that we can value cashflows-- assets, which
+[64:34] are sequences of cashflows.
+[64:36] And the way we value that is by making
+[64:39] some implicit assumptions.
+[64:41] The assumptions are we know the cashflows in advance,
+[64:43] so there's no uncertainty about what the cashflows are.
+[64:46] Second, we know the exchange rates.
+[64:49] And if you don't know them, go get them.
+[64:51] Where do you get them?
+[64:52] You get them from the marketplace.
+[64:54] And finally, there are no frictions
+[64:58] in the currency conversions.
+[65:00] One thing you didn't ask me about
+[65:01] is that typically, when you go abroad
+[65:04] and you have to convert your currencies, what
+[65:06] do you have to do?
+[65:06] You have to find somebody that converts it for you.
+[65:08] And typically they will charge you a fee for that conversion.
+[65:13] I've been talking as if the conversions happen
+[65:15] without any kind of frictions.
+[65:18] That's an assumption that can be tested.
+[65:20] So we're going to talk about frictions later in the course.
+[65:23] But for now, we're going to assume
+[65:25] that there are no frictions.
+[65:28] Now of course, these are all hypotheticals.
+[65:31] They're all approximations to a much more complex reality.
+[65:36] But once we understand how the model works
+[65:39] with these simplifying assumptions,
+[65:42] we can then go back and say, OK, let's make the assumptions more
+[65:44] realistic, and let's see how that affects the implications.
+[65:49] So I'm going to first do the plain vanilla version of this.
+[65:53] And then, after we fully understand it,
+[65:55] I'm going to come back make this more complex.
+[65:58] So until lecture 12--
+[66:00] that's a long ways away--
+[66:02] but until lecture 12 I'm going to assume
+[66:05] that these assumptions hold.
+[66:08] And after lecture 12 I'm going to go back and systematically
+[66:11] question, and expand and revise, each one of these.
+[66:14] So when I told you during the first day of class
+[66:16] that you can't handle the truth, this is what I mean.
+[66:19] We're going to start simple and try
+[66:21] to understand the implications of these simplistic
+[66:23] assumptions.
+[66:24] And then, little by little, we're
+[66:25] going to make the assumptions closer to the truth.
+[66:29] Now more examples-- once we understand how this exchange
+[66:34] rate mechanism works, we can look
+[66:37] at all sorts of other alternatives
+[66:41] to calculating value.
+[66:45] So in particular, one question that you might ask,
+[66:48] that was asked, is $1 today should be worth more than $1
+[66:53] in the future because of impatience,
+[66:55] because of inflation, because of all the reasons we described.
+[66:58] But the bottom line is supply and demand.
+[67:00] More people want money today than money tomorrow.
+[67:04] And so supply and demand, bottom line,
+[67:06] dictates that there is this difference between the two.
+[67:10] So we can actually figure out what
+[67:13] that difference is by looking at the exchange rates.
+[67:16] So in particular, $1 in year 0--
+[67:21] if you hold it for a year it'll turn into $1 times something,
+[67:27] the reverse of the exchange rate of $1 in year 1
+[67:32] brought back to year 0.
+[67:35] But I'm going to write it in this format, 1 plus something.
+[67:40] Because remember, when we're going the other way,
+[67:43] when we have $1 in year 1 and we want
+[67:45] to figure out what is it worth in today's dollars,
+[67:48] that's a discount.
+[67:50] It's a number less than 1.
+[67:51] So if you want to go the opposite direction,
+[67:53] if I have $1 today and I want to know
+[67:55] how much is that dollar worth a year from now,
+[67:58] it should be greater than 1.
+[68:00] In fact, it should be the reciprocal of the exchange
+[68:03] rate going the other way.
+[68:04] Instead of looking at pounds, you look at yen.
+[68:07] And so it's the opposite of the same exchange rate.
+[68:11] But the way I'm going to write it is 1 plus r.
+[68:16] Because it'll be greater than 1, typically, so r
+[68:19] will be a number typically greater than 0.
+[68:22] What about for two years?
+[68:24] I'm going to simply write it as 1 plus r quantity squared.
+[68:30] And the reason I do that is because I'm
+[68:33] thinking about taking that same growth rate
+[68:37] and applying it two years in a row.
+[68:41] I could have written 1 plus z.
+[68:44] And z then would be the rate of growth over a two year period.
+[68:50] But I like to think in terms of annual frequencies.
+[68:53] So I'm going to just simply assume
+[68:55] that a year is my unit of account.
+[68:59] And then-- looking at a one year, two year,
+[69:02] three year growth period--
+[69:05] I'm going to simply take powers of this factor 1 plus r.
+[69:12] So $1 in year 0 is going to be worth $1 times
+[69:19] 1 plus r to the T-th power in year
+[69:22] T. This r is often called the opportunity cost of capital.
+[69:31] In fact there are like, five different names for this r.
+[69:34] It's called the interest rate.
+[69:36] It's called the growth rate.
+[69:38] It's called the cost of capital.
+[69:39] It's called the opportunity cost of capital.
+[69:41] John Maynard Keynes called it the user cost.
+[69:44] There are tons of names for this quantity
+[69:46] but the basic idea is it's the reverse of the exchange rates
+[69:51] that we were looking at before when we were trying to bring
+[69:54] everything to today's dollars.
+[69:57] Now the reason I'm showing this to you
+[69:59] is because it turns out that we're
+[70:01] going to want to move money back and forth through time.
+[70:05] And in order to do that, we need to sometimes multiply
+[70:07] and sometimes divide.
+[70:08] And I want to come up with just one set of notation,
+[70:11] as opposed to all these exchange rates floating around.
+[70:14] So remember when we had T periods
+[70:17] and I wanted to figure out what the value of an asset
+[70:19] was today given T periods.
+[70:21] We had to have T exchange rates.
+[70:23] That's a pain in the neck to carry around T numbers.
+[70:27] And moreover, there are exchange rates
+[70:29] that you have to deal with between dates T plus k and T
+[70:33] plus j.
+[70:35] So any two dates, you've got to have
+[70:37] an exchange rate between them.
+[70:39] So pretty soon the number of exchanges
+[70:41] you've got to keep in your head is ridiculous.
+[70:45] That's why they came up with the Euro.
+[70:47] They tried to unify some of these exchange rates.
+[70:50] So here is a way to unify all of the exchange rates into one
+[70:54] number, little r.
+[70:57] Once you know little r you know everything.
+[70:59] You know all the exchange rates for every possible two dates
+[71:03] that you care about.
+[71:05] Now where do we get a little r from?
+[71:07] AUDIENCE: The market.
+[71:08] ANDREW LO: Exactly.
+[71:09] You're learning.
+[71:10] So we get it from the market.
+[71:12] Now it's going to be a little bit more complicated than that.
+[71:15] It turns out that the market's going to give us many different
+[71:18] r's.
+[71:19] So we're not going to get to that yet.
+[71:21] So for now, let's just assume that the market gives us one
+[71:25] r, this r.
+[71:28] Once you have this one number, r,
+[71:31] it will allow you to do all of these calculations
+[71:35] back and forth.
+[71:36] You can move money back and forth
+[71:37] through time because you will know what the exchange
+[71:40] rate is between any two points in your cashflow sequence.
+[71:47] Now that we have the r, let's go back
+[71:50] and figure out what the exchange rates are,
+[71:52] what we were talking about in terms of bringing stuff back
+[71:54] to date 0.
+[71:57] And it turns out that there's a really simple form.
+[72:00] It turns out that $1 in year 1--
+[72:04] if you paid me $1 in year 1, and I
+[72:07] wanted to figure out what it was worth
+[72:08] today given this r number that I used,
+[72:13] it's actually just equal to $1 divided by 1 plus r.
+[72:20] So what's the exchange rate?
+[72:22] AUDIENCE: O.
+[72:23] ANDREW LO: What's that?
+[72:24] AUDIENCE: O.
+[72:25] ANDREW LO: That's not the exchange rate.
+[72:27] What's the exchange rate that allows us to take $1 next year
+[72:32] and bring it to $1 today?
+[72:34] AUDIENCE: Is it 1 over--
+[72:35] ANDREW LO: It's 1 over 1 plus r.
+[72:37] 1 over 1 plus r.
+[72:40] Remember, r is a number greater than 0.
+[72:43] So 1 over 1 plus r is a number less than 1, like $0.97
+[72:47] to the dollar.
+[72:48] So the exchange rate between next year's dollar and today's
+[72:51] dollar is 1 over 1 plus r.
+[72:56] What about the exchange rate between $1 two years
+[72:59] from now and today.
+[73:00] What is that?
+[73:02] 1 over 1 plus r-squared.
+[73:04] That's right.
+[73:05] And so on.
+[73:07] So the exchange rates, or discount factors,
+[73:11] are simply related to the little r's in this manner.
+[73:21] That's the mechanics and mathematics of present value.
+[73:26] Now this might seem intuitive.
+[73:29] And when I say it you might understand it
+[73:31] or you might think you do.
+[73:33] Please, go back-- between today and Wednesday
+[73:37] go over this and test yourself.
+[73:40] Try to figure out for a given r--
+[73:43] if you have $100 today, and r is 7%,
+[73:48] what is $100 worth three years from now?
+[73:50] Or if you have $180 three years from now,
+[73:53] and you want to figure out what it's going to be worth
+[73:55] not three years from now but a year from now, and the r is 8%,
+[74:01] what is it equal to?
+[74:02] Test yourself by coming up with little examples
+[74:05] to challenge your own understanding of this concept.
+[74:08] Because it's going to be critical.
+[74:09] We have to get this right, because everything
+[74:11] that we build from here on in is going
+[74:14] to rest on the foundations of these calculations.
+[74:19] Now, with these r's, I'm going to leave you
+[74:21] with this one last concept, which
+[74:23] is that the value of the cashflows that we've
+[74:27] been talking about at time 0 is simply
+[74:30] equal to the cashflows multiplied by the exchange
+[74:32] rates.
+[74:33] And now, with this definition of r, this opportunity,
+[74:36] cost of capital, this interest rate, this discount rate,
+[74:40] we then have an expression for what this value operator ought
+[74:44] to be.
+[74:48] Using this expression, any cashflow in the world
+[74:52] can be valued under perfect certainty
+[74:54] and under the assumptions that we described.
+[74:57] Any cashflow can be valued, therefore
+[74:59] any asset can be valued.
+[75:02] So what we've done in the space of a lecture
+[75:06] is to create a valuation operator that
+[75:09] works for virtually anything under the sun
+[75:12] in certain simplified circumstances.
+[75:14] That's a major achievement.
+[75:15] You can congratulate yourself that we've reached this level.
+[75:18] But we're going to have to do some more work
+[75:20] to think about how to use this.
+[75:22] So we're not done yet.
+[75:23] We have some additional analysis to do.
+[75:25] But this is a wonderful starting point.
+[75:27] Next time, we're going to focus on how to take this and apply
+[75:31] it to two very, very special cashflows, an annuity
+[75:35] and a perpetuity.
+[75:36] And you know what this is going to do?
+[75:37] This is going to allow you to figure out what your mortgage
+[75:40] payments are every month, when you go apply for a mortgage.
+[75:42] You'd be surprised at how subtle that calculation is
+[75:45] and how many bankers don't know how to do it.
+[75:47] Well, you will.
+[75:48] All right, I'll see you next time.
+[75:50] [APPLAUSE]
