@@ -1,23 +1,35 @@
 {
   "HdHlfiOAJyE": {
-    "folder": "Ses 1 Introduction and Course Overview",
+    "folder": "courses/mit-15-401-finance-theory/ses-01",
     "title": "Ses 1: Introduction and Course Overview",
     "course": "MIT 15.401 Finance Theory",
     "updated": "2026-10-10T11:21:43+08:00",
-    "corrected": true
+    "corrected": true,
+    "course_slug": "mit-15-401-finance-theory",
+    "aliases": [
+      "Ses 1 Introduction and Course Overview"
+    ]
   },
   "U03Md5enU-0": {
-    "folder": "Ses 2 Present Value Relations I",
+    "folder": "courses/mit-15-401-finance-theory/ses-02",
     "title": "Ses 2: Present Value Relations I",
     "course": "MIT 15.401 Finance Theory",
     "updated": "2026-10-10T13:49:12+08:00",
-    "corrected": true
+    "corrected": true,
+    "course_slug": "mit-15-401-finance-theory",
+    "aliases": [
+      "Ses 2 Present Value Relations I"
+    ]
   },
   "4F1J5Q3DiaI": {
-    "folder": "Ses 3 Present Value Relations II",
+    "folder": "courses/mit-15-401-finance-theory/ses-03",
     "title": "Ses 3: Present Value Relations II",
     "course": "MIT 15.401 Finance Theory",
     "updated": "2026-10-10T15:54:49+08:00",
-    "corrected": true
+    "corrected": true,
+    "course_slug": "mit-15-401-finance-theory",
+    "aliases": [
+      "Ses 3 Present Value Relations II"
+    ]
   }
 }
