@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业的结构：财务资产负债表与企业生命周期</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ── 基础重置 ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            color-scheme: light;
+            --bg-primary: #f7f7f8;
+            --bg-secondary: #ffffff;
+            --bg-card: #eef0f3;
+            --bg-code: #f2f3f5;
+            --text-primary: #1f2328;
+            --text-secondary: #57606a;
+            --text-muted: #6e7781;
+            --accent: #2563eb;
+            --accent-glow: rgba(37, 99, 235, 0.08);
+            --border: #d9dce1;
+            --border-subtle: #e7e9ec;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 文章容器 ── */
+        .book-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 32px 120px;
+        }
+
+        /* ── 标题 ── */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0 0 12px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 56px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 36px 0 12px;
+        }
+
+        /* ── 段落与文字 ── */
+        p {
+            margin: 0 0 16px;
+            color: var(--text-primary);
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── 引用 ── */
+        blockquote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--text-secondary);
+        }
+        blockquote p { margin: 0; }
+
+        /* ── 列表 ── */
+        ul, ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-primary);
+        }
+        li {
+            margin: 6px 0;
+        }
+
+        /* ── 分割线 ── */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 48px 0;
+        }
+
+        /* ── 表格 ── */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        thead {
+            background: var(--bg-card);
+        }
+        th {
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            color: var(--accent);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        tbody tr {
+            background: var(--bg-secondary);
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: var(--bg-card);
+        }
+
+        /* ── 代码 ── */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-code);
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.88em;
+            color: #6d28d9;
+        }
+
+        pre {
+            margin: 20px 0;
+            padding: 20px 24px;
+            background: var(--bg-code);
+            border-radius: var(--radius);
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--text-primary);
+        }
+
+        /* ── 视频嵌入卡片 ── */
+        .video-card {
+            margin: 32px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 12px 16px;
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .video-caption a {
+            color: var(--accent);
+        }
+
+        .video-card.fallback {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ── Lightbox：截图点击放大 ── */
+        .screenshot-card img { cursor: zoom-in; transition: opacity 0.15s; }
+        .screenshot-card img:hover { opacity: 0.9; }
+        .lightbox {
+            position: fixed; inset: 0; z-index: 999;
+            display: none; align-items: center; justify-content: center;
+            background: rgba(5, 5, 8, 0.92); backdrop-filter: blur(4px);
+            cursor: zoom-out; padding: 24px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 96vw; max-height: 90vh;
+            border-radius: 8px; box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+        }
+        .lightbox-caption {
+            position: absolute; bottom: 14px; left: 0; right: 0;
+            text-align: center; color: var(--text-secondary); font-size: 0.85em;
+        }
+
+        /* ── 顶部信息栏 ── */
+        .book-content > blockquote:first-of-type {
+            background: var(--accent-glow);
+            border-left-color: var(--accent);
+            border-radius: var(--radius);
+            margin-bottom: 32px;
+        }
+
+        /* ── 图表居中 ── */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        /* ── 滚动条 ── */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* ── 响应式 ── */
+        @media (max-width: 640px) {
+            .book-content { padding: 32px 16px 80px; }
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.3em; }
+        }
+    </style>
+    <link rel="canonical" href="https://foolishdominator.github.io/lessons/courses/foundations-of-finance/ses-02/book.html">
+</head>
+<body>
+    <article class="book-content">
+<!-- publication-navigation -->
+<nav aria-label="课程导航" style="margin:0 0 1.5rem;font-size:14px"><a href="/lessons/">Lessons</a> · <a href="/lessons/courses/foundations-of-finance/">Foundations of Finance</a></nav>
+<!-- /publication-navigation -->
+<h1 id="_1">企业的结构：财务资产负债表与企业生命周期</h1>
+<blockquote>
+<p><strong>课程</strong>：Foundations of Finance · Session 2: The Structure of a Business<br />
+<strong>讲者</strong>：Aswath Damodaran<br />
+<strong>来源</strong>：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js">观看原视频</a> · 13 分 13 秒<br />
+本讲从企业拥有的资产与筹资方式出发，说明财务资产负债表的四个基本项目，再考察它们如何随企业生命周期变化。</p>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#_1">企业的结构：财务资产负债表与企业生命周期</a><ul>
+<li><a href="#_2">一、用四个项目理解一家企业</a></li>
+<li><a href="#_3">二、既有资产：已经投入的钱，不等于今天的价值</a><ul>
+<li><a href="#_4">价值取决于未来产出</a></li>
+</ul>
+</li>
+<li><a href="#_5">三、增长资产：增长怎样创造价值，又怎样破坏价值</a><ul>
+<li><a href="#_6">企业变大与企业增值是两个问题</a></li>
+</ul>
+</li>
+<li><a href="#_7">四、债务：从合约承诺识别融资的实质</a><ul>
+<li><a href="#1">1. 存在事先确定的付款承诺</a></li>
+<li><a href="#2">2. 不履约会带来控制权方面的后果</a></li>
+<li><a href="#3">3. 相关付款通常具有税前扣除特征</a></li>
+</ul>
+</li>
+<li><a href="#_8">五、股权：剩余索取权与实际股息之间的距离</a><ul>
+<li><a href="#_9">有剩余现金，不代表立即发到股东手中</a></li>
+</ul>
+</li>
+<li><a href="#_10">六、企业生命周期：价值来源如何随年龄变化</a></li>
+<li><a href="#_11">七、融资一侧：为什么年轻企业与成熟企业不同</a><ul>
+<li><a href="#_12">年轻企业：潜力不能拿来支付利息</a></li>
+<li><a href="#_13">成熟与衰退：举债能力先扩大，再进入资金返还</a></li>
+</ul>
+</li>
+<li><a href="#_14">八、收获回报：企业最终怎样把现金交还投资者</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">一、用四个项目理解一家企业</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=3s">00:03—01:43</a></strong></p>
+<p>理解企业，可以先从资产负债表（balance sheet）入手。会计资产负债表（accounting balance sheet）把资产分成固定资产（fixed assets）、流动资产（current assets）、无形资产（intangible assets）、金融资产（financial assets）等类别，在另一侧列示流动负债（current liabilities）、长期负债（long-term liabilities）、股东权益（shareholders' equity）等项目。</p>
+<p>讲者提出的财务资产负债表（financial balance sheet），把这些项目重新组织为四个基本概念：<strong>资产一侧看投资何时形成，融资一侧看钱从哪里来。</strong></p>
+<table>
+<thead>
+<tr>
+<th>资产一侧：企业的价值来自哪里</th>
+<th>融资一侧：企业如何取得资金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>既有资产（assets in place）</strong>：企业已经完成的投资</td>
+<td><strong>债务（debt）</strong>：借来的钱</td>
+</tr>
+<tr>
+<td><strong>增长资产（growth assets）</strong>：预期未来投资所带来的价值</td>
+<td><strong>股权（equity）</strong>：所有者投入的钱</td>
+</tr>
+</tbody>
+</table>
+<p>在这一框架下，一项资产究竟是厂房、软件还是其他无形资产，并不是首要分类标准。更关键的问题是：它属于已经进行的投资，还是未来才会进行的投资？</p>
+<p>对增长资产的判断可以延伸到明年、两年后、五年后，乃至更远的未来。因此，金融中的估值（valuation）可能会为企业尚未想清楚的投资机会赋予价值。这也预示了这个框架的难点：形式虽然简单，判断却依赖对未来的估计。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_01_10.png" alt="财务资产负债表把资产分为既有资产和增长资产，把融资分为债务和股权" loading="lazy">
+  <p class="video-caption">📷 财务资产负债表把资产分为既有资产和增长资产，把融资分为债务和股权<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=70" target="_blank" rel="noopener">在 YouTube 中打开 (00:01:10)</a></p>
+</div>
+
+<p>公司金融（corporate finance）和估值都要反复使用这四个概念。接下来，先分别理解它们，再把它们放到企业的一生中观察。</p>
+<h2 id="_3">二、既有资产：已经投入的钱，不等于今天的价值</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=103s">01:43—03:37</a></strong></p>
+<p>既有资产（assets in place）对应企业已经做出的投资。讲者给出两类例子：</p>
+<table>
+<thead>
+<tr>
+<th>企业</th>
+<th>既有资产的例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通用汽车（GM）、福特（Ford）等传统汽车企业</td>
+<td>汽车工厂、装配厂和已有生产设施</td>
+</tr>
+<tr>
+<td>微软（Microsoft）</td>
+<td>Windows、Office 等已经投入开发的产品</td>
+</tr>
+</tbody>
+</table>
+<p>这些例子也说明，既有资产不只包括看得见、摸得着的厂房。只要投资已经形成，并能支撑企业经营，就可以从既有资产的角度观察。</p>
+<h3 id="_4">价值取决于未来产出</h3>
+<p>金融中的问题是：<strong>这些资产未来能够产生多少现金流（cash flows）？</strong> 过去投入了多少资本，只是另一项信息。即使企业曾经花费数十亿美元，也不能据此认定资产今天仍然值同样多的钱。</p>
+<p>因此，既有资产的价值与已投入资本（capital invested）之间，可能出现三种关系。</p>
+<table>
+<thead>
+<tr>
+<th>资产的表现</th>
+<th>价值与原有投入的可能关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已经难以产生收益</td>
+<td>价值可能远低于会计报表上的金额</td>
+</tr>
+<tr>
+<td>产出能力大幅提高</td>
+<td>价值可能远高于原先投入的资本</td>
+</tr>
+<tr>
+<td>大致维持最初投资时的表现</td>
+<td>价值可能接近原有投入</td>
+</tr>
+</tbody>
+</table>
+<p>这里的“可能”很关键。讲者是在说明为什么两者可以偏离，而不是提供一条只靠历史投入就能算出价值的公式。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_02_50.png" alt="既有资产的价值着眼于未来现金流，而非已经花费的历史投入" loading="lazy">
+  <p class="video-caption">📷 既有资产的价值着眼于未来现金流，而非已经花费的历史投入<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=170" target="_blank" rel="noopener">在 YouTube 中打开 (00:02:50)</a></p>
+</div>
+
+<p>财务资产负债表（financial balance sheet）因此具有面向未来（forward-looking）的特点。虽然这些投资发生在过去，今天给它们估值（valuation）时，仍要问它们今后能够创造什么。</p>
+<h2 id="_5">三、增长资产：增长怎样创造价值，又怎样破坏价值</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=217s">03:37—05:42</a></strong></p>
+<p>增长资产（growth assets）代表预期未来投资带来的价值。它的大小取决于投资能否获得超额回报（excess return），而不只是企业准备投多少钱。</p>
+<p>投入资金本身并不自动创造价值，因为这笔钱必须筹集而来，筹资也有成本。讲者用同一笔 <strong>10 亿美元</strong> 的未来投资，比较三种情形。</p>
+<table>
+<thead>
+<tr>
+<th>计划投资</th>
+<th>筹资成本</th>
+<th>项目回报率</th>
+<th>对增长资产价值的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 亿美元</td>
+<td>10%</td>
+<td>30%、40% 或 50%</td>
+<td>项目回报高于筹资成本，增长创造价值</td>
+</tr>
+<tr>
+<td>10 亿美元</td>
+<td>10%</td>
+<td>恰好 10%</td>
+<td>企业规模扩大，但增长资产的新增价值可以为零</td>
+</tr>
+<tr>
+<td>10 亿美元</td>
+<td>10%</td>
+<td>只有 5%</td>
+<td>回报不足以补偿筹资成本，增长资产可以具有负价值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">企业变大与企业增值是两个问题</h3>
+<p>第二种情形最容易被忽略。企业确实增加了投资，也可能拥有更多项目与资产，但如果项目恰好只赚到筹资成本，规模扩大并没有为企业带来额外价值。</p>
+<p>第三种情形更加严峻：如果企业不断把资金投入回报率不足的项目，增长反而会加速价值损失。这里的负价值，指的是这些未来投资对企业价值的负面贡献。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_05_10.png" alt="增长资产的价值来自未来投资的超额回报；增长也可能不增值，甚至破坏价值" loading="lazy">
+  <p class="video-caption">📷 增长资产的价值来自未来投资的超额回报；增长也可能不增值，甚至破坏价值<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=310" target="_blank" rel="noopener">在 YouTube 中打开 (00:05:10)</a></p>
+</div>
+
+<p>所以，拥有巨大增长潜力还不够，还要能够获得足够的超额回报。对于只能原地踏步的企业，增长资产可能没有价值；对于选择了达不到必要收益率（required rate of return）的项目的企业，增长可能破坏价值。</p>
+<p>讲者把这件事视为公司金融（corporate finance）与估值（valuation）的共同核心：经营企业，要确保未来投资能够创造价值。如果找不到这样的投资，就应停止把价值创造寄托在这些增长项目上。</p>
+<h2 id="_7">四、债务：从合约承诺识别融资的实质</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=342s">05:42—07:17</a></strong></p>
+<p>债务（debt）并不能简单等同于资产负债表（balance sheet）上某个标签下的总数。银行贷款（bank loans）和公司债券（corporate bonds）很容易辨认，但有些具有债务性质的项目，未必会以显眼的债务项目出现。本讲暂不展开具体例子，而是给出三个识别特征。</p>
+<h3 id="1">1. 存在事先确定的付款承诺</h3>
+<p>债务包含合约承诺（contractual commitment）：企业承诺在未来付款。与之相比，企业发行股权（equity）时说自己打算支付股息（dividend），在讲者的比较中，并不等同于债务合约规定的付款义务。</p>
+<p><strong>合约承诺不要求付款金额始终固定。</strong> 它可以约定一个固定金额，也可以约定随其他因素变化的付款规则。例如，浮动利率债务（floating-rate debt）的付款金额会变化，但决定付款的规则在事先就已经确定。</p>
+<h3 id="2">2. 不履约会带来控制权方面的后果</h3>
+<p>不按约付款可能引起违约（default）、破产（bankrupt），使贷款人接管企业，或使企业被关闭。债务因此与潜在的失去控制权（loss of control）联系在一起。</p>
+<h3 id="3">3. 相关付款通常具有税前扣除特征</h3>
+<p>讲者指出，在世界上许多地方，债务相关付款通常可以税前扣除（tax-deductible）；他也明确保留了“并非所有地方”的限制。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_06_58.png" alt="债务的三个识别特征：合约付款承诺、税前扣除，以及违约时失去控制权的风险" loading="lazy">
+  <p class="video-caption">📷 债务的三个识别特征：合约付款承诺、税前扣除，以及违约时失去控制权的风险<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=418" target="_blank" rel="noopener">在 YouTube 中打开 (00:06:58)</a></p>
+</div>
+
+<p>这三个特征共同帮助我们判断一项融资安排是否具有债务实质。具体还有哪些项目应当归入债务，留待后续课程讨论。</p>
+<h2 id="_8">五、股权：剩余索取权与实际股息之间的距离</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=437s">07:17—08:41</a></strong></p>
+<p>股权（equity）是一种剩余索取权（residual claim）。企业所有者取得的，是满足其他各方需求之后所剩的现金流（cash flows）。</p>
+<p>在经营过程中，企业需要偿付贷款人，并满足再投资（reinvestment）需求。剩下的现金流才属于股权投资者。剩余部分可能很多，也可能为零，甚至是负数。</p>
+<p>在企业清算（liquidate）时，剩余索取权同样适用：先偿付贷款人，股东才能取得剩余财产。</p>
+<h3 id="_9">有剩余现金，不代表立即发到股东手中</h3>
+<p>对上市公司（publicly traded company）的股东来说，剩余现金流（residual cash flow）与实际收到的股息（dividend）之间，还隔着公司管理层。管理层决定，要把多少现金以股息形式支付给投资者。</p>
+<p>因此，股息可能等于剩余现金流，也可能远低于它，或在某个时期高于它。讲者把股息称为剩余现金流经过平滑处理（smoothed out）的版本，但也提醒：<strong>股息未必是衡量剩余现金流的可靠数值。</strong></p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_08_10.png" alt="股权对应剩余索取权；上市公司管理层决定把多少剩余现金流作为股息发放" loading="lazy">
+  <p class="video-caption">📷 股权对应剩余索取权；上市公司管理层决定把多少剩余现金流作为股息发放<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=490" target="_blank" rel="noopener">在 YouTube 中打开 (00:08:10)</a></p>
+</div>
+
+<p>分析一家企业时，必须区分两个问题：企业经营后有多少现金可以归属于股东，以及管理层实际选择向股东支付多少现金。</p>
+<h2 id="_10">六、企业生命周期：价值来源如何随年龄变化</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=521s">08:41—10:17</a></strong></p>
+<p>企业生命周期（corporate life cycle）把前面的静态框架变成动态过程。讲者用人的一生作类比：人有出生、成长、成熟与衰退，企业也会经历相应阶段。</p>
+<p>初创企业（startup）像刚出生的孩子；年轻成长企业（young growth company）像青少年；成长企业（growth company）接近生命力旺盛的阶段；之后进入成熟企业（mature company）阶段，再走向衰退（decline）。</p>
+<p>这个框架的价值，在于帮助理解财务资产负债表（financial balance sheet）为什么会变化，尤其是既有资产（assets in place）与增长资产（growth assets）的相对分量。</p>
+<table>
+<thead>
+<tr>
+<th>生命周期位置</th>
+<th>资产一侧的主要特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初创</td>
+<td>几乎全部价值来自增长资产，既有资产很少</td>
+</tr>
+<tr>
+<td>年轻成长</td>
+<td>既有资产逐步积累，但增长资产仍是价值的主要驱动力</td>
+</tr>
+<tr>
+<td>继续成长、走向成熟</td>
+<td>既有资产在总价值中的占比逐渐提高</td>
+</tr>
+<tr>
+<td>成熟</td>
+<td>大部分价值来自既有资产，较少来自增长资产</td>
+</tr>
+<tr>
+<td>衰退</td>
+<td>增长机会枯竭，价值主要来自既有资产，而既有资产本身也开始缩小</td>
+</tr>
+</tbody>
+</table>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_09_40.png" alt="企业生命周期图展示从初创到衰退的阶段，以及收入和收益随时间的变化" loading="lazy">
+  <p class="video-caption">📷 企业生命周期图展示从初创到衰退的阶段，以及收入和收益随时间的变化<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=580" target="_blank" rel="noopener">在 YouTube 中打开 (00:09:40)</a></p>
+</div>
+
+<p>当企业已经缺乏能够创造价值的增长机会时，继续强行扩张可能使价值更快流失。因此，不能脱离生命周期阶段，孤立地把“增长更多”视为更好的经营方向。</p>
+<h2 id="_11">七、融资一侧：为什么年轻企业与成熟企业不同</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=617s">10:17—11:28</a></strong></p>
+<p>企业生命周期（corporate life cycle）不仅改变资产构成，也影响债务（debt）与股权（equity）的搭配。</p>
+<h3 id="_12">年轻企业：潜力不能拿来支付利息</h3>
+<p>对初创企业（startup）而言，既有资产（assets in place）尚未充分形成，企业可能还没有收益。这时，讲者主张主要依靠股权，甚至几乎完全依靠股权融资。</p>
+<p>原因直接而具体：<strong>承诺与潜力不能用来支付利息（interest payments）。</strong> 企业价值可能很高，但如果价值主要来自未来的增长资产（growth assets），今天仍然未必有足够现金履行债务义务。</p>
+<p>年轻成长企业（young growth company）虽然比初创企业走得更远，价值来源仍以增长资产为主，因此融资也仍应以股权为主。</p>
+<h3 id="_13">成熟与衰退：举债能力先扩大，再进入资金返还</h3>
+<p>随着企业成熟，举债能力逐步扩大。企业可能选择增加借款，而讲者此前提到的税收待遇，也是选择债务的原因之一。债务在资产负债表（balance sheet）中的比重由此可能上升。</p>
+<p>进入衰退（decline）后，企业开始清算资产，并向债权人和股东返还资金。这个阶段的债务与股权构成，会反映资产清算和资金返还的进度。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_11_00.png" alt="融资方式随生命周期变化：早期以股权为主，成熟后举债空间扩大，衰退时返还资本" loading="lazy">
+  <p class="video-caption">📷 融资方式随生命周期变化：早期以股权为主，成熟后举债空间扩大，衰退时返还资本<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=660" target="_blank" rel="noopener">在 YouTube 中打开 (00:11:00)</a></p>
+</div>
+
+<p>这一框架把两侧联系起来：理解企业的资产与现金产生能力，有助于解释它采用什么融资方式，以及融资结构为什么会随时间改变。</p>
+<h2 id="_14">八、收获回报：企业最终怎样把现金交还投资者</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=688s">11:28—13:13</a></strong></p>
+<p>收获回报的一侧（harvesting side）关注投资的最终目的。讲者强调，投资者不仅想看到企业长大，还希望最终取得股息（dividend）或其他现金流（cash flows）。</p>
+<p>企业生命周期（corporate life cycle）同样能够解释现金回报为什么会变化。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>筹资与现金返还的典型关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初创</td>
+<td>现金流通常为负，需要筹集资本支持增长</td>
+</tr>
+<tr>
+<td>成长</td>
+<td>仍然需要资本；即使外部融资需求逐渐下降，现金也常被继续投入企业</td>
+</tr>
+<tr>
+<td>成熟</td>
+<td>向投资者返还现金的能力提高</td>
+</tr>
+<tr>
+<td>衰退</td>
+<td>随着资产收缩和清算，现金逐步返还投资者</td>
+</tr>
+</tbody>
+</table>
+<p>对上市公司（publicly traded company），具备返还能力与实际返还之间仍有差别。如果管理层继续留存现金，公司的现金余额（cash balances）就会积累。讲者指出，这些资金最终仍要回到投资者手中。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_12_25.png" alt="生命周期中的现金收获：从需要外部资本，到有能力返还现金，再到清算与资金回收" loading="lazy">
+  <p class="video-caption">📷 生命周期中的现金收获：从需要外部资本，到有能力返还现金，再到清算与资金回收<br><a href="https://www.youtube.com/watch?v=TKoLoLVI_Js&amp;t=745" target="_blank" rel="noopener">在 YouTube 中打开 (00:12:25)</a></p>
+</div>
+
+<p>理解一家企业为什么扩张、为什么借钱、为什么暂时不分红，可以先问：<strong>它处于生命周期的哪个阶段？</strong> 同一个问题，在企业不同年龄段可能有不同答案。</p>
+<p>财务资产负债表（financial balance sheet）用每侧两个项目简化了观察方式，却没有消除判断的难度。既有资产（assets in place）需要估计未来产出，增长资产（growth assets）需要判断未来投资能否增值，融资和现金返还又会随企业阶段而演变。表面上的四个项目，背后连接着对企业未来的一整套判断。</p>
+<hr />
+<p><strong>字幕校读说明</strong>：约 02:06—02:10 的汽车企业例子中，原字幕末语识别为 “in life”，具体原词仍有疑点；正文采用上下文明确的“已有生产设施”，未据此扩展结论。</p>
+    </article>
+
+    <!-- Mermaid 图表引擎初始化 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: false, theme: 'default' });
+            
+            // 兼容普通代码块以及丢失 language-mermaid 类名的情况 (CodeHilite 干扰)
+            const codeNodes = document.querySelectorAll('pre code, .highlight code');
+            codeNodes.forEach(function(node) {
+                const text = node.textContent.trim();
+                // 匹配常见的 mermaid 图表前缀
+                if (text.startsWith('graph ') || text.startsWith('sequenceDiagram') || text.startsWith('gantt') || text.startsWith('pie') || text.startsWith('classDiagram') || text.startsWith('stateDiagram') || text.startsWith('mindmap')) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.className = 'mermaid';
+                    tempDiv.textContent = text;
+                    
+                    // 获取需要替换的最外层父节点 (比如 div.highlight 或者 pre)
+                    const wrapper = node.closest('.highlight') || node.parentNode;
+                    wrapper.replaceWith(tempDiv); 
+                }
+            });
+            
+            // 所有节点转换完成，统一进行图表动态绘制
+            mermaid.run();
+        });
+    </script>
+    <!-- Lightbox：截图点击放大 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = '<img alt=""><div class="lightbox-caption"></div>';
+            document.body.appendChild(lightbox);
+            const lbImg = lightbox.querySelector('img');
+            const lbCap = lightbox.querySelector('.lightbox-caption');
+            function openLightbox(src, alt) {
+                lbImg.src = src; lbImg.alt = alt || '';
+                lbCap.textContent = alt || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lbImg.src = '';
+                document.body.style.overflow = '';
+            }
+            document.querySelectorAll('.screenshot-card img').forEach(function(img) {
+                img.addEventListener('click', function() { openLightbox(img.src, img.alt); });
+            });
+            lightbox.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+        });
+    </script>
+</body>
+</html>

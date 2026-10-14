@@ -34,5 +34,14 @@
     "updated": "2026-10-14T10:17:54+08:00",
     "corrected": true,
     "markdown": true
+  },
+  "TKoLoLVI_Js": {
+    "title": "Session 2: The Structure of a Business",
+    "course": "Foundations of Finance",
+    "course_slug": "foundations-of-finance",
+    "folder": "courses/foundations-of-finance/ses-02",
+    "updated": "2026-10-14T11:03:50+08:00",
+    "corrected": true,
+    "markdown": true
   }
 }
