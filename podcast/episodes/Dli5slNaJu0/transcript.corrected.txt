@@ -1,0 +1,760 @@
+[00:02] Hi, my name is Mario. I hail from the
+[00:04] land of Arnold Schwarzenegger, which you
+[00:08] probably haven't noticed yet based on my
+[00:10] very good English.
+[00:12] I want to preface this with we've been
+[00:14] running around with our 4-year-old the
+[00:15] entire day through London. So we went to
+[00:18] dinosaurs, mummies, Nando's obviously.
+[00:23] And stuff I have already forgotten.
+[00:26] I'm very very tired and if you don't
+[00:29] understand anything I say, just raise
+[00:31] your hand and say grandpa wake up.
+[00:34] Sure.
+[00:35] The reason I'm here is actually
+[00:38] another person which is here incognito
+[00:40] today. Let's call him
+[00:42] Steter Pineburger.
+[00:47] Back in 2025, I think somewhere
+[00:51] around April.
+[00:53] He told me and Armin Ronacher, which you
+[00:57] might also know of Flask fame and Sentry
+[00:59] fame.
+[01:00] Dudes, those coding agents, they
+[01:02] actually work now.
+[01:04] I was like, oh shut the [ __ ] up.
+[01:06] Sorry, I'm also using swear words.
+[01:09] totally not. And a month later we teamed
+[01:11] up at this flat for 24 hours overnight
+[01:14] and just let ourselves
+[01:16] get immersed by the clankers, by the
+[01:19] vibe code and by the vibe slop. And
+[01:21] since then none of us have really were
+[01:24] sleeping anymore basically.
+[01:27] So we're
+[01:28] building stuff, lots of stuff.
+[01:31] Most of which we actually never used
+[01:33] because that's the new thing in
+[01:34] 2025-2026.
+[01:36] We build a lot of stuff, but we don't
+[01:38] build a lot of stuff we actually use. We
+[01:40] wrote a lot of stuff
+[01:42] and eventually that culminated in me
+[01:45] thinking,
+[01:47] I hate all the existing coding agents or
+[01:49] harnesses.
+[01:50] How hard can it be to write one myself?
+[01:53] And Peter was like, oh I just want to do
+[01:55] a thing. Nobody's probably going to hear
+[01:57] about it and it's going to be a
+[02:00] personal assistant because that's what I
+[02:01] always wanted to have and yeah, most of
+[02:03] you probably know how his story went. So
+[02:05] today I'm going to tell you my much less
+[02:07] impressive story, but I hope I can
+[02:09] transport a couple of learnings as we
+[02:11] say in the industry.
+[02:14] that I was able to gather in the past
+[02:16] couple months. So Pi.
+[02:19] In the beginning there was Claude Code.
+[02:21] Actually, there was copy and pasting
+[02:23] from ChatGPT, right? We all did that in
+[02:25] the beginning 2023.
+[02:27] Then there was who remembers the
+[02:29] original GitHub Copilot?
+[02:32] Yeah, actually how many of you are
+[02:33] engineers?
+[02:35] How many of you are using coding agents
+[02:37] like Cursor, Claude Code? Okay.
+[02:40] Popularity contest, Claude Code?
+[02:43] Codex CLI?
+[02:45] Cursor?
+[02:48] Open?
+[02:48] >> versus? Yeah. OpenCode? Antigravity.
+[02:51] Oh that's not a lot. Anybody using this?
+[02:55] I like you.
+[02:56] We're going to have a beer later.
+[02:58] Anyway, so this was basically
+[03:01] what happened, right? In 2025 and
+[03:03] before. Start with copy and pasting from
+[03:05] ChatGPT. It's all mostly broken. It's
+[03:07] mostly single functions, stuff you don't
+[03:09] want to write. Then you got GitHub
+[03:11] Copilot inside of your Visual Studio
+[03:13] Code where you just tap tap tap to
+[03:14] happiness, which did work sometimes,
+[03:17] mostly didn't. Sometimes it would also
+[03:18] just verbatimly
+[03:20] recite GPL code like John Carmack's
+[03:24] inverse square root and stuff like that,
+[03:26] which was a lot of fun.
+[03:28] And then there was Aider. Anybody
+[03:30] remember Aider? Yes. Old people, hello.
+[03:36] Yeah.
+[03:37] You have gray hair. You obviously know
+[03:38] Aider.
+[03:40] There was also AutoGPT. Probably not
+[03:43] a lot there. Okay.
+[03:45] He knows all the things.
+[03:48] And then eventually there was Claude
+[03:50] Code. I think they released it in
+[03:52] November actually as a beta in 2024, but
+[03:55] it really only became
+[03:56] used more
+[03:59] Say again? February. Yeah, February,
+[04:01] March, something like that 2025. And I
+[04:04] was like, I love it. It's awesome. The
+[04:06] Claude team is also awesome. They're on
+[04:08] socials and they're all very good people
+[04:10] and very talented people.
+[04:12] And they basically created the entire
+[04:15] genre. I know there were precursors like
+[04:16] Aider and AutoGPT, but nothing did this
+[04:20] and this was basically the whole agentic
+[04:22] search thing. So instead of like Cursor
+[04:24] going into your code base, indexing
+[04:26] things, constructing ASTs and indexing
+[04:28] that as well and it kind of and not
+[04:30] really working. They just said, we
+[04:33] reinforcement trained our models to just
+[04:36] use file tools, bash tools to explore
+[04:38] your code base ad hoc and find the
+[04:40] places that it needs to find to
+[04:41] understand the code and then modify the
+[04:43] code. And this worked so well
+[04:46] that yeah, we stopped sleeping because
+[04:47] we all of a sudden could produce so much
+[04:49] more code than we could before by hand.
+[04:52] Back then it was simple and predictable
+[04:54] and actually fit my workflow perfectly
+[04:57] fine, but then
+[05:01] They fell into the trap into which most
+[05:04] of us probably fall. The clankers can
+[05:07] write so much code, why not just let it
+[05:09] write all the features you could ever
+[05:11] imagine, right? Isn't that great? Let's
+[05:12] just add this feature and that feature
+[05:14] and this feature and that feature and
+[05:15] eventually you end up with
+[05:17] Homer Simpson's I don't even know what
+[05:19] it's called. I call it a spaceship. And
+[05:22] Claude Code is now a spaceship. It does
+[05:23] so many things that you actually
+[05:25] probably ever use like 5% of what it
+[05:27] offers. You only know about 10% in total
+[05:30] and the rest the 90% that's left over
+[05:33] that's kind of like the dark matter of
+[05:34] AI agents. Nobody knows what it's
+[05:36] actually doing. And I personally find
+[05:39] this not to be very helpful because I
+[05:40] still think that you kind of need to
+[05:43] know what the agent is doing. This guy
+[05:45] might disagree to some degree.
+[05:48] And we're here at Tessl and they
+[05:51] also like context management, right? Or
+[05:53] context engineering as we've called it.
+[05:55] And I
+[05:56] eventually found that Claude Code was not
+[05:58] a good tool when it comes to
+[06:00] observability and actually managing your
+[06:02] context.
+[06:04] Then there was also this. Who likes
+[06:06] this about Claude Code? Like the immense
+[06:08] amounts of flicker, unexplainable
+[06:10] flicker. Well actually I know how to
+[06:12] explain it and why it happens, but they
+[06:13] still haven't fixed it.
+[06:15] Here's Thariq, he's really great. I
+[06:17] love him. He is their dev rel guy mostly
+[06:19] on Twitter and he's amazing.
+[06:21] But sometimes he also says questionable
+[06:23] stuff like our terminal user interface
+[06:26] is now a game engine. Now you have to
+[06:28] know I have a game development
+[06:30] background. Like that's where I come
+[06:31] from and if I read something like this
+[06:32] then it kind of hurts me a little bit
+[06:34] because it's a freaking terminal user
+[06:36] interface, dude. It's not a game engine,
+[06:38] trust me.
+[06:39] The only reason you think it's a game
+[06:41] engine is because you're using React in
+[06:42] your terminal interface and it takes
+[06:44] like 12 milliseconds to re-layout your
+[06:46] entire user interface graph. Just don't
+[06:50] do that, man. You don't it's not a game
+[06:52] engine, right?
+[06:53] So and then Mitchell who is writing
+[06:55] Ghostty was like, dude that's offensive,
+[06:58] man. Like don't blame it on Ghostty or
+[07:01] any other terminal. Your code is
+[07:02] garbage.
+[07:04] Terminals can render it like a hundreds
+[07:05] of frames per second
+[07:07] submilliseconds per frame, so don't
+[07:09] do that, right?
+[07:12] And then they eventually fixed the flicker, but then other stuff happened, so it's like
+[07:18] they fully gave in to the vibe coding, and you can feel it every day when you use Claude
+[07:23] Code.
+[07:24] Now, again, I do not want to diminish their efforts and their results.
+[07:28] Claude Code is still the category leader for a good reason.
+[07:30] They invented this thing and they're doing a great job.
+[07:32] I personally am just an old person
+[07:34] who likes predictable, simple tools.
+[07:37] And this just didn't fit my workflows and my needs anymore.
+[07:40] So yeah.
+[07:42] Also, they do a lot of stuff in the background
+[07:44] manipulating your context.
+[07:46] I built a bunch of tools in summer 2025
+[07:50] that would allow me to intercept requests
+[07:52] being made to their backend from Claude Code
+[07:54] and finding out what kind of little additional text
+[07:58] gets injected into your context behind your back.
+[08:00] And all of that was very detrimental
+[08:01] and it also changed all the time.
+[08:04] Like every day or a second day,
+[08:06] there would be a new release where this changed
+[08:07] what gets injected at what
+[08:09] point, which would basically mess with
+[08:11] your existing workflows. It was just not
+[08:13] a stable tool. And now I understand it
+[08:15] from their perspective, they need to
+[08:16] experiment and they have a huge user
+[08:17] base and it's really hard to experiment
+[08:19] when you have a huge user base.
+[08:21] But they did not care. So all of us had
+[08:24] to suffer, right? You're working
+[08:26] with this new tool, you try to
+[08:28] create predictable workflows
+[08:30] and then the tool vendor
+[08:33] changes a tiny little thing under the
+[08:35] hood that makes the LLM go crazy with
+[08:37] your existing workflows. That's just not
+[08:39] sustainable. I need control over that. I
+[08:40] can't rely on them
+[08:42] providing me a stable kind of thing.
+[08:46] So
+[08:48] I believe as a consequence of their UI
+[08:50] design, they need to reduce the
+[08:53] amount of visibility you have. I
+[08:54] personally don't like that too much, but
+[08:56] that's just a personal preference. I
+[08:57] understand that most people will be
+[08:58] happy with the amount of information
+[09:00] that Claude Code will present you.
+[09:03] There is zero model choice obviously
+[09:05] because it's a Anthropic native tool so
+[09:08] to speak. That's not a downside because
+[09:10] Claude models are I like them.
+[09:12] Like they're really good.
+[09:15] And there's almost zero extensibility
+[09:17] and you might find this kind of funny
+[09:19] because they have this whole hook system
+[09:20] and all of that, but if you compare it
+[09:22] to what Pi allows you to do, it's
+[09:25] not as deeply integrated. It's also
+[09:28] basically based on running a process
+[09:31] when the hook event starts, which is
+[09:34] very expensive if you have to start
+[09:37] up that process over and over again.
+[09:39] So eventually I soured on Claude
+[09:42] code, not because it was terrible. It
+[09:44] was just it stopped being a fit
+[09:46] for me. It became a fit for a lot more
+[09:49] people over that period. So obviously
+[09:51] they're doing things right,
+[09:52] right? But not for me.
+[09:54] Because I'm old.
+[09:56] So then I was looking around for options
+[09:59] and there is Codex CLI which I really
+[10:01] didn't like in the beginning both the
+[10:02] user interface as well as the model.
+[10:05] That has changed at least with respect
+[10:07] to the model. Codex is really pretty
+[10:09] good now.
+[10:10] And there's Amp. The team behind that
+[10:13] used to work at Sourcegraph. They
+[10:16] How do you this spin off of Sourcegraph?
+[10:19] Graph. And there is super good
+[10:20] engineers. They managed to
+[10:23] build a commercial coding harness where
+[10:25] they take away features instead of
+[10:27] adding them.
+[10:28] And most of the choices make a lot of
+[10:31] sense to me.
+[10:33] So yeah, if you're looking for a
+[10:34] commercial coding harness, I would
+[10:36] definitely recommend Amp to you because
+[10:38] it's really good. Factory Droid
+[10:41] kind of similar spiel
+[10:43] also really good although they're not as
+[10:45] experimental as Amp.
+[10:47] And then there's OpenCode which is the
+[10:49] open source coding harness a lot of
+[10:51] people use, right?
+[10:53] So I have a history with open source.
+[10:55] I've been in open source for well
+[10:58] 17 years.
+[11:00] I've managed big and small open source
+[11:02] projects.
+[11:03] so that's near and dear to my heart and
+[11:05] so I thought I'd give OpenCode
+[11:08] a try because that's close to me, right?
+[11:12] And next to Amp, they have one of the
+[11:13] most grounded or pragmatic teams in the
+[11:16] space. They don't hype you up with
+[11:18] features you probably never use. They
+[11:20] try to
+[11:22] kind of conserve a happy path that's
+[11:23] very stable.
+[11:25] And they also have pretty good thoughts
+[11:27] on what coding agents mean for us as a
+[11:29] profession which I personally can
+[11:31] identify with.
+[11:34] The problem with OpenCode is that it's
+[11:36] also not very good at managing your
+[11:37] context.
+[11:38] For example on each turn
+[11:42] it's calling SessionCompaction.prune
+[11:44] which does the following. It prunes all
+[11:47] tool results before the last 40,000
+[11:51] tokens. Now who here knows what prompt
+[11:54] caching is?
+[11:56] Right. What does this do to your prompt
+[11:58] cache?
+[11:59] Lost the prompt cache. Yes.
+[12:02] So OpenCode and Anthropic had an
+[12:04] interesting history and eventually
+[12:07] Anthropic in my opinion
+[12:10] rightly so said, "Dudes, that's just not
+[12:13] going to happen, right?"
+[12:14] And there was never a public kind of
+[12:17] thing about this, but Thariq explains it
+[12:18] here. If you come to a gym and don't
+[12:20] behave and abuse the infrastructure
+[12:22] so to speak, you're going to get banned.
+[12:25] And I think
+[12:27] I don't have any evidence for that, but
+[12:28] I think that's the reason
+[12:30] why there is this animosity between
+[12:32] Anthropic and OpenCode. And I can
+[12:34] totally agree
+[12:35] or at least I think that Anthropic is
+[12:37] clearly in the right here. Don't mess
+[12:39] with the infrastructure.
+[12:42] Then there's also other stuff like
+[12:44] OpenCode comes with LSP, language server
+[12:46] protocol support out of the box. Coming
+[12:48] back to context engineering
+[12:51] let's say you give your agent the task
+[12:53] of modifying a bunch of files. What does
+[12:56] that mean in practice? It will make a
+[12:57] bunch of edits
+[13:00] one after the other
+[13:02] to a bunch of files.
+[13:03] How probable is it that after the first
+[13:07] edit out of 10 edits so to speak, the
+[13:10] code will compile?
+[13:12] What happens if you modify your code
+[13:14] line by line?
+[13:15] How long does it take for it to
+[13:16] stabilize again and compiles cleanly?
+[13:19] It doesn't. It won't compile after the
+[13:21] first edit, probably not after the
+[13:22] second edit and so on and so forth. So
+[13:24] if you then turn around and say, "Hey,
+[13:26] dear LSP server, I just edited one line
+[13:29] in this file. Is it broken?" Then the
+[13:31] LSP server will say, "Yes, it's really
+[13:33] broken." And what this feature does it
+[13:36] then injects this error directly
+[13:38] after the tool call as a kind of
+[13:41] feedback
+[13:42] to the model, "Oh, what you just did is
+[13:44] wrong."
+[13:45] And the model is like
+[13:46] "What the [ __ ] dude? I'm not done
+[13:48] editing things. Why are you telling me
+[13:49] this? Obviously it's not wrong." But if
+[13:51] you do this often enough, the model will
+[13:53] just give up and that leads to very bad
+[13:55] outcomes.
+[13:57] So I'm not a fan of LSP. I think it's a
+[13:59] very terrible idea to have that enabled.
+[14:02] There is natural synchronization points
+[14:03] where you want to have linting and type
+[14:05] checking and all of that and that is
+[14:07] when the agent think it's done.
+[14:09] Only then.
+[14:13] This has changed recently. This is a
+[14:15] a single session of OpenCode.
+[14:19] But every message becomes its own JSON
+[14:21] file. Every single message becomes its
+[14:24] own JSON file on disk.
+[14:26] That indicates to me that there wasn't a
+[14:28] lot of thought put into the architecture
+[14:30] of the whole thing.
+[14:31] And if I lose trust in that, I don't
+[14:33] want to use that tool anymore.
+[14:35] Again, I think the team is actually
+[14:36] really good. I think they iterated super
+[14:39] quickly and built something that's super
+[14:41] useful to a lot of people obviously.
+[14:43] It's just again decisions that I
+[14:45] wouldn't have made that made me decide
+[14:47] to build my own.
+[14:49] Then there was also this. OpenCode comes
+[14:51] with a
+[14:52] a server by default. So the
+[14:54] current architecture is based on a
+[14:56] server and clients connect to it and the
+[14:58] terminal user interface is one of the
+[14:59] clients. There's also a desktop
+[15:01] interface and I don't know.
+[15:03] That turned out to be a security
+[15:04] vulnerability with remote code execution
+[15:07] baked in by default. And that's also
+[15:10] like if you're so proud of your server
+[15:12] infrastructure or server architecture
+[15:14] then I would assume
+[15:16] you're grown-up engineers that thought
+[15:18] about security as well. And apparently
+[15:20] that didn't happen. And this was open
+[15:22] for a long time.
+[15:23] And again, I'm not blaming anyone here.
+[15:25] This is stuff that just happens if
+[15:26] you're working in an industry that's
+[15:28] operating at a breakneck
+[15:31] speed that we haven't seen before,
+[15:32] right? It's just I don't want to use
+[15:34] that tool if that is a thing.
+[15:37] So
+[15:39] So this was my observations with regards
+[15:41] to existing coding harnesses and Amp and Droid
+[15:43] would have been something I could have
+[15:45] used, but again no control. In case of
+[15:48] Amp, even decide what models you can use
+[15:50] and it's only a single model for a
+[15:52] single type of task and that's not me.
+[15:55] In terms of Droid, I think it's a little
+[15:56] bit more open.
+[15:58] But at the time when I tried it out,
+[16:00] it just didn't
+[16:02] I didn't see a big
+[16:03] advantage over Claude Code.
+[16:07] And then I looked into benchmarks for
+[16:09] entirely different reasons and found
+[16:11] Terminal-Bench. Who knows what Terminal-
+[16:13] Bench is?
+[16:15] Okay, basically it's a coding or an
+[16:17] agent
+[16:18] evaluation harness
+[16:21] which has a bunch of computer use and
+[16:23] programming related
+[16:27] Sorry.
+[16:28] Old and tired because we're all old.
+[16:31] It has a bunch of computer use and
+[16:33] coding related tasks that an agent or
+[16:36] the LLM inside an agent harness needs
+[16:39] to fulfill. I think it's about 20—
+[16:41] 82 or so. And they're very diverse.
+[16:44] They're from fix my Windows setup to
+[16:47] code me a Monte Carlo simulation or
+[16:48] something like that.
+[16:51] and they have a leaderboard and on that
+[16:53] leaderboard you see the combination of
+[16:54] coding agent harness and model, right?
+[16:58] they have their own coding agent called
+[17:01] Terminus.
+[17:03] And I think it's brilliant because
+[17:06] it's one of the best performing
+[17:07] harnesses in the benchmark. You're going
+[17:09] to see it later on.
+[17:10] What exactly does it do? Well, all
+[17:13] the model gets is
+[17:16] a tmux session and all it can do is send
+[17:18] keystrokes to it and read back the
+[17:20] VT code sequences that are emitted.
+[17:23] So this is like
+[17:25] the smallest most minimal interface a
+[17:27] model can have to your computer,
+[17:30] right? And this performs
+[17:33] like top of the line of the entire
+[17:34] leaderboard.
+[17:36] So what does this tell us about existing
+[17:38] coding agents harnesses? Do we need all
+[17:40] these features for the models to
+[17:42] actually perform?
+[17:45] For me personally, this is not just
+[17:47] about the model actually being good.
+[17:49] It's also about me as the user the human
+[17:51] having a way to interact with my agent
+[17:53] with the model. And Terminus is
+[17:54] obviously not the user experience or
+[17:58] developer experience that I want.
+[18:00] But it tells us that all of these
+[18:01] features all of these coding harnesses
+[18:03] have
+[18:05] might not be necessary to
+[18:07] get good results out of agents.
+[18:10] So no file tools, no sub agents, no web
+[18:11] search, or nothing.
+[18:13] Two theses based on all of these
+[18:15] findings. We are in the messing around
+[18:17] and finding out stage and nobody has any
+[18:19] idea what the perfect coding agent
+[18:20] should look like or what the perfect
+[18:22] coding harness should look like. We're
+[18:23] trying both minimalism and going full
+[18:26] spaceship swarms and teams of agents and
+[18:28] no control and full autonomy and
+[18:30] whatever. I think that's not
+[18:33] done yet. We haven't answered the
+[18:34] question what this should look like
+[18:35] ideally and what will become the
+[18:37] industry standard.
+[18:38] And the second thing is we need better
+[18:39] ways to mess around with coding
+[18:42] agents. That is we need them to be able
+[18:44] to self-modify themselves and become
+[18:47] malleable so we can quickly experiment
+[18:49] with ideas and see if this is something
+[18:51] we can make like an industry standard a
+[18:53] new workflow that we probably all going
+[18:56] to adapt.
+[18:58] So the basic idea was and it's very
+[18:59] simple and not rocket science, strip
+[19:01] away everything and build a minimal
+[19:03] extensible core.
+[19:05] There's some creature comforts. It's not
+[19:07] a blank slate.
+[19:09] So that's Pi and the general motto is
+[19:12] adapt your coding agent to your needs
+[19:14] instead of the other way around.
+[19:16] It comes with four packages
+[19:19] an AI package which is basically just a
+[19:21] simple abstraction over multiple
+[19:23] providers which all speak different
+[19:25] transport protocols.
+[19:27] So it's very easy to talk to all the
+[19:28] providers and switch between them in the
+[19:31] same context or same session.
+[19:33] The agent core which is just a
+[19:35] generalized agent loop with tool
+[19:37] invocations, verification, and so on and
+[19:38] so forth.
+[19:39] And streaming
+[19:41] a terminal user interface that's like
+[19:43] 600 lines of code.
+[19:46] And works really well surprisingly
+[19:48] because it wasn't written by a
+[19:49] clanker. And the coding agent itself
+[19:52] which is both an SDK that you can
+[19:55] use in headless mode
+[19:57] or a full terminal user interface coding
+[20:00] agent.
+[20:02] This is the entire system prompt.
+[20:05] There's nothing more there.
+[20:07] Compared to other coding harnesses
+[20:08] system prompts. That's in tokens. Yeah.
+[20:13] It turns out frontier models are heavily
+[20:15] RL trained to know what the coding agent
+[20:17] is. So, why do you keep telling them
+[20:20] that they're a coding agent and how they
+[20:22] should do coding tasks, right?
+[20:27] YOLO by default. Why is that?
+[20:30] Most coding agent harnesses at the
+[20:31] moment have two modes, either
+[20:34] agent can do whatever it wants or agent
+[20:39] gets to ask you, "Do you really want to
+[20:40] delete this file? Do you really want to
+[20:42] list the files in this directory?" And
+[20:44] so on and so forth. And there's
+[20:44] different shades of gray here, but at
+[20:47] the end of the day it boils down to the
+[20:49] user needs to approve an action by the
+[20:51] agent and then we are safe. And I think
+[20:53] that's wrong because that leads to
+[20:55] fatigue and people will either turn it
+[20:56] off entirely, YOLO mode, or just sit
+[20:59] there and type enter without reading
+[21:00] anything. So, I don't think that's a
+[21:01] solution. Containerization is also not a
+[21:03] solution if you're worried about
+[21:05] exfiltration of data and prompt
+[21:06] injections, but I think that's the only
+[21:08] thing
+[21:09] I think that's the best basis
+[21:12] compared to guardrails like approval or
+[21:16] dialogues.
+[21:17] It only has four tools, read a file,
+[21:19] write a file, edit a file, and bash.
+[21:20] Bash is all you need. What's not in
+[21:22] there? No MCP, no sub-agents, no plan
+[21:24] mode, no background bash, no built-in
+[21:25] to-do's.
+[21:26] Here's what you can do instead. For MCP,
+[21:29] use CLI tools plus skills or build an
+[21:32] extension, which we'll see in a bit.
+[21:34] No sub-agents. Why? Because they're
+[21:35] not as observable. Instead, use tmux and
+[21:38] spawn the agent again.
+[21:41] You have full control over the agent's
+[21:42] outputs and inputs and can
+[21:45] see everything that's happening
+[21:47] in the sub-agent. Interestingly enough,
+[21:48] Claude Code's team mode now does
+[21:52] exactly this basically as well.
+[21:55] No plan mode. Write a plan.md file. You
+[21:57] have a persistent artifact instead of
+[21:59] some janky UI that doesn't really fit
+[22:02] into your terminal viewport
+[22:04] and you can reuse it across multiple
+[22:05] sessions.
+[22:06] No background bash. Don't need it.
+[22:08] We have tmux. It's the same thing.
+[22:11] And no built-in to-do's. Write a to-do
+[22:12] MD. Same thing. Or
+[22:15] build all of this yourself the way you
+[22:17] like it. And this is what Pi allows you
+[22:19] by being super extensible. So, you can
+[22:21] extend tools, you can give the
+[22:23] LLM tools that you define. I think no
+[22:26] other coding agent harness currently
+[22:28] offers that unless you fork OpenCode.
+[22:32] You don't need to hear it. You just
+[22:32] write a simple TypeScript file and it
+[22:34] gets loaded automatically.
+[22:37] You can also write custom UI.
+[22:39] Skills are obviously in there,
+[22:40] prompt templates, themes
+[22:43] and you can bundle all of that up,
+[22:44] put it on npm or Git, and install it
+[22:47] with a single command, which is very
+[22:48] nice.
+[22:49] And everything hot reloads. So, I
+[22:52] develop my own extensions that are
+[22:53] project or task specific in Pi
+[22:57] inside the project
+[22:59] and as the agent modifies the
+[23:02] extension, I just reload
+[23:05] and it immediately updates
+[23:07] all of the
+[23:09] running code, which is very nice. And in
+[23:11] practice that means you can do custom
+[23:13] compaction. I think that's one of the
+[23:14] things that people should experiment
+[23:16] more because all of the
+[23:18] compaction implementations currently are
+[23:19] not good.
+[23:20] Permission gates, you can easily
+[23:22] implement them in 50 lines of code and
+[23:24] can cover what all the other agent
+[23:25] harnesses do if you want that. Custom
+[23:27] providers, register proxies, OAuth,
+[23:30] self-hosted models, don't care. You
+[23:32] don't need me to do this for you. You
+[23:33] can do this and actually your clanker
+[23:35] can do it for you.
+[23:36] Or override any built-in tool.
+[23:38] Modify how read, write, edit, and bash
+[23:40] work.
+[23:41] Don't care. I have a version of read,
+[23:43] write, edit, and bash that works through
+[23:44] SSH on a remote machine.
+[23:47] For me, that took 5 minutes to
+[23:49] implement. And it works.
+[23:51] And you have full TUI access, so
+[23:53] you can actually write entirely custom
+[23:55] UI in the coding agent.
+[23:58] Claude Code shipped /btw; it
+[24:00] took 5 minutes for somebody to replicate
+[24:02] that in Pi with more features.
+[24:05] Pi Messenger, I have no idea what
+[24:06] it's doing, but apparently it's like a
+[24:08] chat room for multiple Pi agents that
+[24:10] then communicate which then has custom
+[24:13] UI where you can look what they're doing
+[24:15] and yeah, it just works.
+[24:18] Or pi-nes, if you forge just
+[24:21] do play a game while the agent is
+[24:23] running, right? You can do that.
+[24:25] Or Pi Annotate.
+[24:27] open up the website you're working on
+[24:29] currently and annotate stuff in the
+[24:30] front end and give feedback to the agent
+[24:33] directly in line.
+[24:35] Feed it back into the context, have it
+[24:37] modify the thing.
+[24:39] Or
+[24:40] something I use is file switch. I don't
+[24:42] want to switch over to an IDE or editor.
+[24:43] I just want to quickly look at the file
+[24:45] that's been modified. So, all of this is
+[24:47] extensions. None of this is built-in and
+[24:49] it takes people usually a couple of
+[24:51] minutes to an afternoon to build all of
+[24:53] this the way they wanted to.
+[24:56] Pi Web Access, also don't know what it's
+[24:57] doing.
+[24:59] Pi also comes with tree structure.
+[25:01] Not going to explain that. Just look at
+[25:03] pi.dev. Your session is a tree, not
+[25:06] a linear list of chats. So, you can
+[25:08] basically do sub-agents by read all the
+[25:10] files in the directory, summarize this,
+[25:12] go back to my root of the
+[25:13] conversation, take the summary with me
+[25:16] and do the actual work.
+[25:19] Nothing is injected behind your back.
+[25:22] Agent skills, full cost tracking. A lot
+[25:24] of harnesses don't do this. Yeah, Open
+[25:26] Code does it not well.
+[25:29] HTML export, JSON formats, headless JSON
+[25:32] streaming, blah blah blah. Does it
+[25:33] actually work? Well, Terminal-Bench. Let
+[25:35] me zoom in here. I can't. This is
+[25:37] amazing. Here's Pi
+[25:40] right behind Terminus 2
+[25:42] using Claude Opus 4.5. That was back
+[25:45] in October where Pi didn't even have
+[25:46] compaction.
+[25:48] Right?
+[25:49] Demo time. Skipping that. Rage
+[25:51] against the clankers because they are
+[25:52] breaking open source.
+[25:54] If you are associated with this guy's
+[25:55] project, then you will have hundreds of
+[25:58] people coming
+[25:59] from
+[26:01] OpenClaw to your repository and spam
+[26:04] you with clanker filth and slop.
+[26:06] So I had to invent a couple of
+[26:08] measures.
+[26:09] I invented OSS vacation. So, I just
+[26:12] close issues and PRs for a couple of
+[26:14] weeks and work on things on my own.
+[26:16] Anything that's important will be
+[26:18] reported later on anyways.
+[26:20] Or in the Discord. And then I also
+[26:23] implemented a
+[26:24] custom access kind of scheme where I
+[26:26] have a markdown file in the repository.
+[26:28] If somebody opens a PR without being in
+[26:31] without their account name being in that
+[26:32] markdown file, the PR gets auto closed.
+[26:34] I don't care. First, introduce yourself
+[26:36] in a human voice via an issue. Write an
+[26:39] issue that's not longer than a display
+[26:41] long because everything else is clanker
+[26:43] slop, probably.
+[26:44] And once you did that, I'm happy to
+[26:46] looks good to me you. So, you get into
+[26:48] that file and can now submit PRs to the
+[26:50] repository. All I'm asking is human
+[26:52] verification. And Mitchell from Ghostty
+[26:54] then took this and took the
+[26:57] built a project called Vouch, which is
+[26:58] more easily applicable to your own open
+[27:00] source repository.
+[27:02] And that is Pi. Go forth and try it.
