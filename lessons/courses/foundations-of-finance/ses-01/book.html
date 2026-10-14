@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金融第一步：理解企业价值的六个基础</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ── 基础重置 ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            color-scheme: light;
+            --bg-primary: #f7f7f8;
+            --bg-secondary: #ffffff;
+            --bg-card: #eef0f3;
+            --bg-code: #f2f3f5;
+            --text-primary: #1f2328;
+            --text-secondary: #57606a;
+            --text-muted: #6e7781;
+            --accent: #2563eb;
+            --accent-glow: rgba(37, 99, 235, 0.08);
+            --border: #d9dce1;
+            --border-subtle: #e7e9ec;
+            --radius: 12px;
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── 文章容器 ── */
+        .book-content {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 32px 120px;
+        }
+
+        /* ── 标题 ── */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 0 0 12px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 56px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 36px 0 12px;
+        }
+
+        /* ── 段落与文字 ── */
+        p {
+            margin: 0 0 16px;
+            color: var(--text-primary);
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ── 引用 ── */
+        blockquote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            color: var(--text-secondary);
+        }
+        blockquote p { margin: 0; }
+
+        /* ── 列表 ── */
+        ul, ol {
+            margin: 12px 0 20px 24px;
+            color: var(--text-primary);
+        }
+        li {
+            margin: 6px 0;
+        }
+
+        /* ── 分割线 ── */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 48px 0;
+        }
+
+        /* ── 表格 ── */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        thead {
+            background: var(--bg-card);
+        }
+        th {
+            padding: 12px 16px;
+            font-weight: 600;
+            text-align: left;
+            color: var(--accent);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        tbody tr {
+            background: var(--bg-secondary);
+            transition: background 0.15s;
+        }
+        tbody tr:hover {
+            background: var(--bg-card);
+        }
+
+        /* ── 代码 ── */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-code);
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.88em;
+            color: #6d28d9;
+        }
+
+        pre {
+            margin: 20px 0;
+            padding: 20px 24px;
+            background: var(--bg-code);
+            border-radius: var(--radius);
+            overflow-x: auto;
+            border: 1px solid var(--border);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: var(--text-primary);
+        }
+
+        /* ── 视频嵌入卡片 ── */
+        .video-card {
+            margin: 32px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 12px 16px;
+            font-size: 0.88em;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .video-caption a {
+            color: var(--accent);
+        }
+
+        .video-card.fallback {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ── Lightbox：截图点击放大 ── */
+        .screenshot-card img { cursor: zoom-in; transition: opacity 0.15s; }
+        .screenshot-card img:hover { opacity: 0.9; }
+        .lightbox {
+            position: fixed; inset: 0; z-index: 999;
+            display: none; align-items: center; justify-content: center;
+            background: rgba(5, 5, 8, 0.92); backdrop-filter: blur(4px);
+            cursor: zoom-out; padding: 24px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 96vw; max-height: 90vh;
+            border-radius: 8px; box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+        }
+        .lightbox-caption { color: #f8fafc !important;
+            position: absolute; bottom: 14px; left: 0; right: 0;
+            text-align: center; color: var(--text-secondary); font-size: 0.85em;
+        }
+
+        /* ── 顶部信息栏 ── */
+        .book-content > blockquote:first-of-type {
+            background: var(--accent-glow);
+            border-left-color: var(--accent);
+            border-radius: var(--radius);
+            margin-bottom: 32px;
+        }
+
+        /* ── 图表居中 ── */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+            overflow-x: auto;
+        }
+
+        /* ── 滚动条 ── */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* ── 响应式 ── */
+        @media (max-width: 640px) {
+            .book-content { padding: 32px 16px 80px; }
+            h1 { font-size: 1.7em; }
+            h2 { font-size: 1.3em; }
+        }
+    </style>
+    <link rel="canonical" href="https://foolishdominator.github.io/lessons/courses/foundations-of-finance/ses-01/book.html">
+</head>
+<body>
+    <article class="book-content">
+<!-- publication-navigation -->
+<nav aria-label="课程导航" style="margin:0 0 1.5rem;font-size:14px"><a href="/lessons/">Lessons</a> · <a href="/lessons/courses/foundations-of-finance/">Foundations of Finance</a></nav>
+<!-- /publication-navigation -->
+<h1 id="_1">金融第一步：理解企业价值的六个基础</h1>
+<blockquote>
+<p><strong>课程</strong>：Foundations of Finance · Session 1: First Steps in Finance<br />
+<strong>讲者</strong>：Aswath Damodaran<br />
+<strong>来源</strong>：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s">观看原视频</a> · 2020 年 7 月 30 日 · 约 11 分钟<br />
+本书依据英文字幕校读、翻译与编排，保留课程的核心论证、例子和时间索引。它是一讲课程导论，重点在概念及其联系。</p>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#_1">金融第一步：理解企业价值的六个基础</a><ul>
+<li><a href="#_2">一、从企业内部向外看，从企业外部向内看</a></li>
+<li><a href="#_3">二、六个基础构件如何连接</a></li>
+<li><a href="#_4">三、企业：从过去的投入转向未来的收益</a><ul>
+<li><a href="#_5">资产一侧：未来能带来什么</a></li>
+<li><a href="#_6">融资一侧：债务与股权</a></li>
+</ul>
+</li>
+<li><a href="#_7">四、现金流：先看实际现金，再辨认权利类型</a><ul>
+<li><a href="#_8">现金流为什么不能与盈余混用</a></li>
+<li><a href="#_9">三种现金流</a></li>
+</ul>
+</li>
+<li><a href="#_10">五、风险：找到合适的风险，并明确由谁观察</a><ul>
+<li><a href="#_11">风险具有两面性</a></li>
+<li><a href="#_12">同一项决策，可能有不同的风险视角</a></li>
+<li><a href="#_13">把风险视角转化为可用的数值</a></li>
+</ul>
+</li>
+<li><a href="#_14">六、货币时间价值：把现金流放到同一个时点</a></li>
+<li><a href="#_15">七、估值：现金流不同，方法也不同</a><ul>
+<li><a href="#_16">合同约定现金流：折现承诺支付</a></li>
+<li><a href="#_17">剩余现金流：估计预期，再反映投资者的风险</a></li>
+<li><a href="#_18">或有现金流：使用期权定价</a></li>
+</ul>
+</li>
+<li><a href="#_19">八、交易与摩擦：为什么免费午餐难以持续</a><ul>
+<li><a href="#_20">套利的理想</a></li>
+<li><a href="#_21">交易成本不止一笔手续费</a></li>
+<li><a href="#_22">投资者最终能花掉的是税后现金流</a></li>
+<li><a href="#_23">用六个问题回看本讲</a></li>
+<li><a href="#_24">字幕校读说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_2">一、从企业内部向外看，从企业外部向内看</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=3s">00:03—01:15</a></strong></p>
+<p>“一切都与钱有关。”这句话听起来直白，却概括了讲者理解金融（finance）的出发点。企业中的战略、营销、人员关系和公共关系，最终都会涉及资源如何投入、如何取得回报，以及价值如何形成。因此，金融处于企业经营的核心。</p>
+<p>公司金融（corporate finance）与估值（valuation）研究的是同一家企业，只是观察方向不同。</p>
+<table>
+<thead>
+<tr>
+<th>观察方式</th>
+<th>公司金融</th>
+<th>估值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>立足点</td>
+<td>从企业内部向外看</td>
+<td>从企业外部向内看</td>
+</tr>
+<tr>
+<td>主要问题</td>
+<td>怎样做财务决策、经营好企业、创造价值？</td>
+<td>怎样理解这家企业的价值？</td>
+</tr>
+<tr>
+<td>与另一门课的联系</td>
+<td>研究创造价值的决策</td>
+<td>从外部观察这些决策所指向的企业价值</td>
+</tr>
+</tbody>
+</table>
+<p>这两种视角共享一套基础语言：企业、现金流（cash flows）、风险（risk）、时间、价值和交易（trading）。讲者将它们概括为六个基础构件（building blocks），同时强调，这是一种个人的课程组织方式，并非唯一可能的分类。</p>
+<h2 id="_3">二、六个基础构件如何连接</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=75s">01:15—03:39</a></strong></p>
+<p>金融的思考始终面向未来（forward-looking）。判断一家企业时，关键在于预计它未来会做什么、产生什么，而不只是过去已经做过什么。其余概念都围绕这条主线展开。</p>
+<table>
+<thead>
+<tr>
+<th>基础构件</th>
+<th>本讲提出的核心问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业的概念与结构</td>
+<td>企业拥有怎样的资产，又如何为这些资产筹资？</td>
+</tr>
+<tr>
+<td>现金流（cash flows）</td>
+<td>企业会带来什么现金流？为什么它与会计盈余（accounting earnings）、资产账面价值（book value of assets）不同？</td>
+</tr>
+<tr>
+<td>风险（risk）</td>
+<td>如何定义、衡量风险，并确定应当采用谁的风险视角？回报是否足以补偿风险？</td>
+</tr>
+<tr>
+<td>货币时间价值（time value of money）</td>
+<td>不同时点的现金流如何比较？为什么币种重要，时间价值又为何可能随时间变化？</td>
+</tr>
+<tr>
+<td>估值（valuation）</td>
+<td>不同性质的现金流，需要怎样的估值方法？</td>
+</tr>
+<tr>
+<td>交易（trading）</td>
+<td>金融市场如何帮助企业运转？为什么不投入资金、不承担风险的获利机会难以持续？</td>
+</tr>
+</tbody>
+</table>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_01_36.png" alt="六个基础构件的课程总览，可与本章的问题清单逐项对照" loading="lazy">
+  <p class="video-caption">📷 六个基础构件的课程总览，可与本章的问题清单逐项对照<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=96" target="_blank" rel="noopener">在 YouTube 中打开 (00:01:36)</a></p>
+</div>
+
+<p>金融市场（financial markets）被讲者比作企业运转的“润滑剂”。它们未必是企业存在的必要条件，却有助于企业良好运作。理解交易因此也是理解金融的一部分。</p>
+<p>后面的内容按这六个构件逐一展开。它们既是课程的知识地图，也是后续学习公司金融（corporate finance）和估值的共同起点。</p>
+<h2 id="_4">三、企业：从过去的投入转向未来的收益</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=219s">03:39—04:45</a></strong></p>
+<h3 id="_5">资产一侧：未来能带来什么</h3>
+<p>会计资产负债表（accounting balance sheet）通常是人们理解企业的起点。它呈现资产（assets）与负债（liabilities）；讲者进一步提出财务资产负债表（financial balance sheet），用来说明金融中的企业观。</p>
+<p>两种视角都观察企业的资产与融资，但金融更关注一个面向未来的问题：<strong>这些资产将来能为企业带来什么？</strong></p>
+<p>因此，已经在某项资产上投入多少钱，并不能直接回答这项资产的价值问题。金融关心的是对未来收益的预期。这一转向会改变我们看待资产负债表资产一侧的方式。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_04_10.png" alt="企业概念的讲义画面：以未来收益理解资产，以资金来源理解企业融资" loading="lazy">
+  <p class="video-caption">📷 企业概念的讲义画面：以未来收益理解资产，以资金来源理解企业融资<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=250" target="_blank" rel="noopener">在 YouTube 中打开 (00:04:10)</a></p>
+</div>
+
+<h3 id="_6">融资一侧：债务与股权</h3>
+<p>在资金来源上，讲者把企业融资归结为两种基本方式。</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>课程中的解释</th>
+<th>术语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>借来的钱</td>
+<td>企业向他人借入资金</td>
+<td>债务（debt）</td>
+</tr>
+<tr>
+<td>自己的钱</td>
+<td>以所有者投入的资金经营企业</td>
+<td>股权（equity）</td>
+</tr>
+</tbody>
+</table>
+<p>随着企业扩大，债务和股权可能发展出不同层次和形式，但课程在概念层面仍将融资归为这两类。</p>
+<p>企业这一构件建立了两个互相联系的问题：资产未来能产生什么，以及支持这些资产的资金来自哪里。</p>
+<h2 id="_7">四、现金流：先看实际现金，再辨认权利类型</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=285s">04:45—05:52</a></strong></p>
+<h3 id="_8">现金流为什么不能与盈余混用</h3>
+<p>我们掌握的企业信息，往往以会计资料和会计盈余（accounting earnings）的形式出现。但金融分析关心的核心对象是现金流（cash flows），二者可能不同。</p>
+<p>理解这种差异，才能理解讲者提出的现象：有些企业按会计标准看表现很好，却未必很有价值；另一些企业的会计表现不好看，却可能价值很高。</p>
+<p>本讲提出这一差异的重要性，没有进一步列出从盈余调整到现金流的计算步骤。这里要先建立的认识是：<strong>看到盈余数字之后，还需要继续追问现金流。</strong></p>
+<h3 id="_9">三种现金流</h3>
+<table>
+<thead>
+<tr>
+<th>现金流类型</th>
+<th>由什么决定</th>
+<th>视频中的例子或说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>合同约定现金流（contractually set cash flows）</td>
+<td>在签订协议时约定</td>
+<td>公司债券（corporate bond）、银行贷款（bank loan）</td>
+</tr>
+<tr>
+<td>剩余现金流（residual cash flows）</td>
+<td>属于企业所有者或股权（equity）投资者的剩余现金流</td>
+<td>企业所有者、股权投资者所取得的现金流</td>
+</tr>
+<tr>
+<td>或有现金流（contingent cash flows）</td>
+<td>以另一个事件发生为条件</td>
+<td>只有某件事发生，相关现金流才会发生</td>
+</tr>
+</tbody>
+</table>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_05_38.png" alt="现金流讲义：会计盈余与现金流的区别，以及三类现金流的划分" loading="lazy">
+  <p class="video-caption">📷 现金流讲义：会计盈余与现金流的区别，以及三类现金流的划分<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=338" target="_blank" rel="noopener">在 YouTube 中打开 (00:05:38)</a></p>
+</div>
+
+<p>这项分类直接影响估值（valuation）。在选择工具之前，先辨认自己面对的是合同约定的支付、所有者的剩余现金流，还是以事件为条件的现金流。</p>
+<h2 id="_10">五、风险：找到合适的风险，并明确由谁观察</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=352s">05:52—07:12</a></strong></p>
+<p>“人具有风险厌恶（risk averse）的倾向”是金融中常见的说法。本讲没有把它当作一句可以直接略过的口号，而是要求进一步理解：这个结论意味着什么，如何得出，又如何进入决策？</p>
+<h3 id="_11">风险具有两面性</h3>
+<p>风险（risk）既有不利的一面，也有有利的一面。成为一家出色的企业，往往需要主动寻找风险。关键在于寻找合适的风险，并使其中的权衡（trade-off）对自己有利。</p>
+<p>因此，风险厌恶（risk aversion）并不意味着企业应当回避一切风险。金融需要把风险与回报放在一起考虑：预期取得的回报，是否足以补偿承担的风险？</p>
+<h3 id="_12">同一项决策，可能有不同的风险视角</h3>
+<p>想象一家上市公司（publicly traded company）。它可能拥有成千上万的股东（shareholders），也有负责经营的管理者（managers）。不同的人，对同一项决策可能有不同的风险判断。</p>
+<p>这就引出一个必须先回答的问题：<strong>应该从谁的眼中看风险？哪一种风险视角应当主导决策？</strong></p>
+<p>本讲提出这个问题，没有在此选定答案。它提醒我们，在讨论风险大小之前，应先明确观察风险的人是谁。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_06_48.png" alt="风险讲义：从风险的两面性、观察视角到风险的量化" loading="lazy">
+  <p class="video-caption">📷 风险讲义：从风险的两面性、观察视角到风险的量化<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=408" target="_blank" rel="noopener">在 YouTube 中打开 (00:06:48)</a></p>
+</div>
+
+<h3 id="_13">把风险视角转化为可用的数值</h3>
+<p>确定视角后，还需要把它转化为风险数值（risk number），以便明确地纳入决策。讲者认为，风险衡量方法的发展史，与金融学的发展历程紧密相伴。</p>
+<p>这部分的学习顺序可以整理为：理解风险的两面性，明确风险的观察者，再寻找能用于决策的衡量方式。</p>
+<h2 id="_14">六、货币时间价值：把现金流放到同一个时点</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=432s">07:12—08:01</a></strong></p>
+<p>讲者用一个具体画面说明货币时间价值（time value of money）的地位：如果你学过金融，可以看看自己的财务计算器（financial calculator），现值（present value，PV）按钮是不是已经磨损得很厉害？大量金融问题最终都涉及现值。</p>
+<p>“今天的一美元比一年后的一美元更值钱”，是课程用来引入这个主题的常见说法。学习的重点，是理解背后的直觉，并将直觉转化为实际计算能力。</p>
+<p>面对一组现金流（cash flows），学习者至少需要能回答两个问题：</p>
+<ol>
+<li>能否把它们换算到今天？</li>
+<li>能否把它们换算到未来的另一个时间点？</li>
+</ol>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_07_50.png" alt="货币时间价值讲义：由直觉进入不同时点现金流的换算" loading="lazy">
+  <p class="video-caption">📷 货币时间价值讲义：由直觉进入不同时点现金流的换算<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=470" target="_blank" rel="noopener">在 YouTube 中打开 (00:07:50)</a></p>
+</div>
+
+<p>在前面的课程总览中，讲者还提醒我们关注币种，以及货币时间价值本身随时间变化的问题。本讲给出的是后续学习的方向，尚未展开具体公式、数值算例或成立条件。</p>
+<p>这项能力把现金流的“金额”与“发生时间”联系起来，也为估值（valuation）建立了共同的时间基准。</p>
+<h2 id="_15">七、估值：现金流不同，方法也不同</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=481s">08:01—09:14</a></strong></p>
+<p>讲者对估值（valuation）的基本态度是：只要保持简单，估值本身可以很简单；很多复杂性来自我们把问题复杂化。回到前面三类现金流（cash flows），便能看清估值方法的主要区别。</p>
+<p>讲义还将估值与现值（present value）直接联系起来：资产或企业的价值，来自其预期现金流（expected cash flows）的现值。具体计算方式，则随现金流的类型而变化。</p>
+<h3 id="_16">合同约定现金流：折现承诺支付</h3>
+<p>对合同约定现金流（contractually set cash flows），课程采用承诺现金流（promised cash flows），并以经违约风险调整的折现率（default risk adjusted discount rate）进行折现（discount）。</p>
+<p>债券就是例子。它的承诺现金流包括票息（coupons）与面值（face value）；用于折现的，是经违约风险调整的债务成本（cost of debt）。</p>
+<p>“由合同约定”与“实际支付没有风险”是不同的问题。本讲在折现率中明确纳入违约风险，说明合同承诺仍需要相应的风险处理。</p>
+<h3 id="_17">剩余现金流：估计预期，再反映投资者的风险</h3>
+<p>对剩余现金流（residual cash flows），先估计未来的预期现金流（expected cash flows），再按照能够反映投资者所面对风险的利率折现。课程用这一路径解释股权（equity）估值。</p>
+<p>这里连接了前面关于风险（risk）的讨论：估值所采用的风险处理，需要与投资者面对的现金流相对应。</p>
+<h3 id="_18">或有现金流：使用期权定价</h3>
+<p>对或有现金流（contingent cash flows），讲者提出使用另一套工具——期权定价（option pricing）。本讲只说明工具的选择，具体原理将留给后续内容。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_08_58.png" alt="估值讲义：根据现金流的性质区分三条估值路径" loading="lazy">
+  <p class="video-caption">📷 估值讲义：根据现金流的性质区分三条估值路径<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=538" target="_blank" rel="noopener">在 YouTube 中打开 (00:08:58)</a></p>
+</div>
+
+<p>下图依据本讲口述整理，表示三类现金流与估值方法的对应关系：</p>
+<pre class="highlight"><code class="language-mermaid">graph TD
+    A[辨认现金流类型] --&gt; B[合同约定现金流]
+    A --&gt; C[剩余现金流]
+    A --&gt; D[或有现金流]
+    B --&gt; E[承诺现金流 + 经违约风险调整的折现率]
+    C --&gt; F[预期现金流 + 反映投资者风险的折现率]
+    D --&gt; G[期权定价]
+    E --&gt; H[课程例子：债券]
+    F --&gt; I[课程例子：股权]
+</code></pre>
+
+<p>这一节提供的是估值的基本分类框架。掌握这些基础，是进一步处理各种估值对象的起点。</p>
+<h2 id="_19">八、交易与摩擦：为什么免费午餐难以持续</h2>
+<p><strong>对应视频：<a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&amp;t=554s">09:14—11:05</a></strong></p>
+<p>金融市场（financial markets）帮助企业运转，因此理解买入、卖出与交易（trading）也是金融的基础。</p>
+<h3 id="_20">套利的理想</h3>
+<p>每位交易者都希望找到这样的机会：不承担风险，却获得高于无风险利率（risk free rate）的回报。讲者又用一个更鲜明的描述引出套利（arbitrage）：不投入资金、不承担风险，却能够带着利润离场。</p>
+<p>这样的机会在现实中极难找到；即使出现，也可能转瞬即逝。本讲由此引出市场摩擦（frictions in the market place），并重点指出两项：交易成本与税收。</p>
+<h3 id="_21">交易成本不止一笔手续费</h3>
+<p>一提到交易成本（trading costs），人们也许首先想到某次交易要支付的 4.95 美元。但讲者明确提醒，交易成本还包括其他在交易时不容易被想到的项目。</p>
+<p>本讲没有逐项展开这些额外成本，因此这里也不补列清单。需要保留的认识是：<strong>只看到表面的交易费用，还不足以理解交易中的全部成本。</strong> 这也是为什么“免费午餐”如此难找。</p>
+<p>这里的 4.95 美元是原视频中的教学例子，不代表当前某个平台的收费。</p>
+<h3 id="_22">投资者最终能花掉的是税后现金流</h3>
+<p>讲者引用关于“死亡和税收”的老话，并开玩笑说，自己甚至对死亡都不那么确定。玩笑之后，是一个明确的金融判断：税收（taxes）必须进入投资决策，因为投资者真正能花掉的是税后现金流（after tax cash flows）。</p>
+<p>因此，税收应当被纳入决策、交易与投资的分析过程。忽略税收，就没有完整地回答投资者最终能够得到什么。</p>
+<div class="video-card screenshot-card">
+  <img src="images/shot_00_10_37.png" alt="交易与摩擦讲义：套利的理想，以及交易成本和税收带来的现实约束" loading="lazy">
+  <p class="video-caption">📷 交易与摩擦讲义：套利的理想，以及交易成本和税收带来的现实约束<br><a href="https://www.youtube.com/watch?v=aK4qHbDkJ-s&t=637" target="_blank" rel="noopener">在 YouTube 中打开 (00:10:37)</a></p>
+</div>
+
+<h3 id="_23">用六个问题回看本讲</h3>
+<ol>
+<li>面对一家企业，能否区分从内部创造价值与从外部观察价值的视角？</li>
+<li>面对企业数据，能否继续追问现金流，而不只停留在盈余数字？</li>
+<li>讨论风险时，能否说明风险的两面性、观察者与衡量方法？</li>
+<li>面对不同时点的现金流，能否说明为什么需要做时间换算？</li>
+<li>面对一项资产，能否先辨认现金流类型，再选择估值思路？</li>
+<li>面对看似确定获利的交易，能否把交易成本与税收纳入判断？</li>
+</ol>
+<p>这些问题对应公司金融（corporate finance）与估值（valuation）两门课程共同的地基。先把概念及其联系理解清楚，再进入后续的方法与计算。</p>
+<h3 id="_24">字幕校读说明</h3>
+<p>原始平台字幕含有滚动显示造成的重复，以及若干明显的术语识别错误。校读保留了全部原始记录，并另存英文订正稿与逐段中文译稿。00:10、02:12、10:06、10:09 附近的四处口语连接短语仍有疑点，已在字幕及记录中标注；本书依据可确认的上下文组织相应段落，没有把这些短语当作已核实的逐字引文。</p>
+    </article>
+
+    <!-- Mermaid 图表引擎初始化 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: false, theme: 'default' });
+            
+            // 兼容普通代码块以及丢失 language-mermaid 类名的情况 (CodeHilite 干扰)
+            const codeNodes = document.querySelectorAll('pre code, .highlight code');
+            codeNodes.forEach(function(node) {
+                const text = node.textContent.trim();
+                // 匹配常见的 mermaid 图表前缀
+                if (text.startsWith('graph ') || text.startsWith('sequenceDiagram') || text.startsWith('gantt') || text.startsWith('pie') || text.startsWith('classDiagram') || text.startsWith('stateDiagram') || text.startsWith('mindmap')) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.className = 'mermaid';
+                    tempDiv.textContent = text;
+                    
+                    // 获取需要替换的最外层父节点 (比如 div.highlight 或者 pre)
+                    const wrapper = node.closest('.highlight') || node.parentNode;
+                    wrapper.replaceWith(tempDiv); 
+                }
+            });
+            
+            // 所有节点转换完成，统一进行图表动态绘制
+            mermaid.run();
+        });
+    </script>
+    <!-- Lightbox：截图点击放大 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = '<img alt=""><div class="lightbox-caption"></div>';
+            document.body.appendChild(lightbox);
+            const lbImg = lightbox.querySelector('img');
+            const lbCap = lightbox.querySelector('.lightbox-caption');
+            function openLightbox(src, alt) {
+                lbImg.src = src; lbImg.alt = alt || '';
+                lbCap.textContent = alt || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                lbImg.src = '';
+                document.body.style.overflow = '';
+            }
+            document.querySelectorAll('.screenshot-card img').forEach(function(img) {
+                img.addEventListener('click', function() { openLightbox(img.src, img.alt); });
+            });
+            lightbox.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+        });
+    </script>
+</body>
+</html>

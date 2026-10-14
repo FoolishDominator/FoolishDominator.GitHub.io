@@ -1,0 +1,293 @@
+[00:03] this is the first session of the
+[00:07] foundations of Finance to me finance is
+[00:09] at the heart of almost everything that
+[00:10] you do in a business among the old
+[00:12] saying it's about the money
+[00:14] sounds crass but in business that is
+[00:16] always true because no matter what
+[00:18] aspect of business you're talking about
+[00:22] strategy marketing human relations
+[00:25] public relations it's still always about
+[00:28] the money that is how I think about
+[00:30] finance when I teach my corporate
+[00:32] finance class and when I teach my
+[00:34] valuation class in fact I'm often asked
+[00:35] what's the difference between the two
+[00:37] classes and there's actually a very
+[00:40] simple way of describing what the
+[00:41] difference is between corporate finance
+[00:44] and valuation in corporate finance you
+[00:46] look at a business from the inside out
+[00:48] you're looking at financial decision
+[00:51] making within a business how do you run
+[00:52] a business well and how do you create
+[00:54] value in the business in valuation
+[00:57] you're looking at the same business from
+[01:00] the outside in so with the driving
+[01:02] notion that it's always about money what
+[01:03] I'd like to talk about in this session
+[01:06] are six building blocks that you need no
+[01:08] matter what finance class you take now
+[01:11] this is my subjective judgement there
+[01:12] might be others who believe there are
+[01:13] other building blocks but these are the
+[01:16] six building blocks that to me make up
+[01:19] finance the first is finance is a very
+[01:22] simple and at the same time very complex
+[01:24] way of looking at businesses so I'm
+[01:26] going to start off with the concept and
+[01:28] structure of a business at least as we
+[01:31] see it in finance and in the process
+[01:33] we're going to lay out the philosophical
+[01:34] foundation for finance which is it's
+[01:37] always forward-looking it's not about
+[01:39] what you've done in the past but what I
+[01:41] expect you to do in the future that
+[01:43] drives the way we think about decision
+[01:43] making
+[01:45] the second big concept we're going to
+[01:48] talk about is cash flows finance is all
+[01:51] about cash flows as opposed to
+[01:53] what as opposed to accounting earnings
+[01:54] and book value of assets
+[01:57] it's always about cash flows
+[01:59] understanding what drives cash flows why
+[02:01] they're different from earnings the
+[02:03] different types of cash flows is central
+[02:07] to understanding finance the third is
+[02:10] the notion the driving force of risk
+[02:12] everything in finance it's better on
+[02:14] measuring risk and making sure you are
+[02:16] earning a return that is sufficient
+[02:18] given the risk you've taken on so in the
+[02:21] process we've got to define risk we've
+[02:23] got to come up with measures of risk and
+[02:25] we've got to come up with perspectives
+[02:26] on risk sounds strange but I'll talk about
+[02:27] that in a moment
+[02:30] the fourth big idea on which finance is
+[02:32] based is the time value of money
+[02:34] you all heard the saying right a dollar
+[02:37] today is worth more than a dollar a year
+[02:40] from now but why understanding the
+[02:43] intuition of time value is central also
+[02:45] understanding why currencies matter and
+[02:47] why the time value of money itself might
+[02:50] shift across time the fifth big building
+[02:53] block for finance is understanding the
+[02:55] basics of value how do you value
+[02:58] a set of cash flows what if those cash
+[03:00] flows are contractually set what if
+[03:02] they're residual cash flows what if they're
+[03:04] contingent cash flows understanding the
+[03:08] basics of valuation and finally while
+[03:10] financial markets might not be necessary
+[03:12] to run businesses they're the lubricants
+[03:14] that allow businesses to run well
+[03:17] understanding trading is central to
+[03:20] finance in fact every trader likes to
+[03:22] make money without taking any risk and
+[03:25] in fact you'd like to invest no money
+[03:27] take no risk and make money that's
+[03:29] called arbitrage understanding what
+[03:32] makes arbitrage so difficult in markets
+[03:34] is again central to thinking about
+[03:37] finance so let's take a step
+[03:39] in the right direction on each of these
+[03:41] six concepts let's start with the
+[03:44] concept of a business you've seen
+[03:46] an accounting balance sheet
+[03:47] right you've got assets you got
+[03:50] liabilities a financial balance sheet lays
+[03:52] out the core of how we think about
+[03:54] businesses in a financial balance sheet
+[03:56] you want to see assets and liabilities
+[03:59] just like you do in an accounting
+[04:01] balance sheet but unlike an accounting
+[04:03] balance sheet in a financial balance
+[04:05] sheet when we think about assets we
+[04:07] think about not what you've already put
+[04:08] into these assets what you've invested
+[04:11] in them but what we expect you to make
+[04:13] from these assets in the future it's
+[04:15] always about the future and that's going
+[04:17] to change your perspective and what you
+[04:18] see on the asset side of the balance
+[04:21] sheet on the liability side of the
+[04:23] balance sheet I like to believe that in
+[04:24] finance we keep it simple
+[04:26] simple in what sense they're only two
+[04:27] ways you could raise money for a
+[04:31] business one is you can borrow the money
+[04:32] that's debt the other is you can use
+[04:35] your own money that's equity as you
+[04:37] expand as a business the layers of debt
+[04:39] and equity might change but there
+[04:41] still remain only two ways
+[04:43] you can fund a business debt and equity
+[04:46] the second big idea in finance is cash
+[04:49] flows we make a big deal about cash
+[04:51] flows in finance and it's useful
+[04:54] it's critical that you understand why
+[04:56] cash flows can be different from
+[04:57] earnings because often the raw
+[05:00] information we have on companies takes a
+[05:01] form of accounting information
+[05:04] accounting earnings understanding why
+[05:06] cash flows and earnings are different
+[05:09] it's important to understanding why some
+[05:11] businesses that look good in an
+[05:13] accounting basis might not be worth very
+[05:15] much and others that don't look good on
+[05:17] an accounting basis could be worth a lot
+[05:20] the second big idea in cash flows that
+[05:22] I'd like to get through is that cash
+[05:25] flows can take one of three forms they
+[05:27] can be contractually set at the time
+[05:28] you enter an agreement that's what
+[05:30] you get with the corporate bond the bank
+[05:33] loan they can be residual cash flows
+[05:34] which is what you get when you're the
+[05:36] owner of a business or an equity
+[05:38] investor or they can be contingent cash
+[05:40] flows what are contingent cash flows the
+[05:43] cash flow will happen if something else
+[05:46] happens if an event occurs understanding
+[05:49] those different cash flows is useful in
+[05:52] valuing those cash flows then comes the
+[05:56] concept of risk we are as human beings
+[05:58] risk averse we say that all the time but
+[06:01] what does that mean understanding how we
+[06:03] came to that conclusion or that we are
+[06:05] risk averse is central to starting to
+[06:09] think about risk and to convert that
+[06:12] risk aversion into our decision-making
+[06:15] we need to do two things one is we need
+[06:17] to understand that risk is not a bad
+[06:19] thing risk is not something to avoid
+[06:21] because to become a great business you
+[06:23] often have to seek out risk but you have
+[06:25] to seek out the right kind of risk risk
+[06:27] is a two-sided beast it's got a
+[06:29] good side and a bad side and you want to
+[06:31] make sure the trade-off works in your
+[06:32] favor
+[06:34] the second big idea we're going to
+[06:35] promote is that when you think about
+[06:37] risk
+[06:39] in an investment you got to look you
+[06:40] could ask the question risk through
+[06:43] whose eyes think about a publicly traded
+[06:45] company you've got thousands of
+[06:47] shareholders you got managers each of
+[06:49] them might have a very different
+[06:52] perspective on the risk in a decision
+[06:54] whose risk should dominate and thirdly
+[06:56] we've got to convert that risk
+[06:59] perspective into a risk number something
+[07:01] we can bring in explicitly into
+[07:04] decision-making you could actually argue
+[07:06] that the history of the development of risk
+[07:07] measures closely parallels the
+[07:11] development of finance as a discipline
+[07:14] the fourth big idea is the time value of
+[07:16] money if you've taken a finance class
+[07:18] you undoubtedly have a financial
+[07:20] calculator take a look at that
+[07:22] calculator take a look at all those
+[07:24] buttons and take a look at that PV
+[07:26] button and look at how worn out it is
+[07:28] it's amazing how much of finance is a
+[07:30] present value problem in fact every
+[07:32] finance class starts with that Nostrum
+[07:34] a dollar today is worth more than $1
+[07:37] year from now but why understanding the
+[07:39] intuition behind why a dollar today is
+[07:41] worth more than a dollar year from now
+[07:45] is central to finance and converting
+[07:47] that intuition into mechanics in other
+[07:49] words if I get to give you a series of
+[07:51] cash flows can you bring them back to
+[07:54] today or can you move them forward to a
+[07:56] different point in time that's a skill
+[07:58] that anybody who claims to be in finance
+[08:02] has to have which brings us to valuation
+[08:05] we'll have an entire class on valuation
+[08:06] but I'm going to start off by saying
+[08:09] something that I truly believe valuation
+[08:11] is simple if you keep it simple we
+[08:14] choose to make it complex in fact I'm
+[08:17] gonna argue that to understand valuation
+[08:18] you got to go back and think about those
+[08:20] three kinds of cash flows I'd talked
+[08:22] about because the way we approach
+[08:24] valuation is actually different
+[08:26] depending on the type of cash flow for
+[08:28] contractually set cash flows the way we do
+[08:31] valuation is we use the promised cash
+[08:33] flows and we discount them back at a
+[08:36] default risk adjusted discount rate
+[08:38] that's how we value bond the promised
+[08:40] cash flows are the coupons and the face
+[08:43] value the default risk adjusted cost of
+[08:44] debt is what we use to discount them
+[08:48] for residual cash flows we estimate the
+[08:50] residual cash flows those expected cash
+[08:51] flows
+[08:53] we discount them back at a rate that
+[08:56] reflects a risk we as investors see when
+[08:58] we invest in those residual cash flows
+[09:00] that's how we value equity for
+[09:02] contingent cash flows we need a
+[09:04] different toolkit we use option pricing
+[09:07] we'll talk about the basics of option
+[09:09] pricing but if we can get those three
+[09:12] concepts down we can value just about
+[09:12] anything
+[09:16] and finally there's trading as I said
+[09:17] financial markets are the lubricant that
+[09:19] allow businesses to operate so
+[09:22] understanding the notion of buying and
+[09:24] selling the notion of trading is
+[09:27] critical to understanding finance so
+[09:28] let's start off with every traders dream
+[09:31] every traders dream is to find something
+[09:33] that's risk free and make more than the risk
+[09:35] free rate or put differently to be able
+[09:37] to invest no money take no risk and walk
+[09:39] away with profits that's a pure money
+[09:41] machine that's called arbitrage in
+[09:45] practice it's almost impossible to find
+[09:48] arbitrage if it exists it's there
+[09:50] it's transient it's there then it's gone
+[09:51] so we're going to talk about the
+[09:53] frictions in the market place that
+[09:56] caused it to disappear why is it so
+[09:59] difficult for sure things to exist in
+[10:01] markets and we're going to talk about
+[10:04] two big frictions so first is trading
+[10:06] costs nice thing that's easy
+[10:09] it says the $4.95 I have to pay when I
+[10:11] trade not so fast
+[10:14] trading costs are much deeper they
+[10:15] include other items that we don't even
+[10:17] think about when we trade so
+[10:19] understanding those trading costs are
+[10:21] central to understanding why free
+[10:24] lunches are so difficult in trading the
+[10:26] other is taxes you've all heard the old
+[10:28] saying right there only two things in
+[10:31] life that are guaranteed death and taxes
+[10:34] and I'm not even sure about death taxes
+[10:37] are an issue in investing they have to
+[10:39] be an issue because as investors when we
+[10:42] invest in companies we get to spend after
+[10:45] tax cash flows so bringing in taxes
+[10:47] into decision making into trading into
+[10:50] investing is central so let's lay the
+[10:53] foundations for how taxes enter into the
+[10:56] process those are the foundations on
+[10:58] which we're going to build these
+[10:59] corporate finance and valuation
+[11:02] buildings so let's make sure we get
+[11:02] these foundations right

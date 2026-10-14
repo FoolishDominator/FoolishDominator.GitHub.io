@@ -25,5 +25,14 @@
     "corrected": true,
     "course_slug": "mit-15-401-finance-theory",
     "markdown": true
+  },
+  "aK4qHbDkJ-s": {
+    "title": "Session 1: First Steps in Finance",
+    "course": "Foundations of Finance",
+    "course_slug": "foundations-of-finance",
+    "folder": "courses/foundations-of-finance/ses-01",
+    "updated": "2026-10-14T10:17:54+08:00",
+    "corrected": true,
+    "markdown": true
   }
 }
