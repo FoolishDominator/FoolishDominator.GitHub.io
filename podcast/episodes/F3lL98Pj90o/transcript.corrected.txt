@@ -1,0 +1,445 @@
+[00:02] I think I figured out a way to plan any
+[00:05] size of work with an agent. The existing
+[00:07] planning tools that I was using and
+[00:09] playing around with, even ones that I've
+[00:12] created, felt too constrained, too tied
+[00:13] to a single session. I felt like I
+[00:17] wasn't able to be ambitious enough, and
+[00:18] because of that, I was kind of
+[00:20] constraining the stuff I was building to
+[00:22] fit AI, which doesn't feel right. This
+[00:24] new approach doesn't have that limit.
+[00:27] You can plan enormous chunks of work,
+[00:29] and it will orchestrate the planning
+[00:31] over multiple types of sessions. It
+[00:33] knows that you can't make your way
+[00:35] cleanly to the destination. You have to
+[00:38] clear the fog of war. It understands
+[00:40] dependent decisions, and it even allows
+[00:42] you to plan in parallel. And the best
+[00:44] thing about this is based on
+[00:46] software fundamentals. This is based on
+[00:48] the fundamentals of planning work that I
+[00:49] learned when I was a real developer
+[00:52] before AI. And I've packaged this all up
+[00:54] into a skill that's available right now
+[00:56] on my skills repo called Wayfinder. So,
+[00:58] the way that I was planning work before
+[01:00] was really tied into a single session.
+[01:01] It's to do with the grill me or the
+[01:03] grill with doc skill that's in my skills
+[01:06] repo. That's still a super important
+[01:08] primitive, but it's really just tied
+[01:10] into a single session. Some work is
+[01:13] bigger than what you can fit into the
+[01:15] context window, and especially the smart
+[01:18] zone of the context window of the agent.
+[01:20] And you know that going in, so you'll
+[01:23] often take time ahead of these AI agent
+[01:25] sessions to break it down into smaller
+[01:27] chunks, say, "Oh, I'll just bite off
+[01:28] this little bit. I'll just bite off this
+[01:30] little bit." But then what you'll find
+[01:32] is, "Okay, I'm working towards planning
+[01:34] in this bit of grilling." And then you
+[01:36] reach a question that you can't answer,
+[01:39] or you just find yourself lost in fog.
+[01:40] And all the time you're managing the
+[01:42] smart zone, you're trying not to spend
+[01:43] too many tokens. This has been out there
+[01:45] for a while, and people are freaking
+[01:47] loving this thing. It one-shotted a
+[01:48] prototype I kept starting again and
+[01:50] again for months. I really hate the
+[01:52] phrase one-shotting, but I think what he
+[01:54] means is it really helped him out. John
+[01:57] here even built his own freaking harness
+[01:58] because he liked the Wayfinder approach
+[02:00] so much. It's got these gorgeous little
+[02:02] star map on it that kind of lets you
+[02:04] take tasks as you go. So, it's been out
+[02:06] there for a little while and I'm finally
+[02:07] making the video that people want me to
+[02:09] make. What is Wayfinder? How do you best
+[02:11] use it? Well, let's start by looking at
+[02:14] how big work typically gets planned. You
+[02:17] have a start point, a point where you
+[02:19] need to start from, a sort of vague
+[02:21] idea, not really how to get there. And
+[02:23] you're trying to get to some kind of
+[02:25] destination. You know vaguely where you
+[02:27] want to end up, but the steps between
+[02:30] are super foggy. You've no idea how to
+[02:32] get there. This is true, by the way, in
+[02:34] engineering, but it's also true in many
+[02:35] walks of life where you're planning
+[02:37] something ambitious. And so, the first
+[02:39] thing you should probably do is have a
+[02:41] grilling session about it. Get the AI to
+[02:44] interview you and figure out the sort of
+[02:45] basic premise of where you're going.
+[02:47] Now, for some work, that's sufficient
+[02:48] and you'll be able to get straight to
+[02:50] your destination. But for a lot of work,
+[02:51] that will still leave you in a lot of
+[02:53] fog. What you might find is based on
+[02:54] that initial grilling session, you need
+[02:57] to do more sessions. So, you might have
+[02:59] a prototyping session, or you might have
+[03:01] another grilling session, or it might
+[03:03] need to go off and do some research as
+[03:04] well. Conceptually, what we're looking
+[03:07] at here is a map. We are creating a map
+[03:09] of how we're getting to our destination.
+[03:11] This is why it's called Wayfinder. We
+[03:13] are finding our way to the destination.
+[03:15] And each of these things on the map,
+[03:17] they are tickets. Each ticket requires
+[03:20] its own individual session with the
+[03:22] agents. So, you might have a prototyping
+[03:24] session, a grilling session, and a
+[03:26] research session. And all of those
+[03:28] things are created and managed by
+[03:30] Wayfinder. And just a note here, yeah,
+[03:32] this is just a single skill doing all
+[03:34] this and it works with any coding agent.
+[03:36] On its map, Wayfinder gives you a
+[03:38] frontier of tickets here. In other
+[03:40] words, the decisions that it knows about
+[03:43] so far. And it also keeps track of
+[03:45] everything that's in fog. So, things
+[03:47] that are not quite able to be decided
+[03:49] upon yet because we haven't done the
+[03:51] research, or we don't have a prototype
+[03:53] to look at, or we haven't done enough
+[03:55] conversation, enough grilling. At some
+[03:57] point, all of the fog will be resolved,
+[03:59] and then you'll have finally made enough
+[04:00] decisions to finally get to your
+[04:03] destination. Wayfinder can not only
+[04:04] manage the research, but it could also
+[04:07] do tasks here, too. So, if you need to
+[04:09] set up some configuration, or you need
+[04:10] to go out and talk to someone, and
+[04:12] actually go and run an errand, then
+[04:14] Wayfinder can figure that out for you,
+[04:15] as well. In other words, all of the
+[04:17] complicated stuff that you might need to
+[04:19] do while you're planning something big,
+[04:21] Wayfinder orchestrates it all for you.
+[04:24] It keeps track of everything that's been
+[04:26] done, and it measures the fog of war for
+[04:28] you, keeps track of all the frontier of
+[04:30] things you can decide right now. How
+[04:31] does it keep track of it? Well, it does
+[04:34] it in your issue tracker. In my public
+[04:36] course video manager repo, here are all
+[04:38] of the Wayfinder maps that I've done
+[04:40] recently. And you notice that if we look
+[04:43] at this one, this is the big
+[04:47] old map here, and underneath it are 12
+[04:49] subtasks, or sub-issues, and these are
+[04:51] the decision tickets. So, we can zoom
+[04:54] down here, and we can understand all of
+[04:55] the decisions that have been made. As
+[04:58] decisions get made, then obviously, they
+[05:01] get resolved inside the ticket. So, in
+[05:03] this one, this is a sub-issue, close the
+[05:06] clips-during-publish race, and we
+[05:08] resolved it with a discussion a couple
+[05:10] of weeks ago. That resolution also gets
+[05:12] written back up to the parent map. So,
+[05:15] if we look back up here, we can see that
+[05:17] a small version of that also gets
+[05:19] written in the map. Wayfinder is keeping
+[05:21] track of all the decisions that have
+[05:23] been made, all the prototypes that have
+[05:24] been created, all the tasks that have
+[05:26] been done. And by the way, even though
+[05:28] I'm using GitHub for this, my skills are
+[05:30] issue tracker agnostic. So, you can use
+[05:32] it with any issue tracker you like. You
+[05:33] just need to do a little bit of
+[05:34] configuration via
+[05:36] setup-matt-pocock-skills. Use it with
+[05:38] Linear, use it with Jira, use it with
+[05:40] literally whatever you like. The very
+[05:41] first thing you'll need to decide when
+[05:43] you kick off a new Wayfinder session is
+[05:45] the destination. For instance, in this
+[05:48] one, I was adding a command palette with
+[05:50] a bunch of new actions into my
+[05:52] application. And what I ended up wanting
+[05:55] was a buildable spec. So, I wanted a
+[05:58] specification for this command K command
+[06:01] palette in the CVM diagram window. So, I
+[06:02] started it off like this. I invoked the
+[06:04] Wayfinder skill, and then I gave it a
+[06:06] description of what I wanted. I'd like
+[06:08] the ability in the CVM to add an icon
+[06:10] picker. Not only that, I want the
+[06:11] ability to search other diagrams. I want
+[06:13] the ability to copy things from the
+[06:14] diagram and save them as, you know, big
+[06:17] old chunk of work. It went through and
+[06:20] explored the repo, and it invoked the
+[06:22] grilling skill, and it grilled me about
+[06:25] what I wanted. It first asked me what
+[06:26] done looks like, whether I wanted a
+[06:28] spec, and it recommended a spec. That's
+[06:30] good. And then it asked me a few initial
+[06:33] questions before then going and creating
+[06:35] some tickets and the first map. And it
+[06:37] created the other tickets as sub-issues.
+[06:40] So, we kicked off with seven tickets
+[06:41] immediately. However, only three of
+[06:44] those tickets were takable right now.
+[06:46] So, figure out where icon names come
+[06:49] from, component storage schema, and
+[06:50] palette information architecture and
+[06:51] grid keyboard. I don't remember that
+[06:53] one. And so, what I did was I then
+[06:56] worked through each of those tickets in
+[06:57] a new session. The way I did that was I
+[07:00] just called Wayfinder on that ticket
+[07:02] name. I did it in a slightly fancier way
+[07:04] where I actually have a handoff skill
+[07:06] that automatically wrote me a prompt and
+[07:08] spawned a Claude sub-agent. But what it
+[07:10] was essentially doing is just calling
+[07:14] the Wayfinder skill on this map and on
+[07:16] the specific ticket, wherever it was.
+[07:17] Yeah, here it is. Here's your ticket.
+[07:20] Transpile Lucide SVG geometry to Path
+[07:22] Builder. And it just mentions the full
+[07:24] ticket name. So, this is how you work
+[07:26] through a Wayfinder map. You do an
+[07:28] initial Wayfinder prompt just to chart
+[07:30] the map and figure out the next tickets.
+[07:32] And then for each ticket, you say
+[07:35] Wayfinder with the ticket URL. So, you
+[07:36] use Wayfinder for both,
+[07:38] charting the map initially and then
+[07:40] walking through each ticket. As you can
+[07:42] probably see from this diagram, tickets
+[07:44] can have different types, and there are
+[07:46] four types. And these ticket types are
+[07:48] actually brought into the issue tracker
+[07:49] themselves. So, we actually have
+[07:52] Wayfinder research, which is a ticket
+[07:53] type. Research tickets are where the
+[07:55] agent needs to go off and find some
+[07:57] information and bring it back. And it
+[07:59] usually kicks it off immediately. So,
+[08:01] you don't actually need to watch it. It
+[08:02] does it in a sub agent and then reports
+[08:04] back. Prototype tickets, which are the
+[08:07] next type here, create a prototype,
+[08:11] which is so unbelievably invaluable for
+[08:13] really seeing things come to life as
+[08:14] you're planning. I've done a whole extra
+[08:16] video on this, on how important
+[08:18] prototypes are, and it reuses the
+[08:20] prototype skill from that video. Some
+[08:22] folks look at Wayfinder, and they think,
+[08:23] "God, that's a lot of planning. Doesn't
+[08:25] that look like waterfall?" And the
+[08:27] prototypes are the way that you prevent
+[08:30] it from becoming waterfall, huge amounts
+[08:32] of low-fidelity upfront planning. A
+[08:35] prototype is a high-fidelity way to get
+[08:36] feedback on what you're actually
+[08:38] building. And the fact that Wayfinder
+[08:39] encourages you to build so many
+[08:41] prototypes means that the output is
+[08:43] unbelievably good. So, so far, we've got
+[08:45] research, prototype. Obviously, there
+[08:47] are grilling ones as well. So, grilling
+[08:49] sessions. And this is just where you
+[08:51] need a discussion over maybe an
+[08:53] implementation detail, over a particular
+[08:55] aspect of the plan. And the final type
+[08:57] of ticket are tasks. These are things
+[09:00] that need to be done in the real world,
+[09:01] stuff that the agent can't quite do
+[09:04] itself, or possibly sometimes the stuff
+[09:06] agent can do itself, but is scheduled
+[09:08] behind other work. One really cool thing
+[09:10] about Wayfinder is the way that it
+[09:11] establishes blocking relationships
+[09:13] between tickets, because some decisions
+[09:15] can only be made once other decisions
+[09:18] are made. And so, what you end up with
+[09:21] is here, we've got 14 out of 17 done on
+[09:23] this map. So, a lot of work done, but
+[09:25] we've still not built the skill that
+[09:27] this whole map is built around. And once
+[09:29] we build the skill, then we actually
+[09:31] need to revisit some other stuff based
+[09:33] on how the skill works and how it
+[09:35] actually improves things. And what
+[09:36] you're doing a lot of the time when
+[09:38] you're working through a Wayfinder map
+[09:39] is going, "Okay, I've resolved that
+[09:42] ticket. Let's see how this opens up new
+[09:44] tickets. What has the frontier moved
+[09:46] to?" So, then once the map is complete,
+[09:48] what do you then go and do with it?
+[09:50] Well, this one, because its destination
+[09:52] was a spec, the Wayfinder map is
+[09:55] probably a little bit too dense to
+[09:57] create a spec. So, what I like to do is
+[10:00] create a spec from the map. This was the
+[10:02] spec that I created from it, and you can
+[10:05] see it's basically the same setup as
+[10:07] I've had before. I literally just called
+[10:09] to-spec on the Wayfinder map, and it
+[10:12] pulled in this enormous
+[10:14] document with basically all of the
+[10:16] decisions that have been pulled from the
+[10:19] Wayfinder map into this GitHub issue.
+[10:21] The initial draft was actually too large
+[10:23] for GitHub's character limit, so
+[10:25] that kind of tells you how big it was.
+[10:28] And from there, I turned it into tickets
+[10:29] using my usual approach, which is to
+[10:31] spec and then to-tickets. In other
+[10:34] words, Wayfinder fits in just in exactly
+[10:36] the same place that Grill with Docs does
+[10:38] in my usual approach. So, instead of
+[10:40] doing Grill with Docs and then doing to
+[10:42] spec and to-tickets, you're spending a lot
+[10:44] more time in Wayfinder creating this
+[10:47] enormous map, and then taking that map,
+[10:49] turning it to spec, turning it to
+[10:50] tickets, and then implementing each
+[10:52] ticket, and then running code review at
+[10:54] the end. The really cool thing about the
+[10:56] Wayfinder setup is that the specs that
+[11:00] it creates are so dense, and they all
+[11:02] link back to the original decision
+[11:04] tickets. So, you can actually go, and
+[11:06] the agent can go and view the primary
+[11:08] source if it's confused about anything.
+[11:10] That was always a kind of weakness with
+[11:12] Grill with Docs, which is that you were
+[11:14] really relying on the spec to be the
+[11:17] source of truth, but the spec is always
+[11:19] just a summary of what was actually said
+[11:21] in the meeting. Whereas now, with
+[11:23] Wayfinder, you've actually got access to
+[11:24] that primary source, which is amazing.
+[11:27] So, that is Wayfinder. It's a way of
+[11:30] mapping huge chunks of work by planning
+[11:32] things out really in detail ahead of
+[11:34] time. It can handle prototyping, can
+[11:36] handle research, can handle arbitrary
+[11:38] tasks, can handle discussions, too.
+[11:41] Let's jump into an FAQ now of frequently
+[11:43] asked questions that I get when people
+[11:45] ask me about Wayfinder. The first one is
+[11:49] "This is way too much process. This way
+[11:50] too heavy for the kind of work that I
+[11:52] do. When should I actually use it?"
+[11:54] Well, the answer to this is if you think
+[11:55] the work that you're doing can be
+[11:57] completable and planable in a single
+[11:58] session, then plan it in a single
+[12:00] session. If you kind of already know the
+[12:02] way to your destination, then there's no
+[12:04] need to use Wayfinder because you can
+[12:06] just path your way there in a single
+[12:08] session and just figure it out.
+[12:10] Wayfinder is for the cases where you
+[12:12] have the fog of war. You've no idea
+[12:15] quite where to go and you just need to
+[12:16] start and then see where you get to. By
+[12:18] the way, I've actually been using
+[12:20] Wayfinder for non-coding tasks. So, I've
+[12:21] been meaning to put up a garden office
+[12:24] in my garden and I've been using
+[12:25] Wayfinder for that. So, it's
+[12:28] commissioning a site survey, figuring
+[12:29] out all that stuff, figuring out who to
+[12:31] contact, doing all the research, finding
+[12:32] the different firms that could build it.
+[12:33] It's awesome. Another response people
+[12:36] have to Wayfinder is this is SDD. This
+[12:37] is spec-driven development and I don't want
+[12:39] to do spec-driven development. I don't want
+[12:41] to spend all this time putting together
+[12:43] a spec. This seems bananas. Well, the
+[12:46] way I think of specs is really just a
+[12:49] destination for a multi-session piece of
+[12:51] work. In other words, we have a huge
+[12:52] task down here, let's say task number
+[12:55] four, that we're trying to schedule over
+[12:57] multiple agent sessions cuz it's just
+[13:00] too big. And what we want to do is we
+[13:02] need a spec so that we can when we get
+[13:04] to the end figure out where we were
+[13:06] going. That's all a spec is in this
+[13:07] context. It's just a destination
+[13:10] document to handle this multi-session
+[13:12] work. And then each session is done in
+[13:14] an implementation ticket. Also, this is
+[13:16] people get confused when they first use
+[13:17] Wayfinder cuz they go, "Right, it's
+[13:19] creating some tickets. Aren't we
+[13:21] supposed to do the tickets later?" These
+[13:23] are kind of implementation tickets
+[13:24] versus decision tickets. So, in
+[13:26] Wayfinder you have decision tickets.
+[13:28] These are implementation tickets. So,
+[13:29] the difference between my approach and
+[13:31] most other approaches is that people,
+[13:33] when they get to the end of this, they
+[13:36] will keep that spec around somewhere.
+[13:38] For me, I close the issue containing the
+[13:41] spec, and the spec is gone. It's gone
+[13:43] from my repository. I rarely, if ever,
+[13:45] refer to it again. Once the spec is
+[13:47] present in the code, then you can just
+[13:49] delete the spec. Whereas, people who do
+[13:51] spec-driven development go back to the
+[13:54] spec and edit it and modify it. There
+[13:55] are lots of approaches to spec-driven
+[13:56] development, so I'm probably annoying
+[13:58] someone with that, but what I'm
+[14:00] essentially trying to say is that these
+[14:02] specs are non-persistent. With that,
+[14:04] folks, I recommend you go off and you
+[14:08] chart your own awesome foggy idea. I
+[14:10] have found Wayfinder just so liberating
+[14:13] in that it just lets me get started, and
+[14:15] it handles all of that difficult
+[14:16] decision for me. I've been using it to
+[14:18] plan courses, been using it to do
+[14:20] engineering work, been using it to build
+[14:22] a garden office. It is just awesome. The
+[14:23] cool thing about it is that the
+[14:25] destination is totally up to you.
+[14:27] Whether you want it to create a spec
+[14:29] that you then run through an AFK agent,
+[14:31] which is what I do, or if you just want
+[14:33] it to implement the work for you in
+[14:36] tasks, then it totally can. There is no
+[14:38] more fun feeling than starting a new
+[14:40] Wayfinder session, and knowing that
+[14:41] you're going to see something awesome,
+[14:42] but not quite knowing how you're going
+[14:44] to get there. If you're into this stuff,
+[14:45] and if you want to keep up with my
+[14:47] skills, then you should check out this
+[14:49] seven-lesson free course that I've put
+[14:51] out on AI skills for real engineers,
+[14:53] which is on my AI Hero site. I'll add
+[14:55] the link below. This lets you build up a
+[14:56] repeatable workflow that you can ship
+[14:59] great work, and it's all built on solid
+[15:00] software fundamentals. Thanks so much
+[15:02] for hanging out. It is always fun
+[15:04] filming these sessions, and I'm so glad
+[15:05] that people are enjoying Wayfinder so
+[15:07] much. So, cheers, pals. I will see you
+[15:07] in the next one.
