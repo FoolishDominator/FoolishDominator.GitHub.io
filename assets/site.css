@@ -2,7 +2,7 @@
   color-scheme: light;
   --paper: #fdfdfc;
   --ink: #25272b;
-  --muted: #73777d;
+  --muted: #676c73;
   --line: #e4e5e7;
   --link: #345b87;
 }
@@ -61,7 +61,7 @@ li::marker { color: #a2a7ae; }
 .notes-list { padding-left: 25px; }
 .notes-list li { margin: 20px 0; }
 .note-meta { display: block; color: var(--muted); font-size: 13px; }
-.note-meta a { color: #667d97; }
+.note-meta a { color: #536b86; }
 .breadcrumb { font-size: 14px; color: var(--muted); margin: 0 0 28px; }
 .site-footer {
   width: calc(100% - 72px);
